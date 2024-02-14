@@ -23,7 +23,7 @@
 		76E306D32B69578800112552 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		76E306DA2B6957A500112552 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		76E306DC2B69580D00112552 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		76E306DD2B69583C00112552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		76E306DD2B69583C00112552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +37,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		763274B82B7D3FDD00257FD2 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		763274B92B7D3FEF00257FD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		763274BA2B7D3FFE00257FD2 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		763274BB2B7D401A00257FD2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		763274BC2B7D405500257FD2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76E306CF2B69578800112552 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		763274BD2B7D408200257FD2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				76E306DC2B69580D00112552 /* Config.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		763274BE2B7D409E00257FD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76E306CB2B69578700112552 /* EmissionIQApp.swift */,
+				76E306CD2B69578700112552 /* ContentView.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		76E306BF2B69578700112552 = {
 			isa = PBXGroup;
 			children = (
@@ -58,12 +111,15 @@
 			isa = PBXGroup;
 			children = (
 				76E306DD2B69583C00112552 /* Info.plist */,
-				76E306CB2B69578700112552 /* EmissionIQApp.swift */,
-				76E306CD2B69578700112552 /* ContentView.swift */,
-				76E306CF2B69578800112552 /* Assets.xcassets */,
 				76E306D12B69578800112552 /* EmissionIQ.entitlements */,
+				763274BD2B7D408200257FD2 /* Configuration */,
+				763274B82B7D3FDD00257FD2 /* View Modifiers */,
+				763274B92B7D3FEF00257FD2 /* Extensions */,
+				763274BA2B7D3FFE00257FD2 /* Structs */,
+				763274BB2B7D401A00257FD2 /* Modules */,
+				763274BC2B7D405500257FD2 /* Resources */,
+				763274BE2B7D409E00257FD2 /* Supporting Files */,
 				76E306D22B69578800112552 /* Preview Content */,
-				76E306DC2B69580D00112552 /* Config.xcconfig */,
 			);
 			path = EmissionIQ;
 			sourceTree = "<group>";
@@ -271,6 +327,7 @@
 		};
 		76E306D82B69578800112552 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76E306DC2B69580D00112552 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +371,7 @@
 		};
 		76E306D92B69578800112552 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76E306DC2B69580D00112552 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
