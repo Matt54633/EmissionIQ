@@ -17,6 +17,15 @@
 		76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F875192B88F39C000EA3D7 /* Gold.usdz */; };
 		76F8751D2B88F39C000EA3D7 /* Silver.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F8751A2B88F39C000EA3D7 /* Silver.usdz */; };
 		76F8751E2B88F39C000EA3D7 /* Bronze.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F8751B2B88F39C000EA3D7 /* Bronze.usdz */; };
+		76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8751F2B88F41F000EA3D7 /* WavyRectangle.swift */; };
+		76F875222B88F42F000EA3D7 /* Ribbon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875212B88F42F000EA3D7 /* Ribbon.swift */; };
+		76F875242B88F44B000EA3D7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875232B88F44B000EA3D7 /* WebView.swift */; };
+		76F875282B88F4A6000EA3D7 /* GlassEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875272B88F4A6000EA3D7 /* GlassEffectView.swift */; };
+		76F8752A2B88F4C8000EA3D7 /* GalleryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875292B88F4C8000EA3D7 /* GalleryHeaderView.swift */; };
+		76F8752C2B88F4E7000EA3D7 /* PageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8752B2B88F4E7000EA3D7 /* PageHeaderView.swift */; };
+		76F8752E2B88F50D000EA3D7 /* ReusableButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8752D2B88F50D000EA3D7 /* ReusableButtonView.swift */; };
+		76F875302B88F52B000EA3D7 /* ReusableErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8752F2B88F52B000EA3D7 /* ReusableErrorView.swift */; };
+		76F875322B88F53E000EA3D7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875312B88F53E000EA3D7 /* LoadingView.swift */; };
 		76FF34B62B7FA26B00101092 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 76FF34B52B7FA26B00101092 /* Vortex */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +44,15 @@
 		76F875192B88F39C000EA3D7 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
 		76F8751A2B88F39C000EA3D7 /* Silver.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Silver.usdz; sourceTree = "<group>"; };
 		76F8751B2B88F39C000EA3D7 /* Bronze.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bronze.usdz; sourceTree = "<group>"; };
+		76F8751F2B88F41F000EA3D7 /* WavyRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavyRectangle.swift; sourceTree = "<group>"; };
+		76F875212B88F42F000EA3D7 /* Ribbon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ribbon.swift; sourceTree = "<group>"; };
+		76F875232B88F44B000EA3D7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		76F875272B88F4A6000EA3D7 /* GlassEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassEffectView.swift; sourceTree = "<group>"; };
+		76F875292B88F4C8000EA3D7 /* GalleryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryHeaderView.swift; sourceTree = "<group>"; };
+		76F8752B2B88F4E7000EA3D7 /* PageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHeaderView.swift; sourceTree = "<group>"; };
+		76F8752D2B88F50D000EA3D7 /* ReusableButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButtonView.swift; sourceTree = "<group>"; };
+		76F8752F2B88F52B000EA3D7 /* ReusableErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableErrorView.swift; sourceTree = "<group>"; };
+		76F875312B88F53E000EA3D7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +86,9 @@
 		763274BA2B7D3FFE00257FD2 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
+				76F8751F2B88F41F000EA3D7 /* WavyRectangle.swift */,
+				76F875212B88F42F000EA3D7 /* Ribbon.swift */,
+				76F875232B88F44B000EA3D7 /* WebView.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -75,6 +96,7 @@
 		763274BB2B7D401A00257FD2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				76F875252B88F489000EA3D7 /* Utilities */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -155,6 +177,27 @@
 				76F8751B2B88F39C000EA3D7 /* Bronze.usdz */,
 			);
 			path = "3D Models";
+			sourceTree = "<group>";
+		};
+		76F875252B88F489000EA3D7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				76F875262B88F48F000EA3D7 /* Views */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		76F875262B88F48F000EA3D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				76F875272B88F4A6000EA3D7 /* GlassEffectView.swift */,
+				76F875292B88F4C8000EA3D7 /* GalleryHeaderView.swift */,
+				76F8752B2B88F4E7000EA3D7 /* PageHeaderView.swift */,
+				76F8752D2B88F50D000EA3D7 /* ReusableButtonView.swift */,
+				76F8752F2B88F52B000EA3D7 /* ReusableErrorView.swift */,
+				76F875312B88F53E000EA3D7 /* LoadingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +282,17 @@
 			files = (
 				76E306CE2B69578700112552 /* ContentView.swift in Sources */,
 				76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */,
+				76F8752A2B88F4C8000EA3D7 /* GalleryHeaderView.swift in Sources */,
+				76F875282B88F4A6000EA3D7 /* GlassEffectView.swift in Sources */,
 				76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */,
+				76F875222B88F42F000EA3D7 /* Ribbon.swift in Sources */,
+				76F8752C2B88F4E7000EA3D7 /* PageHeaderView.swift in Sources */,
+				76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */,
+				76F8752E2B88F50D000EA3D7 /* ReusableButtonView.swift in Sources */,
 				76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */,
+				76F875302B88F52B000EA3D7 /* ReusableErrorView.swift in Sources */,
+				76F875322B88F53E000EA3D7 /* LoadingView.swift in Sources */,
+				76F875242B88F44B000EA3D7 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
