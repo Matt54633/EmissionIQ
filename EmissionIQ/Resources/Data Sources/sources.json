@@ -1,0 +1,187 @@
+[
+    {
+        "name": "Conversion Factors",
+        "image": "function",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "What are conversion factors?",
+                    "text": "A conversion factor is a number used to change one set of units to another, by multiplying or dividing. EmissionIQ uses conversion factors to calculate emissions produced by modes of transport."
+                },
+                {
+                    "header": "What factors does EmissionIQ use?",
+                    "text": "EmissionIQ utilises conversion factors provided by the UK Government. In use are the factors for 2023."
+                }
+            ],
+            "links": [
+                {
+                    "header": "Source",
+                    "url": "https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Mobility",
+        "image": "car.fill",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Mobility Emissions",
+                    "text": "Mobility emissions are those that are produced from modes of transport such as cars, planes and public transport."
+                },
+                {
+                    "header": "Cars",
+                    "text": "Per mile, an average sized petrol car produces 0.27331kg C0₂e."
+                },
+                {
+                    "header": "Walking",
+                    "text": "Per mile, walking produces 0kg C0₂e."
+                },
+                {
+                    "header": "Cycling",
+                    "text": "Per mile, cycling produces 0kg C0₂e."
+                },
+                {
+                    "header": "Buses",
+                    "text": "Per mile, a bus produces 0.16429kg C0₂e."
+                },
+                {
+                    "header": "Trains",
+                    "text": "Per mile, a national rail train produces 0.05706kg C0₂e."
+                },
+                {
+                    "header": "Ferries",
+                    "text": "Per mile, an average passenger ferry produces 0.18120kg C0₂e."
+                },
+                {
+                    "header": "Planes",
+                    "text": "Per mile, an average short haul flight produces 0.29920kg C0₂e."
+                }
+            ],
+            "links": [
+                {
+                    "header": "Source",
+                    "url": "https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Nature",
+        "image": "leaf.fill",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Trees",
+                    "text": "Each year, the average tree removes 24.62kg of CO₂ from the atmosphere. Absorbed CO₂ is stored in the tree's trunk throughout it's lifetime."
+                },
+                {
+                    "header": "Plastic Bags",
+                    "text": "One single use plastic bag is equivalent to 1.58kg of CO₂e."
+                }
+            ],
+            "links": [
+                {
+                    "header": "Trees",
+                    "url": "https://www.fortomorrow.eu/en/blog/co2-tree"
+                },
+                {
+                    "header": "Plastic Bags",
+                    "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/291023/scho0711buan-e-e.pdf"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Food and Drink",
+        "image": "fork.knife",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Coffee",
+                    "text": "A single mug of coffee is equiavlent to 0.4kg of CO₂e."
+                },
+                {
+                    "header": "Wine",
+                    "text": "A single glass of wine is equiavlent to 0.13kg of CO₂e."
+                },
+                {
+                    "header": "Beef",
+                    "text": "Each 100g serving of beef is equivalent to 15.5kg of CO₂e."
+                },
+                {
+                    "header": "Carrots",
+                    "text": "Each carrot is equiavlent to 0.04kg of CO₂e."
+                }
+            ],
+            "links": [
+                {
+                    "header": "Source",
+                    "url": "https://www.researchgate.net/publication/325532198_Reducing_food%27s_environmental_impacts_through_producers_and_consumers"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Appliances",
+        "image": "washer.fill",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Washing Machines",
+                    "text": "One load in a washing machine is equivalent to 0.7kg of CO₂e."
+                },
+                {
+                    "header": "Tumble Dryers",
+                    "text": "One load in a tumble dryer is equivalent to 1.7kg of CO₂e."
+                }
+            ],
+            "links": [
+                {
+                    "header": "Source",
+                    "url": "https://www.thecapture.club/post/whats-the-carbon-footprint-of-my-laundry"
+                },
+            ]
+        }
+    },
+    {
+        "name": "Facts and Trivia",
+        "image": "doc.questionmark.fill",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Where do our facts come from?",
+                    "text": "Our facts and trivia come from a number of sources, all provided below!"
+                },
+            ],
+            "links": [
+                {
+                    "header": "EPA",
+                    "url": "https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data"
+                },
+                {
+                    "header": "The BBC",
+                    "url": "https://www.bbc.com/future/article/20200317-climate-change-cut-carbon-emissions-from-your-commute",
+                },
+                {
+                    "header": "The United Nations",
+                    "url": "https://www.un.org/en/actnow/facts-and-figures"
+                },
+                {
+                    "header": "The United Nations",
+                    "url": "https://www.unep.org/i nteractive/emissions-gap-report/2020/"
+                },
+                {
+                    "header": "The United Nations",
+                    "url": "https://www.unep.org/facts-about-climate-emergency"
+                },
+                {
+                    "header": "UK Gov",
+                    "url": "https://www.gov.uk/government/statistics/transport-and-environment-statistics-2022/transport-and-environment-statistics-2022"
+                },
+            ]
+        }
+    },
+]
+

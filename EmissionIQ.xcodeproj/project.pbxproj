@@ -26,6 +26,10 @@
 		76F8752E2B88F50D000EA3D7 /* ReusableButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8752D2B88F50D000EA3D7 /* ReusableButtonView.swift */; };
 		76F875302B88F52B000EA3D7 /* ReusableErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8752F2B88F52B000EA3D7 /* ReusableErrorView.swift */; };
 		76F875322B88F53E000EA3D7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875312B88F53E000EA3D7 /* LoadingView.swift */; };
+		76F875362B88F610000EA3D7 /* facts.json in Resources */ = {isa = PBXBuildFile; fileRef = 76F875342B88F610000EA3D7 /* facts.json */; };
+		76F875372B88F610000EA3D7 /* trivia.json in Resources */ = {isa = PBXBuildFile; fileRef = 76F875352B88F610000EA3D7 /* trivia.json */; };
+		76F875392B88F634000EA3D7 /* sources.json in Resources */ = {isa = PBXBuildFile; fileRef = 76F875382B88F62A000EA3D7 /* sources.json */; };
+		76F8753B2B88F652000EA3D7 /* topPicks.json in Resources */ = {isa = PBXBuildFile; fileRef = 76F8753A2B88F647000EA3D7 /* topPicks.json */; };
 		76FF34B62B7FA26B00101092 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 76FF34B52B7FA26B00101092 /* Vortex */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,10 @@
 		76F8752D2B88F50D000EA3D7 /* ReusableButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButtonView.swift; sourceTree = "<group>"; };
 		76F8752F2B88F52B000EA3D7 /* ReusableErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableErrorView.swift; sourceTree = "<group>"; };
 		76F875312B88F53E000EA3D7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		76F875342B88F610000EA3D7 /* facts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = facts.json; sourceTree = "<group>"; };
+		76F875352B88F610000EA3D7 /* trivia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trivia.json; sourceTree = "<group>"; };
+		76F875382B88F62A000EA3D7 /* sources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sources.json; sourceTree = "<group>"; };
+		76F8753A2B88F647000EA3D7 /* topPicks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = topPicks.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 		763274BC2B7D405500257FD2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				76F875332B88F5D3000EA3D7 /* Data Sources */,
 				76F875182B88F39C000EA3D7 /* 3D Models */,
 				76E306CF2B69578800112552 /* Assets.xcassets */,
 			);
@@ -200,6 +209,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		76F875332B88F5D3000EA3D7 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				76F875342B88F610000EA3D7 /* facts.json */,
+				76F875352B88F610000EA3D7 /* trivia.json */,
+				76F875382B88F62A000EA3D7 /* sources.json */,
+				76F8753A2B88F647000EA3D7 /* topPicks.json */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,9 +284,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F875362B88F610000EA3D7 /* facts.json in Resources */,
+				76F875392B88F634000EA3D7 /* sources.json in Resources */,
 				76F8751D2B88F39C000EA3D7 /* Silver.usdz in Resources */,
+				76F875372B88F610000EA3D7 /* trivia.json in Resources */,
 				76F8751E2B88F39C000EA3D7 /* Bronze.usdz in Resources */,
 				76E306D42B69578800112552 /* Preview Assets.xcassets in Resources */,
+				76F8753B2B88F652000EA3D7 /* topPicks.json in Resources */,
 				76E306DB2B6957A500112552 /* .gitignore in Resources */,
 				76E306D02B69578800112552 /* Assets.xcassets in Resources */,
 				76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */,
