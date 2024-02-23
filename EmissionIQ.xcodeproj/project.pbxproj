@@ -12,6 +12,11 @@
 		76E306D02B69578800112552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306CF2B69578800112552 /* Assets.xcassets */; };
 		76E306D42B69578800112552 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306D32B69578800112552 /* Preview Assets.xcassets */; };
 		76E306DB2B6957A500112552 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 76E306DA2B6957A500112552 /* .gitignore */; };
+		76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875142B88F2ED000EA3D7 /* DateExtension.swift */; };
+		76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875162B88F34E000EA3D7 /* RoundedSheet.swift */; };
+		76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F875192B88F39C000EA3D7 /* Gold.usdz */; };
+		76F8751D2B88F39C000EA3D7 /* Silver.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F8751A2B88F39C000EA3D7 /* Silver.usdz */; };
+		76F8751E2B88F39C000EA3D7 /* Bronze.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F8751B2B88F39C000EA3D7 /* Bronze.usdz */; };
 		76FF34B62B7FA26B00101092 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 76FF34B52B7FA26B00101092 /* Vortex */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +30,11 @@
 		76E306DA2B6957A500112552 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		76E306DC2B69580D00112552 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		76E306DD2B69583C00112552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F875142B88F2ED000EA3D7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		76F875162B88F34E000EA3D7 /* RoundedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSheet.swift; sourceTree = "<group>"; };
+		76F875192B88F39C000EA3D7 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
+		76F8751A2B88F39C000EA3D7 /* Silver.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Silver.usdz; sourceTree = "<group>"; };
+		76F8751B2B88F39C000EA3D7 /* Bronze.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bronze.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,7 @@
 		763274B82B7D3FDD00257FD2 /* View Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				76F875162B88F34E000EA3D7 /* RoundedSheet.swift */,
 			);
 			path = "View Modifiers";
 			sourceTree = "<group>";
@@ -49,6 +60,7 @@
 		763274B92B7D3FEF00257FD2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				76F875142B88F2ED000EA3D7 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -70,6 +82,7 @@
 		763274BC2B7D405500257FD2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				76F875182B88F39C000EA3D7 /* 3D Models */,
 				76E306CF2B69578800112552 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -132,6 +145,16 @@
 				76E306D32B69578800112552 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		76F875182B88F39C000EA3D7 /* 3D Models */ = {
+			isa = PBXGroup;
+			children = (
+				76F875192B88F39C000EA3D7 /* Gold.usdz */,
+				76F8751A2B88F39C000EA3D7 /* Silver.usdz */,
+				76F8751B2B88F39C000EA3D7 /* Bronze.usdz */,
+			);
+			path = "3D Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +221,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F8751D2B88F39C000EA3D7 /* Silver.usdz in Resources */,
+				76F8751E2B88F39C000EA3D7 /* Bronze.usdz in Resources */,
 				76E306D42B69578800112552 /* Preview Assets.xcassets in Resources */,
 				76E306DB2B6957A500112552 /* .gitignore in Resources */,
 				76E306D02B69578800112552 /* Assets.xcassets in Resources */,
+				76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76E306CE2B69578700112552 /* ContentView.swift in Sources */,
+				76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */,
 				76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */,
+				76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
