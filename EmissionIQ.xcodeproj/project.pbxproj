@@ -14,6 +14,8 @@
 		76087BA22B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA12B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift */; };
 		76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA32B8BD4BB005C2431 /* ConditionalPadding.swift */; };
 		76087BA62B8BD4D0005C2431 /* ConditionalContentMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA52B8BD4D0005C2431 /* ConditionalContentMargins.swift */; };
+		76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BAE2B8BD5C7005C2431 /* LocationManager.swift */; };
+		76087BB12B8BD5D1005C2431 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BB02B8BD5D1005C2431 /* NotificationManager.swift */; };
 		76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CB2B69578700112552 /* EmissionIQApp.swift */; };
 		76E306CE2B69578700112552 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CD2B69578700112552 /* ContentView.swift */; };
 		76E306D02B69578800112552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306CF2B69578800112552 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		76087BA12B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalContainerRelativeFrame.swift; sourceTree = "<group>"; };
 		76087BA32B8BD4BB005C2431 /* ConditionalPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalPadding.swift; sourceTree = "<group>"; };
 		76087BA52B8BD4D0005C2431 /* ConditionalContentMargins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalContentMargins.swift; sourceTree = "<group>"; };
+		76087BAE2B8BD5C7005C2431 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		76087BB02B8BD5D1005C2431 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		76E306C82B69578700112552 /* EmissionIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmissionIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E306CB2B69578700112552 /* EmissionIQApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionIQApp.swift; sourceTree = "<group>"; };
 		76E306CD2B69578700112552 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +93,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76087BA72B8BD4FB005C2431 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				76087BAE2B8BD5C7005C2431 /* LocationManager.swift */,
+				76087BB02B8BD5D1005C2431 /* NotificationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		76087BA82B8BD555005C2431 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		76087BA92B8BD562005C2431 /* Journeys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Journeys;
+			sourceTree = "<group>";
+		};
+		76087BAA2B8BD566005C2431 /* Trophies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Trophies;
+			sourceTree = "<group>";
+		};
+		76087BAB2B8BD56B005C2431 /* Leaderboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Leaderboards;
+			sourceTree = "<group>";
+		};
+		76087BAC2B8BD571005C2431 /* Learning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Learning;
+			sourceTree = "<group>";
+		};
+		76087BAD2B8BD593005C2431 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		763274B82B7D3FDD00257FD2 /* View Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +180,12 @@
 		763274BB2B7D401A00257FD2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				76087BAD2B8BD593005C2431 /* Onboarding */,
+				76087BA82B8BD555005C2431 /* Home */,
+				76087BA92B8BD562005C2431 /* Journeys */,
+				76087BAA2B8BD566005C2431 /* Trophies */,
+				76087BAB2B8BD56B005C2431 /* Leaderboards */,
+				76087BAC2B8BD571005C2431 /* Learning */,
 				76F875252B88F489000EA3D7 /* Utilities */,
 			);
 			path = Modules;
@@ -183,6 +244,7 @@
 				763274B82B7D3FDD00257FD2 /* View Modifiers */,
 				763274B92B7D3FEF00257FD2 /* Extensions */,
 				763274BA2B7D3FFE00257FD2 /* Structs */,
+				76087BA72B8BD4FB005C2431 /* Managers */,
 				763274BB2B7D401A00257FD2 /* Modules */,
 				763274BC2B7D405500257FD2 /* Resources */,
 				763274BE2B7D409E00257FD2 /* Supporting Files */,
@@ -329,6 +391,7 @@
 				76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */,
 				76087B9A2B8BD469005C2431 /* ListSectionTag.swift in Sources */,
 				76F8752A2B88F4C8000EA3D7 /* GalleryHeaderView.swift in Sources */,
+				76087BB12B8BD5D1005C2431 /* NotificationManager.swift in Sources */,
 				76F875282B88F4A6000EA3D7 /* GlassEffectView.swift in Sources */,
 				76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */,
 				76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */,
@@ -342,6 +405,7 @@
 				76F875322B88F53E000EA3D7 /* LoadingView.swift in Sources */,
 				76F875242B88F44B000EA3D7 /* WebView.swift in Sources */,
 				76087B9C2B8BD47B005C2431 /* LocationTextField.swift in Sources */,
+				76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */,
 				76087BA02B8BD49B005C2431 /* ChartTitle.swift in Sources */,
 				76087BA62B8BD4D0005C2431 /* ConditionalContentMargins.swift in Sources */,
 				76087B9E2B8BD489005C2431 /* PillText.swift in Sources */,
