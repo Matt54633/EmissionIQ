@@ -18,7 +18,7 @@ struct PageHeaderView<Content: View>: View {
     }
     
     var body: some View {
-        ZStack(alignment: .leading) {
+        ZStack(alignment: .top) {
             WavyRectangle()
                 .fill(.primaryGreen)
             
@@ -29,12 +29,11 @@ struct PageHeaderView<Content: View>: View {
                     .foregroundStyle(.white)
                 
                 Spacer()
-                
+        
                 content
-                
             }
-            .padding()
-            .padding(.top, 30)
+            .modifier(ConditionalPadding())
+            .padding(EdgeInsets(top: 60, leading: 15, bottom: 0, trailing: 15))
         }
         .ignoresSafeArea(.all)
     }

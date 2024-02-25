@@ -20,4 +20,10 @@ extension Date {
         formatter.dateFormat = "dd MMMM yyyy"
         return formatter.string(from: self)
     }
+    
+    var endOfWeek: Date {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)
+        return calendar.date(from: components)!.addingTimeInterval(6 * 24 * 60 * 60)
+    }
 }

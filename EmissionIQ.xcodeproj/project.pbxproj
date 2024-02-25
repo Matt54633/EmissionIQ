@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76087B9A2B8BD469005C2431 /* ListSectionTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087B992B8BD469005C2431 /* ListSectionTag.swift */; };
+		76087B9C2B8BD47B005C2431 /* LocationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087B9B2B8BD47B005C2431 /* LocationTextField.swift */; };
+		76087B9E2B8BD489005C2431 /* PillText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087B9D2B8BD489005C2431 /* PillText.swift */; };
+		76087BA02B8BD49B005C2431 /* ChartTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087B9F2B8BD49B005C2431 /* ChartTitle.swift */; };
+		76087BA22B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA12B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift */; };
+		76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA32B8BD4BB005C2431 /* ConditionalPadding.swift */; };
+		76087BA62B8BD4D0005C2431 /* ConditionalContentMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA52B8BD4D0005C2431 /* ConditionalContentMargins.swift */; };
 		76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CB2B69578700112552 /* EmissionIQApp.swift */; };
 		76E306CE2B69578700112552 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CD2B69578700112552 /* ContentView.swift */; };
 		76E306D02B69578800112552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306CF2B69578800112552 /* Assets.xcassets */; };
@@ -34,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76087B992B8BD469005C2431 /* ListSectionTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSectionTag.swift; sourceTree = "<group>"; };
+		76087B9B2B8BD47B005C2431 /* LocationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTextField.swift; sourceTree = "<group>"; };
+		76087B9D2B8BD489005C2431 /* PillText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillText.swift; sourceTree = "<group>"; };
+		76087B9F2B8BD49B005C2431 /* ChartTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTitle.swift; sourceTree = "<group>"; };
+		76087BA12B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalContainerRelativeFrame.swift; sourceTree = "<group>"; };
+		76087BA32B8BD4BB005C2431 /* ConditionalPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalPadding.swift; sourceTree = "<group>"; };
+		76087BA52B8BD4D0005C2431 /* ConditionalContentMargins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalContentMargins.swift; sourceTree = "<group>"; };
 		76E306C82B69578700112552 /* EmissionIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmissionIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E306CB2B69578700112552 /* EmissionIQApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionIQApp.swift; sourceTree = "<group>"; };
 		76E306CD2B69578700112552 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +93,13 @@
 			isa = PBXGroup;
 			children = (
 				76F875162B88F34E000EA3D7 /* RoundedSheet.swift */,
+				76087B992B8BD469005C2431 /* ListSectionTag.swift */,
+				76087B9B2B8BD47B005C2431 /* LocationTextField.swift */,
+				76087B9D2B8BD489005C2431 /* PillText.swift */,
+				76087B9F2B8BD49B005C2431 /* ChartTitle.swift */,
+				76087BA12B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift */,
+				76087BA32B8BD4BB005C2431 /* ConditionalPadding.swift */,
+				76087BA52B8BD4D0005C2431 /* ConditionalContentMargins.swift */,
 			);
 			path = "View Modifiers";
 			sourceTree = "<group>";
@@ -306,9 +327,12 @@
 			files = (
 				76E306CE2B69578700112552 /* ContentView.swift in Sources */,
 				76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */,
+				76087B9A2B8BD469005C2431 /* ListSectionTag.swift in Sources */,
 				76F8752A2B88F4C8000EA3D7 /* GalleryHeaderView.swift in Sources */,
 				76F875282B88F4A6000EA3D7 /* GlassEffectView.swift in Sources */,
 				76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */,
+				76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */,
+				76087BA22B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift in Sources */,
 				76F875222B88F42F000EA3D7 /* Ribbon.swift in Sources */,
 				76F8752C2B88F4E7000EA3D7 /* PageHeaderView.swift in Sources */,
 				76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */,
@@ -317,6 +341,10 @@
 				76F875302B88F52B000EA3D7 /* ReusableErrorView.swift in Sources */,
 				76F875322B88F53E000EA3D7 /* LoadingView.swift in Sources */,
 				76F875242B88F44B000EA3D7 /* WebView.swift in Sources */,
+				76087B9C2B8BD47B005C2431 /* LocationTextField.swift in Sources */,
+				76087BA02B8BD49B005C2431 /* ChartTitle.swift in Sources */,
+				76087BA62B8BD4D0005C2431 /* ConditionalContentMargins.swift in Sources */,
+				76087B9E2B8BD489005C2431 /* PillText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
