@@ -8,7 +8,7 @@
         "answer": "Methane (CH4)"
     },
     {
-        "question": "Which country is the largest emitter of carbon dioxide (CO2) globally?",
+        "question": "Which country is the largest emitter of carbon dioxide (CO₂) globally?",
         "answer": "China"
     },
     {
@@ -17,7 +17,7 @@
     },
     {
         "question": "What is the primary greenhouse gas emitted by the burning of fossil fuels?",
-        "answer": "Carbon Dioxide (CO2)"
+        "answer": "Carbon Dioxide (CO₂)"
     },
     {
         "question": "Which mode of transport is typically the largest contributor to greenhouse gas emissions?",
