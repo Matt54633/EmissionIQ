@@ -15,8 +15,7 @@ class PublicDataManager: ObservableObject {
     static let shared = PublicDataManager()
     
     private let userRecordType = "PublicUser"
-    private let defaultContainer = CKContainer.default()
-    private let publicDatabase = CKContainer.default().publicCloudDatabase
+    private let publicDatabase = CKContainer(identifier: "iCloud.matt54633.emissionIQ").publicCloudDatabase
     private var currentUserId: String?
     
     private init() {

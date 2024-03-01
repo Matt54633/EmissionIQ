@@ -16,8 +16,7 @@ class LevelManager {
     private let levelRecordType = "Level"
     private let levelKey = "level"
     private let xpKey = "xp"
-    private let defaultContainer = CKContainer.default()
-    private let privateDatabase = CKContainer.default().privateCloudDatabase
+    private let privateDatabase = CKContainer(identifier: "iCloud.matt54633.emissionIQ").privateCloudDatabase
     
     private init() {}
     
