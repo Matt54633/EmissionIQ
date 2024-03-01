@@ -12,17 +12,21 @@ struct ListSectionTag: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
     
     func body(content: Content) -> some View {
-        content
-            .padding(EdgeInsets(top: 6, leading: 12, bottom: 6, trailing: 12))
-            .font(.headline)
-            .fontWeight(.semibold)
-            .background(
-                RoundedRectangle(cornerRadius: 100)
-                    .fill(.primaryGreen.opacity(colorScheme == .dark ? 0.25 : 0.125))
-            )
-            .padding(.vertical, 10)
-            .foregroundStyle(.primaryGreen)
-            .listRowInsets(EdgeInsets())
-            .textCase(nil)
+        HStack {
+            Image(systemName: "calendar")
+                .foregroundStyle(.primaryGreen)
+            content
+                .foregroundStyle(colorScheme == .dark ? .white : .black)
+        }
+        .padding(EdgeInsets(top: 7.5, leading: 15, bottom: 7.5, trailing: 15))
+        .font(.system(size: 16))
+        .fontWeight(.semibold)
+        .background(
+            Capsule()
+                .fill(colorScheme == .dark ? Color(.tertiarySystemBackground).opacity(0.75) : Color(.secondarySystemBackground))
+        )
+        .padding(.vertical, 10)
+        .listRowInsets(EdgeInsets())
+        .textCase(nil)
     }
 }

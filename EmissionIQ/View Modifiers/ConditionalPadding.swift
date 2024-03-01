@@ -13,7 +13,7 @@ struct ConditionalPadding: ViewModifier {
     
     func body(content: Content) -> some View {
         if horizontalSizeClass == .regular {
-            return content.padding(.horizontal, 65)
+            return content.padding(.horizontal, 70)
         } else {
             // compact horizontal size class
             return content.padding(.horizontal, 0)

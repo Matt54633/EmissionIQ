@@ -7,14 +7,28 @@
 
 import Foundation
 
-// Extension creates a readable format in different formats
+// Extension creates a readable formats
 extension Date {
-    var firstDayOfWeek: String {
+    var weekFormattedDate: String {
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: self)
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .ordinal
+        let dayOrdinal = numberFormatter.string(from: NSNumber(value: day))
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM"
+        
+        return "\(dayOrdinal ?? "") \(formatter.string(from: self))"
+    }
+    
+    var shortFormattedDate: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yy"
         return formatter.string(from: self)
     }
-
+    
     var longFormattedDate: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM yyyy"
