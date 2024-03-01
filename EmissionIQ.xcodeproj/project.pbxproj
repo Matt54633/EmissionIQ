@@ -14,7 +14,6 @@
 		76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA32B8BD4BB005C2431 /* ConditionalPadding.swift */; };
 		76087BA62B8BD4D0005C2431 /* ConditionalContentMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA52B8BD4D0005C2431 /* ConditionalContentMargins.swift */; };
 		76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BAE2B8BD5C7005C2431 /* LocationManager.swift */; };
-		76087BB12B8BD5D1005C2431 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BB02B8BD5D1005C2431 /* NotificationManager.swift */; };
 		765FA8902B91EC3000030EC1 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA88F2B91EC3000030EC1 /* Source.swift */; };
 		765FA8922B91EC4F00030EC1 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8912B91EC4F00030EC1 /* Details.swift */; };
 		765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8932B91EC8700030EC1 /* SourceLink.swift */; };
@@ -25,6 +24,16 @@
 		765FA89E2B91ECE600030EC1 /* TopPicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA89D2B91ECE600030EC1 /* TopPicks.swift */; };
 		765FA8A02B91ECEE00030EC1 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA89F2B91ECEE00030EC1 /* Trivia.swift */; };
 		765FA8A22B91ED0200030EC1 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8A12B91ED0200030EC1 /* Fact.swift */; };
+		765FA8A62B91ED7500030EC1 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8A52B91ED7500030EC1 /* OnboardingViewModel.swift */; };
+		765FA8A82B91ED9800030EC1 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8A72B91ED9800030EC1 /* OnboardingStartView.swift */; };
+		765FA8AA2B91EDAD00030EC1 /* OnboardingSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8A92B91EDAD00030EC1 /* OnboardingSignInView.swift */; };
+		765FA8AC2B91EDC300030EC1 /* OnboardingLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8AB2B91EDC300030EC1 /* OnboardingLocationView.swift */; };
+		765FA8AE2B91EDD600030EC1 /* OnboardingNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8AD2B91EDD600030EC1 /* OnboardingNotificationView.swift */; };
+		765FA8B02B91EDE600030EC1 /* OnboardingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8AF2B91EDE600030EC1 /* OnboardingDetailView.swift */; };
+		765FA8B42B91EE4600030EC1 /* PublicDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8B32B91EE4600030EC1 /* PublicDataManager.swift */; };
+		765FA8B62B91EE6300030EC1 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8B52B91EE6300030EC1 /* LevelManager.swift */; };
+		765FA8B72B91F24F00030EC1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BB02B8BD5D1005C2431 /* NotificationManager.swift */; };
+		765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8B12B91EE2200030EC1 /* PrivateDataManager.swift */; };
 		76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CB2B69578700112552 /* EmissionIQApp.swift */; };
 		76E306CE2B69578700112552 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CD2B69578700112552 /* ContentView.swift */; };
 		76E306D02B69578800112552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306CF2B69578800112552 /* Assets.xcassets */; };
@@ -70,6 +79,15 @@
 		765FA89D2B91ECE600030EC1 /* TopPicks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicks.swift; sourceTree = "<group>"; };
 		765FA89F2B91ECEE00030EC1 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 		765FA8A12B91ED0200030EC1 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		765FA8A52B91ED7500030EC1 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		765FA8A72B91ED9800030EC1 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
+		765FA8A92B91EDAD00030EC1 /* OnboardingSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSignInView.swift; sourceTree = "<group>"; };
+		765FA8AB2B91EDC300030EC1 /* OnboardingLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLocationView.swift; sourceTree = "<group>"; };
+		765FA8AD2B91EDD600030EC1 /* OnboardingNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNotificationView.swift; sourceTree = "<group>"; };
+		765FA8AF2B91EDE600030EC1 /* OnboardingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDetailView.swift; sourceTree = "<group>"; };
+		765FA8B12B91EE2200030EC1 /* PrivateDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateDataManager.swift; sourceTree = "<group>"; };
+		765FA8B32B91EE4600030EC1 /* PublicDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDataManager.swift; sourceTree = "<group>"; };
+		765FA8B52B91EE6300030EC1 /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
 		76E306C82B69578700112552 /* EmissionIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmissionIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E306CB2B69578700112552 /* EmissionIQApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionIQApp.swift; sourceTree = "<group>"; };
 		76E306CD2B69578700112552 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +134,9 @@
 			children = (
 				76087BAE2B8BD5C7005C2431 /* LocationManager.swift */,
 				76087BB02B8BD5D1005C2431 /* NotificationManager.swift */,
+				765FA8B12B91EE2200030EC1 /* PrivateDataManager.swift */,
+				765FA8B32B91EE4600030EC1 /* PublicDataManager.swift */,
+				765FA8B52B91EE6300030EC1 /* LevelManager.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -158,6 +179,8 @@
 		76087BAD2B8BD593005C2431 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				765FA8A32B91ED5B00030EC1 /* Views */,
+				765FA8A42B91ED6100030EC1 /* ViewModels */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -243,6 +266,26 @@
 				76E306CD2B69578700112552 /* ContentView.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		765FA8A32B91ED5B00030EC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				765FA8A72B91ED9800030EC1 /* OnboardingStartView.swift */,
+				765FA8A92B91EDAD00030EC1 /* OnboardingSignInView.swift */,
+				765FA8AB2B91EDC300030EC1 /* OnboardingLocationView.swift */,
+				765FA8AD2B91EDD600030EC1 /* OnboardingNotificationView.swift */,
+				765FA8AF2B91EDE600030EC1 /* OnboardingDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		765FA8A42B91ED6100030EC1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				765FA8A52B91ED7500030EC1 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		76E306BF2B69578700112552 = {
@@ -417,11 +460,15 @@
 				765FA89C2B91ECDB00030EC1 /* Articles.swift in Sources */,
 				765FA8982B91ECA600030EC1 /* Article.swift in Sources */,
 				76E306CE2B69578700112552 /* ContentView.swift in Sources */,
+				765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */,
+				765FA8AC2B91EDC300030EC1 /* OnboardingLocationView.swift in Sources */,
+				765FA8A82B91ED9800030EC1 /* OnboardingStartView.swift in Sources */,
+				765FA8A62B91ED7500030EC1 /* OnboardingViewModel.swift in Sources */,
 				76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */,
 				76087B9A2B8BD469005C2431 /* ListSectionTag.swift in Sources */,
+				765FA8B62B91EE6300030EC1 /* LevelManager.swift in Sources */,
 				76F8752A2B88F4C8000EA3D7 /* GalleryHeaderView.swift in Sources */,
 				765FA8902B91EC3000030EC1 /* Source.swift in Sources */,
-				76087BB12B8BD5D1005C2431 /* NotificationManager.swift in Sources */,
 				76F875282B88F4A6000EA3D7 /* GlassEffectView.swift in Sources */,
 				76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */,
 				765FA8922B91EC4F00030EC1 /* Details.swift in Sources */,
@@ -432,16 +479,21 @@
 				765FA89A2B91ECBE00030EC1 /* ArticleSource.swift in Sources */,
 				76F875222B88F42F000EA3D7 /* Ribbon.swift in Sources */,
 				76F8752C2B88F4E7000EA3D7 /* PageHeaderView.swift in Sources */,
+				765FA8B72B91F24F00030EC1 /* NotificationManager.swift in Sources */,
 				76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */,
 				76F8752E2B88F50D000EA3D7 /* ReusableButtonView.swift in Sources */,
+				765FA8B02B91EDE600030EC1 /* OnboardingDetailView.swift in Sources */,
 				76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */,
 				76F875302B88F52B000EA3D7 /* ReusableErrorView.swift in Sources */,
 				765FA8A02B91ECEE00030EC1 /* Trivia.swift in Sources */,
+				765FA8AA2B91EDAD00030EC1 /* OnboardingSignInView.swift in Sources */,
 				76F875322B88F53E000EA3D7 /* LoadingView.swift in Sources */,
 				765FA8A22B91ED0200030EC1 /* Fact.swift in Sources */,
 				76F875242B88F44B000EA3D7 /* WebView.swift in Sources */,
 				76087B9C2B8BD47B005C2431 /* LocationTextField.swift in Sources */,
+				765FA8B42B91EE4600030EC1 /* PublicDataManager.swift in Sources */,
 				76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */,
+				765FA8AE2B91EDD600030EC1 /* OnboardingNotificationView.swift in Sources */,
 				765FA8962B91EC9900030EC1 /* Paragraph.swift in Sources */,
 				76087BA02B8BD49B005C2431 /* ChartTitle.swift in Sources */,
 				76087BA62B8BD4D0005C2431 /* ConditionalContentMargins.swift in Sources */,
@@ -582,6 +634,7 @@
 				INFOPLIST_FILE = EmissionIQ/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EmissionIQ;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to provide accurate routing for your journeys!";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -626,6 +679,7 @@
 				INFOPLIST_FILE = EmissionIQ/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EmissionIQ;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to provide accurate routing for your journeys!";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

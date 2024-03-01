@@ -7,9 +7,22 @@
 
 import SwiftUI
 
+// OnboardingSignInView prevents the user progressing through onboarding until they sign into iCloud
 struct OnboardingSignInView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            OnboardingDetailView(image: "icloud.circle.fill", title: "Please sign into iCloud", subTitle: "EmissionIQ uses iCloud to sync your emissions across your devices, provide real-time leaderboards and more. ", systemImage: true)
+            
+            Button(action: {
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url)
+                }
+            }) {
+                ReusableButtonView(backgroundColour: .primaryGreen, text: "Open Settings", textColor: .white, opacity: 1.0, radius: 15, disabled: nil)
+            }
+        }
+        .padding(.horizontal)
+        .modifier(RoundedSheet(radius: 25, height: .medium))
     }
 }
 

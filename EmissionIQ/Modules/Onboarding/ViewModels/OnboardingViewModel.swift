@@ -5,14 +5,38 @@
 //  Created by Matt Sullivan on 01/03/2024.
 //
 
-import SwiftUI
+import Foundation
+import CloudKit
 
-struct OnboardingViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class OnboardingViewModel: ObservableObject {
+    @Published var userNotSignedIn: Bool = false
+    @Published var displaySheet: Bool = false
+    
+    init() {
+        checkICloudSignInStatus()
     }
-}
-
-#Preview {
-    OnboardingViewModel()
+    
+    // check if the device is signed into iCloud
+    func checkICloudSignInStatus() {
+        CKContainer.default().accountStatus { (accountStatus, error) in
+            DispatchQueue.main.async {
+                if accountStatus == .noAccount {
+                    self.userNotSignedIn = true
+                    self.displaySheet = true
+                } else {
+                    self.userNotSignedIn = false
+                    self.displaySheet = false
+                }
+            }
+        }
+    }
+    
+    // create user if required
+    func createUser() {        
+        PrivateDataManager.shared.createUser { result, error in
+            if let userId = result?.userId {
+                PublicDataManager.shared.createUserRecord(userId: userId) { record, error in }
+            }
+        }
+    }
 }
