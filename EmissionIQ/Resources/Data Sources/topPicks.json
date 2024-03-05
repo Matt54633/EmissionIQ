@@ -1,0 +1,74 @@
+{
+    "articles": [
+        {
+            "source": {
+                "name": "Energy Saving Trust"
+            },
+            "title": "Top tips to reduce your carbon emissions",
+            "url": "https://energysavingtrust.org.uk/top-tips-to-reduce-your-carbon-emissions/"
+        },
+        {
+            "source": {
+                "name": "BBC News"
+            },
+            "title": "Six ways to lower your carbon emissions quickly",
+            "url": "https://www.bbc.com/future/article/20230421-what-are-the-best-ways-to-reduce-carbon-footprint"
+        },
+        {
+            "source": {
+                "name": "Circular Ecology"
+            },
+            "title": "Environmental Impacts",
+            "url": "https://circularecology.com/environmental-impacts.html"
+        },
+        {
+            "source": {
+                "name": "Modeshift"
+            },
+            "title": "What Is The Importance Of A Carbon Footprint: Everything You Need To Know",
+            "url": "https://www.modeshift.com/what-is-the-importance-of-a-carbon-footprint-everything-you-need-to-know/"
+        },
+        {
+            "source": {
+                "name": "United Nations"
+            },
+            "title": "What is Climate Change?",
+            "url": "https://www.un.org/en/climatechange/what-is-climate-change"
+        },
+        {
+            "source": {
+                "name": "NASA"
+            },
+            "title": "The Effects of Climate Change",
+            "url": "https://climate.nasa.gov/effects/"
+        },
+        {
+            "source": {
+                "name": "European Environment Agency"
+            },
+            "title": "Transport and Mobility",
+            "url": "https://www.eea.europa.eu/en/topics/in-depth/transport-and-mobility"
+        },
+        {
+            "source": {
+                "name": "European Environment Agency"
+            },
+            "title": "Greenhouse gas emissions from transport in Europe",
+            "url": "https://www.eea.europa.eu/en/analysis/indicators/greenhouse-gas-emissions-from-transport"
+        },
+        {
+            "source": {
+                "name": "United Nations"
+            },
+            "title": "The Paris Agreement",
+            "url": "https://unfccc.int/process-and-meetings/the-paris-agreement"
+        },
+        {
+            "source": {
+                "name": "United Nations"
+            },
+            "title": "Conference of the Parties (COP)",
+            "url": "https://unfccc.int/process/bodies/supreme-bodies/conference-of-the-parties-cop"
+        }
+    ]
+}

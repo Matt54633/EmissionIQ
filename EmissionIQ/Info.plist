@@ -4,12 +4,14 @@
 <dict>
 	<key>GOOGLE_API_KEY</key>
 	<string>$(GOOGLE_API_KEY)</string>
-	<key>NEWS_API_KEY</key>
-	<string>$(NEWS_API_KEY)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>NEWS_API_KEY</key>
+	<string>$(NEWS_API_KEY)</string>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>audio</string>
+		<string>fetch</string>
 		<string>processing</string>
 		<string>remote-notification</string>
 	</array>

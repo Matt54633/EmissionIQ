@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What is the Paris agreement's climate threshold in degrees?",
+        "answer": "1.5°C above pre-industrial levels"
+    },
+    {
+        "question": "What is the main greenhouse gas emitted by agricultural activities?",
+        "answer": "Methane (CH4)"
+    },
+    {
+        "question": "Which country is the largest emitter of carbon dioxide (CO₂) globally?",
+        "answer": "China"
+    },
+    {
+        "question": "Which sector is the largest source of greenhouse gas emissions globally?",
+        "answer": "The Energy Sector"
+    },
+    {
+        "question": "What is the primary greenhouse gas emitted by the burning of fossil fuels?",
+        "answer": "Carbon Dioxide (CO₂)"
+    },
+    {
+        "question": "Which mode of transport is typically the largest contributor to greenhouse gas emissions?",
+        "answer": "Private cars"
+    },
+    {
+        "question": "Which sector is the second-largest source of greenhouse gas emissions globally?",
+        "answer": "The Agriculture Sector"
+    },
+    {
+        "question": "What percentage of global greenhouse gas emissions are estimated to come from the transportation sector?",
+        "answer": "14%"
+    },
+    {
+        "question": "What gas is emitted in significant quantities by diesel-powered vehicles?",
+        "answer": "Nitrogen Oxides (NOx)"
+    },
+    {
+        "question": "What is the primary source of emissions from shipping vessels?",
+        "answer": "The burning of heavy fuel oil"
+    }
+]
