@@ -19,6 +19,9 @@ struct LocationTextField: ViewModifier {
             .lineLimit(1)
             .padding(10)
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, alignment: paddingDirection)
-            .background(UnevenRoundedRectangle(topLeadingRadius: radiusValues[0], bottomLeadingRadius: radiusValues[1], bottomTrailingRadius: radiusValues[2], topTrailingRadius: radiusValues[3]).fill(colorScheme == .dark ? .quaternary : .quinary))
+            .background(
+                UnevenRoundedRectangle(topLeadingRadius: radiusValues[0], bottomLeadingRadius: radiusValues[1], bottomTrailingRadius: radiusValues[2], topTrailingRadius: radiusValues[3])
+                    .fill(colorScheme == .dark ? .quaternary : .quinary)
+            )
     }
 }

@@ -15,7 +15,6 @@ struct ConditionalPadding: ViewModifier {
         if horizontalSizeClass == .regular {
             return content.padding(.horizontal, 70)
         } else {
-            // compact horizontal size class
             return content.padding(.horizontal, 0)
         }
     }

@@ -14,6 +14,7 @@ struct EmissionIQApp: App {
         WindowGroup {
             ContentView()
                 .fontDesign(.rounded)
+                .modifier(MacModifier())
                 .task {
                     try? Tips.configure([
                         .displayFrequency(.immediate),

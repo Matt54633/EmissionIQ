@@ -14,6 +14,7 @@ struct Ribbon: Shape {
         var path = Path()
         let width = rect.size.width
         let height = rect.size.height
+        
         path.move(to: CGPoint(x: 0.99957*width, y: height))
         path.addLine(to: CGPoint(x: 0.91709*width, y: height))
         path.addLine(to: CGPoint(x: 0.77863*width, y: height))

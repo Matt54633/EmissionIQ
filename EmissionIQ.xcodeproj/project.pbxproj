@@ -14,6 +14,10 @@
 		76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA32B8BD4BB005C2431 /* ConditionalPadding.swift */; };
 		76087BA62B8BD4D0005C2431 /* ConditionalContentMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BA52B8BD4D0005C2431 /* ConditionalContentMargins.swift */; };
 		76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BAE2B8BD5C7005C2431 /* LocationManager.swift */; };
+		761A884B2B97DDC000F85ABB /* MacModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A884A2B97DDC000F85ABB /* MacModifier.swift */; };
+		761A884D2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A884C2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift */; };
+		761A884F2B97DE3A00F85ABB /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A884E2B97DE3A00F85ABB /* UIScreen.swift */; };
+		761A88512B97DE4B00F85ABB /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A88502B97DE4B00F85ABB /* UIWindow.swift */; };
 		765FA8902B91EC3000030EC1 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA88F2B91EC3000030EC1 /* Source.swift */; };
 		765FA8922B91EC4F00030EC1 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8912B91EC4F00030EC1 /* Details.swift */; };
 		765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8932B91EC8700030EC1 /* SourceLink.swift */; };
@@ -69,6 +73,10 @@
 		76087BA52B8BD4D0005C2431 /* ConditionalContentMargins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalContentMargins.swift; sourceTree = "<group>"; };
 		76087BAE2B8BD5C7005C2431 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		76087BB02B8BD5D1005C2431 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		761A884A2B97DDC000F85ABB /* MacModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacModifier.swift; sourceTree = "<group>"; };
+		761A884C2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalScrollTargetBehaviour.swift; sourceTree = "<group>"; };
+		761A884E2B97DE3A00F85ABB /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
+		761A88502B97DE4B00F85ABB /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		765FA88F2B91EC3000030EC1 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		765FA8912B91EC4F00030EC1 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		765FA8932B91EC8700030EC1 /* SourceLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLink.swift; sourceTree = "<group>"; };
@@ -203,6 +211,8 @@
 				76087BA12B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift */,
 				76087BA32B8BD4BB005C2431 /* ConditionalPadding.swift */,
 				76087BA52B8BD4D0005C2431 /* ConditionalContentMargins.swift */,
+				761A884C2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift */,
+				761A884A2B97DDC000F85ABB /* MacModifier.swift */,
 			);
 			path = "View Modifiers";
 			sourceTree = "<group>";
@@ -211,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				76F875142B88F2ED000EA3D7 /* DateExtension.swift */,
+				761A884E2B97DE3A00F85ABB /* UIScreen.swift */,
+				761A88502B97DE4B00F85ABB /* UIWindow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -482,6 +494,7 @@
 				76F875282B88F4A6000EA3D7 /* GlassEffectView.swift in Sources */,
 				76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */,
 				765FA8922B91EC4F00030EC1 /* Details.swift in Sources */,
+				761A88512B97DE4B00F85ABB /* UIWindow.swift in Sources */,
 				765FA89E2B91ECE600030EC1 /* TopPicks.swift in Sources */,
 				76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */,
 				765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */,
@@ -491,16 +504,19 @@
 				76F8752C2B88F4E7000EA3D7 /* PageHeaderView.swift in Sources */,
 				765FA8B72B91F24F00030EC1 /* NotificationManager.swift in Sources */,
 				76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */,
+				761A884F2B97DE3A00F85ABB /* UIScreen.swift in Sources */,
 				76F8752E2B88F50D000EA3D7 /* ReusableButtonView.swift in Sources */,
 				765FA8B02B91EDE600030EC1 /* OnboardingDetailView.swift in Sources */,
 				76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */,
 				76F875302B88F52B000EA3D7 /* ReusableErrorView.swift in Sources */,
 				765FA8A02B91ECEE00030EC1 /* Trivia.swift in Sources */,
 				765FA8AA2B91EDAD00030EC1 /* OnboardingSignInView.swift in Sources */,
+				761A884D2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift in Sources */,
 				76F875322B88F53E000EA3D7 /* LoadingView.swift in Sources */,
 				765FA8A22B91ED0200030EC1 /* Fact.swift in Sources */,
 				76F875242B88F44B000EA3D7 /* WebView.swift in Sources */,
 				76087B9C2B8BD47B005C2431 /* LocationTextField.swift in Sources */,
+				761A884B2B97DDC000F85ABB /* MacModifier.swift in Sources */,
 				765FA8B42B91EE4600030EC1 /* PublicDataManager.swift in Sources */,
 				76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */,
 				765FA8AE2B91EDD600030EC1 /* OnboardingNotificationView.swift in Sources */,

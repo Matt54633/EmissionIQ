@@ -11,7 +11,7 @@ import SwiftUI
 struct ConditionalContainerRelativeFrame: ViewModifier {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     var fixedWidth: CGFloat
-
+    
     func body(content: Content) -> some View {
         if horizontalSizeClass == .compact {
             content.containerRelativeFrame(.horizontal)

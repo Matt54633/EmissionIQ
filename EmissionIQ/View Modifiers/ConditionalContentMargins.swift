@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-// Conditionally apply padding for larger screens
+// Conditionally apply content margins for larger screens
 struct ConditionalContentMargins: ViewModifier {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
     func body(content: Content) -> some View {
         if horizontalSizeClass == .regular {
-            return content.contentMargins(.horizontal, 80, for: .scrollContent)
+            return content.contentMargins(.horizontal, 90, for: .scrollContent)
         } else {
             return content.contentMargins(.horizontal, 20, for: .scrollContent)
         }
