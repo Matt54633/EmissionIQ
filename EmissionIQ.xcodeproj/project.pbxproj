@@ -88,6 +88,7 @@
 		765FA8B12B91EE2200030EC1 /* PrivateDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateDataManager.swift; sourceTree = "<group>"; };
 		765FA8B32B91EE4600030EC1 /* PublicDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDataManager.swift; sourceTree = "<group>"; };
 		765FA8B52B91EE6300030EC1 /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
+		768FAAB72B93AB3A00DE4127 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		76E306C82B69578700112552 /* EmissionIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmissionIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E306CB2B69578700112552 /* EmissionIQApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionIQApp.swift; sourceTree = "<group>"; };
 		76E306CD2B69578700112552 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -236,7 +237,7 @@
 				76087BAA2B8BD566005C2431 /* Trophies */,
 				76087BAB2B8BD56B005C2431 /* Leaderboards */,
 				76087BAC2B8BD571005C2431 /* Learning */,
-				76F875252B88F489000EA3D7 /* Utilities */,
+				76F875252B88F489000EA3D7 /* Components */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -291,6 +292,7 @@
 		76E306BF2B69578700112552 = {
 			isa = PBXGroup;
 			children = (
+				768FAAB72B93AB3A00DE4127 /* README.md */,
 				76E306DA2B6957A500112552 /* .gitignore */,
 				76E306CA2B69578700112552 /* EmissionIQ */,
 				76E306C92B69578700112552 /* Products */,
@@ -341,12 +343,12 @@
 			path = "3D Models";
 			sourceTree = "<group>";
 		};
-		76F875252B88F489000EA3D7 /* Utilities */ = {
+		76F875252B88F489000EA3D7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				76F875262B88F48F000EA3D7 /* Views */,
 			);
-			path = Utilities;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		76F875262B88F48F000EA3D7 /* Views */ = {
@@ -654,8 +656,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -699,8 +701,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
