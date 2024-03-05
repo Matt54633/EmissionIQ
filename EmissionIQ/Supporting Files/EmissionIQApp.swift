@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 @main
 struct EmissionIQApp: App {
@@ -13,6 +14,14 @@ struct EmissionIQApp: App {
         WindowGroup {
             ContentView()
                 .fontDesign(.rounded)
+                .task {
+                    try? Tips.configure([
+                        .displayFrequency(.immediate),
+                        .datastoreLocation(.applicationDefault)
+                    ])
+                }
         }
+        .defaultSize(width: 1350, height: 800)
+        .windowResizability(.contentSize)
     }
 }

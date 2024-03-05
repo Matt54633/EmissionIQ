@@ -1,42 +1,186 @@
 [
     {
-        "question": "What is the Paris agreement's climate threshold in degrees?",
-        "answer": "1.5°C above pre-industrial levels"
+        "name": "Conversion Factors",
+        "image": "function",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "What are conversion factors?",
+                    "text": "A conversion factor is a number used to change one set of units to another, by multiplying or dividing. EmissionIQ uses conversion factors to calculate emissions produced by modes of transport."
+                },
+                {
+                    "header": "What factors does EmissionIQ use?",
+                    "text": "EmissionIQ utilises conversion factors provided by the UK Government. In use are the factors for 2023."
+                }
+            ],
+            "links": [
+                {
+                    "header": "UK Gov",
+                    "url": "https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting"
+                }
+            ]
+        }
     },
     {
-        "question": "What is the main greenhouse gas emitted by agricultural activities?",
-        "answer": "Methane (CH4)"
+        "name": "Mobility",
+        "image": "car.fill",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Mobility Emissions",
+                    "text": "Mobility emissions are those that are produced from modes of transport such as cars, planes and public transport."
+                },
+                {
+                    "header": "Cars",
+                    "text": "Per mile, an average sized petrol car produces 0.27331kg CO₂e."
+                },
+                {
+                    "header": "Walking",
+                    "text": "Per mile, walking produces 0kg CO₂e."
+                },
+                {
+                    "header": "Cycling",
+                    "text": "Per mile, cycling produces 0kg CO₂e."
+                },
+                {
+                    "header": "Buses",
+                    "text": "Per mile, a bus produces 0.16429kg CO₂e."
+                },
+                {
+                    "header": "Trains",
+                    "text": "Per mile, a national rail train produces 0.05706kg CO₂e."
+                },
+                {
+                    "header": "Ferries",
+                    "text": "Per mile, an average passenger ferry produces 0.18120kg CO₂e."
+                },
+                {
+                    "header": "Planes",
+                    "text": "Per mile, an average short haul flight produces 0.29920kg CO₂e."
+                }
+            ],
+            "links": [
+                {
+                    "header": "UK Gov",
+                    "url": "https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting"
+                }
+            ]
+        }
     },
     {
-        "question": "Which country is the largest emitter of carbon dioxide (CO₂) globally?",
-        "answer": "China"
+        "name": "Nature",
+        "image": "leaf.fill",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Trees",
+                    "text": "Each year, the average tree removes 24.62kg of CO₂ from the atmosphere. Absorbed CO₂ is stored in the tree's trunk throughout it's lifetime."
+                },
+                {
+                    "header": "Plastic Bags",
+                    "text": "One single use plastic bag is equivalent to 1.58kg of CO₂e."
+                }
+            ],
+            "links": [
+                {
+                    "header": "For Tomorrow",
+                    "url": "https://www.fortomorrow.eu/en/blog/co2-tree"
+                },
+                {
+                    "header": "UK Gov",
+                    "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/291023/scho0711buan-e-e.pdf"
+                }
+            ]
+        }
     },
     {
-        "question": "Which sector is the largest source of greenhouse gas emissions globally?",
-        "answer": "Energy"
+        "name": "Food and Drink",
+        "image": "fork.knife",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Coffee",
+                    "text": "A single mug of coffee is equiavlent to 0.4kg of CO₂e."
+                },
+                {
+                    "header": "Wine",
+                    "text": "A single glass of wine is equiavlent to 0.13kg of CO₂e."
+                },
+                {
+                    "header": "Beef",
+                    "text": "Each 100g serving of beef is equivalent to 15.5kg of CO₂e."
+                },
+                {
+                    "header": "Carrots",
+                    "text": "Each carrot is equiavlent to 0.04kg of CO₂e."
+                }
+            ],
+            "links": [
+                {
+                    "header": "ResearchGate",
+                    "url": "https://www.researchgate.net/publication/325532198_Reducing_food%27s_environmental_impacts_through_producers_and_consumers"
+                }
+            ]
+        }
     },
     {
-        "question": "What is the primary greenhouse gas emitted by the burning of fossil fuels?",
-        "answer": "Carbon Dioxide (CO₂)"
+        "name": "Appliances",
+        "image": "washer.fill",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Washing Machines",
+                    "text": "One load in a washing machine is equivalent to 0.7kg of CO₂e."
+                },
+                {
+                    "header": "Tumble Dryers",
+                    "text": "One load in a tumble dryer is equivalent to 1.7kg of CO₂e."
+                }
+            ],
+            "links": [
+                {
+                    "header": "The Capture Club",
+                    "url": "https://www.thecapture.club/post/whats-the-carbon-footprint-of-my-laundry"
+                },
+            ]
+        }
     },
     {
-        "question": "Which mode of transport is typically the largest contributor to greenhouse gas emissions?",
-        "answer": "Private cars"
+        "name": "Facts and Trivia",
+        "image": "doc.questionmark.fill",
+        "details": {
+            "paragraphs": [
+                {
+                    "header": "Where do our facts come from?",
+                    "text": "Our facts and trivia come from a number of sources, all provided below!"
+                },
+            ],
+            "links": [
+                {
+                    "header": "EPA",
+                    "url": "https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data"
+                },
+                {
+                    "header": "The BBC",
+                    "url": "https://www.bbc.com/future/article/20200317-climate-change-cut-carbon-emissions-from-your-commute",
+                },
+                {
+                    "header": "The United Nations",
+                    "url": "https://www.un.org/en/actnow/facts-and-figures"
+                },
+                {
+                    "header": "The United Nations",
+                    "url": "https://www.unep.org/i nteractive/emissions-gap-report/2020/"
+                },
+                {
+                    "header": "The United Nations",
+                    "url": "https://www.unep.org/facts-about-climate-emergency"
+                },
+                {
+                    "header": "UK Gov",
+                    "url": "https://www.gov.uk/government/statistics/transport-and-environment-statistics-2022/transport-and-environment-statistics-2022"
+                },
+            ]
+        }
     },
-    {
-        "question": "Which sector is the second-largest source of greenhouse gas emissions globally?",
-        "answer": "Agriculture"
-    },
-    {
-        "question": "What percentage of global greenhouse gas emissions are estimated to come from the transportation sector?",
-        "answer": "14%"
-    },
-    {
-        "question": "What gas is emitted in significant quantities by diesel-powered vehicles?",
-        "answer": "Nitrogen Oxides (NOx)"
-    },
-    {
-        "question": "What is the primary source of emissions from shipping vessels?",
-        "answer": "The burning of heavy fuel oil"
-    }
 ]

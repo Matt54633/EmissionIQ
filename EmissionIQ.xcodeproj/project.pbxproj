@@ -186,6 +186,13 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		761A88492B97DD3500F85ABB /* TIps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TIps;
+			sourceTree = "<group>";
+		};
 		763274B82B7D3FDD00257FD2 /* View Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +323,7 @@
 				763274B82B7D3FDD00257FD2 /* View Modifiers */,
 				763274B92B7D3FEF00257FD2 /* Extensions */,
 				763274BA2B7D3FFE00257FD2 /* Structs */,
+				761A88492B97DD3500F85ABB /* TIps */,
 				76087BA72B8BD4FB005C2431 /* Environment */,
 				763274BB2B7D401A00257FD2 /* Modules */,
 				763274BC2B7D405500257FD2 /* Resources */,
