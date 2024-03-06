@@ -82,7 +82,6 @@
 		7644DD0D2B98AB4C00B3EAE4 /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD0C2B98AB4C00B3EAE4 /* LearningView.swift */; };
 		7644DD142B98AB8900B3EAE4 /* ReadArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD132B98AB8900B3EAE4 /* ReadArticle.swift */; };
 		7644DD162B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */; };
-		7644DD182B98AC0A00B3EAE4 /* EmissionsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD172B98AC0A00B3EAE4 /* EmissionsProfileView.swift */; };
 		7644DD1A2B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD192B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift */; };
 		7644DD1C2B98AC3000B3EAE4 /* EmissionsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileView.swift */; };
 		7644DD1E2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD1D2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift */; };
@@ -115,6 +114,10 @@
 		7644DD7A2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6D2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift */; };
 		7644DD7B2B98B5C700B3EAE4 /* LeaderboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6E2B98B5C700B3EAE4 /* LeaderboardItemView.swift */; };
 		7644DD7C2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6F2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift */; };
+		7644DD852B98BBA400B3EAE4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD842B98BBA400B3EAE4 /* Location.swift */; };
+		7644DD872B98BBB400B3EAE4 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD862B98BBB400B3EAE4 /* Journey.swift */; };
+		7644DD8C2B98BD5200B3EAE4 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 7644DD8B2B98BD5200B3EAE4 /* Vortex */; };
+		7644DD8E2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD8D2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift */; };
 		765FA8902B91EC3000030EC1 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA88F2B91EC3000030EC1 /* Source.swift */; };
 		765FA8922B91EC4F00030EC1 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8912B91EC4F00030EC1 /* Details.swift */; };
 		765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8932B91EC8700030EC1 /* SourceLink.swift */; };
@@ -158,7 +161,6 @@
 		76F875372B88F610000EA3D7 /* trivia.json in Resources */ = {isa = PBXBuildFile; fileRef = 76F875352B88F610000EA3D7 /* trivia.json */; };
 		76F875392B88F634000EA3D7 /* sources.json in Resources */ = {isa = PBXBuildFile; fileRef = 76F875382B88F62A000EA3D7 /* sources.json */; };
 		76F8753B2B88F652000EA3D7 /* topPicks.json in Resources */ = {isa = PBXBuildFile; fileRef = 76F8753A2B88F647000EA3D7 /* topPicks.json */; };
-		76FF34B62B7FA26B00101092 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 76FF34B52B7FA26B00101092 /* Vortex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -238,7 +240,6 @@
 		7644DD0C2B98AB4C00B3EAE4 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
 		7644DD132B98AB8900B3EAE4 /* ReadArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadArticle.swift; sourceTree = "<group>"; };
 		7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileGalleryView.swift; sourceTree = "<group>"; };
-		7644DD172B98AC0A00B3EAE4 /* EmissionsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileView.swift; sourceTree = "<group>"; };
 		7644DD192B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileItemView.swift; sourceTree = "<group>"; };
 		7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileView.swift; sourceTree = "<group>"; };
 		7644DD1D2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileBreakdownView.swift; sourceTree = "<group>"; };
@@ -271,6 +272,9 @@
 		7644DD6D2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardPodiumUserView.swift; sourceTree = "<group>"; };
 		7644DD6E2B98B5C700B3EAE4 /* LeaderboardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardItemView.swift; sourceTree = "<group>"; };
 		7644DD6F2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardPodiumBackgroundView.swift; sourceTree = "<group>"; };
+		7644DD842B98BBA400B3EAE4 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		7644DD862B98BBB400B3EAE4 /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		7644DD8D2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileDisplayView.swift; sourceTree = "<group>"; };
 		765FA88F2B91EC3000030EC1 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		765FA8912B91EC4F00030EC1 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		765FA8932B91EC8700030EC1 /* SourceLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLink.swift; sourceTree = "<group>"; };
@@ -325,7 +329,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76FF34B62B7FA26B00101092 /* Vortex in Frameworks */,
+				7644DD8C2B98BD5200B3EAE4 /* Vortex in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +360,9 @@
 		76087BA92B8BD562005C2431 /* Journeys */ = {
 			isa = PBXGroup;
 			children = (
+				7644DD832B98B72600B3EAE4 /* Views */,
+				7644DD822B98B72200B3EAE4 /* ViewModels */,
+				7644DD812B98B71C00B3EAE4 /* Models */,
 			);
 			path = Journeys;
 			sourceTree = "<group>";
@@ -481,6 +488,7 @@
 				761A885C2B97E08200F85ABB /* Navigation */,
 				76087BA82B8BD555005C2431 /* Home */,
 				76087BA92B8BD562005C2431 /* Journeys */,
+				7644DD7D2B98B6F800B3EAE4 /* Search */,
 				76087BAA2B8BD566005C2431 /* Trophies */,
 				76087BAB2B8BD56B005C2431 /* Leaderboards */,
 				76087BAC2B8BD571005C2431 /* Learning */,
@@ -802,7 +810,7 @@
 			isa = PBXGroup;
 			children = (
 				7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */,
-				7644DD172B98AC0A00B3EAE4 /* EmissionsProfileView.swift */,
+				7644DD8D2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift */,
 				7644DD192B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift */,
 				7644DD1D2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift */,
 				7644DD1F2B98ACF100B3EAE4 /* TransportMethodsView.swift */,
@@ -885,6 +893,60 @@
 				7644DD6F2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift */,
 				7644DD6C2B98B5C700B3EAE4 /* LeaderboardPodiumMedalView.swift */,
 				7644DD6D2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7644DD7D2B98B6F800B3EAE4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				7644DD7E2B98B70700B3EAE4 /* Views */,
+				7644DD7F2B98B70B00B3EAE4 /* ViewModels */,
+				7644DD802B98B70F00B3EAE4 /* Models */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		7644DD7E2B98B70700B3EAE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7644DD7F2B98B70B00B3EAE4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7644DD802B98B70F00B3EAE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7644DD842B98BBA400B3EAE4 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7644DD812B98B71C00B3EAE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7644DD862B98BBB400B3EAE4 /* Journey.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7644DD822B98B72200B3EAE4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7644DD832B98B72600B3EAE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1015,7 +1077,7 @@
 			);
 			name = EmissionIQ;
 			packageProductDependencies = (
-				76FF34B52B7FA26B00101092 /* Vortex */,
+				7644DD8B2B98BD5200B3EAE4 /* Vortex */,
 			);
 			productName = EmissionIQ;
 			productReference = 76E306C82B69578700112552 /* EmissionIQ.app */;
@@ -1046,7 +1108,7 @@
 			);
 			mainGroup = 76E306BF2B69578700112552;
 			packageReferences = (
-				76FF34B42B7FA26B00101092 /* XCRemoteSwiftPackageReference "Vortex" */,
+				7644DD8A2B98BD5200B3EAE4 /* XCRemoteSwiftPackageReference "Vortex" */,
 			);
 			productRefGroup = 76E306C92B69578700112552 /* Products */;
 			projectDirPath = "";
@@ -1089,6 +1151,7 @@
 				76E306CE2B69578700112552 /* ContentView.swift in Sources */,
 				7644DCE12B98A7DD00B3EAE4 /* Trophy.swift in Sources */,
 				7644DCA82B9896B700B3EAE4 /* TriviaGalleryView.swift in Sources */,
+				7644DD8E2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift in Sources */,
 				7644DD702B98B5C700B3EAE4 /* LeaderboardViewModel.swift in Sources */,
 				7644DC9A2B98959800B3EAE4 /* CarbonOutputViewModel.swift in Sources */,
 				765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */,
@@ -1105,6 +1168,7 @@
 				7644DCDC2B98A77B00B3EAE4 /* TrophyAchievedView.swift in Sources */,
 				765FA8A62B91ED7500030EC1 /* OnboardingViewModel.swift in Sources */,
 				7644DD7A2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift in Sources */,
+				7644DD872B98BBB400B3EAE4 /* Journey.swift in Sources */,
 				7644DD222B98AD0800B3EAE4 /* TransportTip.swift in Sources */,
 				7644DD242B98AD3100B3EAE4 /* TransportMethodView.swift in Sources */,
 				7644DCFC2B98A97200B3EAE4 /* SourcesViewModel.swift in Sources */,
@@ -1142,13 +1206,13 @@
 				765FA89E2B91ECE600030EC1 /* TopPicks.swift in Sources */,
 				7644DD772B98B5C700B3EAE4 /* LeaderboardRankView.swift in Sources */,
 				7644DCAC2B98972600B3EAE4 /* TriviaDetailView.swift in Sources */,
+				7644DD852B98BBA400B3EAE4 /* Location.swift in Sources */,
 				7644DD262B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift in Sources */,
 				76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */,
 				765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */,
 				7644DCF22B98A8EB00B3EAE4 /* SourceTypeListItemView.swift in Sources */,
 				76087BA22B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift in Sources */,
 				7644DCDA2B98A76800B3EAE4 /* TrophyDisplayView.swift in Sources */,
-				7644DD182B98AC0A00B3EAE4 /* EmissionsProfileView.swift in Sources */,
 				7644DCAE2B98974000B3EAE4 /* TriviaViewModel.swift in Sources */,
 				765FA89A2B91ECBE00030EC1 /* ArticleSource.swift in Sources */,
 				7644DCD62B98A73E00B3EAE4 /* TrophyUnlockedView.swift in Sources */,
@@ -1380,8 +1444,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1425,8 +1489,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1457,7 +1521,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		76FF34B42B7FA26B00101092 /* XCRemoteSwiftPackageReference "Vortex" */ = {
+		7644DD8A2B98BD5200B3EAE4 /* XCRemoteSwiftPackageReference "Vortex" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/Vortex";
 			requirement = {
@@ -1468,9 +1532,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		76FF34B52B7FA26B00101092 /* Vortex */ = {
+		7644DD8B2B98BD5200B3EAE4 /* Vortex */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 76FF34B42B7FA26B00101092 /* XCRemoteSwiftPackageReference "Vortex" */;
+			package = 7644DD8A2B98BD5200B3EAE4 /* XCRemoteSwiftPackageReference "Vortex" */;
 			productName = Vortex;
 		};
 /* End XCSwiftPackageProductDependency section */

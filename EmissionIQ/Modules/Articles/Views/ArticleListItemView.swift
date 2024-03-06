@@ -78,7 +78,7 @@ struct ArticleListItemView: View {
 
 #Preview {
     ArticleListItemView(article: Article(
-        source: Article.ArticleSource(name: "BBC News"),
+        source: ArticleSource(name: "BBC News"),
         title: "Climate Change: A Major Concern - Investigating how this crisis is affecting our planet",
         url: "https://www.bbc.com/news/"
     ))

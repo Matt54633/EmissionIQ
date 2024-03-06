@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 // Header to be displayed on the home page which displays the users' carbon output
 struct CarbonOutputHeaderView: View {

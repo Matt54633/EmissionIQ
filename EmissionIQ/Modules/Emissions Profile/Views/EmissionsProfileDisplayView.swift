@@ -1,5 +1,5 @@
 //
-//  EmissionsProfileView.swift
+//  EmissionsProfileDisplayView.swift
 //  EmissionIQ
 //
 //  Created by Matt Sullivan on 06/03/2024.
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 // View to display the various emissions profile views
-struct EmissionsProfileView: View {
+struct EmissionsProfileDisplayView: View {
     @Query private var journeys: [Journey]
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
@@ -44,5 +44,5 @@ struct EmissionsProfileView: View {
 }
 
 #Preview {
-    EmissionsProfileView()
+    EmissionsProfileDisplayView()
 }

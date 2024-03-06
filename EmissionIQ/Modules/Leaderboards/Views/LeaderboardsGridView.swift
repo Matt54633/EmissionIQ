@@ -30,5 +30,5 @@ struct LeaderboardsGridView: View {
 }
 
 #Preview {
-    LeaderboardGridView(viewModel: LeaderboardViewModel())
+    LeaderboardsGridView(viewModel: LeaderboardViewModel())
 }

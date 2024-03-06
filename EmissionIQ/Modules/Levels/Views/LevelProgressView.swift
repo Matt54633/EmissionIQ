@@ -8,7 +8,7 @@
 import SwiftUI
 
 // LevelProgressCircleView displays the progress wheel around the level text
-struct LevelProgressCircleView: View {
+struct LevelProgressView: View {
     var progress: Double
     var color: Color
     var strokeWidth: Double
@@ -24,6 +24,6 @@ struct LevelProgressCircleView: View {
 }
 
 #Preview {
-    LevelProgressCircleView(progress: 0.8, color: .primaryGreen, strokeWidth: 6.0, frameWidth: 100.0)
+    LevelProgressView(progress: 0.8, color: .primaryGreen, strokeWidth: 6.0, frameWidth: 100.0)
 }
 

@@ -24,7 +24,7 @@ struct SourcesFeedView: View {
                     
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(sources, id: \.name) { source in
-                            SourcesListItemView(source: source)
+                            SourceTypeListItemView(source: source)
                         }
                     }
                     .modifier(ConditionalPadding())

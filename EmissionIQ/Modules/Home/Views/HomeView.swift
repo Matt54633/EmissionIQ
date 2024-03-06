@@ -57,11 +57,11 @@ struct HomeView: View {
                                 
                                 Group {
                                     
-                                    StatsPreviewView()
+                                    StatsGalleryView()
                                     
-                                    TriviaView()
+                                    TriviaGalleryView()
                                     
-                                    QuickActionsView(displayJourneySheet: $displayJourneySheet, selectedTab: $selectedTab)
+                                    QuickActionGalleryView(displayJourneySheet: $displayJourneySheet, selectedTab: $selectedTab)
                                     
                                 }
                                 .modifier(ConditionalPadding())

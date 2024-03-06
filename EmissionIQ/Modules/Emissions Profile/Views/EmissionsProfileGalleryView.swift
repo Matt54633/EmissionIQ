@@ -17,7 +17,7 @@ struct EmissionsProfileGalleryView: View {
         VStack {
             
             NavigationLink {
-                EmissionsProfileView()
+                EmissionsProfileDisplayView()
             } label: {
                 VStack {
                     GalleryHeaderView(image: "person.crop.circle.fill", title: "Emissions Profile", displayNavIndicator: true, topPadding: 15)
