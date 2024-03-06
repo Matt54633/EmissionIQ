@@ -15,8 +15,7 @@ class PrivateDataManager {
     private let userIdRecordType = "User"
     private let userIdKey = "userId"
     private let userCreatedKey = "userCreated"
-    private let defaultContainer = CKContainer.default()
-    private let privateDatabase = CKContainer.default().privateCloudDatabase
+    private let privateDatabase = CKContainer(identifier: "iCloud.matt54633.emissionIQ").privateCloudDatabase
     private init() {}
     
     // save userID to CloudKit private database - synced across devices
