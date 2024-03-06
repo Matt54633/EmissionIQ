@@ -101,6 +101,20 @@
 		7644DD3B2B98B06100B3EAE4 /* LevelConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD3A2B98B06100B3EAE4 /* LevelConfettiView.swift */; };
 		7644DD3D2B98B06E00B3EAE4 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD3C2B98B06E00B3EAE4 /* LevelViewModel.swift */; };
 		7644DD3F2B98B07F00B3EAE4 /* LevelUserRibbonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD3E2B98B07F00B3EAE4 /* LevelUserRibbonView.swift */; };
+		7644DD602B98B5AD00B3EAE4 /* JourneyMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD5F2B98B5AD00B3EAE4 /* JourneyMessageView.swift */; };
+		7644DD702B98B5C700B3EAE4 /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD622B98B5C700B3EAE4 /* LeaderboardViewModel.swift */; };
+		7644DD712B98B5C700B3EAE4 /* LeaderboardMotivatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD642B98B5C700B3EAE4 /* LeaderboardMotivatorView.swift */; };
+		7644DD722B98B5C700B3EAE4 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD652B98B5C700B3EAE4 /* LeaderboardView.swift */; };
+		7644DD732B98B5C700B3EAE4 /* LeaderboardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD662B98B5C700B3EAE4 /* LeaderboardsView.swift */; };
+		7644DD742B98B5C700B3EAE4 /* LeaderboardUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD672B98B5C700B3EAE4 /* LeaderboardUserView.swift */; };
+		7644DD752B98B5C700B3EAE4 /* LeaderboardPodiumItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD682B98B5C700B3EAE4 /* LeaderboardPodiumItemView.swift */; };
+		7644DD762B98B5C700B3EAE4 /* LeaderboardsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD692B98B5C700B3EAE4 /* LeaderboardsGridView.swift */; };
+		7644DD772B98B5C700B3EAE4 /* LeaderboardRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6A2B98B5C700B3EAE4 /* LeaderboardRankView.swift */; };
+		7644DD782B98B5C700B3EAE4 /* LeaderboardListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6B2B98B5C700B3EAE4 /* LeaderboardListItemView.swift */; };
+		7644DD792B98B5C700B3EAE4 /* LeaderboardPodiumMedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6C2B98B5C700B3EAE4 /* LeaderboardPodiumMedalView.swift */; };
+		7644DD7A2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6D2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift */; };
+		7644DD7B2B98B5C700B3EAE4 /* LeaderboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6E2B98B5C700B3EAE4 /* LeaderboardItemView.swift */; };
+		7644DD7C2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6F2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift */; };
 		765FA8902B91EC3000030EC1 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA88F2B91EC3000030EC1 /* Source.swift */; };
 		765FA8922B91EC4F00030EC1 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8912B91EC4F00030EC1 /* Details.swift */; };
 		765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8932B91EC8700030EC1 /* SourceLink.swift */; };
@@ -243,6 +257,20 @@
 		7644DD3A2B98B06100B3EAE4 /* LevelConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelConfettiView.swift; sourceTree = "<group>"; };
 		7644DD3C2B98B06E00B3EAE4 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		7644DD3E2B98B07F00B3EAE4 /* LevelUserRibbonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUserRibbonView.swift; sourceTree = "<group>"; };
+		7644DD5F2B98B5AD00B3EAE4 /* JourneyMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyMessageView.swift; sourceTree = "<group>"; };
+		7644DD622B98B5C700B3EAE4 /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
+		7644DD642B98B5C700B3EAE4 /* LeaderboardMotivatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardMotivatorView.swift; sourceTree = "<group>"; };
+		7644DD652B98B5C700B3EAE4 /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		7644DD662B98B5C700B3EAE4 /* LeaderboardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardsView.swift; sourceTree = "<group>"; };
+		7644DD672B98B5C700B3EAE4 /* LeaderboardUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardUserView.swift; sourceTree = "<group>"; };
+		7644DD682B98B5C700B3EAE4 /* LeaderboardPodiumItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardPodiumItemView.swift; sourceTree = "<group>"; };
+		7644DD692B98B5C700B3EAE4 /* LeaderboardsGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardsGridView.swift; sourceTree = "<group>"; };
+		7644DD6A2B98B5C700B3EAE4 /* LeaderboardRankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardRankView.swift; sourceTree = "<group>"; };
+		7644DD6B2B98B5C700B3EAE4 /* LeaderboardListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardListItemView.swift; sourceTree = "<group>"; };
+		7644DD6C2B98B5C700B3EAE4 /* LeaderboardPodiumMedalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardPodiumMedalView.swift; sourceTree = "<group>"; };
+		7644DD6D2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardPodiumUserView.swift; sourceTree = "<group>"; };
+		7644DD6E2B98B5C700B3EAE4 /* LeaderboardItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardItemView.swift; sourceTree = "<group>"; };
+		7644DD6F2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardPodiumBackgroundView.swift; sourceTree = "<group>"; };
 		765FA88F2B91EC3000030EC1 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		765FA8912B91EC4F00030EC1 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		765FA8932B91EC8700030EC1 /* SourceLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLink.swift; sourceTree = "<group>"; };
@@ -345,6 +373,8 @@
 		76087BAB2B8BD56B005C2431 /* Leaderboards */ = {
 			isa = PBXGroup;
 			children = (
+				7644DD632B98B5C700B3EAE4 /* Views */,
+				7644DD612B98B5C700B3EAE4 /* ViewModels */,
 			);
 			path = Leaderboards;
 			sourceTree = "<group>";
@@ -832,6 +862,33 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		7644DD612B98B5C700B3EAE4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7644DD622B98B5C700B3EAE4 /* LeaderboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7644DD632B98B5C700B3EAE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7644DD662B98B5C700B3EAE4 /* LeaderboardsView.swift */,
+				7644DD692B98B5C700B3EAE4 /* LeaderboardsGridView.swift */,
+				7644DD652B98B5C700B3EAE4 /* LeaderboardView.swift */,
+				7644DD6B2B98B5C700B3EAE4 /* LeaderboardListItemView.swift */,
+				7644DD642B98B5C700B3EAE4 /* LeaderboardMotivatorView.swift */,
+				7644DD6E2B98B5C700B3EAE4 /* LeaderboardItemView.swift */,
+				7644DD6A2B98B5C700B3EAE4 /* LeaderboardRankView.swift */,
+				7644DD672B98B5C700B3EAE4 /* LeaderboardUserView.swift */,
+				7644DD682B98B5C700B3EAE4 /* LeaderboardPodiumItemView.swift */,
+				7644DD6F2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift */,
+				7644DD6C2B98B5C700B3EAE4 /* LeaderboardPodiumMedalView.swift */,
+				7644DD6D2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		765FA8A32B91ED5B00030EC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -925,6 +982,7 @@
 				76F8752F2B88F52B000EA3D7 /* ReusableErrorView.swift */,
 				76F875312B88F53E000EA3D7 /* LoadingView.swift */,
 				7644DC7D2B98900F00B3EAE4 /* PeelEffectView.swift */,
+				7644DD5F2B98B5AD00B3EAE4 /* JourneyMessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1031,9 +1089,11 @@
 				76E306CE2B69578700112552 /* ContentView.swift in Sources */,
 				7644DCE12B98A7DD00B3EAE4 /* Trophy.swift in Sources */,
 				7644DCA82B9896B700B3EAE4 /* TriviaGalleryView.swift in Sources */,
+				7644DD702B98B5C700B3EAE4 /* LeaderboardViewModel.swift in Sources */,
 				7644DC9A2B98959800B3EAE4 /* CarbonOutputViewModel.swift in Sources */,
 				765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */,
 				765FA8AC2B91EDC300030EC1 /* OnboardingLocationView.swift in Sources */,
+				7644DD762B98B5C700B3EAE4 /* LeaderboardsGridView.swift in Sources */,
 				7644DCB82B98984300B3EAE4 /* StatsGridView.swift in Sources */,
 				7644DD3B2B98B06100B3EAE4 /* LevelConfettiView.swift in Sources */,
 				7644DCAA2B9896FF00B3EAE4 /* TriviaItemView.swift in Sources */,
@@ -1044,6 +1104,7 @@
 				765FA8A82B91ED9800030EC1 /* OnboardingStartView.swift in Sources */,
 				7644DCDC2B98A77B00B3EAE4 /* TrophyAchievedView.swift in Sources */,
 				765FA8A62B91ED7500030EC1 /* OnboardingViewModel.swift in Sources */,
+				7644DD7A2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift in Sources */,
 				7644DD222B98AD0800B3EAE4 /* TransportTip.swift in Sources */,
 				7644DD242B98AD3100B3EAE4 /* TransportMethodView.swift in Sources */,
 				7644DCFC2B98A97200B3EAE4 /* SourcesViewModel.swift in Sources */,
@@ -1057,23 +1118,29 @@
 				7644DD062B98AAE900B3EAE4 /* ArticlesErrorView.swift in Sources */,
 				765FA8B62B91EE6300030EC1 /* LevelManager.swift in Sources */,
 				76F8752A2B88F4C8000EA3D7 /* GalleryHeaderView.swift in Sources */,
+				7644DD712B98B5C700B3EAE4 /* LeaderboardMotivatorView.swift in Sources */,
 				7644DD3F2B98B07F00B3EAE4 /* LevelUserRibbonView.swift in Sources */,
 				765FA8902B91EC3000030EC1 /* Source.swift in Sources */,
 				7644DD2B2B98AEF800B3EAE4 /* LevelView.swift in Sources */,
 				76F875282B88F4A6000EA3D7 /* GlassEffectView.swift in Sources */,
 				7644DCB22B9897E800B3EAE4 /* StatsView.swift in Sources */,
 				7644DCA22B98961F00B3EAE4 /* ImpactListItemView.swift in Sources */,
+				7644DD7B2B98B5C700B3EAE4 /* LeaderboardItemView.swift in Sources */,
 				7644DD082B98AB0400B3EAE4 /* ArticleListItemView.swift in Sources */,
 				7644DD3D2B98B06E00B3EAE4 /* LevelViewModel.swift in Sources */,
 				76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */,
 				7644DD372B98B03900B3EAE4 /* LevelUpView.swift in Sources */,
+				7644DD752B98B5C700B3EAE4 /* LeaderboardPodiumItemView.swift in Sources */,
 				7644DCD42B98A72B00B3EAE4 /* TrophyListItemView.swift in Sources */,
 				765FA8922B91EC4F00030EC1 /* Details.swift in Sources */,
 				761A88512B97DE4B00F85ABB /* UIWindow.swift in Sources */,
+				7644DD742B98B5C700B3EAE4 /* LeaderboardUserView.swift in Sources */,
+				7644DD722B98B5C700B3EAE4 /* LeaderboardView.swift in Sources */,
 				7644DCBA2B98986800B3EAE4 /* StatsItemView.swift in Sources */,
 				7644DCC22B9898CD00B3EAE4 /* StatsViewModel.swift in Sources */,
 				7644DCEC2B98A88900B3EAE4 /* FactViewModel.swift in Sources */,
 				765FA89E2B91ECE600030EC1 /* TopPicks.swift in Sources */,
+				7644DD772B98B5C700B3EAE4 /* LeaderboardRankView.swift in Sources */,
 				7644DCAC2B98972600B3EAE4 /* TriviaDetailView.swift in Sources */,
 				7644DD262B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift in Sources */,
 				76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */,
@@ -1085,15 +1152,19 @@
 				7644DCAE2B98974000B3EAE4 /* TriviaViewModel.swift in Sources */,
 				765FA89A2B91ECBE00030EC1 /* ArticleSource.swift in Sources */,
 				7644DCD62B98A73E00B3EAE4 /* TrophyUnlockedView.swift in Sources */,
+				7644DD732B98B5C700B3EAE4 /* LeaderboardsView.swift in Sources */,
 				7644DCB62B98981800B3EAE4 /* StatsProfileView.swift in Sources */,
 				7644DC822B98934100B3EAE4 /* NavView.swift in Sources */,
+				7644DD602B98B5AD00B3EAE4 /* JourneyMessageView.swift in Sources */,
 				7644DCA42B98963800B3EAE4 /* ImpactViewModel.swift in Sources */,
 				76F875222B88F42F000EA3D7 /* Ribbon.swift in Sources */,
+				7644DD792B98B5C700B3EAE4 /* LeaderboardPodiumMedalView.swift in Sources */,
 				7644DD002B98AAAB00B3EAE4 /* ArticlesGalleryView.swift in Sources */,
 				7644DC9E2B9895EE00B3EAE4 /* ImpactListView.swift in Sources */,
 				7644DCB42B9897F700B3EAE4 /* StatsTabView.swift in Sources */,
 				76F8752C2B88F4E7000EA3D7 /* PageHeaderView.swift in Sources */,
 				7644DCEA2B98A87300B3EAE4 /* FactView.swift in Sources */,
+				7644DD7C2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift in Sources */,
 				765FA8B72B91F24F00030EC1 /* NotificationManager.swift in Sources */,
 				7644DC8F2B9894A600B3EAE4 /* QuickActionView.swift in Sources */,
 				7644DD202B98ACF100B3EAE4 /* TransportMethodsView.swift in Sources */,
@@ -1143,6 +1214,7 @@
 				761A88592B97E02E00F85ABB /* JourneyReturnTip.swift in Sources */,
 				76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */,
 				7644DD0D2B98AB4C00B3EAE4 /* LearningView.swift in Sources */,
+				7644DD782B98B5C700B3EAE4 /* LeaderboardListItemView.swift in Sources */,
 				7644DC8B2B98943800B3EAE4 /* HomeView.swift in Sources */,
 				7644DD1E2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift in Sources */,
 				765FA8AE2B91EDD600030EC1 /* OnboardingNotificationView.swift in Sources */,

@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+// View to hide pages when a user has 0 journeys
 struct JourneyMessageView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            
+        ContentUnavailableView {
+            Label("Add a Journey to get Started!", systemImage: "point.topleft.down.to.point.bottomright.curvepath")
+        }
+        
     }
 }
 

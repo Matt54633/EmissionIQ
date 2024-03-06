@@ -7,12 +7,18 @@
 
 import SwiftUI
 
+// LeaderboardPodiumMedalView displays the medal for a given podium placing
 struct LeaderboardPodiumMedalView: View {
+    let color: Color
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Circle()
+            .fill(color)
+            .stroke(Color(.systemBackground), lineWidth: 5)
+            .frame(width: 65)
     }
 }
 
 #Preview {
-    LeaderboardPodiumMedalView()
+    LeaderboardPodiumMedalView(color: .gold)
 }
