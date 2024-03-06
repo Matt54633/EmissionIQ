@@ -138,6 +138,13 @@
 		765FA8B62B91EE6300030EC1 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8B52B91EE6300030EC1 /* LevelManager.swift */; };
 		765FA8B72B91F24F00030EC1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BB02B8BD5D1005C2431 /* NotificationManager.swift */; };
 		765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8B12B91EE2200030EC1 /* PrivateDataManager.swift */; };
+		767FE87F2B98BE96003C225D /* SearchDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE87E2B98BE96003C225D /* SearchDisplayView.swift */; };
+		767FE8812B98BEAF003C225D /* SearchResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8802B98BEAF003C225D /* SearchResultsListView.swift */; };
+		767FE8832B98BEC2003C225D /* RecentResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8822B98BEC2003C225D /* RecentResultsListView.swift */; };
+		767FE8852B98BF44003C225D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8842B98BF44003C225D /* SearchBarView.swift */; };
+		767FE8872B98BF54003C225D /* SearchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8862B98BF54003C225D /* SearchRowView.swift */; };
+		767FE8892B98BF68003C225D /* SearchRecentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8882B98BF68003C225D /* SearchRecentRowView.swift */; };
+		767FE88B2B98BF84003C225D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE88A2B98BF84003C225D /* SearchViewModel.swift */; };
 		76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CB2B69578700112552 /* EmissionIQApp.swift */; };
 		76E306CE2B69578700112552 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CD2B69578700112552 /* ContentView.swift */; };
 		76E306D02B69578800112552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306CF2B69578800112552 /* Assets.xcassets */; };
@@ -294,6 +301,13 @@
 		765FA8B12B91EE2200030EC1 /* PrivateDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateDataManager.swift; sourceTree = "<group>"; };
 		765FA8B32B91EE4600030EC1 /* PublicDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDataManager.swift; sourceTree = "<group>"; };
 		765FA8B52B91EE6300030EC1 /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
+		767FE87E2B98BE96003C225D /* SearchDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDisplayView.swift; sourceTree = "<group>"; };
+		767FE8802B98BEAF003C225D /* SearchResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsListView.swift; sourceTree = "<group>"; };
+		767FE8822B98BEC2003C225D /* RecentResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentResultsListView.swift; sourceTree = "<group>"; };
+		767FE8842B98BF44003C225D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		767FE8862B98BF54003C225D /* SearchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRowView.swift; sourceTree = "<group>"; };
+		767FE8882B98BF68003C225D /* SearchRecentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecentRowView.swift; sourceTree = "<group>"; };
+		767FE88A2B98BF84003C225D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		768FAAB72B93AB3A00DE4127 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		76E306C82B69578700112552 /* EmissionIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmissionIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E306CB2B69578700112552 /* EmissionIQApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionIQApp.swift; sourceTree = "<group>"; };
@@ -910,6 +924,12 @@
 		7644DD7E2B98B70700B3EAE4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				767FE87E2B98BE96003C225D /* SearchDisplayView.swift */,
+				767FE8802B98BEAF003C225D /* SearchResultsListView.swift */,
+				767FE8822B98BEC2003C225D /* RecentResultsListView.swift */,
+				767FE8842B98BF44003C225D /* SearchBarView.swift */,
+				767FE8862B98BF54003C225D /* SearchRowView.swift */,
+				767FE8882B98BF68003C225D /* SearchRecentRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -917,6 +937,7 @@
 		7644DD7F2B98B70B00B3EAE4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				767FE88A2B98BF84003C225D /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1151,6 +1172,7 @@
 				76E306CE2B69578700112552 /* ContentView.swift in Sources */,
 				7644DCE12B98A7DD00B3EAE4 /* Trophy.swift in Sources */,
 				7644DCA82B9896B700B3EAE4 /* TriviaGalleryView.swift in Sources */,
+				767FE8872B98BF54003C225D /* SearchRowView.swift in Sources */,
 				7644DD8E2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift in Sources */,
 				7644DD702B98B5C700B3EAE4 /* LeaderboardViewModel.swift in Sources */,
 				7644DC9A2B98959800B3EAE4 /* CarbonOutputViewModel.swift in Sources */,
@@ -1169,6 +1191,7 @@
 				765FA8A62B91ED7500030EC1 /* OnboardingViewModel.swift in Sources */,
 				7644DD7A2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift in Sources */,
 				7644DD872B98BBB400B3EAE4 /* Journey.swift in Sources */,
+				767FE8812B98BEAF003C225D /* SearchResultsListView.swift in Sources */,
 				7644DD222B98AD0800B3EAE4 /* TransportTip.swift in Sources */,
 				7644DD242B98AD3100B3EAE4 /* TransportMethodView.swift in Sources */,
 				7644DCFC2B98A97200B3EAE4 /* SourcesViewModel.swift in Sources */,
@@ -1217,12 +1240,14 @@
 				765FA89A2B91ECBE00030EC1 /* ArticleSource.swift in Sources */,
 				7644DCD62B98A73E00B3EAE4 /* TrophyUnlockedView.swift in Sources */,
 				7644DD732B98B5C700B3EAE4 /* LeaderboardsView.swift in Sources */,
+				767FE87F2B98BE96003C225D /* SearchDisplayView.swift in Sources */,
 				7644DCB62B98981800B3EAE4 /* StatsProfileView.swift in Sources */,
 				7644DC822B98934100B3EAE4 /* NavView.swift in Sources */,
 				7644DD602B98B5AD00B3EAE4 /* JourneyMessageView.swift in Sources */,
 				7644DCA42B98963800B3EAE4 /* ImpactViewModel.swift in Sources */,
 				76F875222B88F42F000EA3D7 /* Ribbon.swift in Sources */,
 				7644DD792B98B5C700B3EAE4 /* LeaderboardPodiumMedalView.swift in Sources */,
+				767FE8892B98BF68003C225D /* SearchRecentRowView.swift in Sources */,
 				7644DD002B98AAAB00B3EAE4 /* ArticlesGalleryView.swift in Sources */,
 				7644DC9E2B9895EE00B3EAE4 /* ImpactListView.swift in Sources */,
 				7644DCB42B9897F700B3EAE4 /* StatsTabView.swift in Sources */,
@@ -1236,6 +1261,7 @@
 				7644DD1A2B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift in Sources */,
 				76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */,
 				7644DCC42B9898E400B3EAE4 /* StatsPieViewModel.swift in Sources */,
+				767FE88B2B98BF84003C225D /* SearchViewModel.swift in Sources */,
 				761A884F2B97DE3A00F85ABB /* UIScreen.swift in Sources */,
 				7644DCBC2B98987D00B3EAE4 /* StatsGraphView.swift in Sources */,
 				76F8752E2B88F50D000EA3D7 /* ReusableButtonView.swift in Sources */,
@@ -1252,10 +1278,12 @@
 				765FA8A02B91ECEE00030EC1 /* Trivia.swift in Sources */,
 				765FA8AA2B91EDAD00030EC1 /* OnboardingSignInView.swift in Sources */,
 				7644DCBE2B98988E00B3EAE4 /* StatsGraphOverlayView.swift in Sources */,
+				767FE8832B98BEC2003C225D /* RecentResultsListView.swift in Sources */,
 				7644DCE82B98A85900B3EAE4 /* FactGalleryView.swift in Sources */,
 				7644DC982B98957F00B3EAE4 /* CarbonOutputValueView.swift in Sources */,
 				7644DD352B98B02700B3EAE4 /* LevelTextView.swift in Sources */,
 				7644DCFA2B98A95C00B3EAE4 /* SourceLinksView.swift in Sources */,
+				767FE8852B98BF44003C225D /* SearchBarView.swift in Sources */,
 				761A884D2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift in Sources */,
 				761A88572B97E00900F85ABB /* StatsOverviewTip.swift in Sources */,
 				761A885B2B97E04D00F85ABB /* EmissionsProfileTip.swift in Sources */,
