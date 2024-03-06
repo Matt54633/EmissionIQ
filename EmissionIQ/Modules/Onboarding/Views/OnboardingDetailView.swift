@@ -24,18 +24,19 @@ struct OnboardingDetailView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 60)
-                        .foregroundStyle(.green)
+                        .foregroundStyle(.primaryGreen)
                 } else {
                     Image(image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 150)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
                 }
                 
                 Text(title)
                     .font(.title)
                     .fontWeight(.bold)
+                    .lineLimit(2)
                 
                 Text(subTitle)
                     .font(.headline)
@@ -44,7 +45,7 @@ struct OnboardingDetailView: View {
             .padding(5)
         }
         .padding(25)
-        .background(RoundedRectangle(cornerRadius: 25).fill(.clear)
+        .background(RoundedRectangle(cornerRadius: 20).fill(.clear)
             .stroke(.lightGrey, style: StrokeStyle(lineWidth: 2, dash: [10]))
         )
         

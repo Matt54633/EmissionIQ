@@ -26,9 +26,9 @@ struct ReusableErrorView: View {
                 Image(systemName: "exclamationmark.triangle.fill")
                 Text(text)
             }
-            .foregroundStyle(textColor)
             .font(.title3)
             .fontWeight(.semibold)
+            .foregroundStyle(textColor)
             
         }
     }
@@ -37,4 +37,3 @@ struct ReusableErrorView: View {
 #Preview {
     ReusableErrorView(backgroundColour: .red, text: "Error", textColor: .red, opacity: 0.25, radius: 15)
 }
-

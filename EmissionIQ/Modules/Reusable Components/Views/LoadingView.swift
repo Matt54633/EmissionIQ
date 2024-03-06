@@ -11,14 +11,16 @@ import SwiftUI
 struct LoadingView: View {
     var body: some View {
         VStack {
+            
             Spacer()
             
             ProgressView()
+                .padding()
                 .scaleEffect(1.5, anchor: .center)
                 .tint(.primaryGreen)
-                .padding()
             
             Spacer()
+            
         }
     }
 }

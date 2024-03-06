@@ -19,23 +19,25 @@ struct PageHeaderView<Content: View>: View {
     
     var body: some View {
         ZStack(alignment: .top) {
+            
             WavyRectangle()
                 .fill(.primaryGreen)
             
             HStack {
+                
                 Text(pageTitle)
-                    .fontWeight(.semibold)
                     .font(.title)
+                    .fontWeight(.semibold)
                     .foregroundStyle(.white)
                 
                 Spacer()
-        
+                
                 content
             }
             .modifier(ConditionalPadding())
-            .padding(EdgeInsets(top: 60, leading: 15, bottom: 0, trailing: 15))
+            .padding(EdgeInsets(top: UIScreen.current?.bounds.height ?? 600 > 700 ? 55 : 30, leading: 15, bottom: 0, trailing: 15))
+            
         }
         .ignoresSafeArea(.all)
     }
 }
-

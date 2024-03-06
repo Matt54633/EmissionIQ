@@ -11,11 +11,12 @@ import SwiftUI
 struct OnboardingNotificationView: View {
     @StateObject var notificationManager = NotificationManager()
     @AppStorage("onboardingComplete") var onboardingComplete: Bool?
-
+    
     var body: some View {
         VStack {
+            
             OnboardingDetailView(image: "app.badge", title: "Notification Access", subTitle: "EmissionIQ sends a daily reminder to add your journeys to keep you on track!", systemImage: true)
-                        
+            
             Button {
                 onboardingComplete = true
             } label: {
@@ -32,8 +33,9 @@ struct OnboardingNotificationView: View {
                     onboardingComplete = true
                 }
             }
+            
         }
-        .padding(.horizontal)
+        .padding([.horizontal, .bottom])
         .navigationBarBackButtonHidden()
     }
 }

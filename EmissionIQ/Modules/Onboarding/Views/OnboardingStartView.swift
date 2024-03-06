@@ -13,6 +13,7 @@ struct OnboardingStartView: View {
     
     var body: some View {
         NavigationStack {
+            
             VStack {
                 
                 OnboardingDetailView(image: "App Logo", title: "Welcome!", subTitle: "Your EmissionIQ journey starts here. Are you ready to begin?", systemImage: false)
@@ -31,7 +32,8 @@ struct OnboardingStartView: View {
                 }
                 
             }
-            .padding(.horizontal)
+            .padding([.horizontal, .bottom])
+            
         }
         .sheet(isPresented: $viewModel.displaySheet) {
             OnboardingSignInView()
@@ -41,7 +43,9 @@ struct OnboardingStartView: View {
                 viewModel.checkICloudSignInStatus()
             }
             
-            viewModel.createUser()
+            Task {
+                try await viewModel.createUser()
+            }
         }
         .navigationBarBackButtonHidden()
         .tint(.primaryGreen)
@@ -51,4 +55,3 @@ struct OnboardingStartView: View {
 #Preview {
     OnboardingStartView()
 }
-

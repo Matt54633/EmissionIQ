@@ -9,13 +9,14 @@ import SwiftUI
 
 // OnboardingLocationView allows the user to opt in to location access
 struct OnboardingLocationView: View {
-    var locationManager = LocationManager()
     @State private var readyToNavigate: Bool = false
+    var locationManager = LocationManager()
     
     var body: some View {
         VStack {
+            
             OnboardingDetailView(image: "location.circle.fill", title: "Location Access", subTitle: "EmissionIQ uses your location to provide localised search results when adding a journey.", systemImage: true)
-                        
+            
             NavigationLink {
                 OnboardingNotificationView()
             } label: {
@@ -37,8 +38,9 @@ struct OnboardingLocationView: View {
                     }
                 }
             }
+            
         }
-        .padding(.horizontal)
+        .padding([.horizontal, .bottom])
         .navigationBarBackButtonHidden()
     }
 }
