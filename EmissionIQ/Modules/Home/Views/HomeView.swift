@@ -34,7 +34,7 @@ struct HomeView: View {
                                 
                                 Group {
                                     
-                                    StatsPreviewView()
+                                    StatsGalleryView()
                                     
                                     TriviaGalleryView()
                                     
