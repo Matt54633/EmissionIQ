@@ -17,7 +17,7 @@ struct CarbonOutputValueView: View {
             
             HStack {
                 
-                Text("\(journeys.calculateTotalEmissions() < 100.0 ? String(format: "%.1f", journeys.calculateTotalEmissions()) : String(format: "%.0f", journeys.calculateTotalEmissions()))")
+                Text("\(journeys.calculateTotalEmissions() < 10000.0 ? String(format: "%.1f", journeys.calculateTotalEmissions()) : String(format: "%.0f", journeys.calculateTotalEmissions()))")
                     .font(.system(size: 80)) +
                 
                 Text("kg CO₂e")

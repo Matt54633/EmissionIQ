@@ -19,7 +19,7 @@ struct ImpactListView: View {
             VStack(alignment: .leading) {
                 
                 Group {
-                    Text("\((String(format: "%.0f", journeys.calculateTotalEmissions())))")
+                    Text("\((String(format: "%.1f", journeys.calculateTotalEmissions())))")
                         .font(.system(size: 80)) +
                     Text("kg CO₂e")
                         .font(.title2)

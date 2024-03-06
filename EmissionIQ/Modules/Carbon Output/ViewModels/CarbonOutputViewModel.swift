@@ -31,7 +31,7 @@ class CarbonOutputViewModel: ObservableObject {
         let calendar = Calendar.current
         let now = Date()
         let components = calendar.dateComponents([.day], from: fetchedDate, to: now)
-        return components.day ?? 0
+        return (components.day ?? 0) + 1
     }
     
     // create attributes for public record
