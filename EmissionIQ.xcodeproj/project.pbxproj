@@ -90,6 +90,17 @@
 		7644DD222B98AD0800B3EAE4 /* TransportTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD212B98AD0800B3EAE4 /* TransportTip.swift */; };
 		7644DD242B98AD3100B3EAE4 /* TransportMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD232B98AD3100B3EAE4 /* TransportMethodView.swift */; };
 		7644DD262B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD252B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift */; };
+		7644DD2B2B98AEF800B3EAE4 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD2A2B98AEF800B3EAE4 /* LevelView.swift */; };
+		7644DD2D2B98AF1C00B3EAE4 /* LevelXpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD2C2B98AF1C00B3EAE4 /* LevelXpView.swift */; };
+		7644DD2F2B98AFE300B3EAE4 /* LevelXpItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD2E2B98AFE300B3EAE4 /* LevelXpItemView.swift */; };
+		7644DD312B98AFF900B3EAE4 /* LevelIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD302B98AFF900B3EAE4 /* LevelIndicatorView.swift */; };
+		7644DD332B98B00F00B3EAE4 /* LevelProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD322B98B00F00B3EAE4 /* LevelProgressView.swift */; };
+		7644DD352B98B02700B3EAE4 /* LevelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD342B98B02700B3EAE4 /* LevelTextView.swift */; };
+		7644DD372B98B03900B3EAE4 /* LevelUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD362B98B03900B3EAE4 /* LevelUpView.swift */; };
+		7644DD392B98B04900B3EAE4 /* LevelCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD382B98B04900B3EAE4 /* LevelCounterView.swift */; };
+		7644DD3B2B98B06100B3EAE4 /* LevelConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD3A2B98B06100B3EAE4 /* LevelConfettiView.swift */; };
+		7644DD3D2B98B06E00B3EAE4 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD3C2B98B06E00B3EAE4 /* LevelViewModel.swift */; };
+		7644DD3F2B98B07F00B3EAE4 /* LevelUserRibbonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD3E2B98B07F00B3EAE4 /* LevelUserRibbonView.swift */; };
 		765FA8902B91EC3000030EC1 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA88F2B91EC3000030EC1 /* Source.swift */; };
 		765FA8922B91EC4F00030EC1 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8912B91EC4F00030EC1 /* Details.swift */; };
 		765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8932B91EC8700030EC1 /* SourceLink.swift */; };
@@ -221,6 +232,17 @@
 		7644DD212B98AD0800B3EAE4 /* TransportTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportTip.swift; sourceTree = "<group>"; };
 		7644DD232B98AD3100B3EAE4 /* TransportMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMethodView.swift; sourceTree = "<group>"; };
 		7644DD252B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMethodOverlayView.swift; sourceTree = "<group>"; };
+		7644DD2A2B98AEF800B3EAE4 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		7644DD2C2B98AF1C00B3EAE4 /* LevelXpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelXpView.swift; sourceTree = "<group>"; };
+		7644DD2E2B98AFE300B3EAE4 /* LevelXpItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelXpItemView.swift; sourceTree = "<group>"; };
+		7644DD302B98AFF900B3EAE4 /* LevelIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelIndicatorView.swift; sourceTree = "<group>"; };
+		7644DD322B98B00F00B3EAE4 /* LevelProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelProgressView.swift; sourceTree = "<group>"; };
+		7644DD342B98B02700B3EAE4 /* LevelTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTextView.swift; sourceTree = "<group>"; };
+		7644DD362B98B03900B3EAE4 /* LevelUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpView.swift; sourceTree = "<group>"; };
+		7644DD382B98B04900B3EAE4 /* LevelCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCounterView.swift; sourceTree = "<group>"; };
+		7644DD3A2B98B06100B3EAE4 /* LevelConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelConfettiView.swift; sourceTree = "<group>"; };
+		7644DD3C2B98B06E00B3EAE4 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
+		7644DD3E2B98B07F00B3EAE4 /* LevelUserRibbonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUserRibbonView.swift; sourceTree = "<group>"; };
 		765FA88F2B91EC3000030EC1 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		765FA8912B91EC4F00030EC1 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		765FA8932B91EC8700030EC1 /* SourceLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLink.swift; sourceTree = "<group>"; };
@@ -415,6 +437,7 @@
 		763274BB2B7D401A00257FD2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7644DD272B98ADB800B3EAE4 /* Levels */,
 				7644DD0E2B98AB5A00B3EAE4 /* Emissions Profile */,
 				7644DCE42B98A83D00B3EAE4 /* Sources */,
 				7644DCE32B98A83800B3EAE4 /* Articles */,
@@ -775,6 +798,40 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		7644DD272B98ADB800B3EAE4 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				7644DD282B98ADBD00B3EAE4 /* Views */,
+				7644DD292B98ADC200B3EAE4 /* ViewModels */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		7644DD282B98ADBD00B3EAE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7644DD2A2B98AEF800B3EAE4 /* LevelView.swift */,
+				7644DD2C2B98AF1C00B3EAE4 /* LevelXpView.swift */,
+				7644DD2E2B98AFE300B3EAE4 /* LevelXpItemView.swift */,
+				7644DD302B98AFF900B3EAE4 /* LevelIndicatorView.swift */,
+				7644DD322B98B00F00B3EAE4 /* LevelProgressView.swift */,
+				7644DD342B98B02700B3EAE4 /* LevelTextView.swift */,
+				7644DD362B98B03900B3EAE4 /* LevelUpView.swift */,
+				7644DD382B98B04900B3EAE4 /* LevelCounterView.swift */,
+				7644DD3A2B98B06100B3EAE4 /* LevelConfettiView.swift */,
+				7644DD3E2B98B07F00B3EAE4 /* LevelUserRibbonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7644DD292B98ADC200B3EAE4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7644DD3C2B98B06E00B3EAE4 /* LevelViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		765FA8A32B91ED5B00030EC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -978,6 +1035,7 @@
 				765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */,
 				765FA8AC2B91EDC300030EC1 /* OnboardingLocationView.swift in Sources */,
 				7644DCB82B98984300B3EAE4 /* StatsGridView.swift in Sources */,
+				7644DD3B2B98B06100B3EAE4 /* LevelConfettiView.swift in Sources */,
 				7644DCAA2B9896FF00B3EAE4 /* TriviaItemView.swift in Sources */,
 				7644DD0A2B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift in Sources */,
 				7644DCD22B98A71200B3EAE4 /* TrophyView.swift in Sources */,
@@ -991,18 +1049,24 @@
 				7644DCFC2B98A97200B3EAE4 /* SourcesViewModel.swift in Sources */,
 				76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */,
 				7644DC962B98956900B3EAE4 /* CarbonOutputHeaderView.swift in Sources */,
+				7644DD392B98B04900B3EAE4 /* LevelCounterView.swift in Sources */,
 				7644DD142B98AB8900B3EAE4 /* ReadArticle.swift in Sources */,
+				7644DD332B98B00F00B3EAE4 /* LevelProgressView.swift in Sources */,
 				7644DCC82B98991A00B3EAE4 /* StatsPieOverlayView.swift in Sources */,
 				76087B9A2B8BD469005C2431 /* ListSectionTag.swift in Sources */,
 				7644DD062B98AAE900B3EAE4 /* ArticlesErrorView.swift in Sources */,
 				765FA8B62B91EE6300030EC1 /* LevelManager.swift in Sources */,
 				76F8752A2B88F4C8000EA3D7 /* GalleryHeaderView.swift in Sources */,
+				7644DD3F2B98B07F00B3EAE4 /* LevelUserRibbonView.swift in Sources */,
 				765FA8902B91EC3000030EC1 /* Source.swift in Sources */,
+				7644DD2B2B98AEF800B3EAE4 /* LevelView.swift in Sources */,
 				76F875282B88F4A6000EA3D7 /* GlassEffectView.swift in Sources */,
 				7644DCB22B9897E800B3EAE4 /* StatsView.swift in Sources */,
 				7644DCA22B98961F00B3EAE4 /* ImpactListItemView.swift in Sources */,
 				7644DD082B98AB0400B3EAE4 /* ArticleListItemView.swift in Sources */,
+				7644DD3D2B98B06E00B3EAE4 /* LevelViewModel.swift in Sources */,
 				76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */,
+				7644DD372B98B03900B3EAE4 /* LevelUpView.swift in Sources */,
 				7644DCD42B98A72B00B3EAE4 /* TrophyListItemView.swift in Sources */,
 				765FA8922B91EC4F00030EC1 /* Details.swift in Sources */,
 				761A88512B97DE4B00F85ABB /* UIWindow.swift in Sources */,
@@ -1033,6 +1097,7 @@
 				765FA8B72B91F24F00030EC1 /* NotificationManager.swift in Sources */,
 				7644DC8F2B9894A600B3EAE4 /* QuickActionView.swift in Sources */,
 				7644DD202B98ACF100B3EAE4 /* TransportMethodsView.swift in Sources */,
+				7644DD2D2B98AF1C00B3EAE4 /* LevelXpView.swift in Sources */,
 				7644DD1A2B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift in Sources */,
 				76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */,
 				7644DCC42B9898E400B3EAE4 /* StatsPieViewModel.swift in Sources */,
@@ -1054,6 +1119,7 @@
 				7644DCBE2B98988E00B3EAE4 /* StatsGraphOverlayView.swift in Sources */,
 				7644DCE82B98A85900B3EAE4 /* FactGalleryView.swift in Sources */,
 				7644DC982B98957F00B3EAE4 /* CarbonOutputValueView.swift in Sources */,
+				7644DD352B98B02700B3EAE4 /* LevelTextView.swift in Sources */,
 				7644DCFA2B98A95C00B3EAE4 /* SourceLinksView.swift in Sources */,
 				761A884D2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift in Sources */,
 				761A88572B97E00900F85ABB /* StatsOverviewTip.swift in Sources */,
@@ -1063,6 +1129,7 @@
 				7644DCD02B98A6FC00B3EAE4 /* TrophiesView.swift in Sources */,
 				7644DD1C2B98AC3000B3EAE4 /* EmissionsProfileView.swift in Sources */,
 				7644DC912B9894C200B3EAE4 /* QuickActionGalleryView.swift in Sources */,
+				7644DD2F2B98AFE300B3EAE4 /* LevelXpItemView.swift in Sources */,
 				765FA8A22B91ED0200030EC1 /* Fact.swift in Sources */,
 				76F875242B88F44B000EA3D7 /* WebView.swift in Sources */,
 				76087B9C2B8BD47B005C2431 /* LocationTextField.swift in Sources */,
@@ -1071,6 +1138,7 @@
 				7644DCC02B9898B300B3EAE4 /* StatsGraphViewModel.swift in Sources */,
 				7644DCD82B98A75200B3EAE4 /* TrophyLockedView.swift in Sources */,
 				7644DC802B98930B00B3EAE4 /* TrophyManager.swift in Sources */,
+				7644DD312B98AFF900B3EAE4 /* LevelIndicatorView.swift in Sources */,
 				7644DCF62B98A92A00B3EAE4 /* SourceView.swift in Sources */,
 				761A88592B97E02E00F85ABB /* JourneyReturnTip.swift in Sources */,
 				76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */,
