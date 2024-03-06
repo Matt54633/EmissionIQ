@@ -1,5 +1,5 @@
 //
-//  TrophyViewModel.swift
+//  TrophiesViewModel.swift
 //  EmissionIQ
 //
 //  Created by Matt Sullivan on 06/03/2024.
@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 import CloudKit
 
-class TrophyViewModel: ObservableObject {
+class TrophiesViewModel: ObservableObject {
     @Published var level: Int = 0
     @Published var xp: Int = 0
     

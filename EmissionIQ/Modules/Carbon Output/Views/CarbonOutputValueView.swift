@@ -17,7 +17,7 @@ struct CarbonOutputValueView: View {
             
             HStack {
                 
-                Text("\((String(format: "%.0f", journeys.calculateTotalEmissions())))")
+                Text(journeys.calculateTotalEmissions(), format: .number.notation(.compactName))
                     .font(.system(size: 80)) +
                 
                 Text("kg CO₂e")

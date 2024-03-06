@@ -5,7 +5,7 @@
 //  Created by Matt Sullivan on 06/03/2024.
 //
 
-import SwiftUI
+import Foundation
 import CloudKit
 
 class CarbonOutputViewModel: ObservableObject {
@@ -13,12 +13,12 @@ class CarbonOutputViewModel: ObservableObject {
     // set the users number of journeys, active days, and read articles in their public data record
     func setUserAttributes(journeys: [Journey], trophies: [Trophy], readArticles: [ReadArticle]) async {
         let totalDistance = journeys.reduce(0) { $0 + $1.distance }.rounded(.down)
-        let totalImpact = journeys.reduce(0) { $0 + $1.carbonProduced }.rounded(.up)
+        let totalImpact = journeys.reduce(0) { $0 + $1.carbonProduced }.rounded(.down)
         
         do {
             let fetchedDate = try await PrivateDataManager.shared.fetchUserCreationDate()
             let activeDays = self.calculateActiveDays(from: fetchedDate)
-            let attributes = self.createAttributes(journeys: journeys, trophies: trophies, readArticles: readArticles, totalDistance: Double(totalDistance), totalImpact: Double(totalImpact).rounded(.up), activeDays: activeDays)
+            let attributes = self.createAttributes(journeys: journeys, trophies: trophies, readArticles: readArticles, totalDistance: Double(totalDistance), totalImpact: Double(totalImpact), activeDays: activeDays)
             
             try await self.setPublicUserRecord(attributes: attributes)
         } catch {
