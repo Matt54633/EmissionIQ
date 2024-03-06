@@ -57,8 +57,8 @@ struct StatsGraphView: View {
             .chartYAxis(content: {
                 AxisMarks { value in
                     AxisValueLabel {
-                        if let value = value.as(Int.self) {
-                            Text(String(value)) + Text(viewModel.axisLabel ?? "")
+                        if let value = value.as(Double.self) {
+                            Text(String(format: "%.1f" ,value)) + Text(viewModel.axisLabel ?? "")
                         }
                     }
                 }

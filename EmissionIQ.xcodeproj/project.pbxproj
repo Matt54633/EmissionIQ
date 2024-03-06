@@ -92,7 +92,6 @@
 		7644DD2B2B98AEF800B3EAE4 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD2A2B98AEF800B3EAE4 /* LevelView.swift */; };
 		7644DD2D2B98AF1C00B3EAE4 /* LevelXpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD2C2B98AF1C00B3EAE4 /* LevelXpView.swift */; };
 		7644DD2F2B98AFE300B3EAE4 /* LevelXpItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD2E2B98AFE300B3EAE4 /* LevelXpItemView.swift */; };
-		7644DD312B98AFF900B3EAE4 /* LevelIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD302B98AFF900B3EAE4 /* LevelIndicatorView.swift */; };
 		7644DD332B98B00F00B3EAE4 /* LevelProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD322B98B00F00B3EAE4 /* LevelProgressView.swift */; };
 		7644DD352B98B02700B3EAE4 /* LevelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD342B98B02700B3EAE4 /* LevelTextView.swift */; };
 		7644DD372B98B03900B3EAE4 /* LevelUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD362B98B03900B3EAE4 /* LevelUpView.swift */; };
@@ -145,6 +144,36 @@
 		767FE8872B98BF54003C225D /* SearchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8862B98BF54003C225D /* SearchRowView.swift */; };
 		767FE8892B98BF68003C225D /* SearchRecentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8882B98BF68003C225D /* SearchRecentRowView.swift */; };
 		767FE88B2B98BF84003C225D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE88A2B98BF84003C225D /* SearchViewModel.swift */; };
+		767FE88D2B98BFC7003C225D /* JourneysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE88C2B98BFC7003C225D /* JourneysView.swift */; };
+		767FE88F2B98BFE7003C225D /* JourneysListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE88E2B98BFE7003C225D /* JourneysListView.swift */; };
+		767FE8912B98C008003C225D /* JourneysListAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8902B98C008003C225D /* JourneysListAddButtonView.swift */; };
+		767FE8932B98C023003C225D /* JourneysListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8922B98C023003C225D /* JourneysListViewModel.swift */; };
+		767FE8982B98C099003C225D /* AddJourneyForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8972B98C099003C225D /* AddJourneyForm.swift */; };
+		767FE89A2B98C0BA003C225D /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8992B98C0BA003C225D /* LocationPickerView.swift */; };
+		767FE89C2B98C0D0003C225D /* LocationTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE89B2B98C0D0003C225D /* LocationTextFieldView.swift */; };
+		767FE89E2B98C0E2003C225D /* AddJourneyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE89D2B98C0E2003C225D /* AddJourneyButtonView.swift */; };
+		767FE8A02B98C0F5003C225D /* TransportPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE89F2B98C0F5003C225D /* TransportPickerView.swift */; };
+		767FE8A22B98C10F003C225D /* DistanceOverrideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8A12B98C10F003C225D /* DistanceOverrideView.swift */; };
+		767FE8A42B98C11F003C225D /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8A32B98C11F003C225D /* DatePickerView.swift */; };
+		767FE8A62B98C137003C225D /* JourneyInfoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8A52B98C137003C225D /* JourneyInfoButtonView.swift */; };
+		767FE8A82B98C153003C225D /* AddJourneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8A72B98C153003C225D /* AddJourneyViewModel.swift */; };
+		767FE8AA2B98C15E003C225D /* JourneyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8A92B98C15E003C225D /* JourneyInfoView.swift */; };
+		767FE8AC2B98C185003C225D /* JourneyInfoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8AB2B98C185003C225D /* JourneyInfoGridView.swift */; };
+		767FE8AE2B98C199003C225D /* JourneyInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8AD2B98C199003C225D /* JourneyInfoSectionView.swift */; };
+		767FE8B02B98C1D0003C225D /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8AF2B98C1D0003C225D /* JourneyView.swift */; };
+		767FE8B22B98C1E3003C225D /* JourneyLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8B12B98C1E3003C225D /* JourneyLocationsView.swift */; };
+		767FE8B42B98C1F3003C225D /* JourneyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8B32B98C1F3003C225D /* JourneyDetailsView.swift */; };
+		767FE8B62B98C200003C225D /* JourneyInfoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8B52B98C200003C225D /* JourneyInfoItemView.swift */; };
+		767FE8B82B98C215003C225D /* JourneyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8B72B98C215003C225D /* JourneyDetailView.swift */; };
+		767FE8BA2B98C224003C225D /* JourneyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8B92B98C224003C225D /* JourneyMapView.swift */; };
+		767FE8BC2B98C237003C225D /* JourneyDeleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8BB2B98C237003C225D /* JourneyDeleteButtonView.swift */; };
+		767FE8BE2B98C246003C225D /* JourneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8BD2B98C246003C225D /* JourneyViewModel.swift */; };
+		767FE8C02B98C258003C225D /* JourneyImpactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8BF2B98C258003C225D /* JourneyImpactViewModel.swift */; };
+		767FE8C22B98C26A003C225D /* JourneyImpactListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8C12B98C26A003C225D /* JourneyImpactListItemView.swift */; };
+		767FE8C42B98C27D003C225D /* JourneyAlternateTransportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8C32B98C27D003C225D /* JourneyAlternateTransportView.swift */; };
+		767FE8C62B98C28D003C225D /* JourneyImpactGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8C52B98C28D003C225D /* JourneyImpactGalleryView.swift */; };
+		767FE8C82B98C31D003C225D /* JourneyListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8C72B98C31D003C225D /* JourneyListItemView.swift */; };
+		767FE8CA2B98C516003C225D /* LevelIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8C92B98C516003C225D /* LevelIndicatorView.swift */; };
 		76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CB2B69578700112552 /* EmissionIQApp.swift */; };
 		76E306CE2B69578700112552 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CD2B69578700112552 /* ContentView.swift */; };
 		76E306D02B69578800112552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306CF2B69578800112552 /* Assets.xcassets */; };
@@ -257,7 +286,6 @@
 		7644DD2A2B98AEF800B3EAE4 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		7644DD2C2B98AF1C00B3EAE4 /* LevelXpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelXpView.swift; sourceTree = "<group>"; };
 		7644DD2E2B98AFE300B3EAE4 /* LevelXpItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelXpItemView.swift; sourceTree = "<group>"; };
-		7644DD302B98AFF900B3EAE4 /* LevelIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelIndicatorView.swift; sourceTree = "<group>"; };
 		7644DD322B98B00F00B3EAE4 /* LevelProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelProgressView.swift; sourceTree = "<group>"; };
 		7644DD342B98B02700B3EAE4 /* LevelTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTextView.swift; sourceTree = "<group>"; };
 		7644DD362B98B03900B3EAE4 /* LevelUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpView.swift; sourceTree = "<group>"; };
@@ -308,6 +336,36 @@
 		767FE8862B98BF54003C225D /* SearchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRowView.swift; sourceTree = "<group>"; };
 		767FE8882B98BF68003C225D /* SearchRecentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecentRowView.swift; sourceTree = "<group>"; };
 		767FE88A2B98BF84003C225D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		767FE88C2B98BFC7003C225D /* JourneysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneysView.swift; sourceTree = "<group>"; };
+		767FE88E2B98BFE7003C225D /* JourneysListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneysListView.swift; sourceTree = "<group>"; };
+		767FE8902B98C008003C225D /* JourneysListAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneysListAddButtonView.swift; sourceTree = "<group>"; };
+		767FE8922B98C023003C225D /* JourneysListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneysListViewModel.swift; sourceTree = "<group>"; };
+		767FE8972B98C099003C225D /* AddJourneyForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJourneyForm.swift; sourceTree = "<group>"; };
+		767FE8992B98C0BA003C225D /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
+		767FE89B2B98C0D0003C225D /* LocationTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTextFieldView.swift; sourceTree = "<group>"; };
+		767FE89D2B98C0E2003C225D /* AddJourneyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJourneyButtonView.swift; sourceTree = "<group>"; };
+		767FE89F2B98C0F5003C225D /* TransportPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportPickerView.swift; sourceTree = "<group>"; };
+		767FE8A12B98C10F003C225D /* DistanceOverrideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceOverrideView.swift; sourceTree = "<group>"; };
+		767FE8A32B98C11F003C225D /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		767FE8A52B98C137003C225D /* JourneyInfoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyInfoButtonView.swift; sourceTree = "<group>"; };
+		767FE8A72B98C153003C225D /* AddJourneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJourneyViewModel.swift; sourceTree = "<group>"; };
+		767FE8A92B98C15E003C225D /* JourneyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyInfoView.swift; sourceTree = "<group>"; };
+		767FE8AB2B98C185003C225D /* JourneyInfoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyInfoGridView.swift; sourceTree = "<group>"; };
+		767FE8AD2B98C199003C225D /* JourneyInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyInfoSectionView.swift; sourceTree = "<group>"; };
+		767FE8AF2B98C1D0003C225D /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
+		767FE8B12B98C1E3003C225D /* JourneyLocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyLocationsView.swift; sourceTree = "<group>"; };
+		767FE8B32B98C1F3003C225D /* JourneyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyDetailsView.swift; sourceTree = "<group>"; };
+		767FE8B52B98C200003C225D /* JourneyInfoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyInfoItemView.swift; sourceTree = "<group>"; };
+		767FE8B72B98C215003C225D /* JourneyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyDetailView.swift; sourceTree = "<group>"; };
+		767FE8B92B98C224003C225D /* JourneyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyMapView.swift; sourceTree = "<group>"; };
+		767FE8BB2B98C237003C225D /* JourneyDeleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyDeleteButtonView.swift; sourceTree = "<group>"; };
+		767FE8BD2B98C246003C225D /* JourneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyViewModel.swift; sourceTree = "<group>"; };
+		767FE8BF2B98C258003C225D /* JourneyImpactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyImpactViewModel.swift; sourceTree = "<group>"; };
+		767FE8C12B98C26A003C225D /* JourneyImpactListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyImpactListItemView.swift; sourceTree = "<group>"; };
+		767FE8C32B98C27D003C225D /* JourneyAlternateTransportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyAlternateTransportView.swift; sourceTree = "<group>"; };
+		767FE8C52B98C28D003C225D /* JourneyImpactGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyImpactGalleryView.swift; sourceTree = "<group>"; };
+		767FE8C72B98C31D003C225D /* JourneyListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyListItemView.swift; sourceTree = "<group>"; };
+		767FE8C92B98C516003C225D /* LevelIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelIndicatorView.swift; sourceTree = "<group>"; };
 		768FAAB72B93AB3A00DE4127 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		76E306C82B69578700112552 /* EmissionIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmissionIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E306CB2B69578700112552 /* EmissionIQApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionIQApp.swift; sourceTree = "<group>"; };
@@ -501,6 +559,7 @@
 				76087BAD2B8BD593005C2431 /* Onboarding */,
 				761A885C2B97E08200F85ABB /* Navigation */,
 				76087BA82B8BD555005C2431 /* Home */,
+				767FE8942B98C073003C225D /* Journey Creation */,
 				76087BA92B8BD562005C2431 /* Journeys */,
 				7644DD7D2B98B6F800B3EAE4 /* Search */,
 				76087BAA2B8BD566005C2431 /* Trophies */,
@@ -865,7 +924,7 @@
 				7644DD2A2B98AEF800B3EAE4 /* LevelView.swift */,
 				7644DD2C2B98AF1C00B3EAE4 /* LevelXpView.swift */,
 				7644DD2E2B98AFE300B3EAE4 /* LevelXpItemView.swift */,
-				7644DD302B98AFF900B3EAE4 /* LevelIndicatorView.swift */,
+				767FE8C92B98C516003C225D /* LevelIndicatorView.swift */,
 				7644DD322B98B00F00B3EAE4 /* LevelProgressView.swift */,
 				7644DD342B98B02700B3EAE4 /* LevelTextView.swift */,
 				7644DD362B98B03900B3EAE4 /* LevelUpView.swift */,
@@ -961,6 +1020,9 @@
 		7644DD822B98B72200B3EAE4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				767FE8922B98C023003C225D /* JourneysListViewModel.swift */,
+				767FE8BD2B98C246003C225D /* JourneyViewModel.swift */,
+				767FE8BF2B98C258003C225D /* JourneyImpactViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -968,6 +1030,20 @@
 		7644DD832B98B72600B3EAE4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				767FE88C2B98BFC7003C225D /* JourneysView.swift */,
+				767FE88E2B98BFE7003C225D /* JourneysListView.swift */,
+				767FE8902B98C008003C225D /* JourneysListAddButtonView.swift */,
+				767FE8C72B98C31D003C225D /* JourneyListItemView.swift */,
+				767FE8AF2B98C1D0003C225D /* JourneyView.swift */,
+				767FE8B12B98C1E3003C225D /* JourneyLocationsView.swift */,
+				767FE8B32B98C1F3003C225D /* JourneyDetailsView.swift */,
+				767FE8B72B98C215003C225D /* JourneyDetailView.swift */,
+				767FE8B52B98C200003C225D /* JourneyInfoItemView.swift */,
+				767FE8B92B98C224003C225D /* JourneyMapView.swift */,
+				767FE8BB2B98C237003C225D /* JourneyDeleteButtonView.swift */,
+				767FE8C52B98C28D003C225D /* JourneyImpactGalleryView.swift */,
+				767FE8C12B98C26A003C225D /* JourneyImpactListItemView.swift */,
+				767FE8C32B98C27D003C225D /* JourneyAlternateTransportView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -988,6 +1064,41 @@
 			isa = PBXGroup;
 			children = (
 				765FA8A52B91ED7500030EC1 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		767FE8942B98C073003C225D /* Journey Creation */ = {
+			isa = PBXGroup;
+			children = (
+				767FE8952B98C082003C225D /* Views */,
+				767FE8962B98C08B003C225D /* ViewModels */,
+			);
+			path = "Journey Creation";
+			sourceTree = "<group>";
+		};
+		767FE8952B98C082003C225D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				767FE8972B98C099003C225D /* AddJourneyForm.swift */,
+				767FE8992B98C0BA003C225D /* LocationPickerView.swift */,
+				767FE89B2B98C0D0003C225D /* LocationTextFieldView.swift */,
+				767FE89F2B98C0F5003C225D /* TransportPickerView.swift */,
+				767FE8A32B98C11F003C225D /* DatePickerView.swift */,
+				767FE8A12B98C10F003C225D /* DistanceOverrideView.swift */,
+				767FE89D2B98C0E2003C225D /* AddJourneyButtonView.swift */,
+				767FE8A52B98C137003C225D /* JourneyInfoButtonView.swift */,
+				767FE8A92B98C15E003C225D /* JourneyInfoView.swift */,
+				767FE8AB2B98C185003C225D /* JourneyInfoGridView.swift */,
+				767FE8AD2B98C199003C225D /* JourneyInfoSectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		767FE8962B98C08B003C225D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				767FE8A72B98C153003C225D /* AddJourneyViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1165,11 +1276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				767FE8B22B98C1E3003C225D /* JourneyLocationsView.swift in Sources */,
 				765FA89C2B91ECDB00030EC1 /* Articles.swift in Sources */,
 				7644DCF02B98A8BE00B3EAE4 /* SourcesGalleryView.swift in Sources */,
+				767FE8C02B98C258003C225D /* JourneyImpactViewModel.swift in Sources */,
 				765FA8982B91ECA600030EC1 /* Article.swift in Sources */,
 				7644DC7E2B98900F00B3EAE4 /* PeelEffectView.swift in Sources */,
+				767FE8C82B98C31D003C225D /* JourneyListItemView.swift in Sources */,
 				76E306CE2B69578700112552 /* ContentView.swift in Sources */,
+				767FE8912B98C008003C225D /* JourneysListAddButtonView.swift in Sources */,
 				7644DCE12B98A7DD00B3EAE4 /* Trophy.swift in Sources */,
 				7644DCA82B9896B700B3EAE4 /* TriviaGalleryView.swift in Sources */,
 				767FE8872B98BF54003C225D /* SearchRowView.swift in Sources */,
@@ -1179,6 +1294,7 @@
 				765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */,
 				765FA8AC2B91EDC300030EC1 /* OnboardingLocationView.swift in Sources */,
 				7644DD762B98B5C700B3EAE4 /* LeaderboardsGridView.swift in Sources */,
+				767FE8CA2B98C516003C225D /* LevelIndicatorView.swift in Sources */,
 				7644DCB82B98984300B3EAE4 /* StatsGridView.swift in Sources */,
 				7644DD3B2B98B06100B3EAE4 /* LevelConfettiView.swift in Sources */,
 				7644DCAA2B9896FF00B3EAE4 /* TriviaItemView.swift in Sources */,
@@ -1196,6 +1312,7 @@
 				7644DD242B98AD3100B3EAE4 /* TransportMethodView.swift in Sources */,
 				7644DCFC2B98A97200B3EAE4 /* SourcesViewModel.swift in Sources */,
 				76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */,
+				767FE88F2B98BFE7003C225D /* JourneysListView.swift in Sources */,
 				7644DC962B98956900B3EAE4 /* CarbonOutputHeaderView.swift in Sources */,
 				7644DD392B98B04900B3EAE4 /* LevelCounterView.swift in Sources */,
 				7644DD142B98AB8900B3EAE4 /* ReadArticle.swift in Sources */,
@@ -1203,6 +1320,7 @@
 				7644DCC82B98991A00B3EAE4 /* StatsPieOverlayView.swift in Sources */,
 				76087B9A2B8BD469005C2431 /* ListSectionTag.swift in Sources */,
 				7644DD062B98AAE900B3EAE4 /* ArticlesErrorView.swift in Sources */,
+				767FE8C22B98C26A003C225D /* JourneyImpactListItemView.swift in Sources */,
 				765FA8B62B91EE6300030EC1 /* LevelManager.swift in Sources */,
 				76F8752A2B88F4C8000EA3D7 /* GalleryHeaderView.swift in Sources */,
 				7644DD712B98B5C700B3EAE4 /* LeaderboardMotivatorView.swift in Sources */,
@@ -1216,15 +1334,20 @@
 				7644DD082B98AB0400B3EAE4 /* ArticleListItemView.swift in Sources */,
 				7644DD3D2B98B06E00B3EAE4 /* LevelViewModel.swift in Sources */,
 				76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */,
+				767FE8932B98C023003C225D /* JourneysListViewModel.swift in Sources */,
+				767FE8C42B98C27D003C225D /* JourneyAlternateTransportView.swift in Sources */,
 				7644DD372B98B03900B3EAE4 /* LevelUpView.swift in Sources */,
 				7644DD752B98B5C700B3EAE4 /* LeaderboardPodiumItemView.swift in Sources */,
 				7644DCD42B98A72B00B3EAE4 /* TrophyListItemView.swift in Sources */,
 				765FA8922B91EC4F00030EC1 /* Details.swift in Sources */,
 				761A88512B97DE4B00F85ABB /* UIWindow.swift in Sources */,
 				7644DD742B98B5C700B3EAE4 /* LeaderboardUserView.swift in Sources */,
+				767FE8BE2B98C246003C225D /* JourneyViewModel.swift in Sources */,
 				7644DD722B98B5C700B3EAE4 /* LeaderboardView.swift in Sources */,
 				7644DCBA2B98986800B3EAE4 /* StatsItemView.swift in Sources */,
 				7644DCC22B9898CD00B3EAE4 /* StatsViewModel.swift in Sources */,
+				767FE8AA2B98C15E003C225D /* JourneyInfoView.swift in Sources */,
+				767FE8AC2B98C185003C225D /* JourneyInfoGridView.swift in Sources */,
 				7644DCEC2B98A88900B3EAE4 /* FactViewModel.swift in Sources */,
 				765FA89E2B91ECE600030EC1 /* TopPicks.swift in Sources */,
 				7644DD772B98B5C700B3EAE4 /* LeaderboardRankView.swift in Sources */,
@@ -1232,8 +1355,11 @@
 				7644DD852B98BBA400B3EAE4 /* Location.swift in Sources */,
 				7644DD262B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift in Sources */,
 				76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */,
+				767FE8982B98C099003C225D /* AddJourneyForm.swift in Sources */,
+				767FE8BC2B98C237003C225D /* JourneyDeleteButtonView.swift in Sources */,
 				765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */,
 				7644DCF22B98A8EB00B3EAE4 /* SourceTypeListItemView.swift in Sources */,
+				767FE89A2B98C0BA003C225D /* LocationPickerView.swift in Sources */,
 				76087BA22B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift in Sources */,
 				7644DCDA2B98A76800B3EAE4 /* TrophyDisplayView.swift in Sources */,
 				7644DCAE2B98974000B3EAE4 /* TriviaViewModel.swift in Sources */,
@@ -1245,12 +1371,15 @@
 				7644DC822B98934100B3EAE4 /* NavView.swift in Sources */,
 				7644DD602B98B5AD00B3EAE4 /* JourneyMessageView.swift in Sources */,
 				7644DCA42B98963800B3EAE4 /* ImpactViewModel.swift in Sources */,
+				767FE8AE2B98C199003C225D /* JourneyInfoSectionView.swift in Sources */,
 				76F875222B88F42F000EA3D7 /* Ribbon.swift in Sources */,
 				7644DD792B98B5C700B3EAE4 /* LeaderboardPodiumMedalView.swift in Sources */,
 				767FE8892B98BF68003C225D /* SearchRecentRowView.swift in Sources */,
 				7644DD002B98AAAB00B3EAE4 /* ArticlesGalleryView.swift in Sources */,
+				767FE8A02B98C0F5003C225D /* TransportPickerView.swift in Sources */,
 				7644DC9E2B9895EE00B3EAE4 /* ImpactListView.swift in Sources */,
 				7644DCB42B9897F700B3EAE4 /* StatsTabView.swift in Sources */,
+				767FE8A82B98C153003C225D /* AddJourneyViewModel.swift in Sources */,
 				76F8752C2B88F4E7000EA3D7 /* PageHeaderView.swift in Sources */,
 				7644DCEA2B98A87300B3EAE4 /* FactView.swift in Sources */,
 				7644DD7C2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift in Sources */,
@@ -1273,8 +1402,10 @@
 				7644DD042B98AAD600B3EAE4 /* ArticlesFeedView.swift in Sources */,
 				76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */,
 				76F875302B88F52B000EA3D7 /* ReusableErrorView.swift in Sources */,
+				767FE8C62B98C28D003C225D /* JourneyImpactGalleryView.swift in Sources */,
 				7644DD162B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift in Sources */,
 				7644DCF42B98A91200B3EAE4 /* SourcesFeedView.swift in Sources */,
+				767FE8A42B98C11F003C225D /* DatePickerView.swift in Sources */,
 				765FA8A02B91ECEE00030EC1 /* Trivia.swift in Sources */,
 				765FA8AA2B91EDAD00030EC1 /* OnboardingSignInView.swift in Sources */,
 				7644DCBE2B98988E00B3EAE4 /* StatsGraphOverlayView.swift in Sources */,
@@ -1282,13 +1413,18 @@
 				7644DCE82B98A85900B3EAE4 /* FactGalleryView.swift in Sources */,
 				7644DC982B98957F00B3EAE4 /* CarbonOutputValueView.swift in Sources */,
 				7644DD352B98B02700B3EAE4 /* LevelTextView.swift in Sources */,
+				767FE88D2B98BFC7003C225D /* JourneysView.swift in Sources */,
 				7644DCFA2B98A95C00B3EAE4 /* SourceLinksView.swift in Sources */,
 				767FE8852B98BF44003C225D /* SearchBarView.swift in Sources */,
 				761A884D2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift in Sources */,
 				761A88572B97E00900F85ABB /* StatsOverviewTip.swift in Sources */,
 				761A885B2B97E04D00F85ABB /* EmissionsProfileTip.swift in Sources */,
 				761A88552B97DFE800F85ABB /* StatsGraphTip.swift in Sources */,
+				767FE8B82B98C215003C225D /* JourneyDetailView.swift in Sources */,
+				767FE8B02B98C1D0003C225D /* JourneyView.swift in Sources */,
 				76F875322B88F53E000EA3D7 /* LoadingView.swift in Sources */,
+				767FE8B42B98C1F3003C225D /* JourneyDetailsView.swift in Sources */,
+				767FE8BA2B98C224003C225D /* JourneyMapView.swift in Sources */,
 				7644DCD02B98A6FC00B3EAE4 /* TrophiesView.swift in Sources */,
 				7644DD1C2B98AC3000B3EAE4 /* EmissionsProfileView.swift in Sources */,
 				7644DC912B9894C200B3EAE4 /* QuickActionGalleryView.swift in Sources */,
@@ -1301,16 +1437,20 @@
 				7644DCC02B9898B300B3EAE4 /* StatsGraphViewModel.swift in Sources */,
 				7644DCD82B98A75200B3EAE4 /* TrophyLockedView.swift in Sources */,
 				7644DC802B98930B00B3EAE4 /* TrophyManager.swift in Sources */,
-				7644DD312B98AFF900B3EAE4 /* LevelIndicatorView.swift in Sources */,
 				7644DCF62B98A92A00B3EAE4 /* SourceView.swift in Sources */,
 				761A88592B97E02E00F85ABB /* JourneyReturnTip.swift in Sources */,
 				76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */,
 				7644DD0D2B98AB4C00B3EAE4 /* LearningView.swift in Sources */,
+				767FE89E2B98C0E2003C225D /* AddJourneyButtonView.swift in Sources */,
+				767FE8B62B98C200003C225D /* JourneyInfoItemView.swift in Sources */,
 				7644DD782B98B5C700B3EAE4 /* LeaderboardListItemView.swift in Sources */,
 				7644DC8B2B98943800B3EAE4 /* HomeView.swift in Sources */,
 				7644DD1E2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift in Sources */,
+				767FE89C2B98C0D0003C225D /* LocationTextFieldView.swift in Sources */,
 				765FA8AE2B91EDD600030EC1 /* OnboardingNotificationView.swift in Sources */,
 				7644DCCA2B98992C00B3EAE4 /* StatsGalleryView.swift in Sources */,
+				767FE8A22B98C10F003C225D /* DistanceOverrideView.swift in Sources */,
+				767FE8A62B98C137003C225D /* JourneyInfoButtonView.swift in Sources */,
 				765FA8962B91EC9900030EC1 /* Paragraph.swift in Sources */,
 				76087BA02B8BD49B005C2431 /* ChartTitle.swift in Sources */,
 				7644DD022B98AAC100B3EAE4 /* TopPicksGalleryView.swift in Sources */,

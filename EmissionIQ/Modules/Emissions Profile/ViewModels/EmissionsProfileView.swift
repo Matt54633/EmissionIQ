@@ -66,7 +66,7 @@ class EmissionsProfileViewModel: ObservableObject {
     
     // display text about total emissions
     func getTotalEmissionsText(journeys: [Journey]) -> String {
-        let totalEmissions = Int(journeys.calculateTotalEmissions())
+        let totalEmissions = String(format: "%.1f", journeys.calculateTotalEmissions())
         let mostPollutingTransportType = allTransportTypes[allTransportTypes.count / 2]
         let mostPollutingTransportTypeEmissions = Int(emissionPercentagesByVehicleType[mostPollutingTransportType] ?? 0)
         let transportTypeText = allTransportTypes.isEmpty ? "" : "\(mostPollutingTransportType.capitalized) journeys produce \(mostPollutingTransportTypeEmissions)% of your total emissions - that's your most polluting transport type!"

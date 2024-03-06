@@ -24,7 +24,7 @@ struct EmissionsProfileGalleryView: View {
                     
                     HStack {
                         
-                        EmissionsProfileItemView(value: String(format: "%.0f", journeys.calculateTotalEmissions()), unit: "kg", image: "carbon.dioxide.cloud.fill")
+                        EmissionsProfileItemView(value: String(format: "%.1f", journeys.calculateTotalEmissions()), unit: "kg", image: "carbon.dioxide.cloud.fill")
                         
                         EmissionsProfileItemView(value: String(format: "%.0f", viewModel.emissionPercentagesByVehicleType[viewModel.allTransportTypes[viewModel.allTransportTypes.count / 2]]?.rounded(.up) ?? 0), unit: "%", image: viewModel.imageName(for: viewModel.allTransportTypes[viewModel.allTransportTypes.count / 2]))
                         

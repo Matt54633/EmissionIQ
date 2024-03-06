@@ -22,7 +22,7 @@ struct StatsGridView: View {
             
             LazyVGrid(columns: columns) {
                 
-                StatsItemView(statistic: String(format: "%.0f", journeys.calculateTotalEmissions()), title: "kg CO₂e")
+                StatsItemView(statistic: String(format: "%.1f", journeys.calculateTotalEmissions()), title: "kg CO₂e")
                 
                 StatsItemView(statistic: String(format: "%.0f", journeys.calculateTotalDistance()), title: "Miles Travelled")
                 

@@ -23,7 +23,7 @@ struct StatsGraphOverlayView: View {
             
             VStack(alignment: .leading) {
                 
-                Text(String(format: "%.0f", value))
+                Text(String(format: "%.1f", value))
                     .font(.title2)
                     .fontWeight(.bold) + Text(" \(chartType)").font(.caption)
                 

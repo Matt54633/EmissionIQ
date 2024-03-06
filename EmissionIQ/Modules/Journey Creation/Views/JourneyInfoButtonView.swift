@@ -1,0 +1,27 @@
+//
+//  JourneyInfoButtonView.swift
+//  EmissionIQ
+//
+//  Created by Matt Sullivan on 06/03/2024.
+//
+
+import SwiftUI
+
+// View to create button for showing information about journey calculations
+struct JourneyInfoButtonView: View {
+    @Binding var displayInformationSheet: Bool
+    
+    var body: some View {
+        Button {
+            displayInformationSheet = true
+        } label: {
+            Image(systemName: "info.circle.fill")
+                .font(.title)
+                .foregroundStyle(.gray)
+                .symbolRenderingMode(.hierarchical)
+        }
+        .popover(isPresented: $displayInformationSheet) {
+            JourneyInfoView(displayInformationSheet: $displayInformationSheet)
+        }
+    }
+}

@@ -35,7 +35,7 @@ struct StatsView: View {
                         )
                         
                         StatsTabView(
-                            title: String(format: "%.0f" , journeys.calculateTotalDistance()),
+                            title: String(format: "%.1f" , journeys.calculateTotalDistance()),
                             subTitle: "Miles",
                             chartType: "Miles",
                             axisLabel: "mi",
@@ -44,7 +44,7 @@ struct StatsView: View {
                         )
                         
                         StatsTabView(
-                            title: String(format: "%.0f" , journeys.calculateTotalEmissions()),
+                            title: String(format: "%.1f" , journeys.calculateTotalEmissions()),
                             subTitle: "kg CO₂e",
                             chartType: "kg CO₂e",
                             axisLabel: "kg",

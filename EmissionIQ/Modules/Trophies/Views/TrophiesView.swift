@@ -74,11 +74,12 @@ struct TrophiesView: View {
                 if !journeys.isEmpty {
                     viewModel.initialiseTrophies(trophies: trophies, context: context)
                     viewModel.removeDuplicateTrophies(trophies: trophies, context: context)
+                    viewModel.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
                     Task {
                         await viewModel.fetchLevelAndXp()
                         try await viewModel.setUserTrophies(trophies: trophies)
                     }
-                    viewModel.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
+                    
                 }
             }
             .onChange(of: journeys) {

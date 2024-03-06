@@ -14,6 +14,7 @@ struct HomeView: View {
     @Query private var trophies: [Trophy]
     @Query private var readArticles: [ReadArticle]
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.modelContext) var context
     @StateObject var trophyViewModel = TrophiesViewModel()
     @State private var displayJourneySheet = false
     @Binding var selectedTab: Int
@@ -74,7 +75,7 @@ struct HomeView: View {
                         Button {
                             displayJourneySheet = true
                         } label: {
-                            JourneyListAddButtonView()
+                            JourneysListAddButtonView()
                         }
                         
                     }
@@ -88,9 +89,14 @@ struct HomeView: View {
                 AddJourneyForm(displayJourneySheet: $displayJourneySheet)
             }
             .onChange(of: journeys) {
-                trophyViewModel.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
+                if !journeys.isEmpty {
+                    if trophies.isEmpty {
+                        trophyViewModel.initialiseTrophies(trophies: trophies, context: context)
+                    }
+                    trophyViewModel.removeDuplicateTrophies(trophies: trophies, context: context)
+                    trophyViewModel.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
+                }
             }
-            
         }
     }
 }

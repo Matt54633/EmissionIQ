@@ -40,7 +40,7 @@ struct TransportMethodOverlayView: View {
                 
                 Spacer(minLength: 20)
                 
-                Text("\(Int(emissionKg.rounded(.down)))kg")
+                Text("\(String(format: "%.1f", emissionKg))kg")
                 
             }
             .font(.title)

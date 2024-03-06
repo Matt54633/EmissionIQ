@@ -24,5 +24,6 @@ struct EmissionIQApp: App {
         }
         .defaultSize(width: 1350, height: 800)
         .windowResizability(.contentSize)
+        .modelContainer(for: [Journey.self, Location.self, Trophy.self, ReadArticle.self])
     }
 }

@@ -14,8 +14,6 @@ struct LevelView: View {
     @StateObject var viewModel = StatsViewModel()
     @State private var displayView = false
     
-    
-    
     var body: some View {
         if !journeys.isEmpty {
             VStack {
@@ -34,7 +32,7 @@ struct LevelView: View {
                         
                         LevelXpView()
                         
-                        StatsGalleryView(viewModel: viewModel)
+                        StatsGridView(viewModel: viewModel)
                     }
                     .transition(.scale)
                 }
