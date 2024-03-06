@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         if onboardingComplete == true {
-            Text("Welcome")
+            NavView()
         } else {
             OnboardingStartView()
         }
