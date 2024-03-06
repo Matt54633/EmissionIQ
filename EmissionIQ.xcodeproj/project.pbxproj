@@ -81,6 +81,15 @@
 		7644DD0A2B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD092B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift */; };
 		7644DD0D2B98AB4C00B3EAE4 /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD0C2B98AB4C00B3EAE4 /* LearningView.swift */; };
 		7644DD142B98AB8900B3EAE4 /* ReadArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD132B98AB8900B3EAE4 /* ReadArticle.swift */; };
+		7644DD162B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */; };
+		7644DD182B98AC0A00B3EAE4 /* EmissionsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD172B98AC0A00B3EAE4 /* EmissionsProfileView.swift */; };
+		7644DD1A2B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD192B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift */; };
+		7644DD1C2B98AC3000B3EAE4 /* EmissionsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileView.swift */; };
+		7644DD1E2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD1D2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift */; };
+		7644DD202B98ACF100B3EAE4 /* TransportMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD1F2B98ACF100B3EAE4 /* TransportMethodsView.swift */; };
+		7644DD222B98AD0800B3EAE4 /* TransportTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD212B98AD0800B3EAE4 /* TransportTip.swift */; };
+		7644DD242B98AD3100B3EAE4 /* TransportMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD232B98AD3100B3EAE4 /* TransportMethodView.swift */; };
+		7644DD262B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD252B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift */; };
 		765FA8902B91EC3000030EC1 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA88F2B91EC3000030EC1 /* Source.swift */; };
 		765FA8922B91EC4F00030EC1 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8912B91EC4F00030EC1 /* Details.swift */; };
 		765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8932B91EC8700030EC1 /* SourceLink.swift */; };
@@ -203,6 +212,15 @@
 		7644DD092B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGalleryViewModel.swift; sourceTree = "<group>"; };
 		7644DD0C2B98AB4C00B3EAE4 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
 		7644DD132B98AB8900B3EAE4 /* ReadArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadArticle.swift; sourceTree = "<group>"; };
+		7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileGalleryView.swift; sourceTree = "<group>"; };
+		7644DD172B98AC0A00B3EAE4 /* EmissionsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileView.swift; sourceTree = "<group>"; };
+		7644DD192B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileItemView.swift; sourceTree = "<group>"; };
+		7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileView.swift; sourceTree = "<group>"; };
+		7644DD1D2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileBreakdownView.swift; sourceTree = "<group>"; };
+		7644DD1F2B98ACF100B3EAE4 /* TransportMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMethodsView.swift; sourceTree = "<group>"; };
+		7644DD212B98AD0800B3EAE4 /* TransportTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportTip.swift; sourceTree = "<group>"; };
+		7644DD232B98AD3100B3EAE4 /* TransportMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMethodView.swift; sourceTree = "<group>"; };
+		7644DD252B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMethodOverlayView.swift; sourceTree = "<group>"; };
 		765FA88F2B91EC3000030EC1 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		765FA8912B91EC4F00030EC1 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		765FA8932B91EC8700030EC1 /* SourceLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLink.swift; sourceTree = "<group>"; };
@@ -334,6 +352,7 @@
 				761A88562B97E00900F85ABB /* StatsOverviewTip.swift */,
 				761A88582B97E02E00F85ABB /* JourneyReturnTip.swift */,
 				761A885A2B97E04D00F85ABB /* EmissionsProfileTip.swift */,
+				7644DD212B98AD0800B3EAE4 /* TransportTip.swift */,
 			);
 			path = Tips;
 			sourceTree = "<group>";
@@ -729,6 +748,13 @@
 		7644DD0F2B98AB5F00B3EAE4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */,
+				7644DD172B98AC0A00B3EAE4 /* EmissionsProfileView.swift */,
+				7644DD192B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift */,
+				7644DD1D2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift */,
+				7644DD1F2B98ACF100B3EAE4 /* TransportMethodsView.swift */,
+				7644DD232B98AD3100B3EAE4 /* TransportMethodView.swift */,
+				7644DD252B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -736,6 +762,7 @@
 		7644DD102B98AB6400B3EAE4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileView.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -959,6 +986,8 @@
 				765FA8A82B91ED9800030EC1 /* OnboardingStartView.swift in Sources */,
 				7644DCDC2B98A77B00B3EAE4 /* TrophyAchievedView.swift in Sources */,
 				765FA8A62B91ED7500030EC1 /* OnboardingViewModel.swift in Sources */,
+				7644DD222B98AD0800B3EAE4 /* TransportTip.swift in Sources */,
+				7644DD242B98AD3100B3EAE4 /* TransportMethodView.swift in Sources */,
 				7644DCFC2B98A97200B3EAE4 /* SourcesViewModel.swift in Sources */,
 				76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */,
 				7644DC962B98956900B3EAE4 /* CarbonOutputHeaderView.swift in Sources */,
@@ -982,11 +1011,13 @@
 				7644DCEC2B98A88900B3EAE4 /* FactViewModel.swift in Sources */,
 				765FA89E2B91ECE600030EC1 /* TopPicks.swift in Sources */,
 				7644DCAC2B98972600B3EAE4 /* TriviaDetailView.swift in Sources */,
+				7644DD262B98AD5B00B3EAE4 /* TransportMethodOverlayView.swift in Sources */,
 				76087BA42B8BD4BB005C2431 /* ConditionalPadding.swift in Sources */,
 				765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */,
 				7644DCF22B98A8EB00B3EAE4 /* SourceTypeListItemView.swift in Sources */,
 				76087BA22B8BD4AB005C2431 /* ConditionalContainerRelativeFrame.swift in Sources */,
 				7644DCDA2B98A76800B3EAE4 /* TrophyDisplayView.swift in Sources */,
+				7644DD182B98AC0A00B3EAE4 /* EmissionsProfileView.swift in Sources */,
 				7644DCAE2B98974000B3EAE4 /* TriviaViewModel.swift in Sources */,
 				765FA89A2B91ECBE00030EC1 /* ArticleSource.swift in Sources */,
 				7644DCD62B98A73E00B3EAE4 /* TrophyUnlockedView.swift in Sources */,
@@ -1001,6 +1032,8 @@
 				7644DCEA2B98A87300B3EAE4 /* FactView.swift in Sources */,
 				765FA8B72B91F24F00030EC1 /* NotificationManager.swift in Sources */,
 				7644DC8F2B9894A600B3EAE4 /* QuickActionView.swift in Sources */,
+				7644DD202B98ACF100B3EAE4 /* TransportMethodsView.swift in Sources */,
+				7644DD1A2B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift in Sources */,
 				76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */,
 				7644DCC42B9898E400B3EAE4 /* StatsPieViewModel.swift in Sources */,
 				761A884F2B97DE3A00F85ABB /* UIScreen.swift in Sources */,
@@ -1014,6 +1047,7 @@
 				7644DD042B98AAD600B3EAE4 /* ArticlesFeedView.swift in Sources */,
 				76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */,
 				76F875302B88F52B000EA3D7 /* ReusableErrorView.swift in Sources */,
+				7644DD162B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift in Sources */,
 				7644DCF42B98A91200B3EAE4 /* SourcesFeedView.swift in Sources */,
 				765FA8A02B91ECEE00030EC1 /* Trivia.swift in Sources */,
 				765FA8AA2B91EDAD00030EC1 /* OnboardingSignInView.swift in Sources */,
@@ -1027,6 +1061,7 @@
 				761A88552B97DFE800F85ABB /* StatsGraphTip.swift in Sources */,
 				76F875322B88F53E000EA3D7 /* LoadingView.swift in Sources */,
 				7644DCD02B98A6FC00B3EAE4 /* TrophiesView.swift in Sources */,
+				7644DD1C2B98AC3000B3EAE4 /* EmissionsProfileView.swift in Sources */,
 				7644DC912B9894C200B3EAE4 /* QuickActionGalleryView.swift in Sources */,
 				765FA8A22B91ED0200030EC1 /* Fact.swift in Sources */,
 				76F875242B88F44B000EA3D7 /* WebView.swift in Sources */,
@@ -1041,6 +1076,7 @@
 				76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */,
 				7644DD0D2B98AB4C00B3EAE4 /* LearningView.swift in Sources */,
 				7644DC8B2B98943800B3EAE4 /* HomeView.swift in Sources */,
+				7644DD1E2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift in Sources */,
 				765FA8AE2B91EDD600030EC1 /* OnboardingNotificationView.swift in Sources */,
 				7644DCCA2B98992C00B3EAE4 /* StatsGalleryView.swift in Sources */,
 				765FA8962B91EC9900030EC1 /* Paragraph.swift in Sources */,

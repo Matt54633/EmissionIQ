@@ -1,0 +1,50 @@
+//
+//  EmissionsProfileBreakdownView.swift
+//  EmissionIQ
+//
+//  Created by Matt Sullivan on 06/03/2024.
+//
+
+import SwiftUI
+import SwiftData
+
+// View to breakdown and explain the emissions profile
+struct EmissionsProfileBreakdownView: View {
+    @Query private var journeys: [Journey]
+    @Environment(\.colorScheme) var colorScheme
+    @StateObject var viewModel = EmissionsProfileViewModel()
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            
+            HStack {
+                
+                Text("The Breakdown")
+                
+                Spacer()
+                
+                Image(systemName: "sparkles")
+                    .foregroundStyle(.primaryGreen)
+                
+            }
+            .font(.title3)
+            .padding(.bottom, 5)
+            .fontWeight(.semibold)
+            
+            Text(viewModel.getTotalEmissionsText(journeys: journeys))
+                .padding(.bottom, 5)
+            
+        }
+        .padding(20)
+        .background(RoundedRectangle(cornerRadius: 20)
+            .fill(colorScheme == .dark ? .quaternary : .quinary))
+        .padding()
+        .onAppear {
+            viewModel.calculateEmissions(journeys: journeys)
+        }
+    }
+}
+
+#Preview {
+    EmissionsProfileBreakdownView()
+}
