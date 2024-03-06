@@ -36,7 +36,7 @@ struct HomeView: View {
                                     
                                     StatsPreviewView()
                                     
-                                    TriviaView()
+                                    TriviaGalleryView()
                                     
                                     if geometry.size.height > 750 {
                                         EmissionsProfileGalleryView()
