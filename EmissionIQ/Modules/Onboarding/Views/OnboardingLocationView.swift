@@ -40,6 +40,7 @@ struct OnboardingLocationView: View {
             }
             
         }
+        .frame(maxWidth: 700)
         .padding([.horizontal, .bottom])
         .navigationBarBackButtonHidden()
     }

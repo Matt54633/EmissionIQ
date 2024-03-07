@@ -23,7 +23,8 @@ struct OnboardingSignInView: View {
             }
             
         }
-        .padding([.horizontal, .bottom])
+        .frame(maxWidth: 700)
+        .padding()
         .modifier(RoundedSheet(radius: 25, height: .medium))
     }
 }

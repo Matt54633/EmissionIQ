@@ -31,6 +31,7 @@ struct LearningView: View {
                     Group {
                         FactGalleryView()
                         EmissionsProfileGalleryView()
+                            .modifier(ConditionalPadding())
                         TopPicksGalleryView()
                         ArticlesGalleryView()
                         SourcesGalleryView()

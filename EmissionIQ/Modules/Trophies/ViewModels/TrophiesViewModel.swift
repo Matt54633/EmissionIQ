@@ -221,4 +221,15 @@ class TrophiesViewModel: ObservableObject {
             }
         }
     }
+    
+    // wrapper function to be used by other views when they require updating trophies
+    func updateTrophies(trophies: [Trophy], journeys: [Journey], readArticles: [ReadArticle], context: ModelContext) {
+        if !journeys.isEmpty {
+            if trophies.isEmpty {
+                self.initialiseTrophies(trophies: trophies, context: context)
+            }
+            self.removeDuplicateTrophies(trophies: trophies, context: context)
+            self.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
+        }
+    }
 }

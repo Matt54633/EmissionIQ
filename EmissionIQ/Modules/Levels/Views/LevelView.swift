@@ -21,7 +21,7 @@ struct LevelView: View {
                 if displayView {
                     Group {
                         
-                        if UIScreen.current?.bounds.height ?? 600 > 700 {
+                        if UIScreen.current?.bounds.height ?? 600 > 800 {
                             LevelIndicatorView(displayOuter: true, frameWidth: 200, progressWidth: 12, fontSize: 72)
                         } else {
                             LevelIndicatorView(displayOuter: true, frameWidth: 100, progressWidth: 6, fontSize: 36)

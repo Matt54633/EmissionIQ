@@ -39,7 +39,7 @@ struct TrophiesView: View {
                             
                             let groupedAndSortedTrophies = viewModel.groupAndSortTrophies(trophies: trophies)
                             let sortedKeys = groupedAndSortedTrophies.keys.sorted()
-                            let columns = Array(repeating: GridItem(.flexible()), count: geometry.size.width > 800 ? 2 : 1)
+                            let columns = Array(repeating: GridItem(.flexible()), count: geometry.size.width > 900 ? 2 : 1)
                             
                             LazyVGrid(columns: columns) {
                                 ForEach(sortedKeys, id: \.self) { type in

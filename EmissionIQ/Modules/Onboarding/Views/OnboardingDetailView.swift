@@ -15,41 +15,43 @@ struct OnboardingDetailView: View {
     let systemImage: Bool
     
     var body: some View {
-        Spacer()
-        
-        VStack {
-            Group {
-                if systemImage {
-                    Image(systemName: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 60)
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.thinMaterial)
+            
+            VStack {
+                Group {
+                    if systemImage {
+                        Image(systemName: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 60)
+                            .foregroundStyle(.primaryGreen)
+                    } else {
+                        Image(image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 150)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                    }
+                    
+                    Text(title)
+                        .font(.title)
+                        .fontWeight(.bold)
                         .foregroundStyle(.primaryGreen)
-                } else {
-                    Image(image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 150)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .lineLimit(2)
+                    
+                    Text(subTitle)
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
                 }
-                
-                Text(title)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .lineLimit(2)
-                
-                Text(subTitle)
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
+                .padding(5)
             }
-            .padding(5)
+            .padding(25)
+            
         }
-        .padding(25)
-        .background(RoundedRectangle(cornerRadius: 20).fill(.clear)
-            .stroke(.lightGrey, style: StrokeStyle(lineWidth: 2, dash: [10]))
-        )
+        .padding(.vertical)
         
-        Spacer()
     }
 }
 

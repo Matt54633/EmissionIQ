@@ -35,6 +35,7 @@ struct OnboardingNotificationView: View {
             }
             
         }
+        .frame(maxWidth: 700)
         .padding([.horizontal, .bottom])
         .navigationBarBackButtonHidden()
     }

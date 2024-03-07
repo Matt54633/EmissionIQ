@@ -36,7 +36,7 @@ struct StatsGridView: View {
                 
                 StatsItemView(statistic: String(readArticles.count), title: "Articles Read")
                 
-                StatsItemView(statistic: String(viewModel.creationDate ?? "dd/mm/yy"), title: "Date Joined")
+                StatsItemView(statistic: String(viewModel.creationDate ?? " "), title: "Date Joined")
                 
             }
         }

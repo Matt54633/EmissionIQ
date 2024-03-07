@@ -17,7 +17,7 @@ struct JourneysView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @State private var displayJourneySheet = false
     @StateObject private var addJourneyViewModel = AddJourneyViewModel()
-    @StateObject private var trophyViewModel = TrophiesViewModel()
+    @StateObject private var trophiesViewModel = TrophiesViewModel()
     @StateObject private var carbonOutputViewModel = CarbonOutputViewModel()
     
     var body: some View {
@@ -58,13 +58,7 @@ struct JourneysView: View {
                 AddJourneyForm(displayJourneySheet: $displayJourneySheet)
             }
             .onChange(of: journeys) {
-                if !journeys.isEmpty {
-                    if trophies.isEmpty {
-                        trophyViewModel.initialiseTrophies(trophies: trophies, context: context)
-                    }
-                    trophyViewModel.removeDuplicateTrophies(trophies: trophies, context: context)
-                    trophyViewModel.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
-                }
+                trophiesViewModel.updateTrophies(trophies: trophies, journeys: journeys, readArticles: readArticles, context: context)
                 
                 Task {
                     await carbonOutputViewModel.setUserAttributes(journeys: journeys, trophies: trophies, readArticles: readArticles)

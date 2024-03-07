@@ -31,7 +31,6 @@ struct ReusableButtonView: View {
                
         }
         .frame(height: 45)
-        .padding(.bottom, horizontalSizeClass == .compact ? 0 : 15)
         
     }
 }

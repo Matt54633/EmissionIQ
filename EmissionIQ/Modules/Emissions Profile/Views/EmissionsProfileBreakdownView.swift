@@ -27,15 +27,16 @@ struct EmissionsProfileBreakdownView: View {
                     .foregroundStyle(.primaryGreen)
                 
             }
-            .font(.title3)
+            .font(UIScreen.current?.bounds.width ?? 400 > 380 ? .title3 : .body)
             .padding(.bottom, 5)
             .fontWeight(.semibold)
             
+            
             Text(viewModel.getTotalEmissionsText(journeys: journeys))
-                .padding(.bottom, 5)
+                .font(UIScreen.current?.bounds.width ?? 400 > 380 ? .body : .subheadline)
             
         }
-        .padding(20)
+        .padding(UIScreen.current?.bounds.width ?? 400 > 380 ? 20 : 15)
         .background(RoundedRectangle(cornerRadius: 20)
             .fill(colorScheme == .dark ? .quaternary : .quinary))
         .padding()
