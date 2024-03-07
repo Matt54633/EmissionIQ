@@ -11,7 +11,8 @@ import SwiftUI
 struct OnboardingSignInView: View {
     var body: some View {
         VStack {
-            OnboardingDetailView(image: "icloud.circle.fill", title: "Please sign into iCloud", subTitle: "EmissionIQ uses iCloud to sync your emissions across your devices, provide real-time leaderboards and more. ", systemImage: true)
+            
+            OnboardingDetailView(image: "icloud.circle.fill", title: "Sign into iCloud", subTitle: "EmissionIQ requires iCloud to sync your emissions across your devices!", systemImage: true)
             
             Button(action: {
                 if let url = URL(string: UIApplication.openSettingsURLString) {
@@ -20,8 +21,10 @@ struct OnboardingSignInView: View {
             }) {
                 ReusableButtonView(backgroundColour: .primaryGreen, text: "Open Settings", textColor: .white, opacity: 1.0, radius: 15, disabled: nil)
             }
+            
         }
-        .padding(.horizontal)
+        .frame(maxWidth: 700)
+        .padding()
         .modifier(RoundedSheet(radius: 25, height: .medium))
     }
 }

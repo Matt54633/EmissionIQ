@@ -11,15 +11,16 @@ import SwiftUI
 struct OnboardingNotificationView: View {
     @StateObject var notificationManager = NotificationManager()
     @AppStorage("onboardingComplete") var onboardingComplete: Bool?
-
+    
     var body: some View {
         VStack {
+            
             OnboardingDetailView(image: "app.badge", title: "Notification Access", subTitle: "EmissionIQ sends a daily reminder to add your journeys to keep you on track!", systemImage: true)
-                        
+            
             Button {
                 onboardingComplete = true
             } label: {
-                ReusableButtonView(backgroundColour: .lightGrey, text: "No thanks!", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
+                ReusableButtonView(backgroundColour: .lightGrey, text: "No Thanks", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
             }
             
             Button {
@@ -32,8 +33,10 @@ struct OnboardingNotificationView: View {
                     onboardingComplete = true
                 }
             }
+            
         }
-        .padding(.horizontal)
+        .frame(maxWidth: 700)
+        .padding([.horizontal, .bottom])
         .navigationBarBackButtonHidden()
     }
 }

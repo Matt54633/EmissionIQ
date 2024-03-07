@@ -11,23 +11,23 @@ import CoreLocation
 // LocationManager is responsible for requesting access to location services and also identfying the user's location
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     static let shared = LocationManager()
-    private let locationManager = CLLocationManager()
-    var onAuthorizationStatusChanged: ((CLAuthorizationStatus) -> Void)?
-
+    
     @Published var authorizationStatus: CLAuthorizationStatus?
     @Published var userLocation: CLLocation?
     
+    private let locationManager = CLLocationManager()
+    var onAuthorizationStatusChanged: ((CLAuthorizationStatus) -> Void)?
+
     override init() {
         super.init()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    // request the permissions
+    // request location permission
     func requestLocationPermission() {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
-
     }
     
     // get the user's location

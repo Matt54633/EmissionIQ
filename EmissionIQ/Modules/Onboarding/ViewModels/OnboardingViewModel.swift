@@ -20,23 +20,16 @@ class OnboardingViewModel: ObservableObject {
     func checkICloudSignInStatus() {
         CKContainer.default().accountStatus { (accountStatus, error) in
             DispatchQueue.main.async {
-                if accountStatus == .noAccount {
-                    self.userNotSignedIn = true
-                    self.displaySheet = true
-                } else {
-                    self.userNotSignedIn = false
-                    self.displaySheet = false
-                }
+                self.displaySheet = accountStatus == .noAccount
+                self.userNotSignedIn = accountStatus == .noAccount
             }
         }
     }
     
     // create user if required
-    func createUser() {        
-        PrivateDataManager.shared.createUser { result, error in
-            if let userId = result?.userId {
-                PublicDataManager.shared.createUserRecord(userId: userId) { record, error in }
-            }
-        }
+    func createUser() async throws {
+        let result = try await PrivateDataManager.shared.createUser()
+        let userId = result.userId
+        _ = try await PublicDataManager.shared.createUserRecord(userId: userId)
     }
 }

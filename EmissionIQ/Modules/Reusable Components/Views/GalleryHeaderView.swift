@@ -16,9 +16,11 @@ struct GalleryHeaderView: View {
     
     var body: some View {
         HStack(alignment: .center) {
+            
             Image(systemName: image)
                 .foregroundStyle(.primaryGreen)
                 .frame(minWidth: 25)
+            
             Text(title)
                 .font(.title3)
             
@@ -27,6 +29,7 @@ struct GalleryHeaderView: View {
             if displayNavIndicator {
                 Image(systemName: "chevron.right")
             }
+            
         }
         .fontWeight(.semibold)
         .padding(EdgeInsets(top: topPadding, leading: 15, bottom: 5, trailing: 15))

@@ -9,6 +9,8 @@ import SwiftUI
 
 // PageHeaderView is used for page headers, using ViewBuilder to allow child elements to be passed in
 struct PageHeaderView<Content: View>: View {
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+
     let pageTitle: String
     let content: Content
     
@@ -19,23 +21,25 @@ struct PageHeaderView<Content: View>: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            WavyRectangle()
+            
+            WavyRectangle(waveCount: horizontalSizeClass == .compact ? 7 : 17)
                 .fill(.primaryGreen)
+                .ignoresSafeArea(edges: .top)
             
             HStack {
+                
                 Text(pageTitle)
-                    .fontWeight(.semibold)
                     .font(.title)
+                    .fontWeight(.semibold)
                     .foregroundStyle(.white)
                 
                 Spacer()
-        
+                
                 content
+                
             }
             .modifier(ConditionalPadding())
-            .padding(EdgeInsets(top: 60, leading: 15, bottom: 0, trailing: 15))
+            .padding(EdgeInsets(top: horizontalSizeClass == .compact ? 5 : 15, leading: 15, bottom: 0, trailing: 15))
         }
-        .ignoresSafeArea(.all)
     }
 }
-

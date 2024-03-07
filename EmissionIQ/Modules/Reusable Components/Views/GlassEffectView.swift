@@ -14,20 +14,24 @@ struct GlassEffectView: View {
     
     var body: some View {
         ZStack {
+            
             GeometryReader { geometry in
+                
                 Image(image)
                     .resizable()
                     .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
                     .frame(width: geometry.size.width, height: geometry.size.height)
+                
             }
             
             RoundedRectangle(cornerRadius: cornerRadius)
                 .fill(.ultraThinMaterial)
                 .colorScheme(.dark)
         }
+        
     }
 }
 
 #Preview {
-    GlassEffectView(image: "LeaderboardBackground", cornerRadius: 25)
+    GlassEffectView(image: "LeaderboardBackground", cornerRadius: 20)
 }

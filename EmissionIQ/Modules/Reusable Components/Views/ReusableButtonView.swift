@@ -24,12 +24,12 @@ struct ReusableButtonView: View {
                 .opacity(opacity)
             
             Text(text)
-                .foregroundStyle(disabled == true ? .gray : textColor)
-                .font(.title3)
+                .font(.headline)
                 .fontWeight(.bold)
-
+                .foregroundStyle(disabled == true ? .gray : textColor)
+               
         }
-        .frame(height: 50)
+        .frame(height: 45)
     }
 }
 

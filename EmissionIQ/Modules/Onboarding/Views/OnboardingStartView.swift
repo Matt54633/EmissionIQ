@@ -13,25 +13,32 @@ struct OnboardingStartView: View {
     
     var body: some View {
         NavigationStack {
+            
             VStack {
                 
                 OnboardingDetailView(image: "App Logo", title: "Welcome!", subTitle: "Your EmissionIQ journey starts here. Are you ready to begin?", systemImage: false)
                 
                 if viewModel.userNotSignedIn == true {
-                    ReusableButtonView(backgroundColour: .primaryGreen, text: "Start your journey", textColor: .white, opacity: 1.0, radius: 15, disabled: true)
+                    
+                    ReusableButtonView(backgroundColour: .primaryGreen, text: "Start Your Journey", textColor: .white, opacity: 1.0, radius: 15, disabled: true)
                         .onTapGesture {
                             viewModel.displaySheet = true
                         }
+                    
                 } else {
+                    
                     NavigationLink {
                         OnboardingLocationView()
                     } label: {
-                        ReusableButtonView(backgroundColour: .primaryGreen, text: "Start your journey", textColor: .white, opacity: 1.0, radius: 15, disabled: false)
+                        ReusableButtonView(backgroundColour: .primaryGreen, text: "Start Your Journey", textColor: .white, opacity: 1.0, radius: 15, disabled: false)
                     }
+                    
                 }
                 
             }
-            .padding(.horizontal)
+            .frame(maxWidth: 700)
+            .padding([.horizontal, .bottom])
+            
         }
         .sheet(isPresented: $viewModel.displaySheet) {
             OnboardingSignInView()
@@ -41,7 +48,9 @@ struct OnboardingStartView: View {
                 viewModel.checkICloudSignInStatus()
             }
             
-            viewModel.createUser()
+            Task {
+                try await viewModel.createUser()
+            }
         }
         .navigationBarBackButtonHidden()
         .tint(.primaryGreen)
@@ -51,4 +60,3 @@ struct OnboardingStartView: View {
 #Preview {
     OnboardingStartView()
 }
-

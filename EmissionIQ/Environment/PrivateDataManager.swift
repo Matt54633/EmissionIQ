@@ -7,8 +7,7 @@
 
 import CloudKit
 
-// PrivateDataManager is responsible for storing data in a users' private Cloudkit database
-// This means data can only be read by a devices linked to the current user
+// PrivateDataManager is responsible for storing data in a users' private Cloudkit database, this means data can only be read by a devices linked to the current user
 
 class PrivateDataManager {
     static let shared = PrivateDataManager()
@@ -16,91 +15,65 @@ class PrivateDataManager {
     private let userIdRecordType = "User"
     private let userIdKey = "userId"
     private let userCreatedKey = "userCreated"
-    private let privateDatabase =  CKContainer(identifier: "iCloud.matt54633.emissionIQ").privateCloudDatabase
-    
+    private let privateDatabase = CKContainer(identifier: "iCloud.matt54633.emissionIQ").privateCloudDatabase
     private init() {}
     
     // save userID to CloudKit private database - synced across devices
-    func saveUserId(userId: String, userCreated: Date, completion: @escaping (Error?) -> Void) {
+    func saveUserId(userId: String, userCreated: Date) async throws {
         let recordID = CKRecord.ID(recordName: userIdRecordType)
         let record = CKRecord(recordType: userIdRecordType, recordID: recordID)
         record[userIdKey] = userId as CKRecordValue
         record[userCreatedKey] = userCreated as CKRecordValue
         
-        let operation = CKModifyRecordsOperation(recordsToSave: [record], recordIDsToDelete: nil)
-        operation.savePolicy = .changedKeys
-        operation.modifyRecordsResultBlock = { result in
-            if case .failure(let error) = result {
-                completion(error)
-            } else {
-                completion(nil)
-            }
-        }
-        
-        privateDatabase.add(operation)
+        _ = try await privateDatabase.modifyRecords(saving: [record], deleting: [])
     }
     
     // fetch user's ID from CloudKit private database
-    func fetchUserId(completion: @escaping ((userId: String, userCreated: Date)?, Error?) -> Void) {
+    func fetchUserId() async throws -> (userId: String, userCreated: Date) {
         let recordID = CKRecord.ID(recordName: userIdRecordType)
-        privateDatabase.fetch(withRecordID: recordID) { record, error in
-            if let userId = record?[self.userIdKey] as? String, let userCreated = record?[self.userCreatedKey] as? Date {
-                completion((userId, userCreated), nil)
-            } else {
-                completion(nil, error)
-            }
+        let record = try await privateDatabase.record(for: recordID)
+        if let userId = record[userIdKey] as? String, let userCreated = record[userCreatedKey] as? Date {
+            return (userId, userCreated)
+        } else {
+            throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to fetch user ID"])
         }
     }
-
+    
     // create a user if not existing
-    func createUser(completion: @escaping ((userId: String, userCreated: Date)?, Error?) -> Void) {
-        fetchUserId { result, error in
-            if let error = error, (error as? CKError)?.code == .unknownItem {
+    func createUser() async throws -> (userId: String, userCreated: Date) {
+        do {
+            let (userId, userCreated) = try await fetchUserId()
+            if userId.isEmpty {
                 let newUserId = self.generateUserId()
                 let currentDate = Date()
-                self.saveUserId(userId: newUserId, userCreated: currentDate) { error in
-                    if let error = error {
-                        completion(nil, error)
-                    } else {
-                        completion((newUserId, currentDate), nil)
-                    }
-                }
+                try await saveUserId(userId: newUserId, userCreated: currentDate)
+                return (newUserId, currentDate)
             } else {
-                completion(result, error)
+                return (userId, userCreated)
             }
-        }
-    }
-
-
-    // create a user ID if not existing
-    private func createUserId(completion: @escaping ((userId: String, userCreated: Date)?, Error?) -> Void) {
-        let newUserId = self.generateUserId()
-        let currentDate = Date()
-        self.saveUserId(userId: newUserId, userCreated: currentDate) { error in
-            if let error = error {
-                completion(nil, error)
-            } else {
-                completion((newUserId, currentDate), nil)
-            }
+        } catch {
+            let newUserId = self.generateUserId()
+            let currentDate = Date()
+            try await saveUserId(userId: newUserId, userCreated: currentDate)
+            return (newUserId, currentDate)
         }
     }
     
     // fetch the user's creationDate
-    func fetchUserCreationDate(completion: @escaping (Date?, Error?) -> Void) {
+    func fetchUserCreationDate() async throws -> Date {
         let recordID = CKRecord.ID(recordName: userIdRecordType)
-        privateDatabase.fetch(withRecordID: recordID) { record, error in
-            if let userCreated = record?[self.userCreatedKey] as? Date {
-                completion(userCreated, nil)
-            } else {
-                completion(nil, error)
-            }
+        let record = try await privateDatabase.record(for: recordID)
+        if let userCreated = record[userCreatedKey] as? Date {
+            return userCreated
+        } else {
+            throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to fetch user creation date"])
         }
     }
     
     // generate a random username
     func generateUserId() -> String {
-        let adjectives = ["Brave", "Quick", "Fast", "Firey", "Angry", "Bold", "Calm", "Kind", "Wise"]
-        let nouns = ["Lion", "Fox", "Owl", "Tiger", "Bear", "Wolf", "Hawk", "Deer", "Swan", "Goat"]
+        let adjectives = ["Brave", "Quick", "Fast", "Firey", "Angry", "Bold", "Calm", "Kind", "Wise", "Cool", "Vast"]
+        let nouns = ["Lion", "Fox", "Owl", "Tiger", "Bear", "Wolf", "Hawk", "Deer", "Swan", "Goat", "Hippo", "Zebra"]
         return "\(adjectives.randomElement() ?? "Brave")\(nouns.randomElement() ?? "Lion")\(Int.random(in: 1...99))"
     }
 }

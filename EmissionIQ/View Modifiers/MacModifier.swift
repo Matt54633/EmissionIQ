@@ -12,7 +12,7 @@ import SwiftUI
 struct MacModifier: ViewModifier {
     func body(content: Content) -> some View {
         if ProcessInfo.processInfo.isiOSAppOnMac {
-            content.frame(minWidth: 600, maxWidth: 1400, minHeight: 800, maxHeight: 1000)
+            content.frame(minWidth: 400, maxWidth: 10000, minHeight: 400, maxHeight: 10000)
         } else {
             content
         }
