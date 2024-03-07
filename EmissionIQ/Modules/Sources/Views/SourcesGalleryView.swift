@@ -16,7 +16,7 @@ struct SourcesGalleryView: View {
         NavigationStack {
             
             NavigationLink {
-                SourcesFeedView(viewModel: viewModel, pageTitle: "Sources", sources: viewModel.sources)
+                SourcesFeedView(viewModel: viewModel)
                 
             } label: {
                 GalleryHeaderView(image: "checkmark.seal.fill", title: "Sources", displayNavIndicator: true, topPadding: 15)

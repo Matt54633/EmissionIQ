@@ -57,4 +57,15 @@ class StatsPieViewModel: ObservableObject {
             return 0
         }
     }
+    
+    // return the correct method for an index
+    func method(for index: Int) -> String {
+        sortedKeys[index]
+    }
+    
+    // return the correct value for an index
+    func value(for index: Int) -> Double {
+        let method = self.method(for: index)
+        return Double(getValue(for: method, subTitle: subTitle, journeysByMethod: journeysByMethod))
+    }
 }

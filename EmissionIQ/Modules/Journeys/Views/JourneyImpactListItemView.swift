@@ -31,6 +31,7 @@ struct JourneyImpactListItemView: View {
                     Spacer()
                     
                     VStack(alignment: .trailing, spacing: 0) {
+                        
                         Text(impactData.text)
                         
                         Text(impactType.capitalized)

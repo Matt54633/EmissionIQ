@@ -20,7 +20,7 @@ struct OnboardingNotificationView: View {
             Button {
                 onboardingComplete = true
             } label: {
-                ReusableButtonView(backgroundColour: .lightGrey, text: "No thanks!", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
+                ReusableButtonView(backgroundColour: .lightGrey, text: "No Thanks", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
             }
             
             Button {

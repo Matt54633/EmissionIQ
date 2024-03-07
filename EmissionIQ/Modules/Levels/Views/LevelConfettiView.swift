@@ -29,7 +29,7 @@ struct LevelConfettiView: View {
             }
             .onChange(of: currentLevel) {
                 if currentLevel < 3 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         proxy.burst()
                     }
                 }

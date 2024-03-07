@@ -30,7 +30,7 @@ struct StatsItemView: View {
                 .font(.subheadline)
                 
             }
-            .padding(EdgeInsets(top: 12, leading: 5, bottom: 12, trailing: 5))
+            .padding(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5))
             
         }
         .fixedSize(horizontal: false, vertical: true)

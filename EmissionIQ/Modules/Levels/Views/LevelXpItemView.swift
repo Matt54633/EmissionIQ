@@ -30,6 +30,7 @@ struct LevelXpItemView: View {
                 Text(title)
                     .font(.subheadline)
             }
+            .padding(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5))
         }
     }
 }

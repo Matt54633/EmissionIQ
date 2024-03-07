@@ -9,7 +9,6 @@ import SwiftUI
 
 // LocationTextFieldView displays a text field used for adding locations
 struct LocationTextFieldView: View {
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @ObservedObject var viewModel: AddJourneyViewModel
     @Binding var location: String
     @Binding var displayLocationSearchSheet: Bool

@@ -19,14 +19,10 @@ struct StatsPieView: View {
     var body: some View {
         Chart {
             ForEach(viewModel.sortedKeys.indices, id: \.self) { index in
-                
-                let method = viewModel.sortedKeys[index]
-                let value = viewModel.getValue(for: method, subTitle: viewModel.subTitle, journeysByMethod: viewModel.journeysByMethod)
-                
-                SectorMark(angle: .value("Value", value), innerRadius: .ratio(0.825), angularInset: 2.5)
+                SectorMark(angle: .value("Value", viewModel.value(for: index)), innerRadius: .ratio(0.825), angularInset: 2.5)
                     .cornerRadius(5)
-                    .foregroundStyle(by: .value("Name", method.capitalized))
-                    .opacity(viewModel.selectedMethod == nil || method == viewModel.selectedMethod ? 1.0 : 0.3)
+                    .foregroundStyle(by: .value("Name", viewModel.method(for: index).capitalized))
+                    .opacity(viewModel.selectedMethod == nil || viewModel.method(for: index) == viewModel.selectedMethod ? 1.0 : 0.3)
             }
         }
         .padding(EdgeInsets(top: 15, leading: 15, bottom: 10, trailing: 15))

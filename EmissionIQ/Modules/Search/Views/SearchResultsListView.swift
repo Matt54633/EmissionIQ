@@ -22,11 +22,13 @@ struct SearchResultsListView: View {
     
     var body: some View {
         ForEach(locations, id: \.self) { location in
+            
             SearchRowView(location: location)
                 .onTapGesture {
                     addJourneyViewModel.setLocation(location: location, locationType: locationType, displaySearchSheet: $displaySearchSheet, inputText: $inputText)
                     searchViewModel.saveRecentLocation(recentLocations: recentLocations, location: location, context: context)
                 }
+            
         }
     }
 }

@@ -24,7 +24,7 @@ struct StatsGridView: View {
                 
                 StatsItemView(statistic: String(format: "%.1f", journeys.calculateTotalEmissions()), title: "kg CO₂e")
                 
-                StatsItemView(statistic: String(format: "%.0f", journeys.calculateTotalDistance()), title: "Miles Travelled")
+                StatsItemView(statistic: String(format: "%.1f", journeys.calculateTotalDistance()), title: "Miles Travelled")
                 
                 StatsItemView(statistic: String(journeys.count), title: "Journeys")
                 

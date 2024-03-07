@@ -27,7 +27,7 @@ struct LevelIndicatorView: View {
             if !displayOuter {
                 Circle()
                     .fill(Color(.systemBackground))
-                    .frame(width: frameWidth + 10)
+                    .frame(maxWidth: frameWidth + 10)
             }
             
             if let level = viewModel.level, let xp = viewModel.xp {

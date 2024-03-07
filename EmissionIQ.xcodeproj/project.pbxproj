@@ -16,8 +16,6 @@
 		76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BAE2B8BD5C7005C2431 /* LocationManager.swift */; };
 		761A884B2B97DDC000F85ABB /* MacModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A884A2B97DDC000F85ABB /* MacModifier.swift */; };
 		761A884D2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A884C2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift */; };
-		761A884F2B97DE3A00F85ABB /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A884E2B97DE3A00F85ABB /* UIScreen.swift */; };
-		761A88512B97DE4B00F85ABB /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A88502B97DE4B00F85ABB /* UIWindow.swift */; };
 		761A88532B97DFCF00F85ABB /* TriviaTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A88522B97DFCF00F85ABB /* TriviaTip.swift */; };
 		761A88552B97DFE800F85ABB /* StatsGraphTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A88542B97DFE800F85ABB /* StatsGraphTip.swift */; };
 		761A88572B97E00900F85ABB /* StatsOverviewTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A88562B97E00900F85ABB /* StatsOverviewTip.swift */; };
@@ -74,16 +72,14 @@
 		7644DCFA2B98A95C00B3EAE4 /* SourceLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DCF92B98A95C00B3EAE4 /* SourceLinksView.swift */; };
 		7644DCFC2B98A97200B3EAE4 /* SourcesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DCFB2B98A97200B3EAE4 /* SourcesViewModel.swift */; };
 		7644DD002B98AAAB00B3EAE4 /* ArticlesGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DCFF2B98AAAB00B3EAE4 /* ArticlesGalleryView.swift */; };
-		7644DD022B98AAC100B3EAE4 /* TopPicksGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD012B98AAC100B3EAE4 /* TopPicksGalleryView.swift */; };
 		7644DD042B98AAD600B3EAE4 /* ArticlesFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD032B98AAD600B3EAE4 /* ArticlesFeedView.swift */; };
-		7644DD062B98AAE900B3EAE4 /* ArticlesErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD052B98AAE900B3EAE4 /* ArticlesErrorView.swift */; };
 		7644DD082B98AB0400B3EAE4 /* ArticleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD072B98AB0400B3EAE4 /* ArticleListItemView.swift */; };
 		7644DD0A2B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD092B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift */; };
 		7644DD0D2B98AB4C00B3EAE4 /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD0C2B98AB4C00B3EAE4 /* LearningView.swift */; };
 		7644DD142B98AB8900B3EAE4 /* ReadArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD132B98AB8900B3EAE4 /* ReadArticle.swift */; };
 		7644DD162B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */; };
 		7644DD1A2B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD192B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift */; };
-		7644DD1C2B98AC3000B3EAE4 /* EmissionsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileView.swift */; };
+		7644DD1C2B98AC3000B3EAE4 /* EmissionsProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileViewModel.swift */; };
 		7644DD1E2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD1D2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift */; };
 		7644DD202B98ACF100B3EAE4 /* TransportMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD1F2B98ACF100B3EAE4 /* TransportMethodsView.swift */; };
 		7644DD222B98AD0800B3EAE4 /* TransportTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD212B98AD0800B3EAE4 /* TransportTip.swift */; };
@@ -115,7 +111,6 @@
 		7644DD7C2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD6F2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift */; };
 		7644DD852B98BBA400B3EAE4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD842B98BBA400B3EAE4 /* Location.swift */; };
 		7644DD872B98BBB400B3EAE4 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD862B98BBB400B3EAE4 /* Journey.swift */; };
-		7644DD8C2B98BD5200B3EAE4 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 7644DD8B2B98BD5200B3EAE4 /* Vortex */; };
 		7644DD8E2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD8D2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift */; };
 		765FA8902B91EC3000030EC1 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA88F2B91EC3000030EC1 /* Source.swift */; };
 		765FA8922B91EC4F00030EC1 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8912B91EC4F00030EC1 /* Details.swift */; };
@@ -137,6 +132,7 @@
 		765FA8B62B91EE6300030EC1 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8B52B91EE6300030EC1 /* LevelManager.swift */; };
 		765FA8B72B91F24F00030EC1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BB02B8BD5D1005C2431 /* NotificationManager.swift */; };
 		765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8B12B91EE2200030EC1 /* PrivateDataManager.swift */; };
+		766DCD032B9A0E5F005E2430 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 766DCD022B9A0E5F005E2430 /* Vortex */; };
 		767FE87F2B98BE96003C225D /* SearchDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE87E2B98BE96003C225D /* SearchDisplayView.swift */; };
 		767FE8812B98BEAF003C225D /* SearchResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8802B98BEAF003C225D /* SearchResultsListView.swift */; };
 		767FE8832B98BEC2003C225D /* RecentResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8822B98BEC2003C225D /* RecentResultsListView.swift */; };
@@ -210,8 +206,6 @@
 		76087BB02B8BD5D1005C2431 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		761A884A2B97DDC000F85ABB /* MacModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacModifier.swift; sourceTree = "<group>"; };
 		761A884C2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalScrollTargetBehaviour.swift; sourceTree = "<group>"; };
-		761A884E2B97DE3A00F85ABB /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
-		761A88502B97DE4B00F85ABB /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		761A88522B97DFCF00F85ABB /* TriviaTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaTip.swift; sourceTree = "<group>"; };
 		761A88542B97DFE800F85ABB /* StatsGraphTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsGraphTip.swift; sourceTree = "<group>"; };
 		761A88562B97E00900F85ABB /* StatsOverviewTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsOverviewTip.swift; sourceTree = "<group>"; };
@@ -268,16 +262,14 @@
 		7644DCF92B98A95C00B3EAE4 /* SourceLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLinksView.swift; sourceTree = "<group>"; };
 		7644DCFB2B98A97200B3EAE4 /* SourcesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewModel.swift; sourceTree = "<group>"; };
 		7644DCFF2B98AAAB00B3EAE4 /* ArticlesGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGalleryView.swift; sourceTree = "<group>"; };
-		7644DD012B98AAC100B3EAE4 /* TopPicksGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksGalleryView.swift; sourceTree = "<group>"; };
 		7644DD032B98AAD600B3EAE4 /* ArticlesFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesFeedView.swift; sourceTree = "<group>"; };
-		7644DD052B98AAE900B3EAE4 /* ArticlesErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesErrorView.swift; sourceTree = "<group>"; };
 		7644DD072B98AB0400B3EAE4 /* ArticleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemView.swift; sourceTree = "<group>"; };
 		7644DD092B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGalleryViewModel.swift; sourceTree = "<group>"; };
 		7644DD0C2B98AB4C00B3EAE4 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
 		7644DD132B98AB8900B3EAE4 /* ReadArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadArticle.swift; sourceTree = "<group>"; };
 		7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileGalleryView.swift; sourceTree = "<group>"; };
 		7644DD192B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileItemView.swift; sourceTree = "<group>"; };
-		7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileView.swift; sourceTree = "<group>"; };
+		7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileViewModel.swift; sourceTree = "<group>"; };
 		7644DD1D2B98AC5400B3EAE4 /* EmissionsProfileBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileBreakdownView.swift; sourceTree = "<group>"; };
 		7644DD1F2B98ACF100B3EAE4 /* TransportMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMethodsView.swift; sourceTree = "<group>"; };
 		7644DD212B98AD0800B3EAE4 /* TransportTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportTip.swift; sourceTree = "<group>"; };
@@ -401,7 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7644DD8C2B98BD5200B3EAE4 /* Vortex in Frameworks */,
+				766DCD032B9A0E5F005E2430 /* Vortex in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,8 +508,6 @@
 			isa = PBXGroup;
 			children = (
 				76F875142B88F2ED000EA3D7 /* DateExtension.swift */,
-				761A884E2B97DE3A00F85ABB /* UIScreen.swift */,
-				761A88502B97DE4B00F85ABB /* UIWindow.swift */,
 				7644DCCB2B98A6B800B3EAE4 /* JourneyExtension.swift */,
 			);
 			path = Extensions;
@@ -846,10 +836,8 @@
 			isa = PBXGroup;
 			children = (
 				7644DCFF2B98AAAB00B3EAE4 /* ArticlesGalleryView.swift */,
-				7644DD012B98AAC100B3EAE4 /* TopPicksGalleryView.swift */,
 				7644DD032B98AAD600B3EAE4 /* ArticlesFeedView.swift */,
 				7644DD072B98AB0400B3EAE4 /* ArticleListItemView.swift */,
-				7644DD052B98AAE900B3EAE4 /* ArticlesErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -896,7 +884,7 @@
 		7644DD102B98AB6400B3EAE4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileView.swift */,
+				7644DD1B2B98AC3000B3EAE4 /* EmissionsProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1209,7 +1197,7 @@
 			);
 			name = EmissionIQ;
 			packageProductDependencies = (
-				7644DD8B2B98BD5200B3EAE4 /* Vortex */,
+				766DCD022B9A0E5F005E2430 /* Vortex */,
 			);
 			productName = EmissionIQ;
 			productReference = 76E306C82B69578700112552 /* EmissionIQ.app */;
@@ -1240,7 +1228,7 @@
 			);
 			mainGroup = 76E306BF2B69578700112552;
 			packageReferences = (
-				7644DD8A2B98BD5200B3EAE4 /* XCRemoteSwiftPackageReference "Vortex" */,
+				766DCD012B9A0E5F005E2430 /* XCRemoteSwiftPackageReference "Vortex" */,
 			);
 			productRefGroup = 76E306C92B69578700112552 /* Products */;
 			projectDirPath = "";
@@ -1319,7 +1307,6 @@
 				7644DD332B98B00F00B3EAE4 /* LevelProgressView.swift in Sources */,
 				7644DCC82B98991A00B3EAE4 /* StatsPieOverlayView.swift in Sources */,
 				76087B9A2B8BD469005C2431 /* ListSectionTag.swift in Sources */,
-				7644DD062B98AAE900B3EAE4 /* ArticlesErrorView.swift in Sources */,
 				767FE8C22B98C26A003C225D /* JourneyImpactListItemView.swift in Sources */,
 				765FA8B62B91EE6300030EC1 /* LevelManager.swift in Sources */,
 				76F8752A2B88F4C8000EA3D7 /* GalleryHeaderView.swift in Sources */,
@@ -1340,7 +1327,6 @@
 				7644DD752B98B5C700B3EAE4 /* LeaderboardPodiumItemView.swift in Sources */,
 				7644DCD42B98A72B00B3EAE4 /* TrophyListItemView.swift in Sources */,
 				765FA8922B91EC4F00030EC1 /* Details.swift in Sources */,
-				761A88512B97DE4B00F85ABB /* UIWindow.swift in Sources */,
 				7644DD742B98B5C700B3EAE4 /* LeaderboardUserView.swift in Sources */,
 				767FE8BE2B98C246003C225D /* JourneyViewModel.swift in Sources */,
 				7644DD722B98B5C700B3EAE4 /* LeaderboardView.swift in Sources */,
@@ -1391,7 +1377,6 @@
 				76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */,
 				7644DCC42B9898E400B3EAE4 /* StatsPieViewModel.swift in Sources */,
 				767FE88B2B98BF84003C225D /* SearchViewModel.swift in Sources */,
-				761A884F2B97DE3A00F85ABB /* UIScreen.swift in Sources */,
 				7644DCBC2B98987D00B3EAE4 /* StatsGraphView.swift in Sources */,
 				76F8752E2B88F50D000EA3D7 /* ReusableButtonView.swift in Sources */,
 				765FA8B02B91EDE600030EC1 /* OnboardingDetailView.swift in Sources */,
@@ -1426,7 +1411,7 @@
 				767FE8B42B98C1F3003C225D /* JourneyDetailsView.swift in Sources */,
 				767FE8BA2B98C224003C225D /* JourneyMapView.swift in Sources */,
 				7644DCD02B98A6FC00B3EAE4 /* TrophiesView.swift in Sources */,
-				7644DD1C2B98AC3000B3EAE4 /* EmissionsProfileView.swift in Sources */,
+				7644DD1C2B98AC3000B3EAE4 /* EmissionsProfileViewModel.swift in Sources */,
 				7644DC912B9894C200B3EAE4 /* QuickActionGalleryView.swift in Sources */,
 				7644DD2F2B98AFE300B3EAE4 /* LevelXpItemView.swift in Sources */,
 				765FA8A22B91ED0200030EC1 /* Fact.swift in Sources */,
@@ -1453,7 +1438,6 @@
 				767FE8A62B98C137003C225D /* JourneyInfoButtonView.swift in Sources */,
 				765FA8962B91EC9900030EC1 /* Paragraph.swift in Sources */,
 				76087BA02B8BD49B005C2431 /* ChartTitle.swift in Sources */,
-				7644DD022B98AAC100B3EAE4 /* TopPicksGalleryView.swift in Sources */,
 				76087BA62B8BD4D0005C2431 /* ConditionalContentMargins.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1592,6 +1576,7 @@
 				INFOPLIST_FILE = EmissionIQ/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EmissionIQ;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSLocationUsageDescription = "This app uses your location to provide accurate routing for your journeys!";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to provide accurate routing for your journeys!";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1637,6 +1622,7 @@
 				INFOPLIST_FILE = EmissionIQ/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EmissionIQ;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSLocationUsageDescription = "This app uses your location to provide accurate routing for your journeys!";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to provide accurate routing for your journeys!";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1689,7 +1675,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7644DD8A2B98BD5200B3EAE4 /* XCRemoteSwiftPackageReference "Vortex" */ = {
+		766DCD012B9A0E5F005E2430 /* XCRemoteSwiftPackageReference "Vortex" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/Vortex";
 			requirement = {
@@ -1700,9 +1686,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7644DD8B2B98BD5200B3EAE4 /* Vortex */ = {
+		766DCD022B9A0E5F005E2430 /* Vortex */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7644DD8A2B98BD5200B3EAE4 /* XCRemoteSwiftPackageReference "Vortex" */;
+			package = 766DCD012B9A0E5F005E2430 /* XCRemoteSwiftPackageReference "Vortex" */;
 			productName = Vortex;
 		};
 /* End XCSwiftPackageProductDependency section */

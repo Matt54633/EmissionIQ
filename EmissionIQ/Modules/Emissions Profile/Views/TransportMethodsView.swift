@@ -20,19 +20,19 @@ struct TransportMethodsView: View {
             
             HStack {
                 ForEach(viewModel.allTransportTypes.prefix(2), id: \.self) { transportType in
-                    TransportMethodView(transportType: transportType, emissionPercentage: viewModel.emissionPercentagesByVehicleType[transportType]?.rounded(.up) ?? 0.0, emissionKg: Float(viewModel.emissionKgByVehicleType[transportType] ?? 0.0))
+                    TransportMethodView(transportType: transportType, emissionPercentage: viewModel.emissionPercentage(for: transportType), emissionKg: viewModel.emissionKg(for: transportType))
                 }
             }
             
             HStack {
                 ForEach(viewModel.allTransportTypes[2...4], id: \.self) { transportType in
-                    TransportMethodView(transportType: transportType, emissionPercentage: viewModel.emissionPercentagesByVehicleType[transportType]?.rounded(.up) ?? 0.0, emissionKg: Float(viewModel.emissionKgByVehicleType[transportType] ?? 0.0))
+                    TransportMethodView(transportType: transportType, emissionPercentage: viewModel.emissionPercentage(for: transportType), emissionKg: viewModel.emissionKg(for: transportType))
                 }
             }
             
             HStack {
                 ForEach(viewModel.allTransportTypes[5...6], id: \.self) { transportType in
-                    TransportMethodView(transportType: transportType, emissionPercentage: viewModel.emissionPercentagesByVehicleType[transportType]?.rounded(.up) ?? 0.0, emissionKg: Float(viewModel.emissionKgByVehicleType[transportType] ?? 0.0))
+                    TransportMethodView(transportType: transportType, emissionPercentage: viewModel.emissionPercentage(for: transportType), emissionKg: viewModel.emissionKg(for: transportType))
                 }
             }
             

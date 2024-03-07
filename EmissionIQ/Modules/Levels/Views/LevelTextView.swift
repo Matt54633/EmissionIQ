@@ -14,9 +14,11 @@ struct LevelTextView: View {
     var color: Color
     
     var body: some View {
-        Text(level != nil ? String(level!) : " ")
+        
+        Text(String(level ?? 0))
             .font(.system(size: CGFloat(fontSize), weight: .bold))
             .foregroundStyle(color)
+        
     }
 }
 

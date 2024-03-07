@@ -10,7 +10,6 @@ import SwiftUI
 // View to create button for saving new journeys
 struct AddJourneyButtonView: View {
     @Environment(\.modelContext) private var context
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @ObservedObject var viewModel: AddJourneyViewModel
     @Binding var vehicleType: String
     @Binding var manualDistance: String

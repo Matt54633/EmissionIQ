@@ -32,7 +32,7 @@ class LeaderboardViewModel: ObservableObject {
             self.userId = fetchedUser.userId
         }
     }
-
+    
     // fetch data for the leaderboard type
     func fetchData(for leaderboardType: String) async throws {
         let fetchedData = try await publicDataManager.fetchAllData(for: leaderboardType)
@@ -40,13 +40,13 @@ class LeaderboardViewModel: ObservableObject {
             self.data = fetchedData
         }
     }
-
+    
     // fetch leaderboard data and find a user's position
     func fetchDataAndCalculatePosition(for leaderboardType: String) async throws {
         let fetchedData = try await publicDataManager.fetchAllData(for: leaderboardType)
         DispatchQueue.main.async {
             self.positionData = fetchedData
-
+            
             if let userId = self.userId {
                 let sortedData = Array(fetchedData.sorted { self.setLeaderboardOrder(leaderboardType: leaderboardType) ? $0.value > $1.value : $0.value < $1.value }.enumerated())
                 for (index, item) in sortedData.enumerated() {

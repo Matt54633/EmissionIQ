@@ -11,7 +11,7 @@ import SwiftUI
 // Custom shape that creates a rectangle with a wavy bottom edge
 struct WavyRectangle: Shape {
     var amplitude: CGFloat = 15
-    var waveCount: Int = UIScreen.current?.bounds.width ?? 400 > 550 ? 11 : 7
+    var waveCount: Int    
     
     func path(in rect: CGRect) -> Path {
         var path = Path()

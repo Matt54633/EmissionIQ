@@ -15,6 +15,8 @@ struct ArticlesFeedView: View {
     let pageTitle: String
     let articles: [Article]
     
+    
+    
     var body: some View {
         VStack {
             if !articles.isEmpty {
@@ -25,7 +27,6 @@ struct ArticlesFeedView: View {
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(articles, id: \.url) { article in
                             ArticleListItemView(article: article)
-                                .padding(.horizontal)
                         }
                     }
                     .modifier(ConditionalPadding())

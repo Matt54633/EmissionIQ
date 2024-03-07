@@ -12,30 +12,41 @@ struct ArticlesGalleryView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @StateObject var viewModel = ArticlesGalleryViewModel()
     
+    let articleType: String
+    
+    var articles: [Article] {
+        return articleType == "news" ? viewModel.articles : viewModel.topPicks
+    }
+    
     var body: some View {
         VStack {
             
             NavigationLink {
-                ArticlesFeedView(viewModel: viewModel, pageTitle: "In the News", articles: viewModel.articles)
+                ArticlesFeedView(viewModel: viewModel, pageTitle: articleType == "news" ? "In the News" : "Top Picks", articles: articles)
             } label: {
-                GalleryHeaderView(image: "newspaper.fill", title: "In the News", displayNavIndicator: true, topPadding: 15)
+                GalleryHeaderView(image: "newspaper.fill", title: articleType == "news" ? "In the News" : "Top Picks", displayNavIndicator: true, topPadding: 15)
                     .modifier(ConditionalPadding())
             }
             .tint(.primary)
             
             Group {
                 
-                if viewModel.articleError != nil {
+                if articleType == "news" && viewModel.articleError != nil {
                     
-                    ReusableErrorView(backgroundColour: .red, text: "Unable to retrieve Articles", textColor: .red, opacity: 0.2, radius: 25)
+                    ReusableErrorView(backgroundColour: .red, text: "Unable to retrieve News Articles", textColor: .red, opacity: 0.2, radius: 25)
                         .padding(.horizontal)
                     
-                }  else if viewModel.articles.isEmpty {
+                } else if articleType == "topPicks" && viewModel.topPicksError != nil {
+                    
+                    ReusableErrorView(backgroundColour: .red, text: "Unable to retrieve Top Picks", textColor: .red, opacity: 0.2, radius: 25)
+                        .padding(.horizontal)
+                    
+                }  else if articles.isEmpty {
                     LoadingView()
                         .frame(height: 150)
                 } else  {
                     
-                    let articlesView = ForEach(viewModel.articles, id: \.url) { article in
+                    let articlesView = ForEach(articles, id: \.url) { article in
                         ArticleListItemView(article: article)
                             .modifier(ConditionalContainerRelativeFrame(fixedWidth: 350))
                     }
@@ -70,12 +81,16 @@ struct ArticlesGalleryView: View {
             }
         }
         .onAppear {
-            viewModel.fetchClimateChangeNews()
+            if articleType == "news" {
+                viewModel.fetchClimateChangeNews()
+            } else  {
+                viewModel.fetchTopPicks()
+            }
         }
     }
 }
 
 #Preview {
-    ArticlesGalleryView()
+    ArticlesGalleryView(articleType: "news")
 }
 

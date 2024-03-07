@@ -16,15 +16,15 @@ struct JourneyDetailView: View {
     var body: some View {
         VStack(alignment: .center) {
             
-            if let image = image {
-                Image(systemName: image)
-                    .frame(maxWidth: .infinity)
-                    .padding(.bottom, 2.5)
-            } else {
-                Text(value)
-                    .frame(maxWidth: .infinity)
-                    .padding(.bottom, 2.5)
+            Group {
+                if let image = image {
+                    Image(systemName: image)
+                } else {
+                    Text(value)
+                }
             }
+            .frame(maxWidth: .infinity, maxHeight: 55)
+            .padding(.bottom, 2.5)
             
             Text(label)
                 .font(.body)

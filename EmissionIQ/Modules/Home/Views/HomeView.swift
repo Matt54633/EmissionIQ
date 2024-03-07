@@ -29,7 +29,7 @@ struct HomeView: View {
                 VStack(alignment: .center) {
                     if !journeys.isEmpty {
                         
-                        if geometry.size.height > 600 {
+                        ScrollView {
                             VStack {
                                 ImpactGalleryView()
                                 
@@ -48,26 +48,11 @@ struct HomeView: View {
                                 }
                                 .modifier(ConditionalPadding())
                                 
-                                Spacer()
-                            }
-                            .padding(.bottom)
-                            
-                        } else {
-                            ScrollView {
-                                ImpactGalleryView()
-                                
-                                Group {
-                                    
-                                    StatsGalleryView()
-                                    
-                                    TriviaGalleryView()
-                                    
-                                    QuickActionGalleryView(displayJourneySheet: $displayJourneySheet, selectedTab: $selectedTab)
-                                    
-                                }
-                                .modifier(ConditionalPadding())
                             }
                         }
+                        .padding(.top)
+                        
+                        Spacer()
                         
                     } else {
                         JourneyMessageView()
@@ -82,7 +67,6 @@ struct HomeView: View {
                     
                 }
                 
-                Spacer()
                 
             }
             .popover(isPresented: $displayJourneySheet, attachmentAnchor: .point(.bottom),arrowEdge: .top) {

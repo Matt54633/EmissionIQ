@@ -29,31 +29,29 @@ struct ImpactListView: View {
                 .padding(.bottom, 5)
                 
                 HStack {
+                    
                     Text("That's equivalent to")
                         .font(.title3)
                     
                     Spacer()
                     
                     Image(systemName: "chevron.down")
+                    
                 }
                 .fontWeight(.semibold)
                 
                 ScrollView {
                     if !journeys.isEmpty {
+                        
                         ForEach(viewModel.itemTypes, id: \.self) { item in
                             ImpactListItemView(viewModel: viewModel, itemType: item, journeys: journeys)
                         }
+                        
                     } else {
-                        Spacer()
-                        
                         JourneyMessageView()
-                        
-                        Spacer()
                     }
                 }
                 .padding(.top, 5)
-                
-                Spacer()
                 
             }
             .navigationTitle("Impact")

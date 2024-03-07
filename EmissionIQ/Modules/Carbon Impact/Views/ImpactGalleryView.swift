@@ -18,9 +18,10 @@ struct ImpactGalleryView: View {
         NavigationLink {
             ImpactListView()
         } label: {
+            
             VStack(alignment: .leading) {
                 
-                GalleryHeaderView(image: "carbon.dioxide.cloud.fill", title: "Impact", displayNavIndicator: true, topPadding: horizontalSizeClass == .compact ? 15 : 25)
+                GalleryHeaderView(image: "carbon.dioxide.cloud.fill", title: "Impact", displayNavIndicator: true, topPadding: horizontalSizeClass == .compact ? 0 : 10)
                     .modifier(ConditionalPadding())
                 
                 let impactItemsView = ForEach(viewModel.itemTypes.indices, id: \.self) { index in
@@ -41,6 +42,7 @@ struct ImpactGalleryView: View {
                     }
                     .modifier(ConditionalContentMargins())
                     .modifier(ConditionalScrollTargetBehavior(behavior: .viewAligned))
+                    
                 } else {
                     ScrollView(.horizontal) {
                         

@@ -16,12 +16,14 @@ struct LeaderboardsGridView: View {
         LazyVGrid(columns: columns, spacing: 20) {
             
             ForEach(viewModel.leaderboardTypes, id: \.self) { type in
+                
                 NavigationLink {
                     LeaderboardView(viewModel: viewModel, leaderboardType: type)
                 } label: {
                     LeaderboardListItemView(viewModel: viewModel, leaderboardType: type)
                 }
                 .tint(.primary)
+                
             }
             
         }

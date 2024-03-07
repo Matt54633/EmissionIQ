@@ -24,8 +24,8 @@ struct StatsGraphOverlayView: View {
             VStack(alignment: .leading) {
                 
                 Text(String(format: "%.1f", value))
-                    .font(.title2)
-                    .fontWeight(.bold) + Text(" \(chartType)").font(.caption)
+                    .font(.title2.bold())
+                     + Text(" \(chartType)").font(.caption)
                 
                 Text(date.longFormattedDate)
                     .font(.caption)

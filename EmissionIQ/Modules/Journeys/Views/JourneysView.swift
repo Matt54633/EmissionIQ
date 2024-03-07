@@ -15,10 +15,10 @@ struct JourneysView: View {
     @Query private var readArticles: [ReadArticle]
     @Environment(\.modelContext) private var context
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    @State private var displayJourneySheet = false
     @StateObject private var addJourneyViewModel = AddJourneyViewModel()
     @StateObject private var trophiesViewModel = TrophiesViewModel()
     @StateObject private var carbonOutputViewModel = CarbonOutputViewModel()
+    @State private var displayJourneySheet = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -31,7 +31,7 @@ struct JourneysView: View {
                         LevelIndicatorView(displayOuter: false, frameWidth: 32, progressWidth: 4, fontSize: 17)
                     }
                 }
-                .frame(height: horizontalSizeClass == .compact ? 75 : 110)
+                .frame(height: horizontalSizeClass == .compact ? 75 : 90)
                 
                 VStack {
                     
@@ -44,6 +44,7 @@ struct JourneysView: View {
                 }
                 .modifier(ConditionalPadding())
                 .overlay(alignment: .bottom) {
+                    
                     Button {
                         displayJourneySheet = true
                     } label: {
@@ -51,6 +52,7 @@ struct JourneysView: View {
                     }
                     .padding(.bottom)
                     .modifier(ConditionalPadding())
+                    
                 }
                 
             }

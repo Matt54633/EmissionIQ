@@ -24,17 +24,23 @@ struct LearningView: View {
                         LevelIndicatorView(displayOuter: false, frameWidth: 32, progressWidth: 4, fontSize: 17)
                     }
                 }
-                .frame(height: horizontalSizeClass == .compact ? 75 : 110)
+                .frame(height: horizontalSizeClass == .compact ? 75 : 90)
                 
                 ScrollView {
                     
                     Group {
+                        
                         FactGalleryView()
+                        
                         EmissionsProfileGalleryView()
                             .modifier(ConditionalPadding())
-                        TopPicksGalleryView()
-                        ArticlesGalleryView()
+                        
+                        ArticlesGalleryView(articleType: "topPicks")
+                        
+                        ArticlesGalleryView(articleType: "news")
+                        
                         SourcesGalleryView()
+                        
                     }
                     .padding(.bottom, 5)
                     

@@ -13,7 +13,6 @@ import MapKit
 struct SearchDisplayView: View {
     @Query(sort: \Location.creationDate, order: .reverse) private var recentLocations: [Location]
     @Environment(\.modelContext) private var context
-    @Environment(\.colorScheme) var colorScheme
     @StateObject private var searchViewModel = SearchViewModel()
     @ObservedObject var addJourneyViewModel: AddJourneyViewModel
     @State private var searchText: String = ""
@@ -35,14 +34,17 @@ struct SearchDisplayView: View {
             
             List {
                 if !recentLocations.isEmpty && searchText == "" {
+                    
                     Section("Recent Locations") {
                         RecentResultsListView(addJourneyViewModel: addJourneyViewModel, searchViewModel: searchViewModel, displaySearchSheet: $displaySearchSheet, inputText: $inputText, recentLocations: recentLocations, locationType: locationType)
                     }
+                    
                 }
                 
                 SearchResultsListView(addJourneyViewModel: addJourneyViewModel, searchViewModel: searchViewModel, displaySearchSheet: $displaySearchSheet, inputText: $inputText, locations: searchViewModel.locationNames, locationType: locationType, recentLocations: recentLocations)
             }
             .listStyle(.inset)
+            
         }
         .modifier(RoundedSheet(radius: 25, height: .large))
         .onChange(of: searchText) { _, newValue in

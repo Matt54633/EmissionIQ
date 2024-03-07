@@ -33,9 +33,11 @@ struct TrophyDisplayView: View {
                 HStack {
                     
                     Group {
+                        
                         Text(trophy.desc)
                         
                         Text("\(trophy.dateAchieved.shortFormattedDate)")
+                        
                     }
                     .padding(EdgeInsets(top: 7.5, leading: 12.5, bottom: 7.5, trailing: 12.5))
                     .background(Capsule().fill(.white.opacity(0.25)))

@@ -8,7 +8,7 @@
 import Foundation
 import TipKit
 
-// Tip to highlight transport type features on the emisissions profile
+// Tip to highlight transport type features on emisissions profile
 struct EmissionsProfileTip: Tip {
     
     var title: Text {

@@ -13,6 +13,7 @@ struct LevelCounterView: View {
     let level: Int
     
     var body: some View {
+        
         Text("\(viewModel.levelUpLevel)")
             .font(.system(size: 130))
             .contentTransition(.numericText())

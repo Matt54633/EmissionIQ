@@ -25,7 +25,7 @@ struct LeaderboardsView: View {
                         LevelIndicatorView(displayOuter: false, frameWidth: 32, progressWidth: 4, fontSize: 17)
                     }
                 }
-                .frame(height: horizontalSizeClass == .compact ? 75 : 110)
+                .frame(height: horizontalSizeClass == .compact ? 75 : 90)
                 .onAppear {
                     Task {
                         try await viewModel.userIdFetch()
@@ -49,6 +49,7 @@ struct LeaderboardsView: View {
                     }
                 }
                 .modifier(ConditionalPadding())
+                
             }
         }
     }

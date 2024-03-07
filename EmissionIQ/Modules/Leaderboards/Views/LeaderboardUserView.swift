@@ -32,10 +32,12 @@ struct LeaderboardUserView: View {
                 Spacer()
                 
                 HStack(alignment: .firstTextBaseline) {
+                    
                     Text("\(value)")
                         .fontWeight(.semibold)
                     + Text(unit ?? "")
                         .font(.caption)
+                    
                 }
                 
             }

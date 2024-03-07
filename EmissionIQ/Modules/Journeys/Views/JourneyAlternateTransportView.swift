@@ -36,7 +36,9 @@ struct JourneyAlternateTransportView: View {
                 }
                 .fontWeight(.semibold)
                 .padding(.horizontal, 12)
+                
             }
+            
         }
         .frame(height: 50)
         .padding(.bottom, 5)

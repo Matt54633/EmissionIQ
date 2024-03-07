@@ -16,11 +16,14 @@ struct OnboardingDetailView: View {
     
     var body: some View {
         ZStack {
+            
             RoundedRectangle(cornerRadius: 20)
-                .fill(.thinMaterial)
+                .fill(.lightGrey.opacity(0.2))
             
             VStack {
+                
                 Group {
+                    
                     if systemImage {
                         Image(systemName: image)
                             .resizable()
@@ -44,8 +47,10 @@ struct OnboardingDetailView: View {
                     Text(subTitle)
                         .font(.headline)
                         .multilineTextAlignment(.center)
+                    
                 }
                 .padding(5)
+                
             }
             .padding(25)
             

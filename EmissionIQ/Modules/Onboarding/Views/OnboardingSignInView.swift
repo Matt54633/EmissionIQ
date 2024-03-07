@@ -12,7 +12,7 @@ struct OnboardingSignInView: View {
     var body: some View {
         VStack {
             
-            OnboardingDetailView(image: "icloud.circle.fill", title: "Sign into iCloud", subTitle: "EmissionIQ uses iCloud to sync your emissions across your devices!", systemImage: true)
+            OnboardingDetailView(image: "icloud.circle.fill", title: "Sign into iCloud", subTitle: "EmissionIQ requires iCloud to sync your emissions across your devices!", systemImage: true)
             
             Button(action: {
                 if let url = URL(string: UIApplication.openSettingsURLString) {

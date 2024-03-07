@@ -25,10 +25,12 @@ struct JourneyDeleteButtonView: View {
                 .foregroundStyle(colorScheme == .dark ? .white : .black)
         }
         .alert(isPresented: $showingConfirmation) {
+            
             Alert(title: Text("Delete Journey"), message: Text("Are you sure you want to delete this journey?"), primaryButton: .destructive(Text("Delete")) {
                 viewModel.deleteJourney(journey: journey, context: context)
                 dismiss()
             }, secondaryButton: .cancel())
+            
         }
     }
 }

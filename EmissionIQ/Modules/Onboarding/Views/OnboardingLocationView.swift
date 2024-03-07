@@ -15,12 +15,12 @@ struct OnboardingLocationView: View {
     var body: some View {
         VStack {
             
-            OnboardingDetailView(image: "location.circle.fill", title: "Location Access", subTitle: "EmissionIQ uses your location to provide localised search results when adding a journey.", systemImage: true)
+            OnboardingDetailView(image: "location.circle.fill", title: "Location Access", subTitle: "EmissionIQ only uses your location to provide localised search results when adding a journey.", systemImage: true)
             
             NavigationLink {
                 OnboardingNotificationView()
             } label: {
-                ReusableButtonView(backgroundColour: .lightGrey, text: "No thanks!", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
+                ReusableButtonView(backgroundColour: .lightGrey, text: "No Thanks", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
             }
             
             Button {
@@ -43,6 +43,7 @@ struct OnboardingLocationView: View {
         .frame(maxWidth: 700)
         .padding([.horizontal, .bottom])
         .navigationBarBackButtonHidden()
+        
     }
 }
 

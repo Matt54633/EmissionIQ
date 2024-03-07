@@ -15,9 +15,11 @@ struct LeaderboardView: View {
     var body: some View {
         VStack {
             ScrollView {
+                
                 VStack(alignment: .center) {
                     
                     if let data = viewModel.data {
+                        
                         let sortedData = Array(data.sorted { viewModel.setLeaderboardOrder(leaderboardType: leaderboardType) ? $0.value > $1.value : $0.value < $1.value }.enumerated())
                         
                         // podium views
@@ -31,6 +33,7 @@ struct LeaderboardView: View {
                         ForEach(sortedData.dropFirst(3), id: \.element.userId) { index, item in
                             LeaderboardItemView(viewModel: viewModel, leaderboardType: leaderboardType, index: index, item: item, userId: viewModel.userId)
                         }
+                        
                     }
                     
                 }

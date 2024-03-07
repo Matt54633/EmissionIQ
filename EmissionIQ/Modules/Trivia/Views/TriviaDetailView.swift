@@ -14,25 +14,23 @@ struct TriviaDetailView: View {
     let type: String
     
     var body: some View {
-        ZStack(alignment: .leading) {
-            
-            RoundedRectangle(cornerRadius: 20).fill(type == "back" ? .peelGreen : .primaryGreen)
-            
-            HStack {
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 20).fill(type == "back" ? .peelGreen : .primaryGreen)
                 
-                if type == "back" {
-                    Spacer()
+                HStack {
+                    if type == "back" {
+                        Spacer()
+                    }
+                    
+                    Text(title)
+                        .font(horizontalSizeClass == .compact ? .subheadline : .headline)
+                        .fontWeight(.medium)
+                        .padding(.trailing, type == "back" ? (horizontalSizeClass == .regular ? geometry.size.width * 0.03 : geometry.size.width * 0.1) : 45)
+                        .padding(.leading, type == "back" ? 50: 20)
                 }
-                
-                Text(title)
-                    .font(horizontalSizeClass == .compact ? .subheadline : .headline)
-                    .fontWeight(.medium)
-                    .padding(.trailing, type == "back" ? (horizontalSizeClass == .regular ? UIScreen.main.bounds.width * 0.03 : UIScreen.main.bounds.width * 0.1) : 45)
-                    .padding(.leading, type == "back" ? 50: 20)
-                
+                .foregroundStyle(.white)
             }
-            .foregroundStyle(.white)
-            
         }
     }
 }

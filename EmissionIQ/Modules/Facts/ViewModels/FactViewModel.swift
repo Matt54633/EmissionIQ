@@ -38,6 +38,7 @@ class FactViewModel: ObservableObject {
         if let lastUpdate = UserDefaults.standard.object(forKey: "LastFactUpdate") as? Date,
            now.timeIntervalSince(lastUpdate) < 3600, // 3600 seconds = 1 hour
            let savedFact = UserDefaults.standard.object(forKey: "CurrentFact") as? Data {
+            
             let decoder = JSONDecoder()
             
             if let loadedFact = try? decoder.decode(Fact.self, from: savedFact) {

@@ -14,6 +14,8 @@ struct PeelEffectView<Content: View, Back: View>: View {
     @State private var dragProgress: CGFloat = 0.05
     @State private var isExpanded: Bool = false
     @State private var isDragging = false
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    
     
     var content: Content
     var back: Back
@@ -27,6 +29,13 @@ struct PeelEffectView<Content: View, Back: View>: View {
         content
             .onAppear {
                 dragProgress = horizontalSizeClass == .compact ? 0.05 : 0.02
+            }
+            .onReceive(timer) { _ in
+                if !isDragging && dragProgress != (horizontalSizeClass == .compact ? 0.05 : 0.02) {
+                    withAnimation(.spring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
+                        dragProgress = horizontalSizeClass == .compact ? 0.05 : 0.02
+                    }
+                }
             }
             .hidden()
             .overlay(content: {

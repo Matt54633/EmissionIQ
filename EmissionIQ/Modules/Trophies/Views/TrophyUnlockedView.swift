@@ -20,8 +20,10 @@ struct TrophyUnlockedView: View {
                 HStack(alignment: .center) {
                     
                     ZStack {
+                        
                         Image(systemName: "trophy.fill")
                             .foregroundStyle(Color(trophy.rank.capitalized))
+                        
                     }
                     .font(.title)
                     .padding(.trailing, 2.5)

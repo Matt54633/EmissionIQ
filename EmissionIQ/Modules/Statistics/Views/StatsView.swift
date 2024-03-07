@@ -23,7 +23,7 @@ struct StatsView: View {
                     
                     TabView {
                         
-                        StatsProfileView(viewModel: viewModel)
+                        StatsProfileView(statsViewModel: viewModel)
                         
                         StatsTabView(
                             title: String(journeys.count),
@@ -61,6 +61,7 @@ struct StatsView: View {
                 } else if displayStats {
                     JourneyMessageView()
                 }
+                
             }
             .onAppear {
                 viewModel.calculateStatsOverTime(journeys: journeys)
@@ -70,7 +71,7 @@ struct StatsView: View {
                     await viewModel.fetchUserCreationDate()
                 }
                 
-                withAnimation(.spring().delay(0.3)) {
+                withAnimation(.spring().delay(0.15)) {
                     displayStats = true
                 }
             }

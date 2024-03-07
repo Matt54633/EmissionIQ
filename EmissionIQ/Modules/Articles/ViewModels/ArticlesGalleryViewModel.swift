@@ -58,6 +58,7 @@ class ArticlesGalleryViewModel: ObservableObject {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let topPicksResponse = try decoder.decode(TopPicks.self, from: data)
+                
                 DispatchQueue.main.async {
                     self.topPicks = topPicksResponse.articles.shuffled()
                 }

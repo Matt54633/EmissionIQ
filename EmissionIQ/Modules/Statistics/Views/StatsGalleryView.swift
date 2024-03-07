@@ -26,17 +26,11 @@ struct StatsGalleryView: View {
                 HStack {
                     
                     StatsItemView(statistic: String(format: "%.0f", journeys.calculateTotalDistance()), title: "Miles")
-                    
-                    Spacer()
-                    
+                                        
                     StatsItemView(statistic: String(journeys.count), title: "Journeys")
-                    
-                    Spacer()
-                    
+                                        
                     StatsItemView(statistic: String(trophies.filter { $0.isAchieved }.count), title: "Trophies")
-                    
-                    Spacer()
-                    
+                                        
                     StatsItemView(statistic: String(readArticles.count), title: "Articles")
                     
                 }
@@ -46,6 +40,7 @@ struct StatsGalleryView: View {
             .onAppear {
                 Task {
                     await viewModel.fetchUserId()
+                    await viewModel.fetchUserCreationDate()
                 }
             }
         }

@@ -9,7 +9,6 @@ import SwiftUI
 
 // ReusableButtonView is used to create a view that can be used as a button label
 struct ReusableButtonView: View {
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     let backgroundColour: Color
     let text: String
     let textColor: Color
@@ -31,7 +30,6 @@ struct ReusableButtonView: View {
                
         }
         .frame(height: 45)
-        
     }
 }
 

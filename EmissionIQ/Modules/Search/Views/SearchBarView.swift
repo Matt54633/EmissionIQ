@@ -37,6 +37,7 @@ struct SearchBarView: View {
                     }
                     .padding(.trailing, 10)
                 }
+            
         }
         .fontWeight(.semibold)
         .padding(EdgeInsets(top: 20, leading: 15, bottom: 0, trailing: 15))

@@ -25,6 +25,7 @@ struct JourneysListView: View {
                 Section(header: Text("\(week.weekFormattedDate) - \(week.endOfWeek.weekFormattedDate)").modifier(ListSectionTag())) {
                     
                     ForEach(journeys, id: \.self) { journey in
+                        
                         NavigationLink {
                             JourneyView(journey: journey)
                         } label: {
@@ -37,8 +38,9 @@ struct JourneysListView: View {
                                 }
                         }
                         .listRowBackground(colorScheme == .dark ? Color(.tertiarySystemBackground).opacity(0.75) : Color(.secondarySystemBackground))
+                        
                     }
-                    
+                
                 }
             }
         }

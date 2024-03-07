@@ -28,9 +28,7 @@ struct AddJourneyForm: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            
-            Spacer()
-            
+                        
             HStack {
                 
                 Text("\(vehicleType.capitalized) Journey")
@@ -54,13 +52,11 @@ struct AddJourneyForm: View {
                 DistanceOverrideView(manualDistance: $manualDistance)
             }
             
-            Spacer()
-            
             AddJourneyButtonView(viewModel: viewModel, vehicleType: $vehicleType, manualDistance: $manualDistance, journeyDate: $journeyDate, journeyReturn: $isReturn, showAlert: $showAlert, alertMessage: $alertMessage, displayJourneySheet: $displayJourneySheet, showManualDistance: $showManualDistance)
             
         }
         .modifier(RoundedSheet(radius: 25, height: .height(showManualDistance == true ? 410 : 350)))
-        .padding(EdgeInsets(top: 15, leading: 15, bottom: 0, trailing: 15))
+        .padding([.top, .horizontal])
     }
 }
 

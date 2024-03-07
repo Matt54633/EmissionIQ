@@ -32,6 +32,7 @@ struct TransportMethodView: View {
                 
             }
             .fontWeight(.semibold)
+            
         }
         .onTapGesture {
             displayOverlay.toggle()

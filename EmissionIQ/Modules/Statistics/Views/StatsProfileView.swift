@@ -9,17 +9,19 @@ import SwiftUI
 
 // StatsProfileView displays information about the user along with some basic stats
 struct StatsProfileView: View {
-    @ObservedObject var viewModel: StatsViewModel
+    @StateObject var levelViewModel = LevelViewModel()
+    @ObservedObject var statsViewModel: StatsViewModel
     private let tip = StatsOverviewTip()
     
     var body: some View {
+    
         VStack(alignment: .leading) {
             
             Spacer()
             
             HStack {
                 
-                Text(viewModel.userId ?? "")
+                Text(statsViewModel.userId ?? "")
                     .font(.system(size: 45, weight: .bold))
                     .foregroundStyle(.primaryGreen)
                 
@@ -28,23 +30,24 @@ struct StatsProfileView: View {
                 LevelIndicatorView(displayOuter: true, frameWidth: 40, progressWidth: 5, fontSize: 18)
                 
             }
-            .padding(.bottom, 10)
+            .padding(.bottom, 5)
             .popoverTip(tip, arrowEdge: .top)
             
-            LevelXpView()
+            LevelXpView(viewModel: levelViewModel)
+                .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             
-            StatsGridView(viewModel: viewModel)
+            StatsGridView(viewModel: statsViewModel)
             
         }
         .padding(EdgeInsets(top: 0, leading: 15, bottom: 50, trailing: 15 ))
         .onAppear {
             Task {
-                await viewModel.fetchUserId()
+                await statsViewModel.fetchUserId()
             }
         }
     }
 }
 
 #Preview {
-    StatsProfileView(viewModel: StatsViewModel())
+    StatsProfileView(statsViewModel: StatsViewModel())
 }

@@ -16,7 +16,7 @@ class LevelViewModel: ObservableObject {
     @Published var displaySheet: Bool = false
     
     private var currentLevel: Int?
-    var timer: Timer? = nil
+    private var timer: Timer? = nil
     
     init() {
         fetchLevelAndXp()

@@ -20,13 +20,8 @@ class OnboardingViewModel: ObservableObject {
     func checkICloudSignInStatus() {
         CKContainer.default().accountStatus { (accountStatus, error) in
             DispatchQueue.main.async {
-                if accountStatus == .noAccount {
-                    self.userNotSignedIn = true
-                    self.displaySheet = true
-                } else {
-                    self.userNotSignedIn = false
-                    self.displaySheet = false
-                }
+                self.displaySheet = accountStatus == .noAccount
+                self.userNotSignedIn = accountStatus == .noAccount
             }
         }
     }

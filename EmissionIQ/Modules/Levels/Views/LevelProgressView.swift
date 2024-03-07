@@ -15,11 +15,13 @@ struct LevelProgressView: View {
     var frameWidth: Double
     
     var body: some View {
+        
         Circle()
             .trim(from: 0, to: CGFloat(progress))
             .stroke(color, style: StrokeStyle(lineWidth: strokeWidth, lineCap: .round))
             .rotationEffect(Angle(degrees: 90))
             .frame(width: frameWidth)
+        
     }
 }
 

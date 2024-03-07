@@ -13,27 +13,31 @@ struct OnboardingStartView: View {
     
     var body: some View {
         NavigationStack {
-                            
-                VStack {
+            
+            VStack {
+                
+                OnboardingDetailView(image: "App Logo", title: "Welcome!", subTitle: "Your EmissionIQ journey starts here. Are you ready to begin?", systemImage: false)
+                
+                if viewModel.userNotSignedIn == true {
                     
-                    OnboardingDetailView(image: "App Logo", title: "Welcome!", subTitle: "Your EmissionIQ journey starts here. Are you ready to begin?", systemImage: false)
-                    
-                    if viewModel.userNotSignedIn == true {
-                        ReusableButtonView(backgroundColour: .primaryGreen, text: "Start your journey", textColor: .white, opacity: 1.0, radius: 15, disabled: true)
-                            .onTapGesture {
-                                viewModel.displaySheet = true
-                            }
-                    } else {
-                        NavigationLink {
-                            OnboardingLocationView()
-                        } label: {
-                            ReusableButtonView(backgroundColour: .primaryGreen, text: "Start your journey", textColor: .white, opacity: 1.0, radius: 15, disabled: false)
+                    ReusableButtonView(backgroundColour: .primaryGreen, text: "Start Your Journey", textColor: .white, opacity: 1.0, radius: 15, disabled: true)
+                        .onTapGesture {
+                            viewModel.displaySheet = true
                         }
+                    
+                } else {
+                    
+                    NavigationLink {
+                        OnboardingLocationView()
+                    } label: {
+                        ReusableButtonView(backgroundColour: .primaryGreen, text: "Start Your Journey", textColor: .white, opacity: 1.0, radius: 15, disabled: false)
                     }
                     
                 }
-                .frame(maxWidth: 700)
-                .padding([.horizontal, .bottom])
+                
+            }
+            .frame(maxWidth: 700)
+            .padding([.horizontal, .bottom])
             
         }
         .sheet(isPresented: $viewModel.displaySheet) {

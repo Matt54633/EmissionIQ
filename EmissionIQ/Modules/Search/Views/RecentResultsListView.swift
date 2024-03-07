@@ -20,16 +20,22 @@ struct RecentResultsListView: View {
     
     var body: some View {
         ForEach(recentLocations, id: \.self) { location in
+            
             SearchRecentRowView(location: location)
                 .onTapGesture {
                     location.creationDate = Date()
+                    
                     searchViewModel.convertToPlacemark(location: location, locationType: locationType) { placemark in
                         if let placemark = placemark {
+                            
                             addJourneyViewModel.setLocation(location: MKPlacemark(placemark: placemark), locationType: locationType, displaySearchSheet: $displaySearchSheet, inputText: $inputText)
+                            
                         }
+                        
                         displaySearchSheet = false
                     }
                 }
+            
         }
     }
 }

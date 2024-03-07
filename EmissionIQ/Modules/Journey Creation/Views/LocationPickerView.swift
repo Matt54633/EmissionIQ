@@ -24,6 +24,7 @@ struct LocationPickerView: View {
             ZStack(alignment: .center) {
                 
                 HStack {
+                    
                     LocationTextFieldView(viewModel: viewModel, location: $startLocation, displayLocationSearchSheet: $displayStartLocationSearchSheet, locationType: "start", paddingDirection: .leading, radiusValues: [100, 100, 0, 0])
                         .frame(width: geometry.size.width * 0.45)
                     
@@ -31,6 +32,7 @@ struct LocationPickerView: View {
                     
                     LocationTextFieldView(viewModel: viewModel, location: $endLocation, displayLocationSearchSheet: $displayEndLocationSearchSheet, locationType: "end", paddingDirection: .trailing, radiusValues: [0, 0, 100, 100])
                         .frame(width: geometry.size.width * 0.45)
+                    
                 }
                 .font(.subheadline)
                 .fontWeight(.semibold)
@@ -44,10 +46,10 @@ struct LocationPickerView: View {
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
+                    .contentTransition(.symbolEffect(.replace, options: .speed(3)))
                     .onTapGesture {
                         isReturn.toggle()
                     }
-                    .contentTransition(.symbolEffect(.replace, options: .speed(3)))
                 
             }
             .padding(.bottom, 20)

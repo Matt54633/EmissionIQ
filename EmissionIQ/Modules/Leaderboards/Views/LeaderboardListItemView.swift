@@ -41,7 +41,6 @@ struct LeaderboardListItemView: View {
                                 Task {
                                     try await viewModel.fetchDataAndCalculatePosition(for: leaderboardType)
                                 }
-                                
                             }
                         }
                         .onAppear {
@@ -49,7 +48,6 @@ struct LeaderboardListItemView: View {
                                 Task {
                                     try await viewModel.fetchDataAndCalculatePosition(for: leaderboardType)
                                 }
-                                
                             }
                         }
                     

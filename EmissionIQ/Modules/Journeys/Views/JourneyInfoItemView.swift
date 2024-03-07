@@ -20,12 +20,14 @@ struct JourneyInfoItemView: View {
                 .fill(colorScheme == .dark ? .quaternary : .quinary)
             
             HStack {
+                
                 Image(systemName: image)
                     .foregroundStyle(.primaryGreen)
                 
                 Spacer()
                 
                 Text(text)
+                
             }
             .fontWeight(.semibold)
             .padding(.horizontal, 12)

@@ -21,6 +21,7 @@ struct JourneyMapView: View {
     
     var body: some View {
         VStack {
+            
             Map(position: $position) {
                 if let startCoordinate = viewModel.startCoordinate, let endCoordinate = viewModel.endCoordinate {
                     
@@ -41,8 +42,9 @@ struct JourneyMapView: View {
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: 20))
+            
         }
-        .padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
+        .padding([.bottom, .horizontal])
         .onAppear {
             viewModel.getCoordinates(startCoord: startCoord, endCoord: endCoord, journey: journey)
         }

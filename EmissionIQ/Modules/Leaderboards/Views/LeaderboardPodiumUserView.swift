@@ -31,7 +31,6 @@ struct LeaderboardPodiumUserView: View {
                 Text("\(item.value)")
                     .font(.system(size: 23))
                     .fontWeight(.semibold)
-                
                 + Text(viewModel.setLeaderboardUnit(leaderboardType: leaderboardType))
                     .font(.caption)
                 

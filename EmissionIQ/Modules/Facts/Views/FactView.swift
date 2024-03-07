@@ -18,10 +18,12 @@ struct FactView: View {
             GlassEffectView(image: "GreenMesh", cornerRadius: 20)
             
             if let currentFact = viewModel.currentFact?.fact {
+                
                 Text(currentFact)
                     .font(horizontalSizeClass == .compact ? .subheadline : .headline)
                     .fontWeight(.semibold)
                     .padding(EdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 20))
+                
             }
             
         }

@@ -30,25 +30,22 @@ struct TrophiesView: View {
                         LevelIndicatorView(displayOuter: false, frameWidth: 32, progressWidth: 4, fontSize: 17)
                     }
                 }
-                .frame(height: horizontalSizeClass == .compact ? 75 : 110)
-                
+                .frame(height: horizontalSizeClass == .compact ? 75 : 90)
+
                 if !journeys.isEmpty {
                     
                     GeometryReader { geometry in
                         ScrollView {
-                            
-                            let groupedAndSortedTrophies = viewModel.groupAndSortTrophies(trophies: trophies)
-                            let sortedKeys = groupedAndSortedTrophies.keys.sorted()
-                            let columns = Array(repeating: GridItem(.flexible()), count: geometry.size.width > 900 ? 2 : 1)
-                            
-                            LazyVGrid(columns: columns) {
-                                ForEach(sortedKeys, id: \.self) { type in
+                                                    
+                            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: geometry.size.width > 900 ? 2 : 1)) {
+                                
+                                ForEach(viewModel.groupAndSortTrophies(trophies: trophies).keys.sorted(), id: \.self) { type in
                                     
                                     VStack(alignment: .leading) {
                                         
                                         GalleryHeaderView(image: viewModel.imageForTrophyType(type), title: type, displayNavIndicator: false, topPadding: 0)
                                         
-                                        if let trophiesOfType = groupedAndSortedTrophies[type] {
+                                        if let trophiesOfType = viewModel.groupAndSortTrophies(trophies: trophies)[type] {
                                             ForEach(trophiesOfType, id: \.self) { trophy in
                                                 TrophyListItemView(trophy: trophy)
                                             }

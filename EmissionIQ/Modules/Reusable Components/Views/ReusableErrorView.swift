@@ -23,8 +23,11 @@ struct ReusableErrorView: View {
                 .opacity(opacity)
             
             HStack {
+                
                 Image(systemName: "exclamationmark.triangle.fill")
+                
                 Text(text)
+                
             }
             .font(.title3)
             .fontWeight(.semibold)

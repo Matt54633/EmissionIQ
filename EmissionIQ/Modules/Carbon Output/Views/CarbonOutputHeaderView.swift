@@ -13,13 +13,15 @@ struct CarbonOutputHeaderView: View {
     @Query private var journeys: [Journey]
     @Query private var trophies: [Trophy]
     @Query private var readArticles: [ReadArticle]
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @StateObject private var viewModel = CarbonOutputViewModel()
     
     var body: some View {
         ZStack(alignment: .top) {
             
-            WavyRectangle()
+            WavyRectangle(waveCount: horizontalSizeClass == .compact ? 7 : 17)
                 .fill(.primaryGreen)
+                .ignoresSafeArea(edges: .top)
             
             VStack(alignment: .leading) {
                 Spacer()
@@ -44,14 +46,13 @@ struct CarbonOutputHeaderView: View {
                 } label: {
                     LevelIndicatorView(displayOuter: false, frameWidth: 32, progressWidth: 4, fontSize: 17)
                 }
-                .padding(.top, UIScreen.current?.bounds.height ?? 600 > 700 ? 55 : 30)
+                .padding(.top, horizontalSizeClass == .compact ? 5 : 15)
                 
             }
             .modifier(ConditionalPadding())
             .padding(.horizontal, 15)
+            
         }
-        .ignoresSafeArea(.all)
-        
     }
 }
 

@@ -13,8 +13,8 @@ import SwiftData
 class SearchViewModel: ObservableObject {
     @Published var locationNames: [MKPlacemark] = []
     
-    var locationManager = LocationManager()
     let searchSubject = PassthroughSubject<String, Never>()
+    var locationManager = LocationManager()
     var searchCancellable: Cancellable? = nil
     
     // debounce search requests to stay under request limit
@@ -60,7 +60,7 @@ class SearchViewModel: ObservableObject {
     // function to save recent locations
     func saveRecentLocation(recentLocations: [Location], location: MKPlacemark, context: ModelContext) {
         
-        if recentLocations.count == 5 {
+        if recentLocations.count == 10 {
             if let lastLocation = recentLocations.last {
                 context.delete(lastLocation)
             }

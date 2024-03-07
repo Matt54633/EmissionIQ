@@ -72,8 +72,8 @@ class PrivateDataManager {
     
     // generate a random username
     func generateUserId() -> String {
-        let adjectives = ["Brave", "Quick", "Fast", "Firey", "Angry", "Bold", "Calm", "Kind", "Wise"]
-        let nouns = ["Lion", "Fox", "Owl", "Tiger", "Bear", "Wolf", "Hawk", "Deer", "Swan", "Goat"]
+        let adjectives = ["Brave", "Quick", "Fast", "Firey", "Angry", "Bold", "Calm", "Kind", "Wise", "Cool", "Vast"]
+        let nouns = ["Lion", "Fox", "Owl", "Tiger", "Bear", "Wolf", "Hawk", "Deer", "Swan", "Goat", "Hippo", "Zebra"]
         return "\(adjectives.randomElement() ?? "Brave")\(nouns.randomElement() ?? "Lion")\(Int.random(in: 1...99))"
     }
 }

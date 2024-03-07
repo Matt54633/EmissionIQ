@@ -11,47 +11,51 @@ import SwiftData
 // View to display the users' level, XP and the User Level leaderboard
 struct LevelView: View {
     @Query private var journeys: [Journey]
-    @StateObject var viewModel = StatsViewModel()
+    @StateObject var statsViewModel = StatsViewModel()
+    @StateObject var levelViewModel = LevelViewModel()
     @State private var displayView = false
     
     var body: some View {
-        if !journeys.isEmpty {
-            VStack {
-                
+        VStack {
+            if !journeys.isEmpty {
                 if displayView {
-                    Group {
+                    
+                    ScrollView {
                         
-                        if UIScreen.current?.bounds.height ?? 600 > 800 {
-                            LevelIndicatorView(displayOuter: true, frameWidth: 200, progressWidth: 12, fontSize: 72)
-                        } else {
-                            LevelIndicatorView(displayOuter: true, frameWidth: 100, progressWidth: 6, fontSize: 36)
+                        VStack {
+                            
+                            LevelIndicatorView(displayOuter: true, frameWidth: 190, progressWidth: 12, fontSize: 72)
+                            
+                            LevelUserRibbonView(viewModel: statsViewModel)
+                                .frame(height: 50)
+                            
+                            LevelXpView(viewModel: levelViewModel)
+                            
+                            StatsGridView(viewModel: statsViewModel)
                         }
+                        .padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
                         
-                        LevelUserRibbonView(viewModel: viewModel)
-                            .frame(height: 50)
-                        
-                        LevelXpView()
-                        
-                        StatsGridView(viewModel: viewModel)
                     }
-                    .transition(.scale)
+                    .modifier(ConditionalPadding())
+                    .transition(.opacity)
+                    
                 }
-                
+            } else {
+                JourneyMessageView()
             }
-            .padding(EdgeInsets(top: 0, leading: 15, bottom: 15, trailing: 15))
-            .modifier(ConditionalPadding())
-            .onAppear {
-                Task {
-                    await viewModel.fetchUserId()
-                    await viewModel.fetchUserCreationDate()
-                }
-                
-                withAnimation(.spring().delay(0.35)) {
-                    displayView = true
-                }
+            
+        }
+        .onAppear {
+            levelViewModel.fetchLevelAndXp()
+            
+            Task {
+                await statsViewModel.fetchUserId()
+                await statsViewModel.fetchUserCreationDate()
             }
-        } else {
-            JourneyMessageView()
+            
+            withAnimation(.spring().delay(0.35)) {
+                displayView = true
+            }
         }
     }
 }

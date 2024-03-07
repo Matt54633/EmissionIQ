@@ -11,19 +11,16 @@ import SwiftUI
 struct SourcesFeedView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @ObservedObject var viewModel: SourcesViewModel
-    
-    let pageTitle: String
-    let sources: [Source]
-    
+        
     var body: some View {
         VStack {
-            if !sources.isEmpty {
+            if !viewModel.sources.isEmpty {
                 ScrollView {
                     
                     let columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: horizontalSizeClass == .regular ? 2 : 1)
                     
                     LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(sources, id: \.name) { source in
+                        ForEach(viewModel.sources, id: \.name) { source in
                             SourceTypeListItemView(source: source)
                         }
                     }
@@ -36,7 +33,7 @@ struct SourcesFeedView: View {
                     .padding(.horizontal)
             }
         }
-        .navigationTitle(pageTitle)
+        .navigationTitle("Sources")
         .navigationBarTitleDisplayMode(.large)
     }
 }
