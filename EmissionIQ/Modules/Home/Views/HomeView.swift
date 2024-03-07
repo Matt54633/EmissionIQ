@@ -62,7 +62,7 @@ struct HomeView: View {
                         } label: {
                             JourneysListAddButtonView()
                         }
-                        
+                        .padding(.bottom)
                     }
                     
                 }
