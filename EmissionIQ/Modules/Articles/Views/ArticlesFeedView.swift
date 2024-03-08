@@ -29,8 +29,8 @@ struct ArticlesFeedView: View {
                             ArticleListItemView(article: article)
                         }
                     }
+                    .padding()
                     .modifier(ConditionalPadding())
-                    .padding(.vertical)
                     
                 }
             } else {
