@@ -42,6 +42,7 @@ struct OnboardingDetailView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundStyle(.primaryGreen)
+                        .multilineTextAlignment(.center)
                         .lineLimit(2)
                     
                     Text(subTitle)

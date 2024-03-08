@@ -14,6 +14,7 @@ struct EmissionIQApp: App {
         WindowGroup {
             ContentView()
                 .fontDesign(.rounded)
+                .dynamicTypeSize(.small ... .large)
                 .modifier(MacModifier())
                 .task {
                     try? Tips.configure([
