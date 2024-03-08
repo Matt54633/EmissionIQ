@@ -11,7 +11,7 @@ struct ContentView: View {
     @AppStorage("onboardingComplete") var onboardingComplete: Bool?
     
     var body: some View {
-        if onboardingComplete == true || ProcessInfo.processInfo.isiOSAppOnMac {
+        if onboardingComplete == true {
             NavView()
         } else {
             OnboardingStartView()

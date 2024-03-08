@@ -22,7 +22,7 @@ class CarbonOutputViewModel: ObservableObject {
             
             try await self.setPublicUserRecord(attributes: attributes)
         } catch {
-            print("Error fetching user creation date: \(error)")
+            print("Error setting user attributes \(error)")
         }
     }
     

@@ -60,8 +60,6 @@ struct JourneysView: View {
                 AddJourneyForm(displayJourneySheet: $displayJourneySheet)
             }
             .onChange(of: journeys) {
-                trophiesViewModel.updateTrophies(trophies: trophies, journeys: journeys, readArticles: readArticles, context: context)
-                
                 Task {
                     await carbonOutputViewModel.setUserAttributes(journeys: journeys, trophies: trophies, readArticles: readArticles)
                 }

@@ -14,11 +14,9 @@ struct SearchRowView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            
             Text(location.name ?? "")
                 .font(.body)
-            
-            Text("\(location.locality ?? "")\(location.locality != nil && location.administrativeArea != nil ? ", " : "")\(location.administrativeArea ?? "")\(location.administrativeArea != nil && location.countryCode != nil ? ", " : "")\(location.countryCode ?? "")")
+            Text("\(location.thoroughfare ?? "")\(location.thoroughfare != nil ? ", " : "")\(location.locality ?? "")\(location.locality != nil && location.administrativeArea != nil ? ", " : "")\(location.administrativeArea ?? "")\(location.administrativeArea != nil && location.countryCode != nil ? ", " : "")\(location.countryCode ?? "")")
                 .font(.caption)
             
         }

@@ -10,10 +10,11 @@ import SwiftData
 import CloudKit
 
 class TrophiesViewModel: ObservableObject {
-    @Published var level: Int = 0
-    @Published var xp: Int = 0
+    @Published private var level: Int = 0
+    @Published private var xp: Int = 0
     
     private let trophyManager = TrophyManager()
+    private let levelManager = LevelManager.shared
     
     // group and then sort the trophies into the correct order
     func groupAndSortTrophies(trophies: [Trophy]) -> [String: [Trophy]] {
@@ -76,15 +77,15 @@ class TrophiesViewModel: ObservableObject {
     }
     
     // fetch level and xp
-    func fetchLevelAndXp() async {
-        do {
+    func fetchLevelAndXp(completion: @escaping () -> Void) {
+        Task {
             let (fetchedLevel, fetchedXp) = try await LevelManager.shared.fetchLevelAndXP()
+            
             DispatchQueue.main.async {
                 self.level = fetchedLevel
                 self.xp = fetchedXp
+                completion()
             }
-        } catch {
-            print("Error fetching level and xp: \(error)")
         }
     }
     
@@ -99,7 +100,7 @@ class TrophiesViewModel: ObservableObject {
         do {
             try await PublicDataManager.shared.setPublicUserRecord(attributes: attributes)
         } catch {
-            print("Error setting values: \(error)")
+            print("Error setting trophy values: \(error)")
             throw error
         }
     }
@@ -141,16 +142,18 @@ class TrophiesViewModel: ObservableObject {
     
     // update xp trophies based on xp a user has
     private func updateXpTrophies(trophies: [Trophy]) {
-        let totalXp = xp + level * 1000
-        
-        let trophyNames = ["XP Explorer", "XP Adventurer", "XP Trailblazer", "XP Master", "XP Master"]
-        let xpCounts = [1000, 5000, 10000, 25000, 50000]
-        
-        for (index, name) in trophyNames.enumerated() {
-            if let trophy = trophies.first(where: { $0.name == name }), !trophy.isAchieved {
-                trophy.isAchieved = totalXp >= xpCounts[index]
-                if trophy.isAchieved {
-                    trophy.dateAchieved = Date()
+        if let xp = levelManager.xp, let level = levelManager.level {
+            let totalXp = xp + level * 1000
+            
+            let trophyNames = ["XP Explorer", "XP Adventurer", "XP Trailblazer", "XP Master", "XP Master"]
+            let xpCounts = [1000, 5000, 10000, 25000, 50000]
+            
+            for (index, name) in trophyNames.enumerated() {
+                if let trophy = trophies.first(where: { $0.name == name }), !trophy.isAchieved {
+                    trophy.isAchieved = totalXp >= xpCounts[index]
+                    if trophy.isAchieved {
+                        trophy.dateAchieved = Date()
+                    }
                 }
             }
         }
@@ -197,14 +200,16 @@ class TrophiesViewModel: ObservableObject {
     
     // update level trophies based on user level
     private func updateLevelTrophies(trophies: [Trophy]) {
-        let trophyNames = ["Level Explorer", "Level Adventurer", "Level Trailblazer", "Level Master", "Level Champion"]
-        let levelCounts = [1, 5, 10, 25, 50]
-        
-        for (index, name) in trophyNames.enumerated() {
-            if let trophy = trophies.first(where: { $0.name == name }), !trophy.isAchieved {
-                trophy.isAchieved = level >= levelCounts[index]
-                if trophy.isAchieved {
-                    trophy.dateAchieved = Date()
+        if let level = levelManager.level {
+            let trophyNames = ["Level Explorer", "Level Adventurer", "Level Trailblazer", "Level Master", "Level Champion"]
+            let levelCounts = [1, 5, 10, 25, 50]
+            
+            for (index, name) in trophyNames.enumerated() {
+                if let trophy = trophies.first(where: { $0.name == name }), !trophy.isAchieved {
+                    trophy.isAchieved = level >= levelCounts[index]
+                    if trophy.isAchieved {
+                        trophy.dateAchieved = Date()
+                    }
                 }
             }
         }
@@ -230,6 +235,10 @@ class TrophiesViewModel: ObservableObject {
             }
             self.removeDuplicateTrophies(trophies: trophies, context: context)
             self.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
+            
+            Task {
+                try await self.setUserTrophies(trophies: trophies)
+            }
         }
     }
 }

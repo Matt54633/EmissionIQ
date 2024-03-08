@@ -10,55 +10,36 @@ import CloudKit
 import SwiftUI
 
 class LevelViewModel: ObservableObject {
-    @Published var level: Int?
-    @Published var xp: Int?
+    static let shared = LevelViewModel()
+    
     @Published var levelUpLevel: Int = 0
-    @Published var displaySheet: Bool = false
+    @Published var countdownStopped: Bool = false
     
-    private var currentLevel: Int?
-    private var timer: Timer? = nil
-    
-    init() {
-        fetchLevelAndXp()
-    }
-    
-    // fetch Level and XP from the LevelManager
-    func fetchLevelAndXp() {
-        Task {
-            do {
-                let (level, xp) = try await LevelManager.shared.fetchLevelAndXP()
-                DispatchQueue.main.async {
-                    self.level = level
-                    self.xp = xp
-                    
-                    if let level = self.level {
-                        if self.currentLevel == nil {
-                            self.currentLevel = level
-                        } else if level > self.currentLevel! {
-                            self.currentLevel = level
-                            self.displaySheet = true
-                        }
-                    }
-                }
-            } catch {
-                print("Failed to fetch Level/XP Data", error)
+    // start the level up countdown to change the displayed level
+    func startCountdown(level: Int) {
+        levelUpLevel = 0
+        countdownStopped = false
+        for i in 1...level {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) / Double(level)) {
+                self.levelUpLevel = i
             }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.countdownStopped = true
         }
     }
     
-    // start the level up timer to change the displayed level
-    func startTimer(level: Int) {
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0 / Double(level), repeats: true) { [weak self] _ in
-            withAnimation {
-                self?.levelUpLevel += 1
-            }
+    func setUserAttributes(level: Int, xp: Int) async {
+        let attributes: [String: CKRecordValue] = [
+            "level": level as CKRecordValue,
+            "xp": xp as CKRecordValue,
+        ]
+        
+        do {
+            try await PublicDataManager.shared.setPublicUserRecord(attributes: attributes)
+        } catch {
+            print("Error setting user level values: \(error)")
         }
-    }
-    
-    // stop the level up timer
-    func stopTimer() {
-        timer?.invalidate()
-        timer = nil
     }
 }
 

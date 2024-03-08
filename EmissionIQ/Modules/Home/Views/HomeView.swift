@@ -67,13 +67,9 @@ struct HomeView: View {
                     
                 }
                 
-                
             }
             .popover(isPresented: $displayJourneySheet, attachmentAnchor: .point(.bottom),arrowEdge: .top) {
                 AddJourneyForm(displayJourneySheet: $displayJourneySheet)
-            }
-            .onChange(of: journeys) {
-                trophiesViewModel.updateTrophies(trophies: trophies, journeys: journeys, readArticles: readArticles, context: context)
             }
         }
     }

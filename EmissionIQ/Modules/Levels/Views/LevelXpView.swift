@@ -9,24 +9,26 @@ import SwiftUI
 
 // Display both XP for the current level and total XP
 struct LevelXpView: View {
-    @ObservedObject var viewModel: LevelViewModel
+    @StateObject private var levelManager = LevelManager.shared
     
     var body: some View {
         HStack {
             
-            LevelXpItemView(title: "Level XP", value: "\(String(viewModel.xp ?? 0)) / 1000")
+            LevelXpItemView(title: "Level XP", value: "\(String(levelManager.xp ?? 0)) / 1000")
             
-            LevelXpItemView(title: "Total XP", value:  String((viewModel.level ?? 0) * 1000 + (viewModel.xp ?? 0)))
+            LevelXpItemView(title: "Total XP", value:  String((levelManager.level ?? 0) * 1000 + (levelManager.xp ?? 0)))
             
         }
         .onAppear {
-            if viewModel.xp == nil || viewModel.level == nil {
-                viewModel.fetchLevelAndXp()
+            if levelManager.xp == nil || levelManager.level == nil {
+                Task {
+                    try await levelManager.fetchLevelAndXP()
+                }
             }
         }
     }
 }
 
 #Preview {
-    LevelXpView(viewModel: LevelViewModel())
+    LevelXpView()
 }

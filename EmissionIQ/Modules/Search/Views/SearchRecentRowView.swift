@@ -17,7 +17,7 @@ struct SearchRecentRowView: View {
             Text(location.placeName)
                 .font(.body)
             
-            Text("\(location.placeDetail)\(location.placeDetail != "" ? ", " : "")\(location.placeCountry)")
+            Text("\(location.placeDetail)\(location.placeDetail != "" ? ", " : "")\(location.locality), \(location.placeCountry)")
                 .font(.caption)
             
         }

@@ -79,7 +79,7 @@ class ArticlesGalleryViewModel: ObservableObject {
         do {
             try await PublicDataManager.shared.setPublicUserRecord(attributes: attributes)
         } catch {
-            print("Error setting values: \(error)")
+            print("Error setting article values: \(error)")
         }
     }
 }

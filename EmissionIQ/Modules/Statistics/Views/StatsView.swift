@@ -13,13 +13,12 @@ struct StatsView: View {
     @Query private var journeys: [Journey]
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: StatsViewModel
-    @State private var displayStats: Bool = false
     
     var body: some View {
         NavigationStack {
             
             VStack {
-                if !journeys.isEmpty && displayStats {
+                if !journeys.isEmpty {
                     
                     TabView {
                         
@@ -52,13 +51,12 @@ struct StatsView: View {
                             dataPoints: viewModel.carbonEmittedOverTime
                         )
                     }
-                    .transition(.opacity)
                     .navigationTitle("Stats")
                     .tabViewStyle(PageTabViewStyle())
                     .indexViewStyle(.page(backgroundDisplayMode: colorScheme == .dark ?  .never : .always))
                     .modifier(ConditionalPadding())
                     
-                } else if displayStats {
+                } else {
                     JourneyMessageView()
                 }
                 
@@ -69,10 +67,6 @@ struct StatsView: View {
                 
                 Task {
                     await viewModel.fetchUserCreationDate()
-                }
-                
-                withAnimation(.spring().delay(0.15)) {
-                    displayStats = true
                 }
             }
         }

@@ -18,16 +18,9 @@ struct LevelCounterView: View {
             .font(.system(size: 130))
             .contentTransition(.numericText())
             .onAppear {
-                viewModel.startTimer(level: level)
+                viewModel.startCountdown(level: level)
             }
-            .onReceive(viewModel.$levelUpLevel) { newValue in
-                if newValue >= level {
-                    viewModel.stopTimer()
-                }
-            }
-            .onDisappear {
-                viewModel.stopTimer()
-            }
+        
     }
 }
 

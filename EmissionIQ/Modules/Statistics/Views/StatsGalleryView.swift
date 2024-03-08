@@ -25,12 +25,12 @@ struct StatsGalleryView: View {
                 
                 HStack {
                     
-                    StatsItemView(statistic: String(format: "%.0f", journeys.calculateTotalDistance()), title: "Miles")
-                                        
+                    StatsItemView(statistic: String(format: journeys.calculateTotalDistance() < 1000 ? "%.1f" : "%.0f", journeys.calculateTotalDistance()), title: "Miles")
+                    
                     StatsItemView(statistic: String(journeys.count), title: "Journeys")
-                                        
+                    
                     StatsItemView(statistic: String(trophies.filter { $0.isAchieved }.count), title: "Trophies")
-                                        
+                    
                     StatsItemView(statistic: String(readArticles.count), title: "Articles")
                     
                 }

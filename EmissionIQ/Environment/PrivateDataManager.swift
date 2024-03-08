@@ -9,8 +9,11 @@ import CloudKit
 
 // PrivateDataManager is responsible for storing data in a users' private Cloudkit database, this means data can only be read by a devices linked to the current user
 
-class PrivateDataManager {
+class PrivateDataManager: ObservableObject {
     static let shared = PrivateDataManager()
+    
+    @Published var userId: String?
+    @Published var userCreationDate: Date?
     
     private let userIdRecordType = "User"
     private let userIdKey = "userId"
@@ -33,6 +36,9 @@ class PrivateDataManager {
         let recordID = CKRecord.ID(recordName: userIdRecordType)
         let record = try await privateDatabase.record(for: recordID)
         if let userId = record[userIdKey] as? String, let userCreated = record[userCreatedKey] as? Date {
+            DispatchQueue.main.async {
+                self.userId = userId
+            }
             return (userId, userCreated)
         } else {
             throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to fetch user ID"])
@@ -64,6 +70,9 @@ class PrivateDataManager {
         let recordID = CKRecord.ID(recordName: userIdRecordType)
         let record = try await privateDatabase.record(for: recordID)
         if let userCreated = record[userCreatedKey] as? Date {
+            DispatchQueue.main.async {
+                self.userCreationDate = userCreated
+            }
             return userCreated
         } else {
             throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to fetch user creation date"])

@@ -13,7 +13,7 @@ struct StatsGridView: View {
     @Query private var journeys: [Journey]
     @Query private var trophies: [Trophy]
     @Query private var readArticles: [ReadArticle]
-    @ObservedObject var viewModel: StatsViewModel
+    @StateObject var privateDataManager = PrivateDataManager.shared
     
     private let columns = Array(repeating: GridItem(.flexible()), count: 2)
     
@@ -36,13 +36,18 @@ struct StatsGridView: View {
                 
                 StatsItemView(statistic: String(readArticles.count), title: "Articles Read")
                 
-                StatsItemView(statistic: String(viewModel.creationDate ?? " "), title: "Date Joined")
+                StatsItemView(statistic: String(privateDataManager.userCreationDate?.shortFormattedDate ?? ""), title: "Date Joined")
                 
+            }
+            .onAppear {
+                Task {
+                    try await _ = privateDataManager.fetchUserCreationDate()
+                }
             }
         }
     }
 }
 
 #Preview {
-    StatsGridView(viewModel: StatsViewModel())
+    StatsGridView()
 }

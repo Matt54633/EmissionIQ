@@ -15,7 +15,7 @@ struct ArticleListItemView: View {
     @Query private var readArticles: [ReadArticle]
     @Environment(\.modelContext) private var context
     @StateObject var viewModel = ArticlesGalleryViewModel()
-    @StateObject var trophyViewModel = TrophiesViewModel()
+    @StateObject var trophiesViewModel = TrophiesViewModel()
     
     let article: Article
     
@@ -71,7 +71,7 @@ struct ArticleListItemView: View {
                 await viewModel.setUserReadArticles(readArticles: readArticles.count)
             }
             
-            trophyViewModel.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
+            trophiesViewModel.updateTrophies(trophies: trophies, journeys: journeys, readArticles: readArticles, context: context)
         }
     }
 }
