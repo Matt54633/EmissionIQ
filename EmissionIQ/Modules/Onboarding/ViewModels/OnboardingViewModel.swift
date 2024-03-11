@@ -2,7 +2,7 @@
 //  OnboardingViewModel.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 01/03/2024.
+//  Created by Matt Sullivan on 11/03/2024.
 //
 
 import Foundation
@@ -11,6 +11,27 @@ import CloudKit
 class OnboardingViewModel: ObservableObject {
     @Published var userNotSignedIn: Bool = false
     @Published var displaySheet: Bool = false
+    
+    // calculate the number of days until the trial begins
+    var daysUntilAprilFirst: Int {
+        let currentDate = Date()
+        let currentYear = Calendar.current.component(.year, from: currentDate)
+        let aprilFirstThisYear = Calendar.current.date(from: DateComponents(year: currentYear, month: 3, day: 11))!
+        
+        return max(0, Calendar.current.numberOfDaysBetween(currentDate, and: aprilFirstThisYear))
+    }
+    
+    // calculate whether current date is within trial period to restrict application access
+    var isTrialPeriod: Bool {
+        let currentDate = Date()
+        let currentYear = Calendar.current.component(.year, from: currentDate)
+        
+        let startPeriod = Calendar.current.date(from: DateComponents(year: currentYear, month: 3, day: 11))!
+        
+        let daysUntilStart = Calendar.current.numberOfDaysBetween(currentDate, and: startPeriod)
+        
+        return daysUntilStart <= 0
+    }
     
     init() {
         checkICloudSignInStatus()

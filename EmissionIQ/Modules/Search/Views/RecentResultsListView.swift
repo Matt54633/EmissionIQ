@@ -2,7 +2,7 @@
 //  RecentResultsListView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 09/03/2024.
 //
 
 import SwiftUI
@@ -38,4 +38,8 @@ struct RecentResultsListView: View {
             
         }
     }
+}
+
+#Preview {
+    RecentResultsListView(addJourneyViewModel: AddJourneyViewModel(), searchViewModel: SearchViewModel(), displaySearchSheet: .constant(true), inputText: .constant(""), recentLocations: [], locationType: "start")
 }

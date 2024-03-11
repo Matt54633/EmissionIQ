@@ -1,14 +1,14 @@
 //
-//  ArticlesGalleryViewModel.swift
+//  ArticlesViewModel.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 09/03/2024.
 //
 
 import Foundation
 import CloudKit
 
-class ArticlesGalleryViewModel: ObservableObject {
+class ArticlesViewModel: ObservableObject {
     @Published var articles = [Article]()
     @Published var topPicks = [Article]()
     @Published var articleError: Error?

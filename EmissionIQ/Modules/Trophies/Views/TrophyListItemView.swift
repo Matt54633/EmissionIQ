@@ -2,7 +2,7 @@
 //  TrophyListItemView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 17/03/2024.
 //
 
 import SwiftUI
@@ -44,4 +44,8 @@ struct TrophyListItemView: View {
         }
         
     }
+}
+
+#Preview {
+    TrophyListItemView(trophy: Trophy(name: "First Journey", desc: "Complete 1 journey", goal: "Travel 50 miles", type: "Journey", rank: "bronze", isAchieved: false, dateAchieved: Date()))
 }

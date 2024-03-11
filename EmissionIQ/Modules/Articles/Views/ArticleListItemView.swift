@@ -2,7 +2,7 @@
 //  ArticleListItemView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 10/03/2024.
 //
 
 import SwiftUI
@@ -14,7 +14,7 @@ struct ArticleListItemView: View {
     @Query private var trophies: [Trophy]
     @Query private var readArticles: [ReadArticle]
     @Environment(\.modelContext) private var context
-    @StateObject var viewModel = ArticlesGalleryViewModel()
+    @StateObject var viewModel = ArticlesViewModel()
     @StateObject var trophiesViewModel = TrophiesViewModel()
     
     let article: Article

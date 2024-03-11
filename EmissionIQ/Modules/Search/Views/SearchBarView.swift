@@ -2,7 +2,7 @@
 //  SearchBarView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 09/03/2024.
 //
 
 import SwiftUI
@@ -42,4 +42,8 @@ struct SearchBarView: View {
         .fontWeight(.semibold)
         .padding(EdgeInsets(top: 20, leading: 15, bottom: 0, trailing: 15))
     }
+}
+
+#Preview {
+    SearchBarView(searchText: .constant("London"))
 }

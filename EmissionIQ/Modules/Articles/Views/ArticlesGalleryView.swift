@@ -2,7 +2,7 @@
 //  ArticlesGalleryView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 09/03/2024.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SwiftUI
 // View to display articles in a scrolling list
 struct ArticlesGalleryView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    @StateObject var viewModel = ArticlesGalleryViewModel()
+    @StateObject var viewModel = ArticlesViewModel()
     
     let articleType: String
     

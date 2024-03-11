@@ -74,7 +74,7 @@
 		7644DD002B98AAAB00B3EAE4 /* ArticlesGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DCFF2B98AAAB00B3EAE4 /* ArticlesGalleryView.swift */; };
 		7644DD042B98AAD600B3EAE4 /* ArticlesFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD032B98AAD600B3EAE4 /* ArticlesFeedView.swift */; };
 		7644DD082B98AB0400B3EAE4 /* ArticleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD072B98AB0400B3EAE4 /* ArticleListItemView.swift */; };
-		7644DD0A2B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD092B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift */; };
+		7644DD0A2B98AB1E00B3EAE4 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD092B98AB1E00B3EAE4 /* ArticlesViewModel.swift */; };
 		7644DD0D2B98AB4C00B3EAE4 /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD0C2B98AB4C00B3EAE4 /* LearningView.swift */; };
 		7644DD142B98AB8900B3EAE4 /* ReadArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD132B98AB8900B3EAE4 /* ReadArticle.swift */; };
 		7644DD162B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */; };
@@ -170,11 +170,13 @@
 		767FE8C62B98C28D003C225D /* JourneyImpactGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8C52B98C28D003C225D /* JourneyImpactGalleryView.swift */; };
 		767FE8C82B98C31D003C225D /* JourneyListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8C72B98C31D003C225D /* JourneyListItemView.swift */; };
 		767FE8CA2B98C516003C225D /* LevelIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8C92B98C516003C225D /* LevelIndicatorView.swift */; };
+		7689A7CC2B9DC59700733FBF /* OnboardingLockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689A7CB2B9DC59700733FBF /* OnboardingLockedView.swift */; };
 		76E306CC2B69578700112552 /* EmissionIQApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CB2B69578700112552 /* EmissionIQApp.swift */; };
 		76E306CE2B69578700112552 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E306CD2B69578700112552 /* ContentView.swift */; };
 		76E306D02B69578800112552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306CF2B69578800112552 /* Assets.xcassets */; };
 		76E306D42B69578800112552 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306D32B69578800112552 /* Preview Assets.xcassets */; };
 		76E306DB2B6957A500112552 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 76E306DA2B6957A500112552 /* .gitignore */; };
+		76EF20402B9DCF3300EFFAA7 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF203F2B9DCF3300EFFAA7 /* CalendarExtension.swift */; };
 		76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875142B88F2ED000EA3D7 /* DateExtension.swift */; };
 		76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875162B88F34E000EA3D7 /* RoundedSheet.swift */; };
 		76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F875192B88F39C000EA3D7 /* Gold.usdz */; };
@@ -264,7 +266,7 @@
 		7644DCFF2B98AAAB00B3EAE4 /* ArticlesGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGalleryView.swift; sourceTree = "<group>"; };
 		7644DD032B98AAD600B3EAE4 /* ArticlesFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesFeedView.swift; sourceTree = "<group>"; };
 		7644DD072B98AB0400B3EAE4 /* ArticleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemView.swift; sourceTree = "<group>"; };
-		7644DD092B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesGalleryViewModel.swift; sourceTree = "<group>"; };
+		7644DD092B98AB1E00B3EAE4 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
 		7644DD0C2B98AB4C00B3EAE4 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
 		7644DD132B98AB8900B3EAE4 /* ReadArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadArticle.swift; sourceTree = "<group>"; };
 		7644DD152B98ABEE00B3EAE4 /* EmissionsProfileGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileGalleryView.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 		767FE8C52B98C28D003C225D /* JourneyImpactGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyImpactGalleryView.swift; sourceTree = "<group>"; };
 		767FE8C72B98C31D003C225D /* JourneyListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyListItemView.swift; sourceTree = "<group>"; };
 		767FE8C92B98C516003C225D /* LevelIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelIndicatorView.swift; sourceTree = "<group>"; };
+		7689A7CB2B9DC59700733FBF /* OnboardingLockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLockedView.swift; sourceTree = "<group>"; };
 		768FAAB72B93AB3A00DE4127 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		76E306C82B69578700112552 /* EmissionIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmissionIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E306CB2B69578700112552 /* EmissionIQApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionIQApp.swift; sourceTree = "<group>"; };
@@ -368,6 +371,7 @@
 		76E306DA2B6957A500112552 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		76E306DC2B69580D00112552 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		76E306DD2B69583C00112552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76EF203F2B9DCF3300EFFAA7 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
 		76F875142B88F2ED000EA3D7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		76F875162B88F34E000EA3D7 /* RoundedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSheet.swift; sourceTree = "<group>"; };
 		76F875192B88F39C000EA3D7 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
@@ -467,7 +471,7 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		761A88492B97DD3500F85ABB /* Tips */ = {
+		761A88492B97DD3500F85ABB /* TipKit */ = {
 			isa = PBXGroup;
 			children = (
 				761A88522B97DFCF00F85ABB /* TriviaTip.swift */,
@@ -477,7 +481,7 @@
 				761A885A2B97E04D00F85ABB /* EmissionsProfileTip.swift */,
 				7644DD212B98AD0800B3EAE4 /* TransportTip.swift */,
 			);
-			path = Tips;
+			path = TipKit;
 			sourceTree = "<group>";
 		};
 		761A885C2B97E08200F85ABB /* Navigation */ = {
@@ -509,6 +513,7 @@
 			children = (
 				76F875142B88F2ED000EA3D7 /* DateExtension.swift */,
 				7644DCCB2B98A6B800B3EAE4 /* JourneyExtension.swift */,
+				76EF203F2B9DCF3300EFFAA7 /* CalendarExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -536,26 +541,26 @@
 		763274BB2B7D401A00257FD2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7644DD272B98ADB800B3EAE4 /* Levels */,
-				7644DD0E2B98AB5A00B3EAE4 /* Emissions Profile */,
-				7644DCE42B98A83D00B3EAE4 /* Sources */,
-				7644DCE32B98A83800B3EAE4 /* Articles */,
-				7644DCE22B98A83300B3EAE4 /* Facts */,
-				7644DC8C2B98945900B3EAE4 /* Quick Actions */,
-				7644DC882B98942300B3EAE4 /* Trivia */,
-				7644DC862B9893F800B3EAE4 /* Statistics */,
-				7644DC872B98941200B3EAE4 /* Carbon Impact */,
-				7644DC892B98942900B3EAE4 /* Carbon Output */,
+				76F875252B88F489000EA3D7 /* Reusable Components */,
 				76087BAD2B8BD593005C2431 /* Onboarding */,
 				761A885C2B97E08200F85ABB /* Navigation */,
 				76087BA82B8BD555005C2431 /* Home */,
-				767FE8942B98C073003C225D /* Journey Creation */,
+				7644DC892B98942900B3EAE4 /* Carbon Output */,
+				7644DC872B98941200B3EAE4 /* Carbon Impact */,
+				7644DC862B9893F800B3EAE4 /* Statistics */,
+				7644DC882B98942300B3EAE4 /* Trivia */,
+				7644DC8C2B98945900B3EAE4 /* Quick Actions */,
 				76087BA92B8BD562005C2431 /* Journeys */,
+				767FE8942B98C073003C225D /* Journey Creation */,
 				7644DD7D2B98B6F800B3EAE4 /* Search */,
 				76087BAA2B8BD566005C2431 /* Trophies */,
 				76087BAB2B8BD56B005C2431 /* Leaderboards */,
+				7644DD272B98ADB800B3EAE4 /* Levels */,
 				76087BAC2B8BD571005C2431 /* Learning */,
-				76F875252B88F489000EA3D7 /* Reusable Components */,
+				7644DCE22B98A83300B3EAE4 /* Facts */,
+				7644DD0E2B98AB5A00B3EAE4 /* Emissions Profile */,
+				7644DCE42B98A83D00B3EAE4 /* Sources */,
+				7644DCE32B98A83800B3EAE4 /* Articles */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -845,7 +850,7 @@
 		7644DCFE2B98AA9800B3EAE4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				7644DD092B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift */,
+				7644DD092B98AB1E00B3EAE4 /* ArticlesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1039,6 +1044,7 @@
 		765FA8A32B91ED5B00030EC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7689A7CB2B9DC59700733FBF /* OnboardingLockedView.swift */,
 				765FA8A72B91ED9800030EC1 /* OnboardingStartView.swift */,
 				765FA8A92B91EDAD00030EC1 /* OnboardingSignInView.swift */,
 				765FA8AB2B91EDC300030EC1 /* OnboardingLocationView.swift */,
@@ -1118,7 +1124,7 @@
 				763274B82B7D3FDD00257FD2 /* View Modifiers */,
 				763274B92B7D3FEF00257FD2 /* Extensions */,
 				763274BA2B7D3FFE00257FD2 /* Structs */,
-				761A88492B97DD3500F85ABB /* Tips */,
+				761A88492B97DD3500F85ABB /* TipKit */,
 				76087BA72B8BD4FB005C2431 /* Environment */,
 				763274BB2B7D401A00257FD2 /* Modules */,
 				763274BC2B7D405500257FD2 /* Resources */,
@@ -1269,6 +1275,7 @@
 				7644DCF02B98A8BE00B3EAE4 /* SourcesGalleryView.swift in Sources */,
 				767FE8C02B98C258003C225D /* JourneyImpactViewModel.swift in Sources */,
 				765FA8982B91ECA600030EC1 /* Article.swift in Sources */,
+				76EF20402B9DCF3300EFFAA7 /* CalendarExtension.swift in Sources */,
 				7644DC7E2B98900F00B3EAE4 /* PeelEffectView.swift in Sources */,
 				767FE8C82B98C31D003C225D /* JourneyListItemView.swift in Sources */,
 				76E306CE2B69578700112552 /* ContentView.swift in Sources */,
@@ -1286,7 +1293,7 @@
 				7644DCB82B98984300B3EAE4 /* StatsGridView.swift in Sources */,
 				7644DD3B2B98B06100B3EAE4 /* LevelConfettiView.swift in Sources */,
 				7644DCAA2B9896FF00B3EAE4 /* TriviaItemView.swift in Sources */,
-				7644DD0A2B98AB1E00B3EAE4 /* ArticlesGalleryViewModel.swift in Sources */,
+				7644DD0A2B98AB1E00B3EAE4 /* ArticlesViewModel.swift in Sources */,
 				7644DCD22B98A71200B3EAE4 /* TrophyView.swift in Sources */,
 				7644DCCC2B98A6B800B3EAE4 /* JourneyExtension.swift in Sources */,
 				7644DCF82B98A94300B3EAE4 /* SourceDetailsView.swift in Sources */,
@@ -1365,6 +1372,7 @@
 				767FE8A02B98C0F5003C225D /* TransportPickerView.swift in Sources */,
 				7644DC9E2B9895EE00B3EAE4 /* ImpactListView.swift in Sources */,
 				7644DCB42B9897F700B3EAE4 /* StatsTabView.swift in Sources */,
+				7689A7CC2B9DC59700733FBF /* OnboardingLockedView.swift in Sources */,
 				767FE8A82B98C153003C225D /* AddJourneyViewModel.swift in Sources */,
 				76F8752C2B88F4E7000EA3D7 /* PageHeaderView.swift in Sources */,
 				7644DCEA2B98A87300B3EAE4 /* FactView.swift in Sources */,

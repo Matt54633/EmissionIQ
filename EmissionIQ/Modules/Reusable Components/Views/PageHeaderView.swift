@@ -2,7 +2,7 @@
 //  PageHeaderView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 23/02/2024.
+//  Created by Matt Sullivan on 25/02/2024.
 //
 
 import SwiftUI
@@ -43,3 +43,12 @@ struct PageHeaderView<Content: View>: View {
         }
     }
 }
+
+#Preview {
+    PageHeaderView(pageTitle: "Trophies") {
+        NavigationLink {
+            LevelView()
+        } label: {
+            LevelIndicatorView(displayOuter: false, frameWidth: 32, progressWidth: 4, fontSize: 17)
+        }
+    }}

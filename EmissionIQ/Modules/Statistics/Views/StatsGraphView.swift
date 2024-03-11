@@ -2,7 +2,7 @@
 //  StatsGraphView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 12/03/2024.
 //
 
 import SwiftUI
@@ -67,3 +67,8 @@ struct StatsGraphView: View {
         .padding(.bottom, 30)
     }
 }
+
+#Preview {
+    StatsGraphView(chartType: "Journey", axisLabel: "", dataPoints: [(Date(), 6.0), (Date().addingTimeInterval(72000), 10.0)])
+}
+

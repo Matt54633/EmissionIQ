@@ -2,19 +2,22 @@
 //  ContentView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 30/01/2024.
+//  Created by Matt Sullivan on 02/02/2024.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = OnboardingViewModel()
     @AppStorage("onboardingComplete") var onboardingComplete: Bool?
     
     var body: some View {
         if onboardingComplete == true {
             NavView()
-        } else {
+        } else if viewModel.isTrialPeriod {
             OnboardingStartView()
+        } else {
+            OnboardingLockedView()
         }
     }
 }

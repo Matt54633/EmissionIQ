@@ -86,3 +86,7 @@ struct LevelIndicatorView: View {
         }
     }
 }
+
+#Preview {
+    LevelIndicatorView(displayOuter: true, frameWidth: 100, progressWidth: 8, fontSize: 32)
+}

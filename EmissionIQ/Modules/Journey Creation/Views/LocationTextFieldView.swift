@@ -2,7 +2,7 @@
 //  LocationTextFieldView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 01/03/2024.
 //
 
 import SwiftUI
@@ -29,4 +29,8 @@ struct LocationTextFieldView: View {
             }
         
     }
+}
+
+#Preview {
+    LocationTextFieldView(viewModel: AddJourneyViewModel(), location: .constant("London"), displayLocationSearchSheet: .constant(false), locationType: "start", paddingDirection: .leading, radiusValues: [25, 25, 0, 0])
 }
