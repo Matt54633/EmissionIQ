@@ -9,11 +9,10 @@ import Foundation
 import SwiftUI
 
 class LeaderboardViewModel: ObservableObject {
-    @Published var data: [(userId: String, value: Int)]?
+    @Published var leaderboardData: [(userId: String, value: Int)]?
     @Published var positionData: [(userId: String, value: Int)]?
     @Published var userId: String?
     @Published var userPositions: [String: String] = [:]
-    @Published var loadingPosition: Bool = false
     @Published var leaderboardTypes: [String] = ["journeys", "level", "xp", "trophies", "distance", "impact", "articles", "daysActive"]
     
     private var publicDataManager = PublicDataManager.shared
@@ -37,7 +36,7 @@ class LeaderboardViewModel: ObservableObject {
     func fetchData(for leaderboardType: String) async throws {
         let fetchedData = try await publicDataManager.fetchAllData(for: leaderboardType)
         DispatchQueue.main.async {
-            self.data = fetchedData
+            self.leaderboardData = fetchedData
         }
     }
     
@@ -56,6 +55,7 @@ class LeaderboardViewModel: ObservableObject {
                     }
                 }
             }
+            
         }
     }
     

@@ -18,7 +18,7 @@ struct LeaderboardView: View {
                 
                 VStack(alignment: .center) {
                     
-                    if let data = viewModel.data {
+                    if let data = viewModel.leaderboardData {
                         
                         let sortedData = Array(data.sorted { viewModel.setLeaderboardOrder(leaderboardType: leaderboardType) ? $0.value > $1.value : $0.value < $1.value }.enumerated())
                         
