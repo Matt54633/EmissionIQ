@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// OnboardingDetailView displays information about an onboarding view with a dashed rectangular border
+// OnboardingDetailView displays information about an onboarding view
 struct OnboardingDetailView: View {
     let image: String
     let title: String

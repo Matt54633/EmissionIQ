@@ -15,7 +15,7 @@ struct OnboardingNotificationView: View {
     var body: some View {
         VStack {
             
-            OnboardingDetailView(image: "app.badge", title: "Notification Access", subTitle: "EmissionIQ sends a daily reminder to add your journeys to keep you on track!", systemImage: true)
+            OnboardingDetailView(image: "app.badge", title: "Notification Access", subTitle: "Recieve a daily reminder from EmissionIQ to add your journeys to keep you on track!", systemImage: true)
             
             Button {
                 onboardingComplete = true
