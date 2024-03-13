@@ -16,7 +16,7 @@ struct LevelIndicatorView: View {
     @Query private var readArticles: [ReadArticle]
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.modelContext) var context
-    @StateObject private var viewModel = LevelViewModel()
+    @StateObject private var viewModel = LevelViewModel.shared
     @StateObject private var trophiesViewModel = TrophiesViewModel()
     @StateObject private var levelManager = LevelManager.shared
     @State private var currentLevel: Int?

@@ -16,7 +16,7 @@ struct StatsGraphTip: Tip {
     }
     
     var message: Text? {
-        Text("Tap a data point to see more!")
+        Text("Tap and hold a data point to see more!")
     }
     
     var options: [Option] {
