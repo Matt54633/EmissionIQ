@@ -10,6 +10,7 @@ import SwiftUI
 // Display an individual leaderboard for a given type
 struct LeaderboardView: View {
     @ObservedObject var viewModel: LeaderboardViewModel
+    @State private var displayInfoSheet: Bool = false
     let leaderboardType: String
     
     var body: some View {
@@ -50,6 +51,21 @@ struct LeaderboardView: View {
             
             LeaderboardMotivatorView(viewModel: viewModel, leaderboardType: leaderboardType)
             
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    displayInfoSheet = true
+                } label: {
+                    Image(systemName: "info.circle")
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.primaryGreen)
+                }
+                .popover(isPresented: $displayInfoSheet) {
+                    LeaderboardInfoView(viewModel: viewModel, leaderboardType: leaderboardType)
+                        .presentationCompactAdaptation(.popover)
+                }
+            }
         }
         .modifier(ConditionalPadding())
         .navigationTitle((leaderboardType == "xp" ? leaderboardType.uppercased() : (leaderboardType == "daysActive" ? "Days Active" : leaderboardType.capitalized)))

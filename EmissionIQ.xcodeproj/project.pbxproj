@@ -177,6 +177,7 @@
 		76E306D42B69578800112552 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E306D32B69578800112552 /* Preview Assets.xcassets */; };
 		76E306DB2B6957A500112552 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 76E306DA2B6957A500112552 /* .gitignore */; };
 		76EF20402B9DCF3300EFFAA7 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF203F2B9DCF3300EFFAA7 /* CalendarExtension.swift */; };
+		76EF20422BA2360600EFFAA7 /* LeaderboardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF20412BA2360600EFFAA7 /* LeaderboardInfoView.swift */; };
 		76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875142B88F2ED000EA3D7 /* DateExtension.swift */; };
 		76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875162B88F34E000EA3D7 /* RoundedSheet.swift */; };
 		76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F875192B88F39C000EA3D7 /* Gold.usdz */; };
@@ -372,6 +373,7 @@
 		76E306DC2B69580D00112552 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		76E306DD2B69583C00112552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76EF203F2B9DCF3300EFFAA7 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
+		76EF20412BA2360600EFFAA7 /* LeaderboardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardInfoView.swift; sourceTree = "<group>"; };
 		76F875142B88F2ED000EA3D7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		76F875162B88F34E000EA3D7 /* RoundedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSheet.swift; sourceTree = "<group>"; };
 		76F875192B88F39C000EA3D7 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
@@ -959,6 +961,7 @@
 				7644DD6F2B98B5C700B3EAE4 /* LeaderboardPodiumBackgroundView.swift */,
 				7644DD6C2B98B5C700B3EAE4 /* LeaderboardPodiumMedalView.swift */,
 				7644DD6D2B98B5C700B3EAE4 /* LeaderboardPodiumUserView.swift */,
+				76EF20412BA2360600EFFAA7 /* LeaderboardInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1412,6 +1415,7 @@
 				761A884D2B97DE1100F85ABB /* ConditionalScrollTargetBehaviour.swift in Sources */,
 				761A88572B97E00900F85ABB /* StatsOverviewTip.swift in Sources */,
 				761A885B2B97E04D00F85ABB /* EmissionsProfileTip.swift in Sources */,
+				76EF20422BA2360600EFFAA7 /* LeaderboardInfoView.swift in Sources */,
 				761A88552B97DFE800F85ABB /* StatsGraphTip.swift in Sources */,
 				767FE8B82B98C215003C225D /* JourneyDetailView.swift in Sources */,
 				767FE8B02B98C1D0003C225D /* JourneyView.swift in Sources */,
