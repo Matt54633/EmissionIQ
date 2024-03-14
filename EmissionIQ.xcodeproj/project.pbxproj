@@ -182,6 +182,7 @@
 		76EF20492BA3897C00EFFAA7 /* userGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 76EF20482BA3897C00EFFAA7 /* userGuide.pdf */; };
 		76EF204B2BA389A400EFFAA7 /* PdfDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204A2BA389A400EFFAA7 /* PdfDisplayView.swift */; };
 		76EF204D2BA389FA00EFFAA7 /* UserGuideGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204C2BA389FA00EFFAA7 /* UserGuideGalleryView.swift */; };
+		76EF204E2BA3933B00EFFAA7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 76EF20432BA30DE200EFFAA7 /* PrivacyInfo.xcprivacy */; };
 		76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875142B88F2ED000EA3D7 /* DateExtension.swift */; };
 		76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875162B88F34E000EA3D7 /* RoundedSheet.swift */; };
 		76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F875192B88F39C000EA3D7 /* Gold.usdz */; };
@@ -1131,8 +1132,8 @@
 			isa = PBXGroup;
 			children = (
 				76E306DD2B69583C00112552 /* Info.plist */,
-				76E306D12B69578800112552 /* EmissionIQ.entitlements */,
 				76EF20432BA30DE200EFFAA7 /* PrivacyInfo.xcprivacy */,
+				76E306D12B69578800112552 /* EmissionIQ.entitlements */,
 				763274BD2B7D408200257FD2 /* Configuration */,
 				763274B82B7D3FDD00257FD2 /* View Modifiers */,
 				763274B92B7D3FEF00257FD2 /* Extensions */,
@@ -1289,6 +1290,7 @@
 				76F875372B88F610000EA3D7 /* trivia.json in Resources */,
 				76F8751E2B88F39C000EA3D7 /* Bronze.usdz in Resources */,
 				76E306D42B69578800112552 /* Preview Assets.xcassets in Resources */,
+				76EF204E2BA3933B00EFFAA7 /* PrivacyInfo.xcprivacy in Resources */,
 				76F8753B2B88F652000EA3D7 /* topPicks.json in Resources */,
 				76E306DB2B6957A500112552 /* .gitignore in Resources */,
 				76E306D02B69578800112552 /* Assets.xcassets in Resources */,
