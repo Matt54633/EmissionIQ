@@ -27,7 +27,7 @@ struct CarbonOutputValueView: View {
                 
             }
             .fontWeight(.bold)
-            .padding(.bottom, -10)
+            .padding(.bottom, -15)
             
             Text("Keep tracking your progress!")
                 .font(.title3)
