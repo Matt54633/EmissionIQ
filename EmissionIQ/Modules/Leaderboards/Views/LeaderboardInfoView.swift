@@ -20,7 +20,7 @@ struct LeaderboardInfoView: View {
                     .font(.caption)
                     .foregroundStyle(.primaryGreen)
                 
-                Text(leaderboardType.capitalized)
+                Text(leaderboardType == "xp" ? leaderboardType.uppercased() : (leaderboardType == "daysActive" ? "Days Active" : leaderboardType.capitalized))
                     .font(.headline)
                 
             }
