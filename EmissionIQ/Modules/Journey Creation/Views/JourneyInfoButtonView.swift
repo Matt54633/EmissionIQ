@@ -17,7 +17,6 @@ struct JourneyInfoButtonView: View {
         } label: {
             Image(systemName: "info.circle.fill")
                 .font(.title)
-                .foregroundStyle(.gray)
                 .symbolRenderingMode(.hierarchical)
         }
         .popover(isPresented: $displayInformationSheet) {
