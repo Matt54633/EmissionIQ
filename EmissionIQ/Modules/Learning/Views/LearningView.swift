@@ -41,6 +41,9 @@ struct LearningView: View {
                         
                         SourcesGalleryView()
                         
+                        UserGuideGalleryView()
+                            .padding(.bottom, 10)
+                        
                     }
                     .padding(.bottom, 5)
                     

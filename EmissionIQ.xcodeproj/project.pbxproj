@@ -178,6 +178,10 @@
 		76E306DB2B6957A500112552 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 76E306DA2B6957A500112552 /* .gitignore */; };
 		76EF20402B9DCF3300EFFAA7 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF203F2B9DCF3300EFFAA7 /* CalendarExtension.swift */; };
 		76EF20422BA2360600EFFAA7 /* LeaderboardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF20412BA2360600EFFAA7 /* LeaderboardInfoView.swift */; };
+		76EF20472BA3894900EFFAA7 /* PdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF20462BA3894900EFFAA7 /* PdfView.swift */; };
+		76EF20492BA3897C00EFFAA7 /* userGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 76EF20482BA3897C00EFFAA7 /* userGuide.pdf */; };
+		76EF204B2BA389A400EFFAA7 /* PdfDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204A2BA389A400EFFAA7 /* PdfDisplayView.swift */; };
+		76EF204D2BA389FA00EFFAA7 /* UserGuideGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204C2BA389FA00EFFAA7 /* UserGuideGalleryView.swift */; };
 		76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875142B88F2ED000EA3D7 /* DateExtension.swift */; };
 		76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875162B88F34E000EA3D7 /* RoundedSheet.swift */; };
 		76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F875192B88F39C000EA3D7 /* Gold.usdz */; };
@@ -375,6 +379,10 @@
 		76EF203F2B9DCF3300EFFAA7 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
 		76EF20412BA2360600EFFAA7 /* LeaderboardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardInfoView.swift; sourceTree = "<group>"; };
 		76EF20432BA30DE200EFFAA7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		76EF20462BA3894900EFFAA7 /* PdfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfView.swift; sourceTree = "<group>"; };
+		76EF20482BA3897C00EFFAA7 /* userGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = userGuide.pdf; sourceTree = "<group>"; };
+		76EF204A2BA389A400EFFAA7 /* PdfDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfDisplayView.swift; sourceTree = "<group>"; };
+		76EF204C2BA389FA00EFFAA7 /* UserGuideGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideGalleryView.swift; sourceTree = "<group>"; };
 		76F875142B88F2ED000EA3D7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		76F875162B88F34E000EA3D7 /* RoundedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSheet.swift; sourceTree = "<group>"; };
 		76F875192B88F39C000EA3D7 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
@@ -1132,6 +1140,7 @@
 				761A88492B97DD3500F85ABB /* TipKit */,
 				76087BA72B8BD4FB005C2431 /* Environment */,
 				763274BB2B7D401A00257FD2 /* Modules */,
+				76EF20442BA3893200EFFAA7 /* User Guide */,
 				763274BC2B7D405500257FD2 /* Resources */,
 				763274BE2B7D409E00257FD2 /* Supporting Files */,
 				76E306D22B69578800112552 /* Preview Content */,
@@ -1145,6 +1154,24 @@
 				76E306D32B69578800112552 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		76EF20442BA3893200EFFAA7 /* User Guide */ = {
+			isa = PBXGroup;
+			children = (
+				76EF20452BA3893E00EFFAA7 /* Views */,
+			);
+			path = "User Guide";
+			sourceTree = "<group>";
+		};
+		76EF20452BA3893E00EFFAA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				76EF20462BA3894900EFFAA7 /* PdfView.swift */,
+				76EF204A2BA389A400EFFAA7 /* PdfDisplayView.swift */,
+				76EF204C2BA389FA00EFFAA7 /* UserGuideGalleryView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		76F875182B88F39C000EA3D7 /* 3D Models */ = {
@@ -1183,6 +1210,7 @@
 		76F875332B88F5D3000EA3D7 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
+				76EF20482BA3897C00EFFAA7 /* userGuide.pdf */,
 				76F875342B88F610000EA3D7 /* facts.json */,
 				76F875352B88F610000EA3D7 /* trivia.json */,
 				76F875382B88F62A000EA3D7 /* sources.json */,
@@ -1265,6 +1293,7 @@
 				76E306DB2B6957A500112552 /* .gitignore in Resources */,
 				76E306D02B69578800112552 /* Assets.xcassets in Resources */,
 				76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */,
+				76EF20492BA3897C00EFFAA7 /* userGuide.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1289,6 +1318,7 @@
 				7644DCA82B9896B700B3EAE4 /* TriviaGalleryView.swift in Sources */,
 				767FE8872B98BF54003C225D /* SearchRowView.swift in Sources */,
 				7644DD8E2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift in Sources */,
+				76EF204B2BA389A400EFFAA7 /* PdfDisplayView.swift in Sources */,
 				7644DD702B98B5C700B3EAE4 /* LeaderboardViewModel.swift in Sources */,
 				7644DC9A2B98959800B3EAE4 /* CarbonOutputViewModel.swift in Sources */,
 				765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */,
@@ -1302,6 +1332,7 @@
 				7644DCD22B98A71200B3EAE4 /* TrophyView.swift in Sources */,
 				7644DCCC2B98A6B800B3EAE4 /* JourneyExtension.swift in Sources */,
 				7644DCF82B98A94300B3EAE4 /* SourceDetailsView.swift in Sources */,
+				76EF204D2BA389FA00EFFAA7 /* UserGuideGalleryView.swift in Sources */,
 				765FA8A82B91ED9800030EC1 /* OnboardingStartView.swift in Sources */,
 				7644DCDC2B98A77B00B3EAE4 /* TrophyAchievedView.swift in Sources */,
 				765FA8A62B91ED7500030EC1 /* OnboardingViewModel.swift in Sources */,
@@ -1389,6 +1420,7 @@
 				7644DD1A2B98AC1C00B3EAE4 /* EmissionsProfileItemView.swift in Sources */,
 				76F875202B88F41F000EA3D7 /* WavyRectangle.swift in Sources */,
 				7644DCC42B9898E400B3EAE4 /* StatsPieViewModel.swift in Sources */,
+				76EF20472BA3894900EFFAA7 /* PdfView.swift in Sources */,
 				767FE88B2B98BF84003C225D /* SearchViewModel.swift in Sources */,
 				7644DCBC2B98987D00B3EAE4 /* StatsGraphView.swift in Sources */,
 				76F8752E2B88F50D000EA3D7 /* ReusableButtonView.swift in Sources */,
