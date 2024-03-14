@@ -374,6 +374,7 @@
 		76E306DD2B69583C00112552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76EF203F2B9DCF3300EFFAA7 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
 		76EF20412BA2360600EFFAA7 /* LeaderboardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardInfoView.swift; sourceTree = "<group>"; };
+		76EF20432BA30DE200EFFAA7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		76F875142B88F2ED000EA3D7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		76F875162B88F34E000EA3D7 /* RoundedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSheet.swift; sourceTree = "<group>"; };
 		76F875192B88F39C000EA3D7 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
@@ -1123,6 +1124,7 @@
 			children = (
 				76E306DD2B69583C00112552 /* Info.plist */,
 				76E306D12B69578800112552 /* EmissionIQ.entitlements */,
+				76EF20432BA30DE200EFFAA7 /* PrivacyInfo.xcprivacy */,
 				763274BD2B7D408200257FD2 /* Configuration */,
 				763274B82B7D3FDD00257FD2 /* View Modifiers */,
 				763274B92B7D3FEF00257FD2 /* Extensions */,
