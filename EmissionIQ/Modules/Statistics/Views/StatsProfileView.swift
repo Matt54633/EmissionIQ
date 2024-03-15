@@ -10,6 +10,7 @@ import SwiftUI
 // StatsProfileView displays information about the user along with some basic stats
 struct StatsProfileView: View {
     @StateObject var levelViewModel = LevelViewModel.shared
+    @StateObject var networkManager = NetworkManager()
     @ObservedObject var statsViewModel: StatsViewModel
     private let tip = StatsOverviewTip()
     
@@ -40,6 +41,13 @@ struct StatsProfileView: View {
             
         }
         .padding(EdgeInsets(top: 0, leading: 15, bottom: 50, trailing: 15 ))
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                if !networkManager.isConnected {
+                   NetworkConnectionView()
+                }
+            }
+        }
         .onAppear {
             Task {
                 await statsViewModel.fetchUserId()

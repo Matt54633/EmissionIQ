@@ -12,7 +12,8 @@ import SwiftData
 struct LevelView: View {
     @Query private var journeys: [Journey]
     @StateObject var levelViewModel = LevelViewModel.shared
-    
+    @StateObject private var networkManager = NetworkManager()
+
     var body: some View {
         VStack {
             if !journeys.isEmpty {
@@ -38,6 +39,13 @@ struct LevelView: View {
                 JourneyMessageView()
             }
             
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                if !networkManager.isConnected {
+                   NetworkConnectionView()
+                }
+            }
         }
     }
 }

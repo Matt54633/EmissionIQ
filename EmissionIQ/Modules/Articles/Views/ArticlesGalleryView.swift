@@ -33,12 +33,12 @@ struct ArticlesGalleryView: View {
                 
                 if articleType == "news" && viewModel.articleError != nil {
                     
-                    ReusableErrorView(backgroundColour: .red, text: "Unable to retrieve News Articles", textColor: .red, opacity: 0.2, radius: 25)
+                    ReusableErrorView(backgroundColour: .red, text: "Unable to retrieve news articles", textColor: .red, opacity: 0.2, radius: 25)
                         .padding(.horizontal)
                     
                 } else if articleType == "topPicks" && viewModel.topPicksError != nil {
                     
-                    ReusableErrorView(backgroundColour: .red, text: "Unable to retrieve Top Picks", textColor: .red, opacity: 0.2, radius: 25)
+                    ReusableErrorView(backgroundColour: .red, text: "Unable to retrieve top picks", textColor: .red, opacity: 0.2, radius: 25)
                         .padding(.horizontal)
                     
                 }  else if articles.isEmpty {

@@ -183,6 +183,8 @@
 		76EF204B2BA389A400EFFAA7 /* PdfDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204A2BA389A400EFFAA7 /* PdfDisplayView.swift */; };
 		76EF204D2BA389FA00EFFAA7 /* UserGuideGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204C2BA389FA00EFFAA7 /* UserGuideGalleryView.swift */; };
 		76EF204E2BA3933B00EFFAA7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 76EF20432BA30DE200EFFAA7 /* PrivacyInfo.xcprivacy */; };
+		76EF20502BA4519100EFFAA7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204F2BA4519100EFFAA7 /* NetworkManager.swift */; };
+		76EF20522BA459AC00EFFAA7 /* NetworkConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF20512BA459AC00EFFAA7 /* NetworkConnectionView.swift */; };
 		76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875142B88F2ED000EA3D7 /* DateExtension.swift */; };
 		76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875162B88F34E000EA3D7 /* RoundedSheet.swift */; };
 		76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F875192B88F39C000EA3D7 /* Gold.usdz */; };
@@ -384,6 +386,8 @@
 		76EF20482BA3897C00EFFAA7 /* userGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = userGuide.pdf; sourceTree = "<group>"; };
 		76EF204A2BA389A400EFFAA7 /* PdfDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfDisplayView.swift; sourceTree = "<group>"; };
 		76EF204C2BA389FA00EFFAA7 /* UserGuideGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideGalleryView.swift; sourceTree = "<group>"; };
+		76EF204F2BA4519100EFFAA7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		76EF20512BA459AC00EFFAA7 /* NetworkConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionView.swift; sourceTree = "<group>"; };
 		76F875142B88F2ED000EA3D7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		76F875162B88F34E000EA3D7 /* RoundedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSheet.swift; sourceTree = "<group>"; };
 		76F875192B88F39C000EA3D7 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
@@ -425,6 +429,7 @@
 				765FA8B32B91EE4600030EC1 /* PublicDataManager.swift */,
 				765FA8B52B91EE6300030EC1 /* LevelManager.swift */,
 				7644DC7F2B98930B00B3EAE4 /* TrophyManager.swift */,
+				76EF204F2BA4519100EFFAA7 /* NetworkManager.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -1204,6 +1209,7 @@
 				76F875312B88F53E000EA3D7 /* LoadingView.swift */,
 				7644DC7D2B98900F00B3EAE4 /* PeelEffectView.swift */,
 				7644DD5F2B98B5AD00B3EAE4 /* JourneyMessageView.swift */,
+				76EF20512BA459AC00EFFAA7 /* NetworkConnectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1319,6 +1325,7 @@
 				7644DCE12B98A7DD00B3EAE4 /* Trophy.swift in Sources */,
 				7644DCA82B9896B700B3EAE4 /* TriviaGalleryView.swift in Sources */,
 				767FE8872B98BF54003C225D /* SearchRowView.swift in Sources */,
+				76EF20522BA459AC00EFFAA7 /* NetworkConnectionView.swift in Sources */,
 				7644DD8E2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift in Sources */,
 				76EF204B2BA389A400EFFAA7 /* PdfDisplayView.swift in Sources */,
 				7644DD702B98B5C700B3EAE4 /* LeaderboardViewModel.swift in Sources */,
@@ -1400,6 +1407,7 @@
 				767FE87F2B98BE96003C225D /* SearchDisplayView.swift in Sources */,
 				7644DCB62B98981800B3EAE4 /* StatsProfileView.swift in Sources */,
 				7644DC822B98934100B3EAE4 /* NavView.swift in Sources */,
+				76EF20502BA4519100EFFAA7 /* NetworkManager.swift in Sources */,
 				7644DD602B98B5AD00B3EAE4 /* JourneyMessageView.swift in Sources */,
 				7644DCA42B98963800B3EAE4 /* ImpactViewModel.swift in Sources */,
 				767FE8AE2B98C199003C225D /* JourneyInfoSectionView.swift in Sources */,
