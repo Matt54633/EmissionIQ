@@ -12,6 +12,7 @@ import SwiftData
 struct AddJourneyForm: View {
     @Environment(\.modelContext) private var context
     @StateObject private var viewModel = AddJourneyViewModel()
+    @StateObject var networkManager = NetworkManager()
     @State private var vehicleType: String = "car"
     @State private var startLocation: String = "From"
     @State private var endLocation: String = "To"
@@ -37,7 +38,12 @@ struct AddJourneyForm: View {
                 
                 Spacer()
                 
-                JourneyInfoButtonView(displayInformationSheet: $displayInformationSheet)
+                HStack {
+                    if !networkManager.isConnected {
+                        NetworkConnectionView()
+                    }
+                    JourneyInfoButtonView(displayInformationSheet: $displayInformationSheet)
+                }
                 
             }
             .padding(EdgeInsets(top: 10, leading: 0, bottom: 20, trailing: 0))
