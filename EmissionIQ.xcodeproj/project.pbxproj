@@ -179,12 +179,12 @@
 		76EF20402B9DCF3300EFFAA7 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF203F2B9DCF3300EFFAA7 /* CalendarExtension.swift */; };
 		76EF20422BA2360600EFFAA7 /* LeaderboardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF20412BA2360600EFFAA7 /* LeaderboardInfoView.swift */; };
 		76EF20472BA3894900EFFAA7 /* PdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF20462BA3894900EFFAA7 /* PdfView.swift */; };
-		76EF20492BA3897C00EFFAA7 /* userGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 76EF20482BA3897C00EFFAA7 /* userGuide.pdf */; };
 		76EF204B2BA389A400EFFAA7 /* PdfDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204A2BA389A400EFFAA7 /* PdfDisplayView.swift */; };
 		76EF204D2BA389FA00EFFAA7 /* UserGuideGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204C2BA389FA00EFFAA7 /* UserGuideGalleryView.swift */; };
 		76EF204E2BA3933B00EFFAA7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 76EF20432BA30DE200EFFAA7 /* PrivacyInfo.xcprivacy */; };
 		76EF20502BA4519100EFFAA7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF204F2BA4519100EFFAA7 /* NetworkManager.swift */; };
 		76EF20522BA459AC00EFFAA7 /* NetworkConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF20512BA459AC00EFFAA7 /* NetworkConnectionView.swift */; };
+		76EF20712BA60C6C00EFFAA7 /* userGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 76EF20702BA60C6C00EFFAA7 /* userGuide.pdf */; };
 		76F875152B88F2ED000EA3D7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875142B88F2ED000EA3D7 /* DateExtension.swift */; };
 		76F875172B88F34E000EA3D7 /* RoundedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F875162B88F34E000EA3D7 /* RoundedSheet.swift */; };
 		76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76F875192B88F39C000EA3D7 /* Gold.usdz */; };
@@ -383,11 +383,11 @@
 		76EF20412BA2360600EFFAA7 /* LeaderboardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardInfoView.swift; sourceTree = "<group>"; };
 		76EF20432BA30DE200EFFAA7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		76EF20462BA3894900EFFAA7 /* PdfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfView.swift; sourceTree = "<group>"; };
-		76EF20482BA3897C00EFFAA7 /* userGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = userGuide.pdf; sourceTree = "<group>"; };
 		76EF204A2BA389A400EFFAA7 /* PdfDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfDisplayView.swift; sourceTree = "<group>"; };
 		76EF204C2BA389FA00EFFAA7 /* UserGuideGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideGalleryView.swift; sourceTree = "<group>"; };
 		76EF204F2BA4519100EFFAA7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		76EF20512BA459AC00EFFAA7 /* NetworkConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionView.swift; sourceTree = "<group>"; };
+		76EF20702BA60C6C00EFFAA7 /* userGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = userGuide.pdf; sourceTree = "<group>"; };
 		76F875142B88F2ED000EA3D7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		76F875162B88F34E000EA3D7 /* RoundedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSheet.swift; sourceTree = "<group>"; };
 		76F875192B88F39C000EA3D7 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
@@ -1217,7 +1217,7 @@
 		76F875332B88F5D3000EA3D7 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
-				76EF20482BA3897C00EFFAA7 /* userGuide.pdf */,
+				76EF20702BA60C6C00EFFAA7 /* userGuide.pdf */,
 				76F875342B88F610000EA3D7 /* facts.json */,
 				76F875352B88F610000EA3D7 /* trivia.json */,
 				76F875382B88F62A000EA3D7 /* sources.json */,
@@ -1299,9 +1299,9 @@
 				76EF204E2BA3933B00EFFAA7 /* PrivacyInfo.xcprivacy in Resources */,
 				76F8753B2B88F652000EA3D7 /* topPicks.json in Resources */,
 				76E306DB2B6957A500112552 /* .gitignore in Resources */,
+				76EF20712BA60C6C00EFFAA7 /* userGuide.pdf in Resources */,
 				76E306D02B69578800112552 /* Assets.xcassets in Resources */,
 				76F8751C2B88F39C000EA3D7 /* Gold.usdz in Resources */,
-				76EF20492BA3897C00EFFAA7 /* userGuide.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
