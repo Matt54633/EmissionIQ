@@ -10,6 +10,7 @@ import SwiftUI
 // Display an individual leaderboard for a given type
 struct LeaderboardView: View {
     @ObservedObject var viewModel: LeaderboardViewModel
+    @StateObject var networkManager = NetworkManager()
     @State private var displayInfoSheet: Bool = false
     let leaderboardType: String
     
@@ -53,6 +54,13 @@ struct LeaderboardView: View {
             
         }
         .toolbar {
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                if !networkManager.isConnected {
+                   NetworkConnectionView()
+                }
+            }
+            
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     displayInfoSheet = true
@@ -66,6 +74,7 @@ struct LeaderboardView: View {
                         .presentationCompactAdaptation(.popover)
                 }
             }
+            
         }
         .modifier(ConditionalPadding())
         .navigationTitle((leaderboardType == "xp" ? leaderboardType.uppercased() : (leaderboardType == "daysActive" ? "Days Active" : leaderboardType.capitalized)))
