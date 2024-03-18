@@ -21,6 +21,7 @@
 		761A88572B97E00900F85ABB /* StatsOverviewTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A88562B97E00900F85ABB /* StatsOverviewTip.swift */; };
 		761A88592B97E02E00F85ABB /* JourneyReturnTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A88582B97E02E00F85ABB /* JourneyReturnTip.swift */; };
 		761A885B2B97E04D00F85ABB /* EmissionsProfileTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A885A2B97E04D00F85ABB /* EmissionsProfileTip.swift */; };
+		763887542BA84E1C003AC24E /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 763887532BA84E1C003AC24E /* Vortex */; };
 		7644DC7E2B98900F00B3EAE4 /* PeelEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DC7D2B98900F00B3EAE4 /* PeelEffectView.swift */; };
 		7644DC802B98930B00B3EAE4 /* TrophyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DC7F2B98930B00B3EAE4 /* TrophyManager.swift */; };
 		7644DC822B98934100B3EAE4 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DC812B98934100B3EAE4 /* NavView.swift */; };
@@ -132,7 +133,6 @@
 		765FA8B62B91EE6300030EC1 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8B52B91EE6300030EC1 /* LevelManager.swift */; };
 		765FA8B72B91F24F00030EC1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76087BB02B8BD5D1005C2431 /* NotificationManager.swift */; };
 		765FA8B82B91F25400030EC1 /* PrivateDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8B12B91EE2200030EC1 /* PrivateDataManager.swift */; };
-		766DCD032B9A0E5F005E2430 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = 766DCD022B9A0E5F005E2430 /* Vortex */; };
 		767FE87F2B98BE96003C225D /* SearchDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE87E2B98BE96003C225D /* SearchDisplayView.swift */; };
 		767FE8812B98BEAF003C225D /* SearchResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8802B98BEAF003C225D /* SearchResultsListView.swift */; };
 		767FE8832B98BEC2003C225D /* RecentResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767FE8822B98BEC2003C225D /* RecentResultsListView.swift */; };
@@ -413,7 +413,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				766DCD032B9A0E5F005E2430 /* Vortex in Frameworks */,
+				763887542BA84E1C003AC24E /* Vortex in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1243,7 +1243,7 @@
 			);
 			name = EmissionIQ;
 			packageProductDependencies = (
-				766DCD022B9A0E5F005E2430 /* Vortex */,
+				763887532BA84E1C003AC24E /* Vortex */,
 			);
 			productName = EmissionIQ;
 			productReference = 76E306C82B69578700112552 /* EmissionIQ.app */;
@@ -1274,7 +1274,7 @@
 			);
 			mainGroup = 76E306BF2B69578700112552;
 			packageReferences = (
-				766DCD012B9A0E5F005E2430 /* XCRemoteSwiftPackageReference "Vortex" */,
+				763887522BA84E1C003AC24E /* XCRemoteSwiftPackageReference "Vortex" */,
 			);
 			productRefGroup = 76E306C92B69578700112552 /* Products */;
 			projectDirPath = "";
@@ -1731,7 +1731,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		766DCD012B9A0E5F005E2430 /* XCRemoteSwiftPackageReference "Vortex" */ = {
+		763887522BA84E1C003AC24E /* XCRemoteSwiftPackageReference "Vortex" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/Vortex";
 			requirement = {
@@ -1742,9 +1742,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		766DCD022B9A0E5F005E2430 /* Vortex */ = {
+		763887532BA84E1C003AC24E /* Vortex */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 766DCD012B9A0E5F005E2430 /* XCRemoteSwiftPackageReference "Vortex" */;
+			package = 763887522BA84E1C003AC24E /* XCRemoteSwiftPackageReference "Vortex" */;
 			productName = Vortex;
 		};
 /* End XCSwiftPackageProductDependency section */

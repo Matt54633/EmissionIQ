@@ -32,7 +32,7 @@ struct OnboardingLockedView: View {
                     .multilineTextAlignment(.center)
                     .foregroundStyle(.primaryGreen)
                 
-                Text("Unlocks in ^[\(viewModel.daysUntilAprilFirst) \("day")!](inflect: true)")
+                Text("Unlocks in ^[\(viewModel.calculateDaysUntilAprilFirst()) \("day")!](inflect: true)")
                     .font(.title2)
                     .fontWeight(.semibold)
                 

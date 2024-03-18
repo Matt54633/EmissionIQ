@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         if onboardingComplete == true {
             NavView()
-        } else if viewModel.isTrialPeriod {
+        } else if viewModel.calculateIsTrialPeriod() {
             OnboardingStartView()
         } else {
             OnboardingLockedView()
