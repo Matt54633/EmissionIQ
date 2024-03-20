@@ -32,7 +32,7 @@ struct OnboardingLockedView: View {
                     .multilineTextAlignment(.center)
                     .foregroundStyle(.primaryGreen)
                 
-                Text("Unlocks in ^[\(viewModel.calculateDaysUntilAprilFirst()) \("day")!](inflect: true)")
+                Text("Unlocks in ^[\(viewModel.daysUntilAprilFirst) \("day")!](inflect: true)")
                     .font(.title2)
                     .fontWeight(.semibold)
                 
@@ -44,6 +44,13 @@ struct OnboardingLockedView: View {
         }
         .frame(maxWidth: 380)
         .padding(.horizontal)
+        .onAppear {
+            viewModel.calculateDaysUntilAprilFirst()
+            
+            NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) { _ in
+                viewModel.calculateDaysUntilAprilFirst()
+            }
+        }
     }
 }
 

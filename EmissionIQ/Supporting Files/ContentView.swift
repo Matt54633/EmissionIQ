@@ -12,12 +12,21 @@ struct ContentView: View {
     @AppStorage("onboardingComplete") var onboardingComplete: Bool?
     
     var body: some View {
-        if onboardingComplete == true {
-            NavView()
-        } else if viewModel.calculateIsTrialPeriod() {
-            OnboardingStartView()
-        } else {
-            OnboardingLockedView()
+        Group {
+            if onboardingComplete == true {
+                NavView()
+            } else if viewModel.isTrialPeriod {
+                OnboardingStartView()
+            } else {
+                OnboardingLockedView()
+            }
+        }
+        .onAppear {
+            viewModel.calculateIsTrialPeriod()
+            
+            NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) { _ in
+                viewModel.calculateIsTrialPeriod()
+            }
         }
     }
 }

@@ -11,18 +11,20 @@ import CloudKit
 class OnboardingViewModel: ObservableObject {
     @Published var userNotSignedIn: Bool = false
     @Published var displaySheet: Bool = false
+    @Published var daysUntilAprilFirst: Int = 0
+    @Published var isTrialPeriod: Bool = false
     
     // calculate the number of days until the trial begins
-    func calculateDaysUntilAprilFirst() -> Int {
+    func calculateDaysUntilAprilFirst() {
         let currentDate = Date()
         let currentYear = Calendar.current.component(.year, from: currentDate)
         let aprilFirstThisYear = Calendar.current.date(from: DateComponents(year: currentYear, month: 4, day: 1))!
         
-        return max(0, Calendar.current.numberOfDaysBetween(currentDate, and: aprilFirstThisYear))
+        daysUntilAprilFirst = max(0, Calendar.current.numberOfDaysBetween(currentDate, and: aprilFirstThisYear))
     }
     
     // calculate whether current date is within trial period to restrict application access
-    func calculateIsTrialPeriod() -> Bool {
+    func calculateIsTrialPeriod() {
         let currentDate = Date()
         let currentYear = Calendar.current.component(.year, from: currentDate)
         
@@ -30,7 +32,7 @@ class OnboardingViewModel: ObservableObject {
         
         let daysUntilStart = Calendar.current.numberOfDaysBetween(currentDate, and: startPeriod)
         
-        return daysUntilStart <= 0
+        isTrialPeriod = daysUntilStart <= 0
     }
     
     init() {
