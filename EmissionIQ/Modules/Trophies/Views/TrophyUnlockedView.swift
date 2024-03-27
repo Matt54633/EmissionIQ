@@ -2,7 +2,7 @@
 //  TrophyUnlockedView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 18/03/2024.
 //
 
 import SwiftUI
@@ -52,4 +52,8 @@ struct TrophyUnlockedView: View {
         }
         .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
     }
+}
+
+#Preview {
+    TrophyUnlockedView(trophy: Trophy(name: "First Journey", desc: "Complete 1 journey", goal: "Travel 50 miles", type: "Journey", rank: "bronze", isAchieved: false, dateAchieved: Date()))
 }

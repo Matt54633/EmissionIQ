@@ -8,8 +8,8 @@
 import CloudKit
 
 /* PublicDataManager handles fetching, saving and handling any data that is stored in the CloudKit public database
-This allows leaderboards to read user scores etc.
-Data is not actually 'public', it just means data can be read on all users devices */
+ This allows leaderboards to read user scores etc.
+ Data is not actually 'public', it just means data can be read on all users devices */
 
 class PublicDataManager: ObservableObject {
     static let shared = PublicDataManager()
@@ -77,12 +77,24 @@ class PublicDataManager: ObservableObject {
             throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "User ID is not available"])
         }
         
-        let recordToSave = record
-        recordToSave["userId"] = userId as CKRecordValue
+        // fetch the latest version of the record
+        let latestRecord = try await fetchUserRecord()
+        
+        latestRecord["userId"] = userId as CKRecordValue
         for (key, value) in attributes {
-            recordToSave[key] = value
+            latestRecord[key] = value
         }
-        try await self.publicDatabase.save(recordToSave)
+        
+        // create a CKModifyRecordsOperation to save the record
+        let operation = CKModifyRecordsOperation(recordsToSave: [latestRecord], recordIDsToDelete: nil)
+        operation.savePolicy = .changedKeys
+        operation.modifyRecordsResultBlock = { result in
+            if case .failure(let error) = result {
+                print("Error saving public record: \(error)")
+            }
+        }
+        
+        self.publicDatabase.add(operation)
     }
     
     func setPublicUserRecord(attributes: [String: CKRecordValue]) async throws {

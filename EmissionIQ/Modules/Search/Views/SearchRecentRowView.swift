@@ -2,7 +2,7 @@
 //  SearchRecentRowView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 09/03/2024.
 //
 
 import SwiftUI
@@ -17,7 +17,7 @@ struct SearchRecentRowView: View {
             Text(location.placeName)
                 .font(.body)
             
-            Text("\(location.placeDetail)\(location.placeDetail != "" ? ", " : "")\(location.placeCountry)")
+            Text("\(location.placeDetail)\(location.placeDetail != "" ? ", " : "")\(location.locality), \(location.placeCountry)")
                 .font(.caption)
             
         }

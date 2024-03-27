@@ -2,7 +2,7 @@
 //  AddJourneyButtonView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 02/03/2024.
 //
 
 import SwiftUI
@@ -11,6 +11,7 @@ import SwiftUI
 struct AddJourneyButtonView: View {
     @Environment(\.modelContext) private var context
     @ObservedObject var viewModel: AddJourneyViewModel
+    @State private var isSavingJourney: Bool = false
     @Binding var vehicleType: String
     @Binding var manualDistance: String
     @Binding var journeyDate: Date
@@ -24,6 +25,8 @@ struct AddJourneyButtonView: View {
         Button(action: {
             Task {
                 do {
+                    isSavingJourney = true
+                    
                     let (shouldDisplayJourneySheet, message, shouldShowManualDistance, newJourney) = try await viewModel.saveJourney(transportType: vehicleType, manualDistance: manualDistance, journeyDate: journeyDate, journeyReturn: journeyReturn)
                     if let newJourney = newJourney {
                         viewModel.insertJourney(journey: newJourney, context: context)
@@ -32,15 +35,17 @@ struct AddJourneyButtonView: View {
                     alertMessage = message
                     showAlert = message != nil
                     showManualDistance = shouldShowManualDistance
+                    isSavingJourney = false
                 } catch {
                     print("Error saving journey: \(error)")
+                    isSavingJourney = false
                 }
             }
         }) {
-            ReusableButtonView(backgroundColour: .primaryGreen, text: "Save", textColor: .white, opacity: 1.0, radius: 15, disabled: viewModel.startLocation == nil || viewModel.endLocation == nil)
+            ReusableButtonView(backgroundColour: .primaryGreen, text: "Save", textColor: .white, opacity: 1.0, radius: 15, disabled: viewModel.startLocation == nil || viewModel.endLocation == nil || isSavingJourney)
         }
         .padding(.bottom)
-        .disabled(viewModel.startLocation == nil || viewModel.endLocation == nil)
+        .disabled(viewModel.startLocation == nil || viewModel.endLocation == nil || isSavingJourney)
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Directions Unavailable!"), message: Text(alertMessage ?? ""), dismissButton: .default(Text("OK")))
         }

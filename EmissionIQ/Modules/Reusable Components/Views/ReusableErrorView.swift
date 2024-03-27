@@ -2,7 +2,7 @@
 //  ReusableErrorView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 23/02/2024.
+//  Created by Matt Sullivan on 29/02/2024.
 //
 
 import SwiftUI
@@ -27,16 +27,17 @@ struct ReusableErrorView: View {
                 Image(systemName: "exclamationmark.triangle.fill")
                 
                 Text(text)
+                    .font(.title3)
                 
             }
-            .font(.title3)
             .fontWeight(.semibold)
             .foregroundStyle(textColor)
             
         }
+        .frame(minHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    ReusableErrorView(backgroundColour: .red, text: "Error", textColor: .red, opacity: 0.25, radius: 15)
+    ReusableErrorView(backgroundColour: .red, text: "Unable to retrieve news articles", textColor: .red, opacity: 0.25, radius: 15)
 }

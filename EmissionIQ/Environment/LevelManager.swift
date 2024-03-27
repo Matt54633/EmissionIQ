@@ -2,17 +2,19 @@
 //  LevelManager.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 01/03/2024.
+//  Created by Matt Sullivan on 02/03/2024.
 //
 
 import CloudKit
 
 // LevelManager is responsible for handling user level and xp operations, syncing the data to the user's CloudKit private database
 
-class LevelManager {
+class LevelManager: ObservableObject {
     static let shared = LevelManager()
     
-    @Published var isUpdating = false
+    @Published var level: Int?
+    @Published var xp: Int?
+    @Published var previousXP: Int = 0
     
     private let levelRecordType = "Level"
     private let levelKey = "level"
@@ -22,7 +24,6 @@ class LevelManager {
     
     // save level and xp to CloudKit private database - synced across devices
     func saveLevelAndXP(level: Int, xp: Int) async throws {
-        isUpdating = true
         let recordID = CKRecord.ID(recordName: levelRecordType)
         
         do {
@@ -36,7 +37,14 @@ class LevelManager {
             throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to save record: \(error)"])
         }
         
-        isUpdating = false
+        
+        // Fetch level and XP after saving
+        do {
+            try await _ = fetchLevelAndXP()
+        } catch {
+            print("Failed to fetch Level/XP Data", error)
+        }
+        
     }
     
     // create a new level and xp record
@@ -45,7 +53,7 @@ class LevelManager {
         let record = CKRecord(recordType: levelRecordType, recordID: recordID)
         record[levelKey] = 0 as CKRecordValue
         record[xpKey] = 0 as CKRecordValue
-
+        
         do {
             try await privateDatabase.save(record)
         } catch {
@@ -59,6 +67,10 @@ class LevelManager {
         do {
             let record = try await privateDatabase.record(for: recordID)
             if let level = record[levelKey] as? Int, let xp = record[xpKey] as? Int {
+                DispatchQueue.main.async {
+                    self.level = level
+                    self.xp = xp
+                }
                 return (level, xp)
             } else {
                 throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to fetch level and XP"])

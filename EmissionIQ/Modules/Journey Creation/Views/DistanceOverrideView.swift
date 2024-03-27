@@ -2,7 +2,7 @@
 //  DistanceOverrideView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 01/03/2024.
 //
 
 import SwiftUI
@@ -19,4 +19,8 @@ struct DistanceOverrideView: View {
             .background(RoundedRectangle(cornerRadius: 15).fill(colorScheme == .dark ? .quinary : .quinary))
             .padding(.bottom, 20)
     }
+}
+
+#Preview {
+    DistanceOverrideView(manualDistance: .constant("200"))
 }

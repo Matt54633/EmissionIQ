@@ -2,7 +2,7 @@
 //  NavView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 29/02/2024.
 //
 
 import SwiftUI
@@ -11,6 +11,8 @@ import SwiftData
 // Tab controller for page control, selectedTab can be passed into child views to manually set the active tab
 struct NavView: View {
     @Query(sort: \Trophy.dateAchieved, order: .forward) private var trophies: [Trophy]
+    @StateObject var privateDataManager = PrivateDataManager.shared
+    @StateObject var levelManager = LevelManager.shared
     @State private var displayTrophyAchievedView: Bool = false
     @State private var newTrophy: Trophy?
     @State private var selectedTab = 0
@@ -70,6 +72,13 @@ struct NavView: View {
                     displayTrophyAchievedView = false
                 }
                 
+            }
+        }
+        .onAppear {
+            Task {
+                try await _ = privateDataManager.fetchUserId()
+                try await _ = privateDataManager.fetchUserCreationDate()
+                try await _ = levelManager.fetchLevelAndXP()
             }
         }
     }

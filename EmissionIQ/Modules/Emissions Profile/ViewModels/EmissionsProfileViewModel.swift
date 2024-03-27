@@ -2,7 +2,7 @@
 //  EmissionsProfileViewModel.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 26/03/2024.
 //
 
 import Foundation
@@ -77,8 +77,8 @@ class EmissionsProfileViewModel: ObservableObject {
     func getTotalEmissionsText(journeys: [Journey]) -> String {
         let totalEmissions = String(format: "%.1f", journeys.calculateTotalEmissions())
         let mostPollutingTransportType = allTransportTypes[allTransportTypes.count / 2]
-        let mostPollutingTransportTypeEmissions = Int(emissionPercentagesByVehicleType[mostPollutingTransportType] ?? 0)
-        let transportTypeText = allTransportTypes.isEmpty ? "" : "\(mostPollutingTransportType.capitalized) journeys produce \(mostPollutingTransportTypeEmissions)% of your total emissions - that's your most polluting transport type!"
+        let mostPollutingTransportTypeEmissions = emissionPercentagesByVehicleType[mostPollutingTransportType] ?? 0
+        let transportTypeText = totalEmissions == "0.0" ? "" : "\n\n\(mostPollutingTransportType.capitalized) journeys produce \(String(format: "%.0f", mostPollutingTransportTypeEmissions))% of your total emissions - that's your most polluting transport type!"
         
         return "Since starting your EmissionIQ journey, you've generated \(totalEmissions)kg of CO₂e. \(transportTypeText)"
     }

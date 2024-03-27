@@ -2,7 +2,7 @@
 //  OnboardingStartView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 01/03/2024.
+//  Created by Matt Sullivan on 10/03/2024.
 //
 
 import SwiftUI
@@ -10,6 +10,7 @@ import SwiftUI
 // OnboardingStartView displays the welcome screen to the app
 struct OnboardingStartView: View {
     @StateObject var viewModel = OnboardingViewModel()
+    @AppStorage("onboardingComplete") var onboardingComplete: Bool?
     
     var body: some View {
         NavigationStack {
@@ -24,6 +25,14 @@ struct OnboardingStartView: View {
                         .onTapGesture {
                             viewModel.displaySheet = true
                         }
+                    
+                } else if ProcessInfo.processInfo.isiOSAppOnMac {
+                    
+                    Button {
+                        onboardingComplete = true
+                    } label: {
+                        ReusableButtonView(backgroundColour: .primaryGreen, text: "Start Your Journey", textColor: .white, opacity: 1.0, radius: 15, disabled: false)
+                    }
                     
                 } else {
                     

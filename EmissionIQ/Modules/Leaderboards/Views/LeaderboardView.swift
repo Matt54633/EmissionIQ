@@ -2,7 +2,7 @@
 //  LeaderboardView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 24/03/2024.
 //
 
 import SwiftUI
@@ -10,6 +10,8 @@ import SwiftUI
 // Display an individual leaderboard for a given type
 struct LeaderboardView: View {
     @ObservedObject var viewModel: LeaderboardViewModel
+    @StateObject var networkManager = NetworkManager()
+    @State private var displayInfoSheet: Bool = false
     let leaderboardType: String
     
     var body: some View {
@@ -18,7 +20,7 @@ struct LeaderboardView: View {
                 
                 VStack(alignment: .center) {
                     
-                    if let data = viewModel.data {
+                    if let data = viewModel.leaderboardData {
                         
                         let sortedData = Array(data.sorted { viewModel.setLeaderboardOrder(leaderboardType: leaderboardType) ? $0.value > $1.value : $0.value < $1.value }.enumerated())
                         
@@ -49,6 +51,29 @@ struct LeaderboardView: View {
             }
             
             LeaderboardMotivatorView(viewModel: viewModel, leaderboardType: leaderboardType)
+            
+        }
+        .toolbar {
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                if !networkManager.isConnected {
+                   NetworkConnectionView()
+                }
+            }
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    displayInfoSheet = true
+                } label: {
+                    Image(systemName: "info.circle")
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.primaryGreen)
+                }
+                .popover(isPresented: $displayInfoSheet) {
+                    LeaderboardInfoView(viewModel: viewModel, leaderboardType: leaderboardType)
+                        .presentationCompactAdaptation(.popover)
+                }
+            }
             
         }
         .modifier(ConditionalPadding())

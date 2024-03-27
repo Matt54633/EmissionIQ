@@ -2,7 +2,7 @@
 //  LevelConfettiView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 07/03/2024.
 //
 
 import SwiftUI
@@ -11,6 +11,7 @@ import Vortex
 // View to display confetti when a user levels up
 struct LevelConfettiView: View {
     @Binding var currentLevel: Int
+    @ObservedObject var viewModel: LevelViewModel
     
     var body: some View {
         VortexViewReader { proxy in
@@ -27,9 +28,9 @@ struct LevelConfettiView: View {
                     .tag("circle")
                 
             }
-            .onChange(of: currentLevel) {
-                if currentLevel < 3 {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            .onChange(of: viewModel.countdownStopped) {
+                if viewModel.countdownStopped == true {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                         proxy.burst()
                     }
                 }
@@ -38,6 +39,7 @@ struct LevelConfettiView: View {
     }
 }
 
+
 #Preview {
-    LevelConfettiView(currentLevel: .constant(2))
+    LevelConfettiView(currentLevel: .constant(2), viewModel: LevelViewModel.shared)
 }

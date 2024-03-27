@@ -2,7 +2,7 @@
 //  JourneyImpactViewModel.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 05/03/2024.
 //
 
 import Foundation
@@ -85,7 +85,8 @@ class JourneyImpactViewModel: ObservableObject {
         }
         
         let alternateJourney = Journey(startLocationName: journey.startLocationName, endLocationName: journey.endLocationName, startCoordinate: journey.startCoordinate, endCoordinate: journey.endCoordinate, method: alternateTransportMethod, distance: journey.distance, date: journey.date, isReturn: journey.isReturn)
-        carbonSaved = carbonProduced - alternateJourney.carbonProduced
+        
+        carbonSaved = abs(carbonProduced - alternateJourney.carbonProduced)
         
         let actionPhrase = actionPhrases[alternateTransportMethod] ?? ""
         alternateTransport = (imageName: alternateTransportImageName, text: "\(actionPhrase) would save \(String(format: "%.1f", (carbonSaved)))kg CO₂e")

@@ -2,7 +2,7 @@
 //  TrophiesView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 17/03/2024.
 //
 
 import SwiftUI
@@ -31,12 +31,12 @@ struct TrophiesView: View {
                     }
                 }
                 .frame(height: horizontalSizeClass == .compact ? 75 : 90)
-
+                
                 if !journeys.isEmpty {
                     
                     GeometryReader { geometry in
                         ScrollView {
-                                                    
+                            
                             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: geometry.size.width > 900 ? 2 : 1)) {
                                 
                                 ForEach(viewModel.groupAndSortTrophies(trophies: trophies).keys.sorted(), id: \.self) { type in
@@ -68,24 +68,10 @@ struct TrophiesView: View {
             }
             .tint(.primary)
             .onAppear {
-                if !journeys.isEmpty {
-                    viewModel.initialiseTrophies(trophies: trophies, context: context)
-                    viewModel.removeDuplicateTrophies(trophies: trophies, context: context)
-                    viewModel.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
-                    Task {
-                        await viewModel.fetchLevelAndXp()
-                        try await viewModel.setUserTrophies(trophies: trophies)
-                    }
-                    
-                }
+                viewModel.updateTrophies(trophies: trophies, journeys: journeys, readArticles: readArticles, context: context)
             }
             .onChange(of: journeys) {
-                Task {
-                    await viewModel.fetchLevelAndXp()
-                    try await viewModel.setUserTrophies(trophies: trophies)
-                }
-                viewModel.updateAllTrophies(journeys: journeys, trophies: trophies, readArticles: readArticles)
-                
+                viewModel.updateTrophies(trophies: trophies, journeys: journeys, readArticles: readArticles, context: context)
             }
         }
     }

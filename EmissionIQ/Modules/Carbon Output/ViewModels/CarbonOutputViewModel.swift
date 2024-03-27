@@ -22,8 +22,9 @@ class CarbonOutputViewModel: ObservableObject {
             
             try await self.setPublicUserRecord(attributes: attributes)
         } catch {
-            print("Error fetching user creation date: \(error)")
+            print("Error setting user attributes \(error)")
         }
+        
     }
     
     // calculate how many days account has been active for
@@ -31,6 +32,7 @@ class CarbonOutputViewModel: ObservableObject {
         let calendar = Calendar.current
         let now = Date()
         let components = calendar.dateComponents([.day], from: fetchedDate, to: now)
+        
         return (components.day ?? 0) + 1
     }
     

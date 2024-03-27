@@ -2,7 +2,7 @@
 //  TransportMethodsView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 26/03/2024.
 //
 
 import SwiftUI
@@ -46,5 +46,9 @@ struct TransportMethodsView: View {
             viewModel.calculateEmissions(journeys: journeys)
         }
     }
+}
+
+#Preview {
+    TransportMethodsView()
 }
 

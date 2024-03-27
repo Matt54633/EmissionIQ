@@ -2,19 +2,31 @@
 //  ContentView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 30/01/2024.
+//  Created by Matt Sullivan on 02/02/2024.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = OnboardingViewModel()
     @AppStorage("onboardingComplete") var onboardingComplete: Bool?
     
     var body: some View {
-        if onboardingComplete == true || ProcessInfo.processInfo.isiOSAppOnMac {
-            NavView()
-        } else {
-            OnboardingStartView()
+        Group {
+            if onboardingComplete == true {
+                NavView()
+            } else if viewModel.isTrialPeriod {
+                OnboardingStartView()
+            } else {
+                OnboardingLockedView()
+            }
+        }
+        .onAppear {
+            viewModel.calculateIsTrialPeriod()
+            
+            NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) { _ in
+                viewModel.calculateIsTrialPeriod()
+            }
         }
     }
 }

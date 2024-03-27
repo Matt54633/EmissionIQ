@@ -2,19 +2,18 @@
 //  LeaderboardViewModel.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 26/03/2024.
 //
 
 import Foundation
 import SwiftUI
 
 class LeaderboardViewModel: ObservableObject {
-    @Published var data: [(userId: String, value: Int)]?
+    @Published var leaderboardData: [(userId: String, value: Int)]?
     @Published var positionData: [(userId: String, value: Int)]?
     @Published var userId: String?
     @Published var userPositions: [String: String] = [:]
-    @Published var loadingPosition: Bool = false
-    @Published var leaderboardTypes: [String] = ["journeys", "level", "xp", "trophies", "distance", "impact", "articles", "daysActive"]
+    @Published var leaderboardTypes: [String] = ["journeys", "impact", "level", "xp", "trophies", "distance", "articles", "daysActive"]
     
     private var publicDataManager = PublicDataManager.shared
     private var privateDataManager = PrivateDataManager.shared
@@ -37,7 +36,7 @@ class LeaderboardViewModel: ObservableObject {
     func fetchData(for leaderboardType: String) async throws {
         let fetchedData = try await publicDataManager.fetchAllData(for: leaderboardType)
         DispatchQueue.main.async {
-            self.data = fetchedData
+            self.leaderboardData = fetchedData
         }
     }
     
@@ -56,6 +55,7 @@ class LeaderboardViewModel: ObservableObject {
                     }
                 }
             }
+            
         }
     }
     
@@ -153,6 +153,30 @@ class LeaderboardViewModel: ObservableObject {
             return "You're in the top 10, keep pushing!"
         default:
             return "Keep working towards your progress!"
+        }
+    }
+    
+    // display information text to explain info about a leaderboard
+    func setInfoText(leaderboardType: String) -> String {
+        switch leaderboardType {
+        case "journeys":
+            return "Total number of journeys"
+        case "level":
+            return "User level achieved"
+        case "xp":
+            return "Total XP gained"
+        case "trophies":
+            return "Total number of trophies"
+        case "distance":
+            return "Total miles travelled"
+        case "impact":
+            return "Total kg CO₂e, in descending order"
+        case "articles":
+            return "Total number of articles read"
+        case "daysActive":
+            return "Total number of days active"
+        default:
+            return "Information text"
         }
     }
 }

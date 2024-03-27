@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 29/02/2024.
 //
 
 import SwiftUI
@@ -67,13 +67,9 @@ struct HomeView: View {
                     
                 }
                 
-                
             }
             .popover(isPresented: $displayJourneySheet, attachmentAnchor: .point(.bottom),arrowEdge: .top) {
                 AddJourneyForm(displayJourneySheet: $displayJourneySheet)
-            }
-            .onChange(of: journeys) {
-                trophiesViewModel.updateTrophies(trophies: trophies, journeys: journeys, readArticles: readArticles, context: context)
             }
         }
     }

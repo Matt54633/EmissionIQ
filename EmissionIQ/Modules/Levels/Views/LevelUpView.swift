@@ -2,14 +2,14 @@
 //  LevelUpView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 07/03/2024.
 //
 
 import SwiftUI
 
 // View to display when the user levels up, displays the new level and confetti animation
 struct LevelUpView: View {
-    @StateObject private var viewModel = LevelViewModel()
+    @StateObject private var viewModel = LevelViewModel.shared
     let level: Int
     
     var body: some View {
@@ -17,17 +17,13 @@ struct LevelUpView: View {
             
             Rectangle().fill(.primaryGreen)
             
-            LevelConfettiView(currentLevel: $viewModel.levelUpLevel)
+            LevelConfettiView(currentLevel: $viewModel.levelUpLevel, viewModel: viewModel)
             
             VStack {
-                HStack {
-                    Text("Level Up!")
-                        .padding(.vertical)
-                    
-                    Spacer()
-                    
-                }
-                .font(.title)
+                
+                Text("Level Up!")
+                    .padding(.vertical)
+                    .font(.title)
                 
                 Spacer()
                 

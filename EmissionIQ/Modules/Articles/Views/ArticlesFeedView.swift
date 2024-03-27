@@ -2,7 +2,7 @@
 //  ArticlesFeedView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 10/03/2024.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SwiftUI
 // View to display Articles in a vertical scrolling feed
 struct ArticlesFeedView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-    @ObservedObject var viewModel: ArticlesGalleryViewModel
+    @ObservedObject var viewModel: ArticlesViewModel
     
     let pageTitle: String
     let articles: [Article]
@@ -29,8 +29,8 @@ struct ArticlesFeedView: View {
                             ArticleListItemView(article: article)
                         }
                     }
+                    .padding()
                     .modifier(ConditionalPadding())
-                    .padding(.vertical)
                     
                 }
             } else {
@@ -41,4 +41,8 @@ struct ArticlesFeedView: View {
         .navigationTitle(pageTitle)
         .navigationBarTitleDisplayMode(.large)
     }
+}
+
+#Preview {
+    ArticlesFeedView(viewModel: ArticlesViewModel(), pageTitle: "In the News", articles: ArticlesViewModel().articles)
 }

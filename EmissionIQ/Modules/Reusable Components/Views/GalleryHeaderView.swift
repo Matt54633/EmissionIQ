@@ -2,7 +2,7 @@
 //  GalleryHeaderView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 23/02/2024.
+//  Created by Matt Sullivan on 25/02/2024.
 //
 
 import SwiftUI
@@ -34,4 +34,8 @@ struct GalleryHeaderView: View {
         .fontWeight(.semibold)
         .padding(EdgeInsets(top: topPadding, leading: 15, bottom: 5, trailing: 15))
     }
+}
+
+#Preview {
+    GalleryHeaderView(image: "leaf.fill", title: "Impact", displayNavIndicator: true, topPadding: 0)
 }

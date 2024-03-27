@@ -2,12 +2,12 @@
 //  OnboardingDetailView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 01/03/2024.
+//  Created by Matt Sullivan on 13/03/2024.
 //
 
 import SwiftUI
 
-// OnboardingDetailView displays information about an onboarding view with a dashed rectangular border
+// OnboardingDetailView displays information about an onboarding view
 struct OnboardingDetailView: View {
     let image: String
     let title: String
@@ -42,6 +42,7 @@ struct OnboardingDetailView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundStyle(.primaryGreen)
+                        .multilineTextAlignment(.center)
                         .lineLimit(2)
                     
                     Text(subTitle)

@@ -2,14 +2,14 @@
 //  LevelUserRibbonView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 07/03/2024.
 //
 
 import SwiftUI
 
 // LevelUserRibbonView displays the user's ID in a ribbon
 struct LevelUserRibbonView: View {
-    @ObservedObject var viewModel: StatsViewModel
+    @StateObject var privateDataManager = PrivateDataManager.shared
     
     var body: some View {
         GeometryReader { geometry in
@@ -27,17 +27,22 @@ struct LevelUserRibbonView: View {
                     
                 }
                 
-                Text(viewModel.userId ?? "")
+                Text(privateDataManager.userId ?? "")
                     .font(.title3)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                 
             }
             .padding(.bottom)
+            .onAppear {
+                Task {
+                    try await _ = privateDataManager.fetchUserId()
+                }
+            }
         }
     }
 }
 
 #Preview {
-    LevelUserRibbonView(viewModel: StatsViewModel())
+    LevelUserRibbonView()
 }

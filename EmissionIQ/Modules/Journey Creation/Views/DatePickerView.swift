@@ -2,7 +2,7 @@
 //  DatePickerView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 01/03/2024.
 //
 
 import SwiftUI
@@ -17,4 +17,8 @@ struct DatePickerView: View {
             .fontWeight(.semibold)
             .padding(.bottom, 20)
     }
+}
+
+#Preview {
+    DatePickerView(journeyDate: .constant(Date()))
 }

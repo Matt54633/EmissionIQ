@@ -2,19 +2,20 @@
 //  StatsProfileView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 06/03/2024.
+//  Created by Matt Sullivan on 12/03/2024.
 //
 
 import SwiftUI
 
 // StatsProfileView displays information about the user along with some basic stats
 struct StatsProfileView: View {
-    @StateObject var levelViewModel = LevelViewModel()
+    @StateObject var levelViewModel = LevelViewModel.shared
+    @StateObject var networkManager = NetworkManager()
     @ObservedObject var statsViewModel: StatsViewModel
     private let tip = StatsOverviewTip()
     
     var body: some View {
-    
+        
         VStack(alignment: .leading) {
             
             Spacer()
@@ -33,13 +34,20 @@ struct StatsProfileView: View {
             .padding(.bottom, 5)
             .popoverTip(tip, arrowEdge: .top)
             
-            LevelXpView(viewModel: levelViewModel)
+            LevelXpView()
                 .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             
-            StatsGridView(viewModel: statsViewModel)
+            StatsGridView()
             
         }
         .padding(EdgeInsets(top: 0, leading: 15, bottom: 50, trailing: 15 ))
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                if !networkManager.isConnected {
+                   NetworkConnectionView()
+                }
+            }
+        }
         .onAppear {
             Task {
                 await statsViewModel.fetchUserId()

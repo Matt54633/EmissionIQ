@@ -2,7 +2,7 @@
 //  OnboardingLocationView.swift
 //  EmissionIQ
 //
-//  Created by Matt Sullivan on 01/03/2024.
+//  Created by Matt Sullivan on 10/03/2024.
 //
 
 import SwiftUI
@@ -15,7 +15,7 @@ struct OnboardingLocationView: View {
     var body: some View {
         VStack {
             
-            OnboardingDetailView(image: "location.circle.fill", title: "Location Access", subTitle: "EmissionIQ only uses your location to provide localised search results when adding a journey.", systemImage: true)
+            OnboardingDetailView(image: "location.circle.fill", title: "Location Access", subTitle: "Grant access to see localised search results when adding a journey.", systemImage: true)
             
             NavigationLink {
                 OnboardingNotificationView()
