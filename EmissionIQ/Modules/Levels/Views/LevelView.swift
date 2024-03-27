@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-// View to display the users' level, XP and the User Level leaderboard
+// View to display the users' level, XP and selected stats
 struct LevelView: View {
     @Query private var journeys: [Journey]
     @StateObject var levelViewModel = LevelViewModel.shared
