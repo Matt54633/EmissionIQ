@@ -15,8 +15,6 @@ struct ArticlesFeedView: View {
     let pageTitle: String
     let articles: [Article]
     
-    
-    
     var body: some View {
         VStack {
             if !articles.isEmpty {

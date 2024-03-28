@@ -36,7 +36,7 @@ class FactViewModel: ObservableObject {
         
         // check if the fact was last updated within the last hour
         if let lastUpdate = UserDefaults.standard.object(forKey: "LastFactUpdate") as? Date,
-           now.timeIntervalSince(lastUpdate) < 3600, // 3600 seconds = 1 hour
+           now.timeIntervalSince(lastUpdate) < 3600,
            let savedFact = UserDefaults.standard.object(forKey: "CurrentFact") as? Data {
             
             let decoder = JSONDecoder()
@@ -49,9 +49,11 @@ class FactViewModel: ObservableObject {
         
         // if fact was updated more than an hour ago or there's no saved fact, select a new fact
         var newFact: Fact
+        
         repeat {
             newFact = factList.randomElement() ?? Fact(fact: "")
         } while newFact == currentFact
+        
         currentFact = newFact
         saveFact()
     }
