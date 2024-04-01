@@ -36,6 +36,8 @@ struct LeaderboardView: View {
                             LeaderboardItemView(viewModel: viewModel, leaderboardType: leaderboardType, index: index, item: item, userId: viewModel.userId)
                         }
                         
+                    } else {
+                        LoadingView()
                     }
                     
                 }
@@ -45,6 +47,9 @@ struct LeaderboardView: View {
                         try await viewModel.userIdFetch()
                         try await  viewModel.fetchData(for: leaderboardType)
                     }
+                }
+                .onDisappear {
+                    viewModel.leaderboardData = nil
                 }
                 
                 Spacer()
