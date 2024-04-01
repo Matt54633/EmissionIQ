@@ -54,6 +54,12 @@ struct LeaderboardView: View {
                 
                 Spacer()
             }
+            .refreshable {
+                Task {
+                    try await viewModel.userIdFetch()
+                    try await  viewModel.fetchData(for: leaderboardType)
+                }
+            }
             
             LeaderboardMotivatorView(viewModel: viewModel, leaderboardType: leaderboardType)
             
