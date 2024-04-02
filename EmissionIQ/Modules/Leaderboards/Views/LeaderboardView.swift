@@ -16,11 +16,12 @@ struct LeaderboardView: View {
     
     var body: some View {
         VStack {
-            ScrollView {
+            if let data = viewModel.leaderboardData {
                 
-                VStack(alignment: .center) {
+                ScrollView {
                     
-                    if let data = viewModel.leaderboardData {
+                    VStack(alignment: .center) {
+                        
                         
                         let sortedData = Array(data.sorted { viewModel.setLeaderboardOrder(leaderboardType: leaderboardType) ? $0.value > $1.value : $0.value < $1.value }.enumerated())
                         
@@ -35,21 +36,13 @@ struct LeaderboardView: View {
                         ForEach(sortedData.dropFirst(3), id: \.element.userId) { index, item in
                             LeaderboardItemView(viewModel: viewModel, leaderboardType: leaderboardType, index: index, item: item, userId: viewModel.userId)
                         }
-                        
                     }
-                    
+                    .padding()
                 }
-                .padding()
-                .onAppear {
-                    Task {
-                        try await viewModel.userIdFetch()
-                        try await  viewModel.fetchData(for: leaderboardType)
-                    }
-                }
-                
-                Spacer()
+            } else {
+                LoadingView()
             }
-            
+
             LeaderboardMotivatorView(viewModel: viewModel, leaderboardType: leaderboardType)
             
         }
@@ -79,6 +72,22 @@ struct LeaderboardView: View {
         .modifier(ConditionalPadding())
         .navigationTitle((leaderboardType == "xp" ? leaderboardType.uppercased() : (leaderboardType == "daysActive" ? "Days Active" : leaderboardType.capitalized)))
         .navigationBarTitleDisplayMode(.large)
+        .onAppear {
+            Task {
+                try await viewModel.userIdFetch()
+                try await  viewModel.fetchData(for: leaderboardType)
+            }
+        }
+        .onDisappear {
+            viewModel.leaderboardData = nil
+        }
+        .refreshable {
+            Task {
+                try await viewModel.userIdFetch()
+                try await  viewModel.fetchData(for: leaderboardType)
+            }
+        }
+        
     }
 }
 

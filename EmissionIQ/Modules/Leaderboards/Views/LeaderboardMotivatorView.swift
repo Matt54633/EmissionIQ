@@ -34,7 +34,7 @@ struct LeaderboardMotivatorView: View {
             .padding()
             
         }
-        .padding(EdgeInsets(top: 5, leading: 15, bottom: 15, trailing: 15))
+        .padding(EdgeInsets(top: 0, leading: 15, bottom: 5, trailing: 15))
         
     }
 }
