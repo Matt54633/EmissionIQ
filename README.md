@@ -30,6 +30,6 @@ The EmissionIQ Artefact cannot be run locally due to the iCloud data container b
  To run EmissionIQ, download Apple's Testflight application from the App Store: [TestFlight](https://testflight.apple.com). Then, once installed, follow this link: [EmissionIQ TestFlight Install](https://testflight.apple.com/join/SCHGVdfU), this link will redeem EmissionIQ and ask you to install the application through TestFlight. Once EmissionIQ is installed, you can run the app by tapping the icon on your Home Screen or by entering the TestFlight app and tapping `Open` next to EmissionIQ. 
  
 ## Other Information
-EmissionIQ is a multi-platform, single-codebase application that can run on iPhones, iPads and Mac (Apple Silicon) devices. At least either iOS 17, iPadOS 17 and macOS Sonoma is required on a device to run the application.
+EmissionIQ is a multi-platform, single-codebase application that can run on iPhones, iPads and Mac (Apple Silicon) devices. At least either iOS 17, iPadOS 17 or macOS Sonoma is required on a device to run the application.
 
 User's data is synced to their iCloud account so that their data persists across all of their devices. SwiftData models persist data on a user's device, and this is synced across devices using CloudKit. CloudKit is also employed to store each user's User and Level models in their own CloudKit private database. Each user has a PublicUser model stored in the CloudKit public database with each user's app being able to read from this database to provide public leaderboards. 

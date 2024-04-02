@@ -23,7 +23,7 @@ struct StatsProfileView: View {
             HStack {
                 
                 Text(statsViewModel.userId ?? "")
-                    .font(.system(size: 45, weight: .bold))
+                    .font(.system(size: 42, weight: .bold))
                     .foregroundStyle(.primaryGreen)
                 
                 Spacer()
