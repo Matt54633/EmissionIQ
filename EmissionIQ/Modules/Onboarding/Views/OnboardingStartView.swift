@@ -36,10 +36,15 @@ struct OnboardingStartView: View {
                     
                 } else {
                     
-                    NavigationLink {
-                        OnboardingLocationView()
+                    Button {
+                        Task {
+                            try await viewModel.createUser()
+                        }
                     } label: {
                         ReusableButtonView(backgroundColour: .primaryGreen, text: "Start Your Journey", textColor: .white, opacity: 1.0, radius: 15, disabled: false)
+                            .navigationDestination(isPresented: $viewModel.userCreated) {
+                                OnboardingLocationView()
+                            }
                     }
                     
                 }
@@ -50,15 +55,11 @@ struct OnboardingStartView: View {
             
         }
         .sheet(isPresented: $viewModel.displaySheet) {
-            OnboardingSignInView()
+            OnboardingICloudView(viewModel: viewModel)
         }
         .onAppear {
             NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) { _ in
-                viewModel.checkICloudSignInStatus()
-            }
-            
-            Task {
-                try await viewModel.createUser()
+                viewModel.checkICloudStatus()
             }
         }
         .navigationBarBackButtonHidden()

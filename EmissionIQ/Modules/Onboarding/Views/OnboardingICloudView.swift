@@ -1,5 +1,5 @@
 //
-//  OnboardingSignInView.swift
+//  OnboardingICloudView.swift
 //  EmissionIQ
 //
 //  Created by Matt Sullivan on 10/03/2024.
@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-// OnboardingSignInView prevents the user progressing through onboarding until they sign into iCloud
-struct OnboardingSignInView: View {
+// OnboardingICloudView prevents the user progressing through onboarding until they sign into iCloud or if their iCloud storage is full
+struct OnboardingICloudView: View {
+    @ObservedObject var viewModel: OnboardingViewModel
+    
     var body: some View {
         VStack {
             
-            OnboardingDetailView(image: "icloud.circle.fill", title: "Sign into iCloud", subTitle: "EmissionIQ requires iCloud to sync your emissions across your devices!", systemImage: true)
+            OnboardingDetailView(image: "icloud.circle.fill", title: "\(viewModel.iCloudTitle)", subTitle: "\(viewModel.iCloudError)", systemImage: true)
             
             Button(action: {
                 if let url = URL(string: UIApplication.openSettingsURLString) {
@@ -30,5 +32,5 @@ struct OnboardingSignInView: View {
 }
 
 #Preview {
-    OnboardingSignInView()
+    OnboardingICloudView(viewModel: OnboardingViewModel())
 }
