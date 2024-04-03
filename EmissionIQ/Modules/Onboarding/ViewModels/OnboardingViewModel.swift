@@ -10,7 +10,10 @@ import CloudKit
 
 class OnboardingViewModel: ObservableObject {
     @Published var userNotSignedIn: Bool = false
+    @Published var userCreated: Bool = false
     @Published var displaySheet: Bool = false
+    @Published var iCloudTitle: String = ""
+    @Published var iCloudError: String = ""
     @Published var daysUntilAprilFirst: Int = 0
     @Published var isTrialPeriod: Bool = false
     
@@ -36,15 +39,43 @@ class OnboardingViewModel: ObservableObject {
     }
     
     init() {
-        checkICloudSignInStatus()
+        checkICloudStatus()
     }
     
     // check if the device is signed into iCloud
-    func checkICloudSignInStatus() {
+    func checkICloudStatus() {
         CKContainer.default().accountStatus { (accountStatus, error) in
             DispatchQueue.main.async {
                 self.displaySheet = accountStatus == .noAccount
                 self.userNotSignedIn = accountStatus == .noAccount
+                self.iCloudTitle = "Sign into iCloud"
+                self.iCloudError = "EmissionIQ requires iCloud to sync your emissions across your devices!"
+                
+                if accountStatus == .available {
+                    let privateDatabase = CKContainer(identifier: "iCloud.matt54633.emissionIQ").privateCloudDatabase
+                    let record = CKRecord(recordType: "CheckStorage")
+                    
+                    privateDatabase.save(record) { (record, error) in
+                        if let error = error as? CKError {
+                            if error.code == .quotaExceeded {
+                                DispatchQueue.main.async {
+                                    self.displaySheet = true
+                                    self.iCloudTitle = "iCloud Storage Full"
+                                    self.iCloudError = "EmissionIQ requires iCloud. Free up space by deleting unused data!"
+                                }
+                            }
+                        } else {
+                            if let record = record {
+                                privateDatabase.delete(withRecordID: record.recordID) { (recordID, error) in
+                                    if let error = error {
+                                        print("Failed to delete test record: \(error)")
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
             }
         }
     }
@@ -54,5 +85,9 @@ class OnboardingViewModel: ObservableObject {
         let result = try await PrivateDataManager.shared.createUser()
         let userId = result.userId
         _ = try await PublicDataManager.shared.createUserRecord(userId: userId)
+        
+        DispatchQueue.main.async {
+            self.userCreated = true
+        }
     }
 }
