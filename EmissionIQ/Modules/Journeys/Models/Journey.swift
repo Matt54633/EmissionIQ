@@ -75,6 +75,8 @@ final class Journey: Identifiable {
             self.carbonProduced = 0.0
             self.xp = 0
         }
+        
+        self.xp = isReturn ? self.xp * 2 : self.xp
     }
 }
 
