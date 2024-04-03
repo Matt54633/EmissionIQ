@@ -29,7 +29,7 @@ struct AddJourneyForm: View {
     
     var body: some View {
         VStack(alignment: .center) {
-                        
+            
             HStack {
                 
                 Text("\(vehicleType.capitalized) Journey")
@@ -52,6 +52,8 @@ struct AddJourneyForm: View {
             
             TransportPickerView(vehicleType: $vehicleType)
             
+            ReturnToggleView(isReturn: $isReturn)
+            
             DatePickerView(journeyDate: $journeyDate)
             
             if showManualDistance {
@@ -61,7 +63,7 @@ struct AddJourneyForm: View {
             AddJourneyButtonView(viewModel: viewModel, vehicleType: $vehicleType, manualDistance: $manualDistance, journeyDate: $journeyDate, journeyReturn: $isReturn, showAlert: $showAlert, alertMessage: $alertMessage, displayJourneySheet: $displayJourneySheet, showManualDistance: $showManualDistance)
             
         }
-        .modifier(RoundedSheet(radius: 25, height: .height(showManualDistance == true ? 410 : 350)))
+        .modifier(RoundedSheet(radius: 25, height: .height(showManualDistance == true ? 460 : 400)))
         .padding([.top, .horizontal])
     }
 }

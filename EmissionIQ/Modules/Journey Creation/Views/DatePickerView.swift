@@ -12,10 +12,11 @@ struct DatePickerView: View {
     @Binding var journeyDate: Date
     
     var body: some View {
-        DatePicker("Journey Date", selection: $journeyDate, displayedComponents: .date)
-            .font(.headline)
+        
+        DatePicker("Date", selection: $journeyDate, displayedComponents: .date)
             .fontWeight(.semibold)
             .padding(.bottom, 20)
+        
     }
 }
 
