@@ -113,6 +113,7 @@
 		7644DD852B98BBA400B3EAE4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD842B98BBA400B3EAE4 /* Location.swift */; };
 		7644DD872B98BBB400B3EAE4 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD862B98BBB400B3EAE4 /* Journey.swift */; };
 		7644DD8E2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644DD8D2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift */; };
+		764CCB9C2BBDDF080027352D /* ReturnToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CCB9B2BBDDF080027352D /* ReturnToggleView.swift */; };
 		765FA8902B91EC3000030EC1 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA88F2B91EC3000030EC1 /* Source.swift */; };
 		765FA8922B91EC4F00030EC1 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8912B91EC4F00030EC1 /* Details.swift */; };
 		765FA8942B91EC8700030EC1 /* SourceLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FA8932B91EC8700030EC1 /* SourceLink.swift */; };
@@ -312,6 +313,7 @@
 		7644DD842B98BBA400B3EAE4 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		7644DD862B98BBB400B3EAE4 /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 		7644DD8D2B98BD8D00B3EAE4 /* EmissionsProfileDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsProfileDisplayView.swift; sourceTree = "<group>"; };
+		764CCB9B2BBDDF080027352D /* ReturnToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnToggleView.swift; sourceTree = "<group>"; };
 		765FA88F2B91EC3000030EC1 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		765FA8912B91EC4F00030EC1 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		765FA8932B91EC8700030EC1 /* SourceLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLink.swift; sourceTree = "<group>"; };
@@ -1096,6 +1098,7 @@
 				767FE8992B98C0BA003C225D /* LocationPickerView.swift */,
 				767FE89B2B98C0D0003C225D /* LocationTextFieldView.swift */,
 				767FE89F2B98C0F5003C225D /* TransportPickerView.swift */,
+				764CCB9B2BBDDF080027352D /* ReturnToggleView.swift */,
 				767FE8A32B98C11F003C225D /* DatePickerView.swift */,
 				767FE8A12B98C10F003C225D /* DistanceOverrideView.swift */,
 				767FE89D2B98C0E2003C225D /* AddJourneyButtonView.swift */,
@@ -1478,6 +1481,7 @@
 				7644DCC02B9898B300B3EAE4 /* StatsGraphViewModel.swift in Sources */,
 				7644DCD82B98A75200B3EAE4 /* TrophyLockedView.swift in Sources */,
 				7644DC802B98930B00B3EAE4 /* TrophyManager.swift in Sources */,
+				764CCB9C2BBDDF080027352D /* ReturnToggleView.swift in Sources */,
 				7644DCF62B98A92A00B3EAE4 /* SourceView.swift in Sources */,
 				761A88592B97E02E00F85ABB /* JourneyReturnTip.swift in Sources */,
 				76087BAF2B8BD5C7005C2431 /* LocationManager.swift in Sources */,
