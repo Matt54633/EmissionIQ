@@ -36,6 +36,7 @@ struct LeaderboardPodiumUserView: View {
                 
                 Text(item.userId == userId ? "You" : item.userId)
                     .fontWeight(item.userId == userId ? .semibold : .regular)
+                    .clipped()
                 
             }
             .foregroundStyle(item.userId == userId ? (colorScheme == .dark ? .black : .white) : .primary)

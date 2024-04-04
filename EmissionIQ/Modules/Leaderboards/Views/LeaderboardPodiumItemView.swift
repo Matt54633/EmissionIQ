@@ -24,7 +24,6 @@ struct LeaderboardPodiumItemView: View {
             LeaderboardPodiumBackgroundView(viewModel: viewModel, leaderboardType: leaderboardType, userId: userId, item: item, index: index)
             
         }
-        .padding(2)
     }
 }
 
