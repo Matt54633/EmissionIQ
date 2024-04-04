@@ -52,9 +52,13 @@ struct AddJourneyForm: View {
             
             TransportPickerView(vehicleType: $vehicleType)
             
-            ReturnToggleView(isReturn: $isReturn)
-            
-            DatePickerView(journeyDate: $journeyDate)
+            HStack {
+                ReturnToggleView(isReturn: $isReturn)
+                
+                Spacer(minLength: 30)
+                
+                DatePickerView(journeyDate: $journeyDate)
+            }
             
             if showManualDistance {
                 DistanceOverrideView(manualDistance: $manualDistance)
@@ -63,7 +67,7 @@ struct AddJourneyForm: View {
             AddJourneyButtonView(viewModel: viewModel, vehicleType: $vehicleType, manualDistance: $manualDistance, journeyDate: $journeyDate, journeyReturn: $isReturn, showAlert: $showAlert, alertMessage: $alertMessage, displayJourneySheet: $displayJourneySheet, showManualDistance: $showManualDistance)
             
         }
-        .modifier(RoundedSheet(radius: 25, height: .height(showManualDistance == true ? 460 : 400)))
+        .modifier(RoundedSheet(radius: 25, height: .height(showManualDistance == true ? 410 : 350)))
         .padding([.top, .horizontal])
     }
 }

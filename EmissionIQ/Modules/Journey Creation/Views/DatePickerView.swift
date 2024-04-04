@@ -15,6 +15,7 @@ struct DatePickerView: View {
         
         DatePicker("Date", selection: $journeyDate, displayedComponents: .date)
             .fontWeight(.semibold)
+            .labelsHidden()
             .padding(.bottom, 20)
         
     }
