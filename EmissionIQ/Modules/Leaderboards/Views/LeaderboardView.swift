@@ -73,11 +73,9 @@ struct LeaderboardView: View {
         .navigationTitle((leaderboardType == "xp" ? leaderboardType.uppercased() : (leaderboardType == "daysActive" ? "Days Active" : leaderboardType.capitalized)))
         .navigationBarTitleDisplayMode(.large)
         .onAppear {
-            if viewModel.leaderboardData[leaderboardType] == nil {
-                Task {
-                    try await viewModel.userIdFetch()
-                    try await  viewModel.fetchData(for: leaderboardType)
-                }
+            Task {
+                try await viewModel.userIdFetch()
+                try await  viewModel.fetchData(for: leaderboardType)
             }
         }
         .refreshable {
