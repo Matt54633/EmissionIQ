@@ -12,7 +12,7 @@ import SwiftData
 struct LeaderboardsView: View {
     @Query private var journeys: [Journey]
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    @StateObject private var viewModel = LeaderboardViewModel()
+    @StateObject private var viewModel = LeaderboardViewModel.shared
     @StateObject private var networkManager = NetworkManager()
     
     var body: some View {
@@ -29,6 +29,10 @@ struct LeaderboardsView: View {
                 .onAppear {
                     Task {
                         try await viewModel.userIdFetch()
+                        
+                        if viewModel.leaderboardData.isEmpty {
+                            try await viewModel.fetchAllData()
+                        }
                     }
                 }
                 
@@ -48,7 +52,7 @@ struct LeaderboardsView: View {
                                 
                             }
                             
-                            LeaderboardsGridView( viewModel: viewModel)
+                            LeaderboardsGridView(viewModel: viewModel)
                         }
                         .padding(.top, horizontalSizeClass == .compact ? 15 : 30)
                     }
@@ -57,7 +61,12 @@ struct LeaderboardsView: View {
                     }
                 }
                 .modifier(ConditionalPadding())
-                
+                .refreshable {
+                    Task {
+                        try await viewModel.fetchAllData()
+                        try await viewModel.fetchDataAndCalculatePositions()
+                    }
+                }
             }
         }
     }

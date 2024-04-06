@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 class LeaderboardViewModel: ObservableObject {
-    @Published var leaderboardData: [(userId: String, value: Int)]?
+    static let shared = LeaderboardViewModel()
+    
+    @Published var leaderboardData: [String: [(userId: String, value: Int)]] = [:]
     @Published var positionData: [(userId: String, value: Int)]?
     @Published var userId: String?
     @Published var userPositions: [String: String] = [:]
@@ -36,7 +38,35 @@ class LeaderboardViewModel: ObservableObject {
     func fetchData(for leaderboardType: String) async throws {
         let fetchedData = try await publicDataManager.fetchAllData(for: leaderboardType)
         DispatchQueue.main.async {
-            self.leaderboardData = fetchedData
+            self.leaderboardData[leaderboardType] = fetchedData
+        }
+    }
+    
+    // fetch data for all leaderboard types
+    func fetchAllData() async throws {
+        for leaderboardType in leaderboardTypes {
+            try await fetchData(for: leaderboardType)
+        }
+    }
+    
+    // fetch all leaderboard data and find a user's position
+    func fetchDataAndCalculatePositions() async throws {
+        for leaderboardType in leaderboardTypes {
+            let fetchedData = try await publicDataManager.fetchAllData(for: leaderboardType)
+            DispatchQueue.main.async {
+                self.leaderboardData[leaderboardType] = fetchedData
+                
+                // calculate a user's position for a specific leaderboard type
+                if let userId = self.userId {
+                    let sortedData = Array(fetchedData.sorted { self.setLeaderboardOrder(leaderboardType: leaderboardType) ? $0.value > $1.value : $0.value < $1.value }.enumerated())
+                    for (index, item) in sortedData.enumerated() {
+                        if item.element.userId == userId {
+                            let position = index
+                            self.userPositions[leaderboardType] = self.ordinalNumberString(from: position)
+                        }
+                    }
+                }
+            }
         }
     }
     
