@@ -29,7 +29,13 @@ struct StatsPieOverlayView: View {
                 
             } else {
                 
-                Text(String(format: "%.0f" , viewModel.getValue(for: selectedMethod!, subTitle: subTitle, journeysByMethod: journeysByMethod)))
+                Group {
+                    if subTitle == "Journeys" {
+                        Text(String(format: "%.0f" , viewModel.getValue(for: selectedMethod!, subTitle: subTitle, journeysByMethod: journeysByMethod)))
+                    } else {
+                        Text(String(format: "%.1f" , viewModel.getValue(for: selectedMethod!, subTitle: subTitle, journeysByMethod: journeysByMethod)))
+                    }
+                }
                     .font(.title)
                     .fontWeight(.semibold)
                 
