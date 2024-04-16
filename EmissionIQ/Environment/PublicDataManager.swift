@@ -111,7 +111,7 @@ class PublicDataManager: ObservableObject {
     
     // fetch all data for a given attribute
     func fetchAllData(for key: String) async throws -> [(userId: String, value: Int)] {
-        let predicate = NSPredicate(value: true)
+        let predicate = NSPredicate(format: "journeys != 0") 
         let query = CKQuery(recordType: userRecordType, predicate: predicate)
         
         let (matchResults, _) = try await publicDatabase.records(matching: query)
