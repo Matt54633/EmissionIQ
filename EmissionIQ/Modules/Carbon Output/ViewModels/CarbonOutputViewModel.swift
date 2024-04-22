@@ -31,9 +31,33 @@ class CarbonOutputViewModel: ObservableObject {
     private func calculateActiveDays(from fetchedDate: Date) -> Int {
         let calendar = Calendar.current
         let now = Date()
-        let components = calendar.dateComponents([.day], from: fetchedDate, to: now)
+        let today = calendar.startOfDay(for: now)
         
-        return (components.day ?? 0) + 1
+        var activeDays: Int
+        if let lastUsedDate = UserDefaults.standard.object(forKey: "lastUsedDate") as? Date {
+            activeDays = (calendar.dateComponents([.day], from: fetchedDate, to: lastUsedDate).day ?? 0) + 1
+            if today != calendar.startOfDay(for: lastUsedDate) {
+                activeDays += 1
+                UserDefaults.standard.set(today, forKey: "lastUsedDate")
+            }
+        } else {
+            activeDays = 1
+            UserDefaults.standard.set(today, forKey: "lastUsedDate")
+        }
+        
+        return activeDays
+    }
+    
+    // set just active days (function called on appear)
+    func publishActiveDays() async {
+        do {
+            let fetchedDate = try await PrivateDataManager.shared.fetchUserCreationDate()
+            let activeDays = self.calculateActiveDays(from: fetchedDate)
+            
+            try await self.setPublicUserRecord(attributes: ["daysActive": activeDays as CKRecordValue])
+        } catch {
+            print("Error setting active days \(error)")
+        }
     }
     
     // create attributes for public record
