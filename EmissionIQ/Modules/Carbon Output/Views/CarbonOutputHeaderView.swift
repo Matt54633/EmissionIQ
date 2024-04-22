@@ -29,15 +29,9 @@ struct CarbonOutputHeaderView: View {
                 CarbonOutputValueView()
                     .onAppear {
                         Task {
-                            await viewModel.setUserAttributes(journeys: journeys, trophies: trophies, readArticles: readArticles)
+                            await viewModel.publishActiveDays()
                         }
                     }
-                    .onChange(of: journeys) {
-                        Task {
-                            await viewModel.setUserAttributes(journeys: journeys, trophies: trophies, readArticles: readArticles)
-                        }
-                    }
-                
             }
             .overlay(alignment: .topTrailing) {
                 

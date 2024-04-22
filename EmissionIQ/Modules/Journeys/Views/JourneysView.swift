@@ -59,11 +59,6 @@ struct JourneysView: View {
             .popover(isPresented: $displayJourneySheet, attachmentAnchor: .point(.bottom),arrowEdge: .top) {
                 AddJourneyForm(displayJourneySheet: $displayJourneySheet)
             }
-            .onChange(of: journeys) {
-                Task {
-                    await carbonOutputViewModel.setUserAttributes(journeys: journeys, trophies: trophies, readArticles: readArticles)
-                }
-            }
         }
     }
 }
