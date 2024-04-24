@@ -580,6 +580,7 @@
 				7644DD0E2B98AB5A00B3EAE4 /* Emissions Profile */,
 				7644DCE42B98A83D00B3EAE4 /* Sources */,
 				7644DCE32B98A83800B3EAE4 /* Articles */,
+				76EF20442BA3893200EFFAA7 /* User Guide */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1149,7 +1150,6 @@
 				761A88492B97DD3500F85ABB /* TipKit */,
 				76087BA72B8BD4FB005C2431 /* Environment */,
 				763274BB2B7D401A00257FD2 /* Modules */,
-				76EF20442BA3893200EFFAA7 /* User Guide */,
 				763274BC2B7D405500257FD2 /* Resources */,
 				763274BE2B7D409E00257FD2 /* Supporting Files */,
 				76E306D22B69578800112552 /* Preview Content */,

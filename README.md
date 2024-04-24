@@ -1,10 +1,10 @@
 
 #  EmissionIQ
 
-Artefact produced for final year project titled "Engineering a Gamified Mobile Application For Climate Change Awareness".
+Artefact produced for final year project titled "Engineering a Gamified Mobile Application for Climate Change Awareness".
 
   ## Source Code
-To view EmissionIQ's source code, Apple Xcode 15 is required. Once this is installed & running, open the EmissionIQ folder, and then open the `EmissionIQ.xcodeproj` file to open the project. 
+To view EmissionIQ's source code, Xcode 15 is required. To run the project, open the EmissionIQ folder and then open the `EmissionIQ.xcodeproj` file. 
 
 ### Project Structure
 
@@ -19,7 +19,7 @@ The folder structure for the artefact is as follows:
  - Modules - Folders for each individual piece of app functionality, containing the MVVM structure for each
  - Resources - JSON files for data sources along with project assets
  - Supporting Files - Wrapper Views required for the application
- - Preview Content - Assets required for Xcode previews (Empty)
+ - Preview Content - Assets required for Xcode previews
 
 ## Installation Guide
 
@@ -27,9 +27,9 @@ The EmissionIQ Artefact cannot be run locally due to the iCloud data container b
 
 ### Installation using TestFlight
 
- To run EmissionIQ, download Apple's Testflight application from the App Store: [TestFlight](https://testflight.apple.com). Then, once installed, follow this link: [EmissionIQ TestFlight Install](https://testflight.apple.com/join/SCHGVdfU), this link will redeem EmissionIQ and ask you to install the application through TestFlight. Once EmissionIQ is installed, you can run the app by tapping the icon on your Home Screen or by entering the TestFlight app and tapping `Open` next to EmissionIQ. 
+ To run EmissionIQ, download Apple's Testflight application from the App Store: [TestFlight](https://testflight.apple.com). Then, once installed, follow this link: [EmissionIQ TestFlight Install](https://testflight.apple.com/join/SCHGVdfU). This link will redeem EmissionIQ and ask you to install the application through TestFlight. Once EmissionIQ is installed, you can run the app by tapping the icon on your Home Screen or by entering the TestFlight app and tapping `Open` next to EmissionIQ. 
  
 ## Other Information
 EmissionIQ is a multi-platform, single-codebase application that can run on iPhones, iPads and Mac (Apple Silicon) devices. At least either iOS 17, iPadOS 17 or macOS Sonoma is required on a device to run the application.
 
-User's data is synced to their iCloud account so that their data persists across all of their devices. SwiftData models persist data on a user's device, and this is synced across devices using CloudKit. CloudKit is also employed to store each user's User and Level models in their own CloudKit private database. Each user has a PublicUser model stored in the CloudKit public database with each user's app being able to read from this database to provide public leaderboards. 
+Users' data is synced to their iCloud account so that their data persists across all of their devices. SwiftData models persist data on a user's device, and this is synced across devices using CloudKit. CloudKit is also employed to store each user's User and Level models in their own CloudKit private database. Each user has a `PublicUser` model stored in the CloudKit public database with the app being able to read from this database to provide public leaderboards. 
