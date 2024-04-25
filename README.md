@@ -4,7 +4,7 @@
 Artefact produced for final year project titled "Engineering a Gamified Mobile Application for Climate Change Awareness".
 
   ## Source Code
-To view EmissionIQ's source code, Xcode 15 is required. To run the project, open the EmissionIQ folder and then open the `EmissionIQ.xcodeproj` file. 
+To execute EmissionIQ's source code, Xcode 15 is required. To run the project, open the EmissionIQ folder and then open the `EmissionIQ.xcodeproj` file. 
 
 ### Project Structure
 
