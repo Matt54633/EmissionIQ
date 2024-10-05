@@ -15,20 +15,20 @@ struct JourneyListItemView: View {
         HStack {
             
             Image(systemName: journey.imageName)
-                .font(.title3)
                 .fontWeight(.regular)
                 .foregroundStyle(.primaryGreen)
                 .frame(width: 27.5)
-                .padding(.trailing,2.5)
+                .padding(.trailing, 5)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 3) {
                 
                 Text(journey.startLocationName)
                 
                 Text(journey.endLocationName)
                 
             }
-            .font(.subheadline)
+            .font(.system(size: 14))
+            .padding(.vertical, 2)
             .lineLimit(1)
             
             Spacer()

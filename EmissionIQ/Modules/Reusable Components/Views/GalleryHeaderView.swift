@@ -20,14 +20,16 @@ struct GalleryHeaderView: View {
             Image(systemName: image)
                 .foregroundStyle(.primaryGreen)
                 .frame(minWidth: 25)
+                .padding(.trailing, 1)
             
             Text(title)
-                .font(.title3)
+                .font(.headline)
             
             Spacer()
             
             if displayNavIndicator {
                 Image(systemName: "chevron.right")
+                    .font(.subheadline)
             }
             
         }

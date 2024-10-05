@@ -29,7 +29,7 @@ struct TrophyUnlockedView: View {
                     .padding(.trailing, 2.5)
                     
                     Text(trophy.name.split(separator: " ").joined(separator: "\n"))
-                        .font(.headline)
+                        .font(.callout)
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.leading)
                     
