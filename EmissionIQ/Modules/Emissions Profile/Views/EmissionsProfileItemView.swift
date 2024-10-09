@@ -18,26 +18,26 @@ struct EmissionsProfileItemView: View {
     var body: some View {
         ZStack {
             
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: 15)
                 .fill(colorScheme == .dark ? .quaternary : .quinary)
             
             HStack {
                 
                 Image(systemName: image)
-                    .font(.title3)
+                    .font(.subheadline)
                     .foregroundStyle(.primaryGreen)
                 
                 Spacer()
                 
                 Text(value)
-                    .font(.title) + Text(unit).font(.caption)
+                    .font(.title3) + Text(unit).font(.caption)
                 
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 12.5)
             
         }
-        .fontWeight(.semibold)
-        .frame(height: 60)
+        .fontWeight(.bold)
+        .frame(height: 45)
     }
 }
 

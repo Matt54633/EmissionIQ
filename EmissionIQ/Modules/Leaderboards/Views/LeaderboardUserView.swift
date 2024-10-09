@@ -25,7 +25,7 @@ struct LeaderboardUserView: View {
             HStack {
                 
                 Text(isCurrentUser ? "You" : userId)
-                    .font(.body)
+                    .font(.subheadline)
                     .fontWeight(isCurrentUser ? .bold : .regular)
                     .foregroundStyle(isCurrentUser ? .primaryGreen : .primary)
                 

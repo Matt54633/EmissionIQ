@@ -18,17 +18,19 @@ struct JourneyListItemView: View {
                 .font(.title3)
                 .fontWeight(.regular)
                 .foregroundStyle(.primaryGreen)
-                .frame(width: 27.5)
-                .padding(.trailing,2.5)
+                .frame(width: 25)
+                .padding(.trailing, 5)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 3) {
                 
                 Text(journey.startLocationName)
                 
                 Text(journey.endLocationName)
                 
             }
-            .font(.subheadline)
+            .font(.system(size: 14))
+            .padding(.vertical, 2)
+            .padding(.trailing)
             .lineLimit(1)
             
             Spacer()

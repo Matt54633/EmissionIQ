@@ -33,6 +33,7 @@ struct EmissionsProfileBreakdownView: View {
             
             ScrollView {
                 Text(viewModel.getTotalEmissionsText(journeys: journeys))
+                    .font(.subheadline)
             }
             .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             

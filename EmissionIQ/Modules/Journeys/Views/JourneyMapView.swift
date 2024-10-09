@@ -22,7 +22,7 @@ struct JourneyMapView: View {
     var body: some View {
         VStack {
             
-            Map(position: $position) {
+            Map(position: $position, interactionModes: [.zoom, .rotate]) {
                 if let startCoordinate = viewModel.startCoordinate, let endCoordinate = viewModel.endCoordinate {
                     
                     Marker(journey.startLocationName, systemImage: journey.imageName, coordinate: startCoordinate)
@@ -41,7 +41,7 @@ struct JourneyMapView: View {
                     }
                 }
             }
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .clipShape(RoundedRectangle(cornerRadius: 15))
             
         }
         .padding([.bottom, .horizontal])

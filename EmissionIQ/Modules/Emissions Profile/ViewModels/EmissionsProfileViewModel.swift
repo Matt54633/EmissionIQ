@@ -26,6 +26,7 @@ class EmissionsProfileViewModel: ObservableObject {
         self.emissionPercentagesByVehicleType = journeys.calculateEmissionsPercentageByVehicleType()
         self.emissionKgByVehicleType = journeys.calculateEmissionsInKgByVehicleType()
         self.initializeEmissionData()
+        self.normalizeEmissionPercentages()
         self.sortTransportTypes()
     }
     
@@ -41,9 +42,34 @@ class EmissionsProfileViewModel: ObservableObject {
         }
     }
     
+    // normalize emission percentages so they sum to 100%
+    private func normalizeEmissionPercentages() {
+        let totalPercentage = emissionPercentagesByVehicleType.values.reduce(0, +)
+        
+        if totalPercentage > 0 {
+            var normalisedPercentages: [String: Float] = [:]
+            var normalisedTotal: Float = 0.0
+            
+            for (transportType, percentage) in emissionPercentagesByVehicleType {
+                let normalisedValue = (percentage / totalPercentage) * 100
+                normalisedPercentages[transportType] = normalisedValue
+                normalisedTotal += normalisedValue
+            }
+            
+            let difference = 100.0 - normalisedTotal
+            
+            if let firstTransportType = normalisedPercentages.first(where: { $0.value > 0 })?.key {
+                normalisedPercentages[firstTransportType]! += difference
+            }
+            
+            emissionPercentagesByVehicleType = normalisedPercentages
+        }
+    }
+
+
+    
     // sort transport types so most polluting type appears in middle of profile
     private func sortTransportTypes() {
-        // Sort the transport types based on the emission percentages
         allTransportTypes.sort { emissionPercentagesByVehicleType[$0] ?? 0.0 > emissionPercentagesByVehicleType[$1] ?? 0.0 }
         
         let centerIndex = allTransportTypes.count / 2
@@ -93,4 +119,3 @@ class EmissionsProfileViewModel: ObservableObject {
         return Float(emissionKgByVehicleType[transportType] ?? 0.0)
     }
 }
-

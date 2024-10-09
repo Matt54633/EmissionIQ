@@ -21,11 +21,11 @@ struct TrophyLockedView: View {
                     HStack(alignment: .center) {
                         
                         Image(systemName: "lock.fill")
-                            .font(.title)
+                            .font(.title2)
                             .padding(.trailing, 2.5)
                         
                         Text(trophy.name.split(separator: " ").joined(separator: "\n"))
-                            .font(.headline)
+                            .font(.subheadline)
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.leading)
                         
@@ -36,7 +36,7 @@ struct TrophyLockedView: View {
                     HStack {
                         
                         Text(trophy.goal)
-                            .font(.subheadline)
+                            .font(.caption)
                             .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                             .background(Capsule().fill(colorScheme == .dark ? .white.opacity(0.25) : .lightGrey.opacity(0.18)))
                         

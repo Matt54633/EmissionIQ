@@ -18,7 +18,7 @@ struct SourceTypeListItemView: View {
         } label: {
             ZStack {
                 
-                RoundedRectangle(cornerRadius: 20)
+                RoundedRectangle(cornerRadius: 15)
                     .fill(colorScheme == .dark ? .quaternary : .quinary)
                 
                 VStack(alignment: .leading) {
@@ -38,10 +38,13 @@ struct SourceTypeListItemView: View {
                     HStack {
                         
                         Text(source.name)
+                            .font(.subheadline)
                         
                         Spacer()
                         
                         Image(systemName: "chevron.right")
+                            .font(.subheadline)
+                            .foregroundStyle(.gray)
                         
                     }
                     .fontWeight(.semibold)

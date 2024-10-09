@@ -44,6 +44,7 @@ struct JourneysListView: View {
                 }
             }
         }
+        .listSectionSpacing(30)
         .background(Color(.systemBackground))
         .scrollContentBackground(.hidden)
         .padding(.top, horizontalSizeClass == .compact ? 15 : 30)

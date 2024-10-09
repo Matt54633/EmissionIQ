@@ -25,11 +25,11 @@ struct TrophyUnlockedView: View {
                             .foregroundStyle(Color(trophy.rank.capitalized))
                         
                     }
-                    .font(.title)
+                    .font(.title2)
                     .padding(.trailing, 2.5)
                     
                     Text(trophy.name.split(separator: " ").joined(separator: "\n"))
-                        .font(.headline)
+                        .font(.subheadline)
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.leading)
                     
@@ -40,11 +40,13 @@ struct TrophyUnlockedView: View {
                 HStack {
                     
                     Text(trophy.dateAchieved.shortFormattedDate)
-                        .font(.subheadline)
+                        .font(.caption)
                         .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                         .background(Capsule().fill(colorScheme == .dark ? .white.opacity(0.25) : .lightGrey.opacity(0.18)))
                     
                     Image(systemName: "chevron.right")
+                        .font(.subheadline)
+                        .foregroundStyle(.gray)
                     
                 }
                 .fontWeight(.semibold)

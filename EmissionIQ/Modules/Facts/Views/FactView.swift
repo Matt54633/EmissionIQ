@@ -10,17 +10,19 @@ import SwiftUI
 // FactView displays a single fact
 struct FactView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: FactViewModel
     
     var body: some View {
         ZStack(alignment: .leading) {
             
-            GlassEffectView(image: "GreenMesh", cornerRadius: 20)
+            RoundedRectangle(cornerRadius: 15)
+                .fill(colorScheme == .dark ? .quaternary : .quinary)
             
             if let currentFact = viewModel.currentFact?.fact {
                 
                 Text(currentFact)
-                    .font(horizontalSizeClass == .compact ? .subheadline : .headline)
+                    .font(.subheadline)
                     .fontWeight(.semibold)
                     .padding(EdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 20))
                 

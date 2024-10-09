@@ -20,7 +20,7 @@ struct TriviaItemView: View {
                 }, back: {
                     TriviaDetailView(title: trivia.answer, type: "back")
                 })
-                .frame(height: 80)
+                .frame(height: 70)
                 
             }
         }

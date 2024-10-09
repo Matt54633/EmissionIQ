@@ -18,7 +18,7 @@ struct LeaderboardListItemView: View {
     var body: some View {
         ZStack {
             
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: 15)
                 .fill(colorScheme == .dark ? .quaternary : .quinary)
             
             VStack(alignment: .leading) {
@@ -26,7 +26,7 @@ struct LeaderboardListItemView: View {
                 HStack {
                     
                     Image(systemName: viewModel.setLeaderboardImage(leaderboardType: leaderboardType))
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.medium)
                         .foregroundStyle(.primaryGreen)
                     
@@ -57,11 +57,12 @@ struct LeaderboardListItemView: View {
                 HStack {
                     
                     Text(leaderboardType == "xp" ? leaderboardType.uppercased() : (leaderboardType == "daysActive" ? "Days Active" : leaderboardType.capitalized))
-                        .font(.title3)
                     
                     Spacer()
                     
                     Image(systemName: "chevron.right")
+                        .font(.subheadline)
+                        .foregroundStyle(.gray)
                     
                 }
                 .fontWeight(.semibold)

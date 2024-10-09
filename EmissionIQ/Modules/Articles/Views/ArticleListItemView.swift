@@ -30,7 +30,7 @@ struct ArticleListItemView: View {
         } label: {
             ZStack {
                 
-                GlassEffectView(image: "newspapers", cornerRadius: 20)
+                GlassEffectView(image: "newspapers", cornerRadius: 15)
                 
                 VStack(alignment: .leading) {
                     HStack {
@@ -44,18 +44,20 @@ struct ArticleListItemView: View {
                         Spacer()
                         
                         Image(systemName: "chevron.right")
+                            .font(.subheadline)
                     }
                     .fontWeight(.semibold)
                     .padding(EdgeInsets(top: 15, leading: 15, bottom: 6, trailing: 20))
                     
                     ZStack(alignment: .leading) {
                         
-                        UnevenRoundedRectangle(topLeadingRadius: 0, bottomLeadingRadius: 20, bottomTrailingRadius: 20, topTrailingRadius: 0)
+                        UnevenRoundedRectangle(topLeadingRadius: 0, bottomLeadingRadius: 15, bottomTrailingRadius: 15, topTrailingRadius: 0)
                             .fill(.ultraThinMaterial)
                             .colorScheme(.dark)
                         
                         Text(article.title)
                             .fontWeight(.semibold)
+                            .font(.subheadline)
                             .multilineTextAlignment(.leading)
                             .lineLimit(2)
                             .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15))
@@ -63,7 +65,7 @@ struct ArticleListItemView: View {
                 }
             }
             .foregroundStyle(.white)
-            .frame(height: 130)
+            .frame(height: 115)
         }
         .tint(.primary)
         .onChange(of: readArticles) {

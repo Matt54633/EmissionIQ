@@ -16,10 +16,10 @@ struct JourneysListAddButtonView: View {
             
             Circle()
                 .fill(.primaryGreen)
-                .frame(height: 55)
+                .frame(height: 40)
             
             Image(systemName: "plus")
-                .font(.title)
+                .font(.title3)
                 .fontWeight(.bold)
                 .foregroundStyle(colorScheme == .dark ? .black : .white)
             

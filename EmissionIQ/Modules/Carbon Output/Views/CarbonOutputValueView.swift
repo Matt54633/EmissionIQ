@@ -15,10 +15,10 @@ struct CarbonOutputValueView: View {
     var body: some View {
         VStack(alignment: .leading) {
             
-            HStack {
+            HStack(alignment: .firstTextBaseline, spacing: 3) {
                 
                 Text("\(journeys.calculateTotalEmissions() < 10000.0 ? String(format: "%.1f", journeys.calculateTotalEmissions()) : String(format: "%.0f", journeys.calculateTotalEmissions()))")
-                    .font(.system(size: 80)) +
+                    .font(.system(size: 70))
                 
                 Text("kg CO₂e")
                     .font(.title2)
@@ -27,10 +27,11 @@ struct CarbonOutputValueView: View {
                 
             }
             .fontWeight(.bold)
-            .padding(.bottom, -15)
+            .padding(.bottom, -10)
             
             Text("Keep tracking your progress!")
-                .font(.title3)
+                .font(.headline)
+                .fontWeight(.medium)
             
         }
         .foregroundStyle(.white)

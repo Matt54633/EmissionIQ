@@ -17,23 +17,23 @@ struct OnboardingLocationView: View {
             
             OnboardingDetailView(image: "location.circle.fill", title: "Location Access", subTitle: "Grant access to see localised search results when adding a journey.", systemImage: true)
             
-            NavigationLink {
-                OnboardingNotificationView()
-            } label: {
-                ReusableButtonView(backgroundColour: .lightGrey, text: "No Thanks", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
-            }
+//            NavigationLink {
+//                OnboardingNotificationView()
+//            } label: {
+//                ReusableButtonView(backgroundColour: .lightGrey, text: "No Thanks", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
+//            }
             
             Button {
                 locationManager.requestLocationPermission()
             } label: {
-                ReusableButtonView(backgroundColour: .primaryGreen, text: "Allow", textColor: .white, opacity: 1.0, radius: 15, disabled: nil)
+                ReusableButtonView(backgroundColour: .primaryGreen, text: "Continue", textColor: .white, opacity: 1.0, radius: 15, disabled: nil)
                     .navigationDestination(isPresented: $readyToNavigate) {
                         OnboardingNotificationView()
                     }
             }
             .onAppear {
                 locationManager.onAuthorizationStatusChanged = { newStatus in
-                    if newStatus == .authorizedWhenInUse || newStatus == .authorizedAlways {
+                    if newStatus == .authorizedWhenInUse || newStatus == .authorizedAlways || newStatus == .denied {
                         readyToNavigate = true
                     }
                 }

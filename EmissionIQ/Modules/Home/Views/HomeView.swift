@@ -26,7 +26,7 @@ struct HomeView: View {
                 CarbonOutputHeaderView()
                     .frame(height: horizontalSizeClass == .compact ? 150 : 175)
                 
-                VStack(alignment: .center) {
+                VStack(alignment: .center, spacing: 25) {
                     if !journeys.isEmpty {
                         
                         ScrollView {
@@ -39,9 +39,7 @@ struct HomeView: View {
                                     
                                     TriviaGalleryView()
                                     
-                                    if geometry.size.height > 750 {
-                                        EmissionsProfileGalleryView()
-                                    }
+                                    EmissionsProfileGalleryView()
                                     
                                     QuickActionGalleryView(displayJourneySheet: $displayJourneySheet, selectedTab: $selectedTab)
                                     
@@ -49,10 +47,10 @@ struct HomeView: View {
                                 .modifier(ConditionalPadding())
                                 
                             }
+                            .padding(.bottom)
                         }
                         .padding(.top)
                         
-                        Spacer()
                         
                     } else {
                         JourneyMessageView()

@@ -17,21 +17,21 @@ struct OnboardingNotificationView: View {
             
             OnboardingDetailView(image: "app.badge", title: "Notification Access", subTitle: "Recieve a daily reminder from EmissionIQ to add your journeys to keep you on track!", systemImage: true)
             
-            Button {
-                onboardingComplete = true
-            } label: {
-                ReusableButtonView(backgroundColour: .lightGrey, text: "No Thanks", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
-            }
+//            Button {
+//                onboardingComplete = true
+//            } label: {
+//                ReusableButtonView(backgroundColour: .lightGrey, text: "No Thanks", textColor: .primary, opacity: 0.25, radius: 15, disabled: nil)
+//            }
             
             Button {
                 notificationManager.requestPermission()
             } label: {
-                ReusableButtonView(backgroundColour: .primaryGreen, text: "Allow", textColor: .white, opacity: 1.0, radius: 15, disabled: nil)
+                ReusableButtonView(backgroundColour: .primaryGreen, text: "Continue", textColor: .white, opacity: 1.0, radius: 15, disabled: nil)
             }
             .onChange(of: notificationManager.authorizationStatus) {
-                if notificationManager.authorizationStatus == .authorized {
+//                if notificationManager.authorizationStatus == .authorized {
                     onboardingComplete = true
-                }
+//                }
             }
             
         }

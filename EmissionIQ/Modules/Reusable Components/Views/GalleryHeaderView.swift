@@ -19,20 +19,23 @@ struct GalleryHeaderView: View {
             
             Image(systemName: image)
                 .foregroundStyle(.primaryGreen)
-                .frame(minWidth: 25)
+                .font(.subheadline)
+                .frame(minWidth: 22.5)
             
             Text(title)
-                .font(.title3)
+                .font(.headline)
             
             Spacer()
             
             if displayNavIndicator {
                 Image(systemName: "chevron.right")
+                    .font(.subheadline)
+                    .foregroundStyle(.gray)
             }
             
         }
         .fontWeight(.semibold)
-        .padding(EdgeInsets(top: topPadding, leading: 15, bottom: 5, trailing: 15))
+        .padding(EdgeInsets(top: topPadding, leading: 15, bottom: 0, trailing: 15))
     }
 }
 
