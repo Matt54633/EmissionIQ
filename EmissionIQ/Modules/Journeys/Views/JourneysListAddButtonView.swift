@@ -20,7 +20,7 @@ struct JourneysListAddButtonView: View {
             
             Image(systemName: "plus")
                 .font(.title3)
-                .fontWeight(.semibold)
+                .fontWeight(.bold)
                 .foregroundStyle(colorScheme == .dark ? .black : .white)
             
         }

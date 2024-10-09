@@ -36,6 +36,7 @@ struct LeaderboardPodiumUserView: View {
                 
                 Text(item.userId == userId ? "You" : item.userId)
                     .fontWeight(item.userId == userId ? .semibold : .regular)
+                    .font(.subheadline)
                     .clipped()
                 
             }

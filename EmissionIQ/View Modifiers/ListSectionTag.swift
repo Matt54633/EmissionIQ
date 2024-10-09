@@ -27,7 +27,7 @@ struct ListSectionTag: ViewModifier {
             Capsule()
                 .fill(colorScheme == .dark ? .quaternary : .quinary)
         )
-        .padding(.bottom, 12.5)
+        .padding(.bottom, 10)
         .listRowInsets(EdgeInsets())
         
     }

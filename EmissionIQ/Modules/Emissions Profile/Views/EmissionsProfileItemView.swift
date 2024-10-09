@@ -24,6 +24,7 @@ struct EmissionsProfileItemView: View {
             HStack {
                 
                 Image(systemName: image)
+                    .font(.subheadline)
                     .foregroundStyle(.primaryGreen)
                 
                 Spacer()
@@ -32,7 +33,7 @@ struct EmissionsProfileItemView: View {
                     .font(.title3) + Text(unit).font(.caption)
                 
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 12.5)
             
         }
         .fontWeight(.bold)

@@ -11,7 +11,6 @@ import SwiftUI
 struct QuickActionView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    let image: String
     let title: String
     
     var body: some View {
@@ -22,10 +21,6 @@ struct QuickActionView: View {
             
             HStack {
                 
-                Image(systemName: image)
-                    .font(.subheadline)
-                    .foregroundStyle(.primaryGreen)
-                                
                     Text(title)
                     .font(.subheadline)
                         .multilineTextAlignment(.leading)
@@ -33,7 +28,7 @@ struct QuickActionView: View {
                     Spacer()
                     
                     Image(systemName: "chevron.right")
-                        .font(.caption)
+                    .font(.subheadline)
                         .foregroundStyle(.gray)
                 
                 
@@ -49,5 +44,5 @@ struct QuickActionView: View {
 }
 
 #Preview {
-    QuickActionView(image: "plus.circle.fill", title: "Add Journey")
+    QuickActionView(title: "Add Journey")
 }

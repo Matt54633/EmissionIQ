@@ -33,7 +33,7 @@ struct LeaderboardListItemView: View {
                     Spacer()
                     
                     Text(viewModel.userPositions[leaderboardType] ?? "Pos")
-                        .font(.title2)
+                        .font(.title)
                         .fontWeight(.bold)
                         .redacted(reason: viewModel.userPositions[leaderboardType] == nil ? .placeholder : [])
                         .onChange(of: viewModel.userId) {
