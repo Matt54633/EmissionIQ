@@ -23,8 +23,7 @@ struct JourneyDetailView: View {
                     Text(value)
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: 55)
-            .padding(.bottom, 2.5)
+            .frame(maxWidth: .infinity, maxHeight: 45)
             
             Text(label)
                 .font(.body)

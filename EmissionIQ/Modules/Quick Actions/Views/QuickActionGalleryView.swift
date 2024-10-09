@@ -22,7 +22,7 @@ struct QuickActionGalleryView: View {
                 Button {
                     displayJourneySheet = true
                 } label: {
-                    QuickActionView(image: "plus.circle.fill", title: "Add Journey")
+                    QuickActionView(image: "plus.circle.fill", title: "Journey")
                 }
                 
                 Button {

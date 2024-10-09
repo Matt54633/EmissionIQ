@@ -16,7 +16,7 @@ struct TriviaDetailView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
-                RoundedRectangle(cornerRadius: 20).fill(type == "back" ? .peelGreen : .primaryGreen)
+                RoundedRectangle(cornerRadius: 15).fill(type == "back" ? .peelGreen : .primaryGreen)
                 
                 HStack {
                     if type == "back" {
@@ -24,7 +24,7 @@ struct TriviaDetailView: View {
                     }
                     
                     Text(title)
-                        .font(horizontalSizeClass == .compact ? .subheadline : .headline)
+                        .font(.subheadline)
                         .fontWeight(.medium)
                         .padding(.trailing, type == "back" ? (horizontalSizeClass == .regular ? geometry.size.width * 0.03 : geometry.size.width * 0.1) : 45)
                         .padding(.leading, type == "back" ? 50: 20)

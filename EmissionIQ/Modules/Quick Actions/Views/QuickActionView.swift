@@ -17,30 +17,29 @@ struct QuickActionView: View {
     var body: some View {
         ZStack {
             
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: 15)
                 .fill(colorScheme == .dark ? .quaternary : .quinary)
             
-            VStack(alignment: .leading) {
+            HStack {
                 
                 Image(systemName: image)
-                    .font(.title2)
+                    .font(.subheadline)
                     .foregroundStyle(.primaryGreen)
-                
-                Spacer()
-                
-                HStack {
+                                
                     Text(title)
+                    .font(.subheadline)
                         .multilineTextAlignment(.leading)
                     
                     Spacer()
                     
                     Image(systemName: "chevron.right")
-                        .font(.subheadline)
-                }
+                        .font(.caption)
+                        .foregroundStyle(.gray)
+                
                 
             }
             .fontWeight(.semibold)
-            .padding(EdgeInsets(top: 10, leading: 12.5, bottom: 10, trailing: 12.5))
+            .padding(EdgeInsets(top: 12.5, leading: 12.5, bottom: 12.5, trailing: 12.5))
             
         }
         .fixedSize(horizontal: false, vertical: horizontalSizeClass == .regular ? true : false)

@@ -13,9 +13,11 @@ struct ConditionalContentMargins: ViewModifier {
     
     func body(content: Content) -> some View {
         if horizontalSizeClass == .regular {
-            return content.contentMargins(.horizontal, 90, for: .scrollContent)
+            return content.contentMargins(.horizontal, 70, for: .scrollContent)
         } else {
-            return content.contentMargins(.horizontal, 20, for: .scrollContent)
+            return content.contentMargins(.horizontal, 15, for: .scrollContent)
         }
+        
+        
     }
 }

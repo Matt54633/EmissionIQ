@@ -17,7 +17,7 @@ struct SourceLinksView: View {
             
             ZStack(alignment: .leading) {
                 
-                RoundedRectangle(cornerRadius: 20)
+                RoundedRectangle(cornerRadius: 15)
                     .fill(colorScheme == .dark ? .quaternary : .quinary)
                 
                 VStack(alignment: .leading) {
@@ -31,7 +31,6 @@ struct SourceLinksView: View {
                         Image(systemName: "globe")
                         
                     }
-                    .font(.title3)
                     .fontWeight(.semibold)
                     .padding(.bottom, 1)
                     

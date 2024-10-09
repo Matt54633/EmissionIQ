@@ -18,9 +18,9 @@ struct ImpactListView: View {
             
             VStack(alignment: .leading) {
                 
-                Group {
+                HStack(alignment: .firstTextBaseline, spacing: 3) {
                     Text("\((String(format: "%.1f", journeys.calculateTotalEmissions())))")
-                        .font(.system(size: 80)) +
+                        .font(.system(size: 70))
                     Text("kg CO₂e")
                         .font(.title2)
                 }
@@ -30,8 +30,7 @@ struct ImpactListView: View {
                 
                 HStack {
                     
-                    Text("That's equivalent to")
-                        .font(.title3)
+                    Text("That's equivalent to:")
                     
                     Spacer()
                     

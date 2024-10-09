@@ -37,7 +37,7 @@ struct TrophiesView: View {
                     GeometryReader { geometry in
                         ScrollView {
                             
-                            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: geometry.size.width > 900 ? 2 : 1)) {
+                            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: geometry.size.width > 900 ? 2 : 1), spacing: 15) {
                                 
                                 ForEach(viewModel.groupAndSortTrophies(trophies: trophies).keys.sorted(), id: \.self) { type in
                                     

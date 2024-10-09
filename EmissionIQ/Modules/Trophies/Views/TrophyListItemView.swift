@@ -23,7 +23,7 @@ struct TrophyListItemView: View {
         } label: {
             ZStack {
                 
-                RoundedRectangle(cornerRadius: 20)
+                RoundedRectangle(cornerRadius: 15)
                     .fill(colorScheme == .dark ? .quaternary : .quinary)
                 
                 VStack {
@@ -35,7 +35,7 @@ struct TrophyListItemView: View {
                 }
                 
             }
-            .frame(height: 70)
+            .frame(height: 60)
             .navigationDestination(isPresented: $displayTrophySheet) {
                 TrophyDisplayView(trophy: trophy)
             }

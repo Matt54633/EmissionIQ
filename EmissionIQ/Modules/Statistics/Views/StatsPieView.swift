@@ -19,8 +19,8 @@ struct StatsPieView: View {
     var body: some View {
         Chart {
             ForEach(viewModel.sortedKeys.indices, id: \.self) { index in
-                SectorMark(angle: .value("Value", viewModel.value(for: index)), innerRadius: .ratio(0.825), angularInset: 2.5)
-                    .cornerRadius(5)
+                SectorMark(angle: .value("Value", viewModel.value(for: index)), innerRadius: .ratio(0.85), angularInset: 3)
+                    .cornerRadius(100)
                     .foregroundStyle(by: .value("Name", viewModel.method(for: index).capitalized))
                     .opacity(viewModel.selectedMethod == nil || viewModel.method(for: index) == viewModel.selectedMethod ? 1.0 : 0.3)
             }

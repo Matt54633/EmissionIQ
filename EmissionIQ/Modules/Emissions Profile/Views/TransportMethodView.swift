@@ -23,7 +23,7 @@ struct TransportMethodView: View {
                 .frame(width: 90, height: 90)
                 .foregroundColor(.primaryGreen.opacity(max(0.12, Double(emissionPercentage) / 100 + 0.11)))
             
-            VStack {
+            VStack(spacing: 4) {
                 
                 Image(systemName: viewModel.imageName(for: transportType))
                     .font(.title3)
@@ -37,7 +37,7 @@ struct TransportMethodView: View {
         .onTapGesture {
             displayOverlay.toggle()
         }
-        .popover(isPresented: $displayOverlay, attachmentAnchor: .point(.top), arrowEdge: .bottom) {
+        .popover(isPresented: $displayOverlay, attachmentAnchor: .point(.bottom), arrowEdge: .bottom) {
             TransportMethodOverlayView(viewModel: viewModel, transportType: transportType, emissionPercentage: emissionPercentage, emissionKg: emissionKg)
                 .presentationCompactAdaptation(.popover)
         }

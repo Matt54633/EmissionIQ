@@ -29,6 +29,7 @@ struct ImpactListItemView: View {
                 Spacer()
                 
                 viewModel.setListItemValues(itemType: itemType, journeys: journeys).text
+                    .font(.subheadline)
             }
             .fontWeight(.semibold)
             .padding()

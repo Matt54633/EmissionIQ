@@ -23,9 +23,11 @@ struct JourneyLocationsView: View {
             VStack(alignment: .leading) {
                 
                 Text(journey.startLocationName)
+                    .lineLimit(1)
                     .padding(.bottom, 5)
                 
                 Text(journey.endLocationName)
+                    .lineLimit(1)
                 
             }
             .font(.title2)

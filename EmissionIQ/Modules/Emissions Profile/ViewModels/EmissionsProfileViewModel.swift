@@ -26,6 +26,7 @@ class EmissionsProfileViewModel: ObservableObject {
         self.emissionPercentagesByVehicleType = journeys.calculateEmissionsPercentageByVehicleType()
         self.emissionKgByVehicleType = journeys.calculateEmissionsInKgByVehicleType()
         self.initializeEmissionData()
+        self.normalizeEmissionPercentages()
         self.sortTransportTypes()
     }
     
@@ -37,6 +38,16 @@ class EmissionsProfileViewModel: ObservableObject {
             }
             if emissionKgByVehicleType[transportType] == nil {
                 emissionKgByVehicleType[transportType] = 0.0
+            }
+        }
+    }
+    
+    // normalize emission percentages so they sum to 100%
+    private func normalizeEmissionPercentages() {
+        let totalPercentage = emissionPercentagesByVehicleType.values.reduce(0, +)
+        if totalPercentage > 0 {
+            for (transportType, percentage) in emissionPercentagesByVehicleType {
+                emissionPercentagesByVehicleType[transportType] = (percentage / totalPercentage) * 100
             }
         }
     }
@@ -93,4 +104,3 @@ class EmissionsProfileViewModel: ObservableObject {
         return Float(emissionKgByVehicleType[transportType] ?? 0.0)
     }
 }
-

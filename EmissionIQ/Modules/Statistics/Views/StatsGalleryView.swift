@@ -34,7 +34,7 @@ struct StatsGalleryView: View {
                     StatsItemView(statistic: String(readArticles.count), title: "Articles")
                     
                 }
-                .padding(EdgeInsets(top: 2.5, leading: 15, bottom: 0, trailing: 15))
+                .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
                 
             }
             .onAppear {

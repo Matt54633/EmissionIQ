@@ -17,20 +17,21 @@ struct StatsItemView: View {
     var body: some View {
         ZStack {
             
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: 15)
                 .fill(colorScheme == .dark ? .quaternary : .quinary)
             
             VStack {
                 
                 Text(statistic)
-                    .font(.title2)
+                    .font(.title3)
                     .fontWeight(.bold)
                 
                 Text(title)
-                .font(.subheadline)
+                    .font(.caption)
+                    .fontDesign(.rounded)
                 
             }
-            .padding(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5))
+            .padding(EdgeInsets(top: 12.5, leading: 2.5, bottom: 12.5, trailing: 2.5))
             
         }
         .fixedSize(horizontal: false, vertical: true)

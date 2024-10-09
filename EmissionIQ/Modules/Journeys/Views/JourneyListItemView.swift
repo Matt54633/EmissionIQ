@@ -15,9 +15,10 @@ struct JourneyListItemView: View {
         HStack {
             
             Image(systemName: journey.imageName)
+                .font(.title3)
                 .fontWeight(.regular)
                 .foregroundStyle(.primaryGreen)
-                .frame(width: 27.5)
+                .frame(width: 25)
                 .padding(.trailing, 5)
             
             VStack(alignment: .leading, spacing: 3) {
@@ -29,6 +30,7 @@ struct JourneyListItemView: View {
             }
             .font(.system(size: 14))
             .padding(.vertical, 2)
+            .padding(.trailing)
             .lineLimit(1)
             
             Spacer()

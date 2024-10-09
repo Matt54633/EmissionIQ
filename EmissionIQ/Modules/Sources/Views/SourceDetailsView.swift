@@ -19,7 +19,6 @@ struct SourceDetailsView: View {
                 VStack(alignment: .leading) {
                     
                     Text(paragraph.header)
-                        .font(.title3)
                         .fontWeight(.semibold)
                         .padding(.bottom, 2.5)
                     

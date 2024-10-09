@@ -13,19 +13,19 @@ struct ListSectionTag: ViewModifier {
     
     func body(content: Content) -> some View {
         
-        HStack {
+        HStack(spacing: 10) {
             Image(systemName: "calendar")
                 .foregroundStyle(.primaryGreen)
             content
                 .foregroundStyle(colorScheme == .dark ? .white : .black)
         }
-        .font(.subheadline)
+        .font(.caption)
         .fontWeight(.semibold)
         .textCase(nil)
         .padding(EdgeInsets(top: 7.5, leading: 12.5, bottom: 7.5, trailing: 12.5))
         .background(
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color(.systemGray6))
+            Capsule()
+                .fill(colorScheme == .dark ? .quaternary : .quinary)
         )
         .padding(.bottom, 12.5)
         .listRowInsets(EdgeInsets())
