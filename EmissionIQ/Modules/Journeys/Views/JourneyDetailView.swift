@@ -14,16 +14,17 @@ struct JourneyDetailView: View {
     var label: String
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .center, spacing: 5) {
             
             Group {
                 if let image = image {
                     Image(systemName: image)
                 } else {
                     Text(value)
+                    
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: 45)
+            .frame(height: 40)
             
             Text(label)
                 .font(.body)
@@ -32,6 +33,9 @@ struct JourneyDetailView: View {
         }
         .font(.system(size: 32))
         .fontWeight(.semibold)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(RoundedRectangle(cornerRadius: 15).fill(.listItemBackground))
+
         
     }
 }

@@ -19,8 +19,7 @@ struct EmissionsProfileItemView: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 15)
-                .fill(colorScheme == .dark ? .quaternary : .quinary)
-            
+.fill(.listItemBackground)            
             HStack {
                 
                 Image(systemName: image)

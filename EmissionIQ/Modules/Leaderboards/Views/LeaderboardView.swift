@@ -39,11 +39,14 @@ struct LeaderboardView: View {
                     }
                     .padding()
                 }
+                .overlay(alignment: .bottom) {
+                    LeaderboardMotivatorView(viewModel: viewModel, leaderboardType: leaderboardType)
+                }
             } else {
                 LoadingView()
             }
             
-            LeaderboardMotivatorView(viewModel: viewModel, leaderboardType: leaderboardType)
+          
             
         }
         .toolbar {
@@ -59,7 +62,7 @@ struct LeaderboardView: View {
                     displayInfoSheet = true
                 } label: {
                     Image(systemName: "info.circle")
-                        .fontWeight(.semibold)
+                        .fontWeight(.medium)
                         .foregroundStyle(.primaryGreen)
                 }
                 .popover(isPresented: $displayInfoSheet) {

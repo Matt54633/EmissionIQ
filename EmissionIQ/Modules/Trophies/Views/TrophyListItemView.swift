@@ -24,8 +24,7 @@ struct TrophyListItemView: View {
             ZStack {
                 
                 RoundedRectangle(cornerRadius: 15)
-                    .fill(colorScheme == .dark ? .quaternary : .quinary)
-                
+    .fill(.listItemBackground)                
                 VStack {
                     if trophy.isAchieved {
                         TrophyUnlockedView(trophy: trophy)

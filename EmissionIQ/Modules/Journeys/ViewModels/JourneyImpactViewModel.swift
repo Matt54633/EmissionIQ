@@ -89,6 +89,6 @@ class JourneyImpactViewModel: ObservableObject {
         carbonSaved = abs(carbonProduced - alternateJourney.carbonProduced)
         
         let actionPhrase = actionPhrases[alternateTransportMethod] ?? ""
-        alternateTransport = (imageName: alternateTransportImageName, text: "\(actionPhrase) would save \(String(format: "%.1f", (carbonSaved)))kg CO₂e")
+        alternateTransport = (imageName: alternateTransportImageName, text: "\(actionPhrase) would save \(String(format: "%.1f", (carbonSaved)))kg of CO₂e")
     }
 }

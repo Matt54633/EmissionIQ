@@ -26,7 +26,7 @@ struct JourneyInfoSectionView: View {
             }
             
         }
-        .font(.title3)
+        .font(.headline)
         .fontWeight(.semibold)
         
         Text(description)

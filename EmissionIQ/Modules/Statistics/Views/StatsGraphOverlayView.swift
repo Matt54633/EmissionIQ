@@ -19,8 +19,7 @@ struct StatsGraphOverlayView: View {
         ZStack(alignment: .center) {
             
             RoundedRectangle(cornerRadius: 10)
-                .fill(colorScheme == .dark ? .quaternary : .quinary)
-            
+.fill(.listItemBackground)            
             VStack(alignment: .leading) {
                 
                 Text(String(format: "%.1f", value))

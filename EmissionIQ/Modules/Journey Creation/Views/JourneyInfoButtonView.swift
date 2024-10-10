@@ -9,7 +9,6 @@ import SwiftUI
 
 // View to create button for showing information about journey calculations
 struct JourneyInfoButtonView: View {
-    @Environment(\.colorScheme) var colorScheme
     @Binding var displayInformationSheet: Bool
     
     var body: some View {
@@ -18,7 +17,8 @@ struct JourneyInfoButtonView: View {
         } label: {
             Image(systemName: "info.circle.fill")
                 .font(.title)
-                .foregroundStyle(colorScheme == .dark ? .white : .gray)
+                .fontWeight(.medium)
+                .foregroundStyle(.gray)
                 .symbolRenderingMode(.hierarchical)
         }
         .popover(isPresented: $displayInformationSheet) {

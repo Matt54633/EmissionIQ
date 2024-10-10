@@ -17,20 +17,19 @@ struct LevelXpItemView: View {
     var body: some View {
         ZStack {
             
-            RoundedRectangle(cornerRadius: 20)
-                .fill(colorScheme == .dark ? .quaternary : .quinary)
-            
+            RoundedRectangle(cornerRadius: 15)
+                .fill(.listItemBackground)
             VStack {
                 if let value = value {
                     Text(value)
-                        .font(.system(size: 19))
-                        .fontWeight(.semibold)
+                        .font(.title3)
+                        .fontWeight(.bold)
                 }
                 
                 Text(title)
-                    .font(.subheadline)
+                    .font(.caption)
             }
-            .padding(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5))
+            .padding(EdgeInsets(top: 12.5, leading: 2.5, bottom: 12.5, trailing: 2.5))
         }
     }
 }

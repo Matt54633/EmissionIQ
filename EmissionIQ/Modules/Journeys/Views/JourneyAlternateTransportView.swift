@@ -18,8 +18,7 @@ struct JourneyAlternateTransportView: View {
         ZStack(alignment: .leading) {
             
             RoundedRectangle(cornerRadius: 15)
-                .fill(colorScheme == .dark ? .quaternary : .quinary)
-            
+.fill(.listItemBackground)            
             if let alternateTransport = viewModel.alternateTransport {
                 HStack {
                     
