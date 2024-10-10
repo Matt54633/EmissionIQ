@@ -20,8 +20,7 @@ struct JourneyImpactListItemView: View {
         ZStack(alignment: .leading) {
             
             RoundedRectangle(cornerRadius: 15)
-                .fill(colorScheme == .dark ? .quaternary : .quinary)
-            
+.fill(.listItemBackground)            
             if let impactData = viewModel.impactData {
                 HStack {
                     
@@ -33,6 +32,7 @@ struct JourneyImpactListItemView: View {
                     VStack(alignment: .trailing, spacing: 0) {
                         
                         Text(impactData.text)
+                            .font(.subheadline)
                         
                         Text(impactType.capitalized)
                             .font(.caption)

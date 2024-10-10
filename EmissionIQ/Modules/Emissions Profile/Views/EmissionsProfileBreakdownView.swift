@@ -27,7 +27,6 @@ struct EmissionsProfileBreakdownView: View {
                     .foregroundStyle(.primaryGreen)
                 
             }
-            .font(.title3)
             .padding(.bottom, 5)
             .fontWeight(.semibold)
             
@@ -40,7 +39,7 @@ struct EmissionsProfileBreakdownView: View {
         }
         .padding(20)
         .background(RoundedRectangle(cornerRadius: 20)
-            .fill(colorScheme == .dark ? .quaternary : .quinary))
+            .fill(.listItemBackground))
         .padding()
         .onAppear {
             viewModel.calculateEmissions(journeys: journeys)

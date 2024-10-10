@@ -14,22 +14,16 @@ struct JourneyDetailsView: View {
     var body: some View {
         VStack {
             
-            HStack(alignment: .center) {
+            HStack(alignment: .center, spacing: 10) {
                 
                 JourneyDetailView(image: journey.imageName, value: "", label: journey.method.capitalized)
                 
-                Divider()
-                    .background(Color.gray)
-                
                 JourneyDetailView(image: nil, value: String(format: "%.1f", journey.carbonProduced), label: "kg CO₂e")
-                
-                Divider()
-                    .background(Color.gray)
                 
                 JourneyDetailView(image: nil, value: String(format: "%.1f", Double(journey.distance)), label: "Miles")
                 
             }
-            .padding(EdgeInsets(top: 0, leading: 15, bottom: 10, trailing: 15))
+            .padding(EdgeInsets(top: 0, leading: 15, bottom: 7.5, trailing: 15))
             .frame(height: 150)
             
             HStack {

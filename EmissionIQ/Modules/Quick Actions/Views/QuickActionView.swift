@@ -17,8 +17,7 @@ struct QuickActionView: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 15)
-                .fill(colorScheme == .dark ? .quaternary : .quinary)
-            
+.fill(.listItemBackground)            
             HStack {
                 
                     Text(title)

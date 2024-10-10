@@ -17,8 +17,7 @@ struct JourneyInfoItemView: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 15)
-                .fill(colorScheme == .dark ? .quaternary : .quinary)
-            
+.fill(.listItemBackground)            
             HStack {
                 
                 Image(systemName: image)
@@ -27,6 +26,7 @@ struct JourneyInfoItemView: View {
                 Spacer()
                 
                 Text(text)
+                    .font(.subheadline)
                 
             }
             .fontWeight(.semibold)

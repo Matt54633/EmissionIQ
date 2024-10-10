@@ -16,7 +16,7 @@ class ImpactViewModel: ObservableObject {
         switch itemType {
             
         case "trees":
-            let text =  Text("CO₂ removed annually by ") + Text("^[\(Int((journeys.calculateTotalEmissions() / 24.62).rounded(.up))) \("Tree")](inflect: true)")
+            let text =  Text("The CO₂ removed annually by ") + Text("^[\(Int((journeys.calculateTotalEmissions() / 24.62).rounded(.up))) \("Tree")](inflect: true)")
             return ("tree.fill", .primaryGreen, text)
             
         case "washing":

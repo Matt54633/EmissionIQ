@@ -19,8 +19,7 @@ struct ImpactListItemView: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 15)
-                .fill(colorScheme == .dark ? .quaternary : .quinary)
-                .frame(height: 50)
+.fill(.listItemBackground)                .frame(height: 50)
             
             HStack {
                 Image(systemName: viewModel.setListItemValues(itemType: itemType, journeys: journeys).image)

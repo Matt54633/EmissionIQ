@@ -18,8 +18,7 @@ struct SourceLinksView: View {
             ZStack(alignment: .leading) {
                 
                 RoundedRectangle(cornerRadius: 15)
-                    .fill(colorScheme == .dark ? .quaternary : .quinary)
-                
+    .fill(.listItemBackground)                
                 VStack(alignment: .leading) {
                     
                     HStack {

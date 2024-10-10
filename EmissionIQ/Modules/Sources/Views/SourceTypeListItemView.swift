@@ -19,8 +19,7 @@ struct SourceTypeListItemView: View {
             ZStack {
                 
                 RoundedRectangle(cornerRadius: 15)
-                    .fill(colorScheme == .dark ? .quaternary : .quinary)
-                
+    .fill(.listItemBackground)                
                 VStack(alignment: .leading) {
                     
                     HStack {
